@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useMemo } from 'react';
+import { Link } from 'react-router-dom';
 import { 
   TrendingUp, 
   BarChart3, 
@@ -7,10 +8,21 @@ import {
   Target, 
   Hourglass,
   Wallet,
-  BrainCircuit
+  BrainCircuit,
+  ArrowRight
 } from 'lucide-react';
+import { INITIAL_ARTICLES } from '../constants';
+import { Category } from '../types';
+import { ArticleCard } from '../components/ArticleCard';
 
 export const InvestmentGuide: React.FC = () => {
+  // Automatically fetch articles related to this guide's category
+  const relatedArticles = useMemo(() => {
+    return INITIAL_ARTICLES
+      .filter(article => article.category === Category.INVESTMENT)
+      .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
+  }, []);
+
   return (
     <main className="flex-grow bg-white text-slate-900 font-sans leading-relaxed selection:bg-red-100">
       {/* =====================================================================================
@@ -82,122 +94,32 @@ export const InvestmentGuide: React.FC = () => {
       </section>
 
       {/* =====================================================================================
-          3. CORE CONTENT: MARKET STRUCTURE & SMALL AMOUNT (H2)
+          3. DYNAMIC CONTENT: RELATED ARTICLES (SEO HUB STRUCTURE)
           ===================================================================================== */}
-      <section className="py-20 bg-slate-50 border-y border-slate-200">
-        <div className="container mx-auto px-4 max-w-4xl">
-          <div className="flex items-start gap-4 mb-8">
-            <div className="p-3 bg-blue-50 text-blue-600 rounded-xl mt-1">
-              <BarChart3 size={24} />
-            </div>
+      <section id="latest-articles" className="py-24 bg-white border-t border-slate-200">
+        <div className="container mx-auto px-4 max-w-6xl">
+          <div className="flex items-end justify-between mb-10 border-b border-slate-100 pb-4">
             <div>
-              <h2 className="text-2xl md:text-3xl font-extrabold text-slate-900 mb-4">
-                2. 주식의 기본 구조와 소액 투자의 힘
-              </h2>
-              <div className="prose prose-slate max-w-none text-slate-600 leading-loose">
-                <p>
-                  주식 시장은 자본이 필요한 기업과 자산을 불리려는 투자자가 만나는 곳입니다. 
-                  기업은 주식을 발행해 자금을 조달하고, 투자자는 주식을 매수하여 <strong>주주(Shareholder)</strong>가 됩니다. 
-                  주주는 기업이 벌어들인 이익을 배당금으로 받거나, 주가 상승을 통해 자산 증식을 누릴 권리가 있습니다.
-                </p>
-                
-                <h3 className="text-xl font-bold text-slate-900 mt-8 mb-4">
-                  "돈이 없어서 못 한다"는 핑계입니다
-                </h3>
-                <p>
-                  많은 분들이 "목돈을 모아서 투자하겠다"고 말합니다. 하지만 투자의 핵심 성공 요인은 '금액'이 아니라 <strong>'시간'</strong>입니다. 
-                  매달 커피값, 회식비를 아껴 10만 원씩이라도 꾸준히 우량한 자산(주식)으로 바꾸는 과정이 필요합니다. 
-                  소액이라도 일찍 시작하면 <strong>복리(Compound Interest)</strong> 효과가 적용되어, 시간이 지날수록 자산이 눈덩이처럼 불어나는 경험을 하게 됩니다.
-                </p>
-              </div>
+              <h2 className="text-3xl font-bold text-slate-900">투자/주식 최신 분석</h2>
+              <p className="text-slate-500 mt-2">시장 흐름을 읽고 자산을 불리는 구체적인 전략</p>
             </div>
-          </div>
-        </div>
-      </section>
-
-      {/* =====================================================================================
-          4. CORE CONTENT: RISK MANAGEMENT (H2)
-          ===================================================================================== */}
-      <section className="py-20 bg-white">
-        <div className="container mx-auto px-4 max-w-4xl">
-          <div className="flex items-start gap-4 mb-8">
-            <div className="p-3 bg-amber-50 text-amber-600 rounded-xl mt-1">
-              <AlertOctagon size={24} />
-            </div>
-            <div>
-              <h2 className="text-2xl md:text-3xl font-extrabold text-slate-900 mb-4">
-                3. 위험을 통제하는 현실적인 방법
-              </h2>
-              <div className="prose prose-slate max-w-none text-slate-600 leading-loose">
-                <p>
-                  주식 시장에서 '위험(Risk)'은 피할 수 없는 동반자입니다. 주가는 매일 오르고 내립니다. 
-                  하지만 이러한 <strong>변동성</strong> 자체는 위험이 아닙니다. 진짜 위험은 감당할 수 없는 자금으로 시장에 들어오는 것입니다.
-                </p>
-
-                <div className="bg-red-50 p-6 rounded-2xl border border-red-100 my-6">
-                  <h3 className="text-lg font-bold text-red-800 mb-3 flex items-center gap-2">
-                    <Shield size={20} />
-                    가장 위험한 투자: 빚투(빚내서 투자)
-                  </h3>
-                  <p className="text-sm text-red-900/80 mb-4 leading-relaxed">
-                    투자에서 가장 경계해야 할 것은 <strong>레버리지(대출)의 오용</strong>입니다. 
-                    대출이나 신용카드 현금서비스를 통해 마련한 자금은 '시간의 압박'을 받습니다. 
-                    시장이 일시적으로 하락할 때 버티지 못하고 손절매를 강요당하게 되며, 이는 회복 불가능한 손실로 이어집니다. 
-                    <strong>투자는 반드시 '여유 자금'으로 해야 합니다.</strong>
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* =====================================================================================
-          5. CONCLUSION & MINDSET (H2)
-          ===================================================================================== */}
-      <section className="py-20 bg-slate-900 text-slate-300">
-        <div className="container mx-auto px-4 max-w-4xl">
-          <div className="text-center mb-10">
-            <h2 className="text-2xl md:text-3xl font-bold text-white mb-4">
-              성공적인 투자를 위한 기본 태도
-            </h2>
-            <p className="text-slate-400">시장을 예측하려 하지 말고, 좋은 자산을 모아가는 태도가 필요합니다.</p>
-          </div>
-
-          <div className="grid md:grid-cols-2 gap-6">
-            <div className="bg-slate-800 p-6 rounded-2xl border border-slate-700">
-              <div className="text-red-400 mb-4">
-                <Hourglass size={32} />
-              </div>
-              <h4 className="text-lg font-bold text-white mb-2">장기적 관점을 유지하라</h4>
-              <p className="text-sm leading-relaxed text-slate-400">
-                나무를 심고 다음 날 바로 열매를 기대하는 사람은 없습니다. 
-                기업이 성장하고 이익을 낼 때까지 충분한 시간을 주어야 합니다. 
-                단기적인 시세 등락에 일희일비하지 않는 인내심이 최고의 투자 무기입니다.
-              </p>
-            </div>
-            
-            <div className="bg-slate-800 p-6 rounded-2xl border border-slate-700">
-              <div className="text-red-400 mb-4">
-                <Wallet size={32} />
-              </div>
-              <h4 className="text-lg font-bold text-white mb-2">잃지 않는 투자를 하라</h4>
-              <p className="text-sm leading-relaxed text-slate-400">
-                워런 버핏의 투자 제1원칙은 "절대 돈을 잃지 말라"입니다. 
-                대박을 쫓아 검증되지 않은 정보에 흔들리기보다, 
-                우량한 자산을 꾸준히 모아가는 '저축하듯 투자하는 습관'이 부를 만듭니다.
-              </p>
-            </div>
+            <Link to="/investment" className="hidden md:flex items-center text-sm font-bold text-blue-600 hover:underline">
+              전체 보기 <ArrowRight size={16} className="ml-1" />
+            </Link>
           </div>
           
-          <div className="mt-12 text-center text-xs text-slate-500">
-            <p className="flex items-center justify-center gap-2 mb-2">
-              <Target size={14} /> 
-              <strong>정보 제공 목적 안내</strong>
-            </p>
-            본 페이지는 투자 판단을 돕기 위한 일반적인 정보를 제공하며, 특정 종목의 추천이나 수익을 보장하지 않습니다.<br/>
-            모든 투자의 책임은 투자자 본인에게 있으며, 원금 손실의 위험이 있음을 인지하시기 바랍니다.
-          </div>
+          {/* Dynamic Article Grid */}
+          {relatedArticles.length > 0 ? (
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {relatedArticles.map(article => (
+                <ArticleCard key={article.id} article={article} />
+              ))}
+            </div>
+          ) : (
+            <div className="text-center py-12 bg-slate-50 rounded-xl">
+              <p className="text-slate-500">관련된 최신 글이 준비 중입니다.</p>
+            </div>
+          )}
         </div>
       </section>
     </main>

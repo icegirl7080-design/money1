@@ -1,20 +1,34 @@
-import React from 'react';
+import React, { useMemo } from 'react';
 import { Link } from 'react-router-dom';
 import { 
   Wallet, 
   TrendingUp, 
   PieChart, 
   ArrowRightLeft, 
-  Landmark, 
-  Target,
-  ShieldCheck,
   Lightbulb,
   ArrowRight
 } from 'lucide-react';
+import { INITIAL_ARTICLES } from '../constants';
+import { Category } from '../types';
+import { ArticleCard } from '../components/ArticleCard';
+import { SEO } from '../components/SEO';
 
 export const FinanceGuide: React.FC = () => {
+  // Automatically fetch articles related to this guide's category
+  const relatedArticles = useMemo(() => {
+    return INITIAL_ARTICLES
+      .filter(article => article.category === Category.FINANCE)
+      .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
+  }, []);
+
   return (
     <main className="flex-grow bg-white text-slate-900 font-sans leading-relaxed selection:bg-emerald-100">
+      <SEO 
+        title="금융 기초 가이드 | 사회초년생 돈 관리와 통장 쪼개기"
+        description="금융 지식의 기초부터 실전 통장 쪼개기, 현금 흐름 관리 시스템 구축까지. 부자가 되기 위해 반드시 알아야 할 자산 관리의 핵심 원칙을 정리합니다."
+        keywords={['금융기초', '돈관리', '통장쪼개기', '재테크', '자산관리', '현금흐름', '사회초년생 재테크']}
+      />
+      
       {/* =====================================================================================
           1. HEADER SECTION (H1)
           ===================================================================================== */}
@@ -32,21 +46,21 @@ export const FinanceGuide: React.FC = () => {
           <h1 className="text-3xl md:text-5xl font-black leading-tight mb-6 break-keep">
             금융과 재테크의 본질:<br />
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-teal-400">
-              부를 쌓는 돈 관리의 기초
+              부를 쌓는 돈 관리 시스템 구축
             </span>
           </h1>
 
           <p className="text-lg text-slate-400 leading-relaxed max-w-2xl font-light mb-0 break-keep">
-            돈을 많이 버는 것과 돈을 잘 모으는 것은 다른 영역의 능력입니다. 
-            현대 사회에서 <strong>금융 지식</strong>은 생존을 위한 필수 교양이며, 
-            <strong>재테크</strong>는 자본주의 시스템 안에서 나의 자산을 지키고 불리는 기술입니다.
-            본 페이지는 금융 생활을 처음 시작하는 분들을 위해 돈 관리의 핵심 원칙과 구조를 정리했습니다.
+            돈을 많이 버는 것(High Income)과 부자가 되는 것(High Net Worth)은 다릅니다. 
+            현대 사회에서 <strong>금융 문맹</strong>은 생존을 위협하는 가장 큰 위험 요소입니다.
+            단순히 아끼는 것을 넘어, 자본주의 시스템 안에서 나의 자산을 지키고 불리는 
+            <strong>구조적인 머니 시스템</strong>을 만드는 법을 안내합니다.
           </p>
         </div>
       </section>
 
       {/* =====================================================================================
-          NAVIGATION LINK FOR LIFE HACKS (NEW)
+          Internal Link Strategy: Cross-Link to Life Hacks
           ===================================================================================== */}
       <section className="bg-slate-50 border-b border-slate-200">
         <div className="container mx-auto px-4 py-8">
@@ -56,8 +70,8 @@ export const FinanceGuide: React.FC = () => {
                   <Lightbulb size={24} />
                 </div>
                 <div>
-                  <h3 className="font-bold text-slate-900 text-lg group-hover:text-amber-700 transition-colors">생활 속 금융 꿀팁이 궁금하신가요?</h3>
-                  <p className="text-sm text-slate-500">소비 습관 개선과 절약 노하우를 확인하세요.</p>
+                  <h3 className="font-bold text-slate-900 text-lg group-hover:text-amber-700 transition-colors">소비 통제가 안 되시나요?</h3>
+                  <p className="text-sm text-slate-500">지출을 줄이는 생활 속 금융 꿀팁 확인하기</p>
                 </div>
               </div>
               <ArrowRight className="text-slate-300 group-hover:text-amber-500 group-hover:translate-x-1 transition-all" />
@@ -76,19 +90,19 @@ export const FinanceGuide: React.FC = () => {
             </div>
             <div>
               <h2 className="text-2xl md:text-3xl font-extrabold text-slate-900 mb-4">
-                1. 금융(Finance)과 재테크의 차이
+                1. 금융(Finance) 이해력과 재테크의 차이
               </h2>
               <div className="prose prose-slate max-w-none text-slate-600 leading-loose">
                 <p>
-                  많은 사람들이 금융과 재테크를 혼용해서 사용하지만, 그 결은 조금 다릅니다. 
-                  <strong>금융</strong>은 돈이 융통되는 전체적인 흐름과 시스템을 의미합니다. 
-                  은행, 증권사, 보험사 등이 만든 제도권 안에서 자금이 어떻게 이동하는지를 이해하는 것이 금융 공부의 시작입니다.
+                  많은 사회초년생들이 재테크를 단순히 '수익률 높은 상품 찾기'로 오해합니다. 
+                  하지만 <strong>금융(Finance)</strong>은 돈이 흐르는 전체적인 생태계를 이해하는 것입니다. 
+                  금리가 오르면 왜 주가가 떨어지는지, 환율 변동이 내 자산에 어떤 영향을 미치는지 아는 것이 선행되어야 합니다.
                 </p>
                 <p>
-                  반면 <strong>재테크(재무 테크놀로지)</strong>는 금융 시스템을 활용하여 
-                  개인의 자산을 불리는 구체적인 '기술'입니다. 
-                  금융이 '지도'라면, 재테크는 그 지도 위에서 목적지까지 효율적으로 이동하는 '운전 기술'과 같습니다. 
-                  지도를 볼 줄 알아야 운전을 잘할 수 있듯, 금융의 기본 원리를 이해해야 성공적인 재테크가 가능합니다.
+                  <strong>재테크(Investment Tech)</strong>는 이러한 금융 지식을 바탕으로 실행하는 기술입니다. 
+                  기초 체력(금융 지식) 없이 기술(투자 기법)만 배우려 한다면, 
+                  작은 시장 충격에도 공들여 모은 자산이 무너질 수 있습니다.
+                  머니와이즈는 '운'이 아닌 '지식'에 기반한 자산 증식을 지향합니다.
                 </p>
               </div>
             </div>
@@ -111,27 +125,39 @@ export const FinanceGuide: React.FC = () => {
               </h2>
               <div className="prose prose-slate max-w-none text-slate-600 leading-loose">
                 <p>
-                  돈 관리의 핵심은 복잡한 금융 상품을 아는 것이 아니라, 
-                  <strong>현금 흐름(Cash Flow)</strong>을 통제하는 것입니다. 
-                  건강한 재무 상태는 다음의 4단계 순환 구조가 원활할 때 만들어집니다.
+                  재무 설계의 핵심은 복잡한 상품 가입이 아니라, 
+                  <strong>현금 흐름(Cash Flow)</strong>을 흑자로 유지하는 시스템을 만드는 것입니다.
+                  건강한 재무 상태를 위해 다음 4가지 단계를 점검해보세요.
                 </p>
                 
-                <ul className="space-y-4 mt-6 list-none pl-0">
+                <ul className="space-y-6 mt-6 list-none pl-0">
                   <li className="flex gap-4 items-start">
-                    <span className="font-bold text-slate-900 w-16 shrink-0">1. 소득</span>
-                    <span>재테크의 원천입니다. 근로 소득을 높이는 자기계발이 최고의 초기 재테크입니다.</span>
+                    <span className="font-bold text-emerald-700 w-20 shrink-0 bg-emerald-50 px-2 py-1 rounded text-center text-sm">소득(Income)</span>
+                    <span>
+                      재테크의 엔진입니다. 초기에는 근로 소득을 높여 <strong>시드 머니(Seed Money)</strong>를 빠르게 확보하는 것이 
+                      어떤 투자 상품보다 높은 수익률을 보장합니다.
+                    </span>
                   </li>
                   <li className="flex gap-4 items-start">
-                    <span className="font-bold text-slate-900 w-16 shrink-0">2. 지출</span>
-                    <span>가장 통제하기 어려운 영역입니다. 소득보다 적게 쓰는 것(잉여 자금 확보)이 모든 투자의 시작점입니다.</span>
+                    <span className="font-bold text-red-700 w-20 shrink-0 bg-red-50 px-2 py-1 rounded text-center text-sm">지출(Expense)</span>
+                    <span>
+                      가장 통제하기 어려운 영역입니다. '선저축 후지출' 원칙을 지키고, 
+                      고정비(통신비, 보험료 등)를 줄여 <strong>잉여 현금</strong>을 만드는 것이 투자의 시작점입니다.
+                    </span>
                   </li>
                   <li className="flex gap-4 items-start">
-                    <span className="font-bold text-slate-900 w-16 shrink-0">3. 저축</span>
-                    <span>시드 머니(종잣돈)를 만드는 과정입니다. 투자를 위한 총알을 준비하는 단계로, 안전성이 최우선입니다.</span>
+                    <span className="font-bold text-blue-700 w-20 shrink-0 bg-blue-50 px-2 py-1 rounded text-center text-sm">저축(Saving)</span>
+                    <span>
+                      투자를 위한 총알을 준비하는 단계입니다. 비상금(생활비의 3~6개월 치)을 먼저 확보하여 
+                      예기치 못한 상황에서도 투자를 지속할 수 있는 <strong>방어막</strong>을 구축해야 합니다.
+                    </span>
                   </li>
                   <li className="flex gap-4 items-start">
-                    <span className="font-bold text-slate-900 w-16 shrink-0">4. 투자</span>
-                    <span>모은 돈을 일하게 하는 단계입니다. 주식, 부동산 등을 통해 자산 가치를 증식시키는 과정입니다.</span>
+                    <span className="font-bold text-purple-700 w-20 shrink-0 bg-purple-50 px-2 py-1 rounded text-center text-sm">투자(Invest)</span>
+                    <span>
+                      돈이 나를 위해 일하게 하는 단계입니다. 인플레이션(물가 상승)을 방어하고, 
+                      복리의 마법을 누리기 위해 주식, 채권, 부동산 등 자산군에 <strong>장기 분산 투자</strong>하십시오.
+                    </span>
                   </li>
                 </ul>
               </div>
@@ -141,93 +167,32 @@ export const FinanceGuide: React.FC = () => {
       </section>
 
       {/* =====================================================================================
-          4. CORE CONTENT: STARTING SMALL (H2)
+          4. DYNAMIC CONTENT: RELATED ARTICLES (SEO HUB STRUCTURE)
           ===================================================================================== */}
-      <section className="py-20 bg-white">
-        <div className="container mx-auto px-4 max-w-4xl">
-          <div className="flex items-start gap-4 mb-8">
-            <div className="p-3 bg-amber-50 text-amber-600 rounded-xl mt-1">
-              <TrendingUp size={24} />
-            </div>
+      <section id="latest-articles" className="py-24 bg-white border-t border-slate-200">
+        <div className="container mx-auto px-4 max-w-6xl">
+          <div className="flex items-end justify-between mb-10 border-b border-slate-100 pb-4">
             <div>
-              <h2 className="text-2xl md:text-3xl font-extrabold text-slate-900 mb-4">
-                3. 소액으로 시작하는 부의 설계
-              </h2>
-              <div className="prose prose-slate max-w-none text-slate-600 leading-loose">
-                <p>
-                  "돈이 있어야 돈을 벌지"라는 말은 반은 맞고 반은 틀립니다. 
-                  거대한 자본이 있으면 유리한 것은 사실이지만, <strong>시간</strong>이라는 자본은 누구에게나 공평합니다. 
-                  소액이라도 일찍 시작하면 <strong>복리(Compound Interest)</strong>의 마법을 누릴 수 있습니다.
-                </p>
-
-                <div className="bg-slate-50 p-6 rounded-2xl border border-slate-200 my-6">
-                  <h3 className="text-lg font-bold text-slate-800 mb-3 flex items-center gap-2">
-                    <Lightbulb size={20} className="text-amber-500"/>
-                    관점을 바꾸는 금융 팁
-                  </h3>
-                  <div className="space-y-4">
-                    <p className="text-sm text-slate-600">
-                      <strong>대출의 양면성:</strong> 대출은 무조건 나쁜 것이 아닙니다. 
-                      자산 증식을 위해 감당 가능한 범위 내에서 사용하는 레버리지(지렛대)는 훌륭한 도구가 됩니다. 
-                      단, 소비를 위한 대출은 철저히 경계해야 합니다.
-                    </p>
-                    <p className="text-sm text-slate-600">
-                      <strong>투자의 접근성:</strong> 커피 한 잔 값으로도 글로벌 1등 기업의 주주가 될 수 있는 시대입니다. 
-                      거창한 목돈이 모일 때까지 기다리지 말고, 지금 당장 <strong>소액 투자</strong>를 경험하며 시장 감각을 익히십시오.
-                    </p>
-                  </div>
-                </div>
-              </div>
+              <h2 className="text-3xl font-bold text-slate-900">금융/재테크 최신 칼럼</h2>
+              <p className="text-slate-500 mt-2">전문가가 분석한 돈 관리의 정석과 트렌드</p>
             </div>
-          </div>
-        </div>
-      </section>
-
-      {/* =====================================================================================
-          5. CONCLUSION & PERSPECTIVE (H2)
-          ===================================================================================== */}
-      <section className="py-20 bg-slate-900 text-slate-300">
-        <div className="container mx-auto px-4 max-w-4xl">
-          <div className="text-center mb-10">
-            <h2 className="text-2xl md:text-3xl font-bold text-white mb-4">
-              긴 호흡으로 바라보는 금융 생활
-            </h2>
-            <p className="text-slate-400">재테크는 100미터 달리기가 아니라 마라톤입니다.</p>
-          </div>
-
-          <div className="grid md:grid-cols-2 gap-6">
-            <div className="bg-slate-800 p-6 rounded-2xl border border-slate-700">
-              <div className="text-emerald-400 mb-4">
-                <Target size={32} />
-              </div>
-              <h4 className="text-lg font-bold text-white mb-2">목적 있는 돈 모으기</h4>
-              <p className="text-sm leading-relaxed text-slate-400">
-                막연히 "부자가 되고 싶다"는 목표는 쉽게 지칩니다. 
-                "3년 안에 5천만 원 모으기", "노후 월 현금 흐름 200만 원 만들기"처럼 
-                구체적이고 측정 가능한 목표를 세우는 것이 꾸준함의 비결입니다.
-              </p>
-            </div>
-            
-            <div className="bg-slate-800 p-6 rounded-2xl border border-slate-700">
-              <div className="text-emerald-400 mb-4">
-                <ShieldCheck size={32} />
-              </div>
-              <h4 className="text-lg font-bold text-white mb-2">스스로 지키는 힘</h4>
-              <p className="text-sm leading-relaxed text-slate-400">
-                세상에 공짜 점심은 없으며, 원금 보장과 고수익을 동시에 약속하는 상품은 사기일 확률이 높습니다. 
-                금융 지식을 쌓는 것은 내 소중한 자산을 타인의 말에 휘둘리지 않고 스스로 지키는 방패를 만드는 과정입니다.
-              </p>
-            </div>
+            <Link to="/finance" className="hidden md:flex items-center text-sm font-bold text-blue-600 hover:underline">
+              전체 보기 <ArrowRight size={16} className="ml-1" />
+            </Link>
           </div>
           
-          <div className="mt-12 text-center text-xs text-slate-500">
-            <p className="flex items-center justify-center gap-2 mb-2">
-              <Landmark size={14} /> 
-              <strong>정보 제공 목적 안내</strong>
-            </p>
-            본 페이지는 금융 및 재테크 입문자를 위한 일반적인 가이드를 제공합니다.<br/>
-            구체적인 금융 상품 선택 및 투자 결정은 개인의 상황에 맞춰 신중하게 판단하시기 바랍니다.
-          </div>
+          {/* Dynamic Article Grid */}
+          {relatedArticles.length > 0 ? (
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {relatedArticles.map(article => (
+                <ArticleCard key={article.id} article={article} />
+              ))}
+            </div>
+          ) : (
+            <div className="text-center py-12 bg-slate-50 rounded-xl">
+              <p className="text-slate-500">관련된 최신 글이 준비 중입니다.</p>
+            </div>
+          )}
         </div>
       </section>
     </main>

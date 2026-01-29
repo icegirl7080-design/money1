@@ -9,6 +9,7 @@ export enum Category {
 
 export interface Article {
   id: string;
+  slug: string; // Added for SEO-friendly URLs
   title: string;
   summary: string;
   category: Category;

@@ -2,6 +2,7 @@ import React, { useMemo } from 'react';
 import { useLocation, Link } from 'react-router-dom';
 import { INITIAL_ARTICLES, NAV_ITEMS } from '../constants';
 import { ArticleCard } from '../components/ArticleCard';
+import { SEO } from '../components/SEO';
 
 export const CategoryPage: React.FC = () => {
   const location = useLocation();
@@ -21,6 +22,7 @@ export const CategoryPage: React.FC = () => {
   if (!navItem || !navItem.category) {
     return (
       <div className="container mx-auto px-4 py-20 text-center">
+        <SEO title="카테고리 찾기 실패" description="요청하신 카테고리를 찾을 수 없습니다." />
         <h2 className="text-2xl font-bold text-slate-900 mb-4">카테고리를 찾을 수 없습니다.</h2>
         <Link to="/" className="text-blue-600 hover:underline">홈으로 돌아가기</Link>
       </div>
@@ -29,6 +31,12 @@ export const CategoryPage: React.FC = () => {
 
   return (
     <main className="flex-grow bg-slate-50 min-h-screen">
+      <SEO 
+        title={`${navItem.category} | 머니와이즈`}
+        description={`전문가가 엄선한 ${navItem.category} 관련 최신 정보와 실전 꿀팁을 확인하세요. 당신의 금융 생활을 업그레이드할 핵심 가이드입니다.`}
+        keywords={[navItem.category, '금융', '재테크', '꿀팁']}
+      />
+
       <div className="bg-white border-b border-slate-200">
         <div className="container mx-auto px-4 py-16 text-center md:text-left">
           <span className="inline-block px-3 py-1 mb-4 text-xs font-bold tracking-wider text-blue-600 uppercase bg-blue-50 rounded-full">

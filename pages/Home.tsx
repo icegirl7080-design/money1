@@ -2,6 +2,7 @@ import React, { useMemo } from 'react';
 import { Link } from 'react-router-dom';
 import { ArticleCard } from '../components/ArticleCard';
 import { INITIAL_ARTICLES } from '../constants';
+import { SEO } from '../components/SEO';
 import { 
   ArrowRight, 
   ShieldCheck, 
@@ -25,6 +26,11 @@ export const Home: React.FC = () => {
 
   return (
     <main className="flex-grow bg-white text-slate-900 font-sans leading-relaxed selection:bg-blue-100">
+      <SEO 
+        title="머니와이즈 | 금융, 대출, 투자, 복지의 모든 것"
+        description="소액 대출, 신용카드 현금화 팁, 주식 투자 전략, 정부 복지 정책까지. 당신의 금융 생활을 업그레이드할 필수 정보를 제공합니다."
+        keywords={['소액', '대출', '신용카드', '현금화', '재테크', '주식', '복지']}
+      />
       
       {/* =====================================================================================
           1. HEADER SECTION (H1)
@@ -62,7 +68,7 @@ export const Home: React.FC = () => {
               to="/blog" 
               className="w-full sm:w-auto px-8 py-4 bg-slate-800 hover:bg-slate-700 text-slate-300 font-medium rounded-xl border border-slate-700 transition-all flex items-center justify-center gap-2"
             >
-              <span>전체 칼럼 보기</span>
+              <span>금융 칼럼 전체 보기</span>
             </Link>
           </div>
         </div>
@@ -261,7 +267,7 @@ export const Home: React.FC = () => {
               <p className="text-slate-500 mt-2">금융 에디터가 작성한 심층 분석 칼럼을 확인하세요.</p>
             </div>
             <Link to="/blog" className="hidden md:flex items-center text-sm font-bold text-slate-600 hover:text-blue-600 transition-colors">
-              전체 칼럼 보기 <ArrowRight size={16} className="ml-1" />
+              금융 칼럼 전체 보기 <ArrowRight size={16} className="ml-1" />
             </Link>
           </div>
           
