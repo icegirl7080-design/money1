@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { Calendar, Tag, ArrowRight } from 'lucide-react';
 import { Article } from '../types';
 
@@ -12,16 +13,16 @@ export const ArticleCard: React.FC<ArticleCardProps> = ({ article, featured = fa
     return (
       <div className="group relative overflow-hidden rounded-2xl bg-white shadow-xl transition-all hover:shadow-2xl border border-slate-100">
         <div className="grid md:grid-cols-2 h-full">
-          <div className="relative h-64 md:h-full overflow-hidden">
+          <Link to={`/article/${article.id}`} className="relative h-64 md:h-full overflow-hidden block">
             <img 
               src={article.imageUrl} 
               alt={article.title} 
               className="absolute inset-0 h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
             />
-            <div className="absolute top-4 left-4 bg-blue-600 text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wide">
+            <div className="absolute top-4 left-4 bg-blue-600 text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wide z-10">
               {article.category}
             </div>
-          </div>
+          </Link>
           <div className="p-8 flex flex-col justify-center">
             <div className="flex items-center gap-2 text-sm text-slate-500 mb-3">
               <Calendar size={16} />
@@ -29,9 +30,11 @@ export const ArticleCard: React.FC<ArticleCardProps> = ({ article, featured = fa
               <span className="mx-2">•</span>
               <span>{article.author}</span>
             </div>
-            <h2 className="text-2xl md:text-3xl font-bold text-slate-900 mb-4 leading-tight group-hover:text-blue-700 transition-colors">
-              {article.title}
-            </h2>
+            <Link to={`/article/${article.id}`} className="block">
+              <h2 className="text-2xl md:text-3xl font-bold text-slate-900 mb-4 leading-tight group-hover:text-blue-700 transition-colors">
+                {article.title}
+              </h2>
+            </Link>
             <p className="text-slate-600 mb-6 line-clamp-3 leading-relaxed">
               {article.summary}
             </p>
@@ -43,9 +46,9 @@ export const ArticleCard: React.FC<ArticleCardProps> = ({ article, featured = fa
                 </span>
               ))}
             </div>
-            <button className="self-start flex items-center gap-2 text-sm font-bold text-blue-600 hover:text-blue-800 transition-colors">
+            <Link to={`/article/${article.id}`} className="self-start flex items-center gap-2 text-sm font-bold text-blue-600 hover:text-blue-800 transition-colors">
               자세히 보기 <ArrowRight size={16} />
-            </button>
+            </Link>
           </div>
         </div>
       </div>
@@ -54,7 +57,7 @@ export const ArticleCard: React.FC<ArticleCardProps> = ({ article, featured = fa
 
   return (
     <article className="group flex flex-col bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow border border-slate-100 overflow-hidden h-full">
-      <div className="relative h-48 overflow-hidden">
+      <Link to={`/article/${article.id}`} className="relative h-48 overflow-hidden block">
         <img 
           src={article.imageUrl} 
           alt={article.title} 
@@ -63,14 +66,16 @@ export const ArticleCard: React.FC<ArticleCardProps> = ({ article, featured = fa
         <div className="absolute top-3 left-3 bg-emerald-600 text-white text-[10px] font-bold px-2 py-1 rounded-full">
           {article.category}
         </div>
-      </div>
+      </Link>
       <div className="flex flex-col flex-grow p-5">
         <div className="flex items-center gap-2 text-xs text-slate-400 mb-2">
           <span>{article.date}</span>
         </div>
-        <h3 className="text-lg font-bold text-slate-900 mb-2 line-clamp-2 group-hover:text-blue-600 transition-colors">
-          {article.title}
-        </h3>
+        <Link to={`/article/${article.id}`} className="block mb-2">
+          <h3 className="text-lg font-bold text-slate-900 line-clamp-2 group-hover:text-blue-600 transition-colors">
+            {article.title}
+          </h3>
+        </Link>
         <p className="text-sm text-slate-500 line-clamp-2 mb-4 flex-grow">
           {article.summary}
         </p>

@@ -1,20 +1,13 @@
 import { GoogleGenAI } from "@google/genai";
 
-// This service will be used to generate full blog posts and SEO descriptions
-// when the admin functionality is implemented.
-
-const getAiClient = () => {
-  const apiKey = process.env.API_KEY;
-  if (!apiKey) {
-    console.warn("API Key is missing. AI features will be disabled.");
-    return null;
-  }
-  return new GoogleGenAI({ apiKey });
-};
+// This service handles content generation including text and images.
 
 export const generateArticleContent = async (topic: string, keywords: string[]): Promise<string> => {
-  const ai = getAiClient();
-  if (!ai) return "API Key Required to generate content.";
+  const apiKey = process.env.API_KEY;
+  if (!apiKey) return "API Key Required to generate content.";
+  
+  // Create instance per call to ensure fresh key if updated
+  const ai = new GoogleGenAI({ apiKey });
 
   const prompt = `
     다음 주제에 대해 SEO에 최적화된 블로그 글을 작성해주세요.
@@ -37,5 +30,37 @@ export const generateArticleContent = async (topic: string, keywords: string[]):
   } catch (error) {
     console.error("Gemini API Error:", error);
     throw error;
+  }
+};
+
+export const generateMarketingImage = async (prompt: string, type: 'hero' | 'card'): Promise<string | null> => {
+  const apiKey = process.env.API_KEY;
+  if (!apiKey) return null;
+
+  const ai = new GoogleGenAI({ apiKey });
+
+  try {
+    const response = await ai.models.generateContent({
+      model: 'gemini-3-pro-image-preview',
+      contents: {
+        parts: [{ text: prompt }],
+      },
+      config: {
+        imageConfig: {
+          aspectRatio: type === 'hero' ? '16:9' : '3:4',
+          imageSize: '1K',
+        }
+      }
+    });
+
+    for (const part of response.candidates?.[0]?.content?.parts || []) {
+      if (part.inlineData) {
+        return `data:image/png;base64,${part.inlineData.data}`;
+      }
+    }
+    return null;
+  } catch (error) {
+    console.error("Image Gen Error:", error);
+    return null;
   }
 };
