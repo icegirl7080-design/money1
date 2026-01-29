@@ -2,19 +2,18 @@ import React, { useState } from 'react';
 import { 
   BookOpen, 
   Scale, 
-  CreditCard, 
   AlertTriangle, 
   CheckCircle2, 
   Landmark,
   ShieldAlert,
   Wallet,
-  ArrowRight,
   Sparkles,
-  Loader2
+  Loader2,
+  Coins
 } from 'lucide-react';
 import { generateMarketingImage } from '../services/geminiService';
 
-const HERO_PROMPT = "Minimalist and trustworthy 3D illustration of a balanced scale with gold coins and a shield, blue and white theme, representing financial stability and safe lending";
+const HERO_PROMPT = "Minimalist 3D illustration of a balanced scale with gold coins on one side and a document on the other, clean blue and white background, representing financial balance and loan agreement";
 
 export const LoanGuide: React.FC = () => {
   const [heroImage, setHeroImage] = useState<string | null>(null);
@@ -51,7 +50,7 @@ export const LoanGuide: React.FC = () => {
           <>
             <img 
               src={heroImage} 
-              alt="금융 안정성과 대출 가이드 배경" 
+              alt="대출 기본 가이드 배경" 
               className="absolute inset-0 w-full h-full object-cover opacity-20" 
             />
             <div className="absolute inset-0 bg-gradient-to-r from-slate-900 via-slate-900/95 to-slate-900/60"></div>
@@ -61,21 +60,21 @@ export const LoanGuide: React.FC = () => {
         <div className="container mx-auto px-4 relative z-10 max-w-4xl">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-300 text-xs font-bold mb-6 backdrop-blur-md uppercase tracking-wider">
             <BookOpen size={14} />
-            <span>Essential Financial Guide</span>
+            <span>Loan Basics</span>
           </div>
 
           <h1 className="text-3xl md:text-5xl font-black leading-tight mb-6 break-keep">
-            금융 소비자가 꼭 알아야 할<br />
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-emerald-400">
-              대출의 정석과 자금 관리 원칙
+            대출의 기본과 원칙:<br />
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">
+              현명한 금융 소비자를 위한 가이드
             </span>
           </h1>
 
           <p className="text-lg text-slate-400 leading-relaxed max-w-2xl font-light mb-8 break-keep">
-            대출은 빚인 동시에 자산을 증식하거나 위기를 극복하는 금융 도구입니다. 
-            본 페이지는 <strong>소액 대출</strong>의 구조적 특징부터 <strong>신용카드</strong>와의 관계, 
-            그리고 현명한 현금 흐름 관리를 위한 필수 지식을 제공합니다. 
-            금융 초보자라면 반드시 숙지해야 할 대출의 A to Z를 정리했습니다.
+            대출을 고민할 때 가장 많이 하는 오해는 "빚은 무조건 나쁜 것"이라는 생각입니다. 
+            하지만 자본주의 사회에서 대출은 자산 증식을 위한 레버리지이자, 삶의 유동성을 공급하는 핵심 도구입니다. 
+            중요한 것은 대출 그 자체가 아니라, 그것을 다루는 <strong>사용자의 기준과 전략</strong>입니다.
+            본 페이지는 대출을 처음 고민하는 분들을 위해 금융의 관점에서 대출을 해석하고 올바른 활용법을 제시합니다.
           </p>
 
           <button 
@@ -90,7 +89,7 @@ export const LoanGuide: React.FC = () => {
       </section>
 
       {/* =====================================================================================
-          2. CORE CONTENT: DEFINITION & CONCEPT (H2)
+          2. CORE CONTENT: STRUCTURE & PRINCIPLE (H2)
           ===================================================================================== */}
       <section className="py-20 bg-white">
         <div className="container mx-auto px-4 max-w-4xl">
@@ -100,17 +99,18 @@ export const LoanGuide: React.FC = () => {
             </div>
             <div>
               <h2 className="text-2xl md:text-3xl font-extrabold text-slate-900 mb-4">
-                1. 대출의 본질: 미래의 소득을 현재로 가져오는 기술
+                1. 대출의 구조와 원리 이해하기
               </h2>
               <div className="prose prose-slate max-w-none text-slate-600 leading-loose">
                 <p>
-                  많은 분들이 '대출'이라는 단어에 막연한 거부감을 느낍니다. 하지만 금융 공학적 관점에서 <strong>대출</strong>은 
-                  '미래에 벌어들일 소득을 이자라는 비용을 지불하고 현재로 당겨와 사용하는 행위'로 정의됩니다.
+                  대출(Loan)의 본질은 <strong>'미래의 소득을 현재로 가져와 사용하는 것'</strong>입니다. 
+                  우리는 미래에 벌어들일 돈을 담보로 현재의 목돈을 마련하고, 그 대가로 <strong>이자(Interest)</strong>라는 비용을 지불합니다.
                 </p>
                 <p>
-                  중요한 것은 '비용(금리)'과 '목적'입니다. 자산 증식을 위한 레버리지(Leverage) 활용이나, 
-                  더 큰 비용 발생을 막기 위한 유동성 확보 차원에서의 대출은 합리적인 경제 활동입니다. 
-                  반면, 소비나 유흥을 위한 무계획적인 대출은 미래의 나를 빈곤하게 만드는 지름길입니다.
+                  은행은 자선 단체가 아닙니다. 그들은 당신의 '상환 능력'과 '신용'을 평가하여 돈을 빌려줍니다. 
+                  따라서 대출을 받을 때는 단순히 "얼마나 빌릴 수 있는가?"를 묻기보다, 
+                  "이 자금을 통해 내가 얻는 효용이 이자 비용보다 큰가?"를 먼저 계산해야 합니다. 
+                  이 계산이 서지 않는다면 대출은 자산이 아니라 부채가 되어 삶을 압박할 것입니다.
                 </p>
               </div>
             </div>
@@ -125,34 +125,33 @@ export const LoanGuide: React.FC = () => {
         <div className="container mx-auto px-4 max-w-4xl">
           <div className="flex items-start gap-4 mb-8">
             <div className="p-3 bg-emerald-50 text-emerald-600 rounded-xl mt-1">
-              <Wallet size={24} />
+              <Coins size={24} />
             </div>
             <div>
               <h2 className="text-2xl md:text-3xl font-extrabold text-slate-900 mb-4">
-                2. 소액 대출: 편리함 속에 숨겨진 금리의 역설
+                2. 소액 대출과 일반 대출의 차이
               </h2>
               <div className="prose prose-slate max-w-none text-slate-600 leading-loose">
                 <p>
-                  300만 원 이하의 <strong>소액 대출</strong>은 소득 증빙 없이도 모바일로 간편하게 실행할 수 있어 
-                  사회초년생이나 주부들에게 인기가 높습니다. 흔히 '비상금 대출'이라고 불리며, 
-                  서울보증보험의 보증을 통해 1금융권에서도 취급합니다.
+                  처음 대출을 접하는 분들이 가장 많이 이용하는 것이 300만 원 이하의 <strong>소액 대출</strong>입니다. 
+                  일반 신용대출과 달리, 소액 대출은 재직 증명이나 소득 증빙 없이 통신 등급이나 보증보험증권만으로 실행되는 경우가 많습니다.
                 </p>
-                <div className="bg-white p-6 rounded-2xl border border-slate-200 my-6 shadow-sm">
-                  <h3 className="text-lg font-bold text-slate-800 mb-3">소액 대출 이용 시 주의사항</h3>
-                  <ul className="space-y-3 list-none pl-0">
-                    <li className="flex gap-3 items-start">
-                      <CheckCircle2 size={18} className="text-emerald-500 mt-1 shrink-0" />
-                      <span><strong>금리 확인:</strong> 소액이라도 신용대출이므로 개인의 신용도에 따라 연 5~10% 이상의 금리가 적용될 수 있습니다.</span>
-                    </li>
-                    <li className="flex gap-3 items-start">
-                      <CheckCircle2 size={18} className="text-emerald-500 mt-1 shrink-0" />
-                      <span><strong>상환 방식:</strong> '만기일시상환'과 '마이너스 통장' 방식 중, 사용한 금액에 대해서만 이자를 내는 마이너스 통장 방식이 유동성 관리에 유리합니다.</span>
-                    </li>
-                    <li className="flex gap-3 items-start">
-                      <CheckCircle2 size={18} className="text-emerald-500 mt-1 shrink-0" />
-                      <span><strong>신용 영향:</strong> 1금융권 대출은 신용점수 하락 폭이 적지만, 건수가 늘어나면 '다중 채무'로 분류되어 추후 큰 대출 시 불이익을 받을 수 있습니다.</span>
-                    </li>
-                  </ul>
+                
+                <div className="grid md:grid-cols-2 gap-6 mt-8">
+                  <div className="bg-white p-6 rounded-2xl border border-slate-200">
+                    <strong className="block text-emerald-700 mb-2">접근성과 편의성</strong>
+                    <p className="text-sm">
+                      모바일 앱을 통해 1분 내외로 실행될 만큼 빠르고 간편합니다. 
+                      급한 현금 흐름을 막는 비상금 용도로 적합합니다.
+                    </p>
+                  </div>
+                  <div className="bg-white p-6 rounded-2xl border border-slate-200">
+                    <strong className="block text-emerald-700 mb-2">금리와 한도의 한계</strong>
+                    <p className="text-sm">
+                      편리한 만큼 일반 직장인 신용대출에 비해 금리가 다소 높을 수 있습니다. 
+                      또한 한도가 낮아 주거 비용 등 큰 자금을 해결하기에는 부족합니다.
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
@@ -161,54 +160,35 @@ export const LoanGuide: React.FC = () => {
       </section>
 
       {/* =====================================================================================
-          4. CORE CONTENT: CREDIT CARD & CASH OUT (H2)
+          4. CORE CONTENT: CREDIT SCORE & CAUTION (H2)
           ===================================================================================== */}
       <section className="py-20 bg-white">
         <div className="container mx-auto px-4 max-w-4xl">
           <div className="flex items-start gap-4 mb-8">
             <div className="p-3 bg-amber-50 text-amber-600 rounded-xl mt-1">
-              <CreditCard size={24} />
+              <Scale size={24} />
             </div>
             <div>
               <h2 className="text-2xl md:text-3xl font-extrabold text-slate-900 mb-4">
-                3. 신용카드와 현금 흐름의 관계
+                3. 신용도: 보이지 않는 자산
               </h2>
               <div className="prose prose-slate max-w-none text-slate-600 leading-loose">
                 <p>
-                  <strong>신용카드</strong> 사용은 엄밀히 말해 카드사로부터 한 달간 돈을 빌리는 '단기 무이자 대출'입니다. 
-                  따라서 신용카드는 현금 흐름을 유연하게 만드는 도구이지만, 잘못 사용하면 빚의 굴레가 됩니다.
+                  대출 한도와 금리를 결정하는 핵심은 <strong>신용점수</strong>입니다. 
+                  금융권에서 신용은 곧 '돈'입니다. 평소 신용카드를 연체 없이 사용하고, 
+                  소액이라도 대출을 성실히 상환한 이력은 신용점수를 올리는 긍정적인 요인이 됩니다.
                 </p>
-                
-                <h3 className="text-xl font-bold text-slate-900 mt-8 mb-4">현금서비스 vs 포인트 현금화</h3>
+
+                <h3 className="text-xl font-bold text-slate-900 mt-8 mb-4 flex items-center gap-2">
+                  <AlertTriangle size={20} className="text-amber-500" />
+                  주의: 위험한 현금 흐름
+                </h3>
                 <p>
-                  급전이 필요할 때 가장 주의해야 할 단어가 '현금화'입니다. 
-                  여기에는 <strong>두 가지 상반된 의미</strong>가 혼재되어 있습니다.
+                  자금 융통이 어렵다고 해서 정상적인 대출이 아닌 방식에 눈을 돌려서는 안 됩니다. 
+                  신용카드 현금화(깡), 내구제 대출, 작업 대출 등은 당장의 현금을 줄지 몰라도, 
+                  결국 <strong>금융 질서 문란자</strong>로 등록되어 제도권 금융 이용이 영구히 막히는 치명적인 결과를 초래합니다. 
+                  대출은 반드시 허가받은 1·2금융권을 통해서만 진행해야 합니다.
                 </p>
-
-                <div className="grid md:grid-cols-2 gap-6 mt-6">
-                  <div className="bg-red-50 p-6 rounded-2xl border border-red-100">
-                    <div className="flex items-center gap-2 text-red-700 font-bold mb-3">
-                      <ShieldAlert size={20} />
-                      위험: 카드 현금 서비스
-                    </div>
-                    <p className="text-sm text-red-900/70">
-                      카드사에서 제공하는 단기 카드대출입니다. 
-                      이용 즉시 신용점수가 급격히 하락하며, 이자율이 매우 높습니다. 
-                      대출 한도 산정 시 부채로 잡혀 불리하게 작용합니다.
-                    </p>
-                  </div>
-
-                  <div className="bg-blue-50 p-6 rounded-2xl border border-blue-100">
-                    <div className="flex items-center gap-2 text-blue-700 font-bold mb-3">
-                      <Scale size={20} />
-                      권장: 포인트 현금화
-                    </div>
-                    <p className="text-sm text-blue-900/70">
-                      카드 사용으로 적립된 포인트를 <strong>현금화</strong>하여 계좌로 받는 것입니다. 
-                      이는 소비자의 정당한 자산이며, 여신금융협회를 통해 안전하게 입금받을 수 있습니다.
-                    </p>
-                  </div>
-                </div>
               </div>
             </div>
           </div>
@@ -216,59 +196,39 @@ export const LoanGuide: React.FC = () => {
       </section>
 
       {/* =====================================================================================
-          5. CONCLUSION & ADVICE (H2)
+          5. CONCLUSION & CRITERIA (H2)
           ===================================================================================== */}
       <section className="py-20 bg-slate-900 text-slate-300">
         <div className="container mx-auto px-4 max-w-4xl">
           <div className="text-center mb-10">
             <h2 className="text-2xl md:text-3xl font-bold text-white mb-4">
-              건강한 금융 생활을 위한 조언
+              대출 실행 전 3가지 질문
             </h2>
-            <p className="text-slate-400">대출을 실행하기 전, 스스로에게 세 가지 질문을 던져보세요.</p>
+            <p className="text-slate-400">자신만의 확고한 기준이 리스크를 통제합니다.</p>
           </div>
 
-          <div className="grid gap-6">
-            <div className="bg-slate-800 p-6 rounded-2xl border border-slate-700 flex gap-4">
-              <div className="bg-blue-600 text-white w-8 h-8 rounded-full flex items-center justify-center font-bold shrink-0">1</div>
-              <div>
-                <h4 className="text-lg font-bold text-white mb-2">상환 계획이 명확한가?</h4>
-                <p className="text-sm leading-relaxed">
-                  막연히 '월급 받으면 갚아야지'라는 생각은 위험합니다. 
-                  매달 나가는 고정 지출을 제외하고, 실제로 상환 가능한 여유 자금이 얼마인지 계산기를 두드려봐야 합니다.
-                </p>
-              </div>
+          <div className="space-y-4">
+            <div className="bg-slate-800 p-5 rounded-xl border border-slate-700 flex items-center gap-4">
+              <CheckCircle2 className="text-blue-500 shrink-0" />
+              <p className="text-slate-300"><strong>목적의 명확성:</strong> 소비(사라지는 돈)를 위한 대출인가, 투자(불어나는 돈)를 위한 대출인가?</p>
             </div>
-            
-            <div className="bg-slate-800 p-6 rounded-2xl border border-slate-700 flex gap-4">
-              <div className="bg-blue-600 text-white w-8 h-8 rounded-full flex items-center justify-center font-bold shrink-0">2</div>
-              <div>
-                <h4 className="text-lg font-bold text-white mb-2">1금융권부터 알아보았는가?</h4>
-                <p className="text-sm leading-relaxed">
-                  귀찮다는 이유로, 혹은 잘 모른다는 이유로 2금융권이나 대부업체를 먼저 찾지 마세요. 
-                  최근에는 모바일 앱으로 1금융권 대출 가능 여부를 1분 안에 조회할 수 있습니다.
-                </p>
-              </div>
+            <div className="bg-slate-800 p-5 rounded-xl border border-slate-700 flex items-center gap-4">
+              <CheckCircle2 className="text-blue-500 shrink-0" />
+              <p className="text-slate-300"><strong>상환의 확실성:</strong> 나의 월 고정 소득에서 원리금을 감당할 수 있는가?</p>
             </div>
-
-            <div className="bg-slate-800 p-6 rounded-2xl border border-slate-700 flex gap-4">
-              <div className="bg-blue-600 text-white w-8 h-8 rounded-full flex items-center justify-center font-bold shrink-0">3</div>
-              <div>
-                <h4 className="text-lg font-bold text-white mb-2">대출의 목적이 소비인가 투자인가?</h4>
-                <p className="text-sm leading-relaxed">
-                  사라지는 가치(명품, 여행, 유흥)를 위해 빚을 내는 것은 피해야 합니다. 
-                  자산 가치가 상승하거나, 생산적인 활동을 위한 대출일 때만 레버리지 효과를 누릴 수 있습니다.
-                </p>
-              </div>
+            <div className="bg-slate-800 p-5 rounded-xl border border-slate-700 flex items-center gap-4">
+              <CheckCircle2 className="text-blue-500 shrink-0" />
+              <p className="text-slate-300"><strong>대안의 부재:</strong> 보유한 현금 자산이나 다른 저금리 정책 자금을 먼저 확인했는가?</p>
             </div>
           </div>
           
           <div className="mt-12 text-center text-xs text-slate-500">
             <p className="flex items-center justify-center gap-2 mb-2">
-              <AlertTriangle size={14} /> 
-              <strong>법적 고지</strong>
+              <ShieldAlert size={14} /> 
+              <strong>정보 제공 목적 안내</strong>
             </p>
-            본 페이지는 일반적인 금융 정보를 제공할 뿐, 대출 상품을 중개하거나 권유하지 않습니다.<br/>
-            과도한 빚은 당신에게 큰 불행을 안겨줄 수 있으며, 대출 시 신용등급 또는 개인신용평점이 하락할 수 있습니다.
+            본 페이지는 금융 소비자의 합리적인 판단을 돕기 위한 정보성 콘텐츠입니다.<br/>
+            특정 금융 상품을 권유하지 않으며, 과도한 빚은 개인의 삶에 큰 고통을 줄 수 있습니다.
           </div>
         </div>
       </section>
