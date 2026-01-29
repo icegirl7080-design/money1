@@ -18,6 +18,140 @@ export const NAV_ITEMS: NavItem[] = [
 
 export const INITIAL_ARTICLES: Article[] = [
   {
+    id: '13',
+    slug: 'google-info-fee-cash-truth',
+    category: Category.FINANCE,
+    title: '구글정보이용료현금화의 실체: 수수료 40%의 진실과 계정 정지 리스크',
+    summary: '휴대폰 소액결제 한도가 막혔을 때 찾는 마지막 수단, 정보이용료(콘텐츠이용료). 왜 수수료가 비정상적으로 높은지, 그리고 구글 계정 영구 정지라는 치명적 위험을 피하는 방법은 무엇인지 분석합니다.',
+    imageUrl: 'https://picsum.photos/seed/google_pay/800/600',
+    date: '2023-11-30',
+    author: '금융 에디터',
+    tags: ['구글정보이용료', '콘텐츠이용료', '정보이용료현금화', '구글깡', '리니지m', '소액결제'],
+    content: `
+      <p class="mb-6 text-lg leading-relaxed">
+        신용카드 한도가 차고, 통신사 소액결제 정책마저 '차단'이나 '한도 초과'로 막혔을 때, 급전이 필요한 사람들이 마지막으로 문을 두드리는 곳이 있습니다. 바로 <strong>구글정보이용료현금화</strong>(일명 '콘텐츠이용료' 현금화) 시장입니다.
+      </p>
+      <p class="mb-6 text-lg leading-relaxed">
+        이 방식은 통신사의 일반 소액결제 한도와는 별도로 부여되는 '구글 플레이스토어 결제 한도'를 이용하기 때문에, 금융 사각지대에서 널리 이용되고 있습니다. 하지만 접근성이 좋은 만큼, 그 대가는 혹독합니다. 평균 40~50%에 달하는 살인적인 수수료와 구글 계정 영구 정지라는 리스크가 도사리고 있기 때문입니다. 본 글에서는 정보이용료 시장의 기형적인 구조와 금융 소비자가 반드시 인지해야 할 위험성을 파헤칩니다.
+      </p>
+
+      <div class="my-8 rounded-2xl overflow-hidden shadow-lg border border-slate-100">
+        <div class="bg-slate-200 aspect-video flex items-center justify-center relative">
+           <span class="absolute top-2 left-2 bg-slate-800 text-white text-xs px-2 py-1 rounded">IMAGE</span>
+           <div class="text-center p-6">
+             <p class="font-bold text-slate-700 mb-2">이미지 설명: 어두운 방 안, 스마트폰 화면에서 구글 플레이 결제 오류 또는 '한도 부족' 알림을 보며 고민에 빠진 사람의 손 클로즈업.</p>
+             <p class="text-xs text-slate-500">키워드: smartphone payment error, stressed user, google play screen, financial trouble</p>
+             <p class="text-xs text-blue-600 mt-2">이유: 유동성이 막혀 절박한 심정으로 정보이용료 현금화를 고민하는 독자의 상황에 공감하고 문제의식을 환기하기 위함.</p>
+           </div>
+        </div>
+      </div>
+
+      <div class="bg-slate-50 border-l-4 border-slate-900 p-6 mb-10 rounded-r-xl">
+        <strong class="block text-slate-900 text-lg mb-2">💡 이 글의 핵심 포인트</strong>
+        <ul class="list-disc list-inside space-y-1 text-slate-700">
+          <li>소액결제(물품)와 정보이용료(콘텐츠)의 결정적 차이</li>
+          <li>수수료가 40% 이상으로 책정되는 구조적 원인 (구글세 30%)</li>
+          <li>'구글 깡' 시도가 계정 및 통신 정지로 이어지는 과정</li>
+          <li>안전한 자금 마련을 위한 현실적 대안</li>
+        </ul>
+      </div>
+
+      <h2 class="text-2xl font-bold text-slate-900 mt-12 mb-4">1. 정보이용료(콘텐츠이용료)란 무엇인가?</h2>
+      <p class="mb-6 leading-relaxed">
+        많은 분들이 '휴대폰 소액결제'와 '정보이용료'를 혼동합니다. 하지만 통신사 고지서에는 이 둘이 명확히 구분되어 청구됩니다.
+      </p>
+      <ul class="list-disc list-inside space-y-4 text-slate-700 mb-8 ml-2">
+        <li><strong>소액결제:</strong> 쇼핑몰 물품 구매, 배달 음식 결제 등 '실물 재화'나 '서비스'를 구매하는 한도입니다. (최대 100만 원)</li>
+        <li><strong>정보이용료(콘텐츠이용료):</strong> 구글 플레이스토어, 원스토어, 애플 앱스토어 내에서 게임 아이템, 유료 앱, 이모티콘 등 '디지털 콘텐츠'를 구매하는 한도입니다. (최대 100만 원 별도 부여)</li>
+      </ul>
+      <p class="mb-6 leading-relaxed">
+        즉, 쇼핑몰 결제가 막혀도 구글 게임 아이템 결제는 가능한 경우가 많아, 이를 현금화의 루트로 삼는 것입니다. 대표적으로 '리니지M 다이아' 같은 환금성 높은 게임 재화를 구매해 되파는 방식이 사용됩니다.
+      </p>
+
+      <div class="my-8 rounded-2xl overflow-hidden shadow-lg border border-slate-100">
+        <div class="bg-slate-200 aspect-video flex items-center justify-center relative">
+           <span class="absolute top-2 left-2 bg-slate-800 text-white text-xs px-2 py-1 rounded">IMAGE</span>
+           <div class="text-center p-6">
+             <p class="font-bold text-slate-700 mb-2">이미지 설명: 좌측에는 '택배 박스(실물 상품)', 우측에는 화려하게 빛나는 '게임 보석 아이템(디지털 재화)'을 배치하여 두 자산의 성격이 다름을 대비.</p>
+             <p class="text-xs text-slate-500">키워드: delivery box vs game gems, physical goods vs digital assets, comparison</p>
+             <p class="text-xs text-blue-600 mt-2">이유: 소액결제와 정보이용료가 결제하는 대상(타겟)이 다르다는 것을 직관적으로 보여주어 개념 혼동을 방지.</p>
+           </div>
+        </div>
+      </div>
+
+      <h2 class="text-2xl font-bold text-slate-900 mt-12 mb-4">2. 왜 수수료가 40%~50%인가? (살인적인 비용 구조)</h2>
+      <p class="mb-6 leading-relaxed">
+        상품권 현금화 수수료가 보통 10~15%인 것에 비해, 정보이용료 현금화는 <strong>최소 40% 이상의 수수료</strong>를 떼어갑니다. 10만 원을 결제하면 내 손에 쥐는 돈은 5~6만 원에 불과합니다. 도대체 왜 이렇게 비싼 걸까요? 여기에는 '구글세(Google Tax)'가 숨어 있습니다.
+      </p>
+      <p class="mb-6 leading-relaxed">
+        구글은 플레이스토어 내 결제 금액의 <strong>30%</strong>를 플랫폼 수수료로 가져갑니다. 
+        즉, 11만 원(VAT 포함)을 결제해서 아이템을 사더라도, 게임사가 가져가는 돈은 약 7만 원 수준입니다. 
+        여기에 매입 업체의 마진과 환전 리스크 비용이 더해지면서, 소비자가 부담해야 할 최종 수수료는 눈덩이처럼 불어나는 것입니다. 이는 금융 상품이 아니라, 자산을 반토막 내는 행위입니다.
+      </p>
+
+      <div class="my-8 rounded-2xl overflow-hidden shadow-lg border border-slate-100">
+        <div class="bg-slate-200 aspect-video flex items-center justify-center relative">
+           <span class="absolute top-2 left-2 bg-slate-800 text-white text-xs px-2 py-1 rounded">IMAGE</span>
+           <div class="text-center p-6">
+             <p class="font-bold text-slate-700 mb-2">이미지 설명: 100만 원이라는 돈이 파이프를 통과하면서 '구글 수수료', '매입 업체 수수료'라는 필터를 거쳐 아주 적은 양의 물(현금)로 떨어지는 인포그래픽.</p>
+             <p class="text-xs text-slate-500">키워드: money pipe leakage, high commission fee structure, shrinking cash, infographic</p>
+             <p class="text-xs text-blue-600 mt-2">이유: 40% 이상의 수수료가 발생하는 구조적 원인을 시각화하여 사용자의 손실 체감도를 높임.</p>
+           </div>
+        </div>
+      </div>
+
+      <h2 class="text-2xl font-bold text-slate-900 mt-12 mb-4">3. 구글 계정 영구 정지와 통신 정지의 공포</h2>
+      <p class="mb-6 leading-relaxed">
+        비싼 수수료보다 더 무서운 것은 <strong>계정 제재</strong>입니다. 구글은 AI 기반의 FDS(부정결제탐지시스템)를 통해 비정상적인 결제 패턴을 실시간으로 감시합니다.
+        평소 게임을 하지 않던 계정에서 갑자기 고액의 아이템이 결제되거나, 결제 직후 아이템이 이동하는 정황이 포착되면 구글은 해당 계정을 즉시 <strong>'결제 차단'</strong>하거나 <strong>'영구 정지'</strong> 시킵니다.
+      </p>
+      <p class="mb-6 leading-relaxed">
+        계정이 정지되면 해당 계정에 연동된 모든 이메일, 사진, 연락처, 드라이브 자료를 잃게 됩니다. 또한, 통신사는 정보이용료 미납 발생 시 일반 통신 요금 미납보다 더 빠르게 발신 정지 및 직권 해지 조치를 취하는 경향이 있습니다. 스마트폰이 정지되면 본인 인증이 불가능해져 현대 사회에서 사실상 고립됩니다.
+      </p>
+
+      <div class="my-8 rounded-2xl overflow-hidden shadow-lg border border-slate-100">
+        <div class="bg-slate-200 aspect-video flex items-center justify-center relative">
+           <span class="absolute top-2 left-2 bg-slate-800 text-white text-xs px-2 py-1 rounded">IMAGE</span>
+           <div class="text-center p-6">
+             <p class="font-bold text-slate-700 mb-2">이미지 설명: 노트북 화면에 붉은색 경고창으로 'Google 계정이 비활성화되었습니다' 또는 '보안 경고' 메시지가 떠 있고, 당황한 사용자의 실루엣.</p>
+             <p class="text-xs text-slate-500">키워드: account ban, google security alert, locked user, computer screen warning</p>
+             <p class="text-xs text-blue-600 mt-2">이유: 단순한 금전적 손실을 넘어, 디지털 자산(계정) 전체를 잃을 수 있다는 경각심을 시각적으로 전달.</p>
+           </div>
+        </div>
+      </div>
+
+      <h2 class="text-2xl font-bold text-slate-900 mt-12 mb-4">4. 올바른 대안: 유동성 위기 탈출법</h2>
+      <p class="mb-6 leading-relaxed">
+        정보이용료 현금화는 '이자율 500% 이상의 초고금리 사채'를 쓰는 것과 같습니다. 이 늪에 빠지기 전에 합법적이고 안전한 대안을 먼저 확인해야 합니다.
+      </p>
+      <ul class="list-disc list-inside space-y-4 text-slate-700 mb-8 ml-2">
+        <li><strong>통신사 비상금 대출:</strong> 통신 3사(SKT, KT, LG U+) 이용자라면 통신 등급을 활용한 1금융권(핀크, 농협 올원 등) 비상금 대출을 이용할 수 있습니다. 수수료 없이 법정 금리 내에서 안전하게 이용 가능합니다.</li>
+        <li><strong>서민금융진흥원 긴급생계비:</strong> 신용점수가 낮아도 국가에서 지원하는 소액생계비대출(최대 100만 원)은 당일 대출이 가능할 수 있습니다.</li>
+        <li><strong>신용회복위원회 상담:</strong> 이미 돌려막기 중이라면, 더 큰 빚을 내기 전에 채무 조정 상담을 받는 것이 유일한 살길입니다.</li>
+      </ul>
+
+      <hr class="border-slate-200 my-10" />
+
+      <div class="my-8 rounded-2xl overflow-hidden shadow-lg border border-slate-100">
+        <div class="bg-slate-200 aspect-video flex items-center justify-center relative">
+           <span class="absolute top-2 left-2 bg-slate-800 text-white text-xs px-2 py-1 rounded">IMAGE</span>
+           <div class="text-center p-6">
+             <p class="font-bold text-slate-700 mb-2">이미지 설명: 갈림길 표지판. 왼쪽은 험난하고 어두운 '불법 현금화' 길, 오른쪽은 밝고 정돈된 '정부 지원/은행' 길. 밝은 쪽을 가리키는 손.</p>
+             <p class="text-xs text-slate-500">키워드: crossroads decision, financial choice, bright future path, helping hand</p>
+             <p class="text-xs text-blue-600 mt-2">이유: 독자에게 마지막으로 올바른 선택을 하도록 유도하고, 긍정적인 해결책이 있음을 암시.</p>
+           </div>
+        </div>
+      </div>
+
+      <h3 class="text-2xl font-bold text-slate-900 mt-8 mb-4">결론: 스마트폰은 지갑이 아닙니다</h3>
+      <p class="mb-4 leading-relaxed">
+        <strong>구글정보이용료현금화</strong>는 당장의 10만 원을 위해 다음 달의 20만 원과 나의 디지털 신원을 담보로 잡히는 위험한 도박입니다.
+        "한 번만 쓰고 갚으면 되겠지"라는 생각은 계정 정지와 통신 불량자로 가는 지름길입니다.
+        부디 비정상적인 방법보다는, 제도권 내의 안전한 금융망을 통해 위기를 현명하게 극복하시길 바랍니다.
+      </p>
+    `
+  },
+  {
     id: '12',
     slug: 'credit-card-cash-liquidation-truth',
     category: Category.FINANCE,
@@ -198,7 +332,7 @@ export const INITIAL_ARTICLES: Article[] = [
           <strong>신용카드 현금서비스의 전략적 활용:</strong> 현금서비스도 신용점수에 좋지 않지만, 소액결제 깡보다는 수수료가 낮고 기록이 투명합니다. 단, 반드시 다음 달에 상환해야 합니다.
         </li>
         <li>
-          <strong>서민금융진흥원 소액생계비대출:</strong> 신용이 매우 낮아 1금융권 이용이 어렵다면, 정부에서 지원하는 소액생계비대출을 알아보십시오. 최대 100만 원까지 당일 지원이 가능할 수 있습니다.
+          <strong>서민금융진흥원 소액생계비대출:</strong> 신용이 매우 낮아 1금융권 이용이 어렵다면, 정부에서 지원하는 소액생계비대출(최대 100만 원)을 알아보십시오.
         </li>
       </ul>
 
