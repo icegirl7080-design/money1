@@ -14,9 +14,10 @@ import {
   Loader2,
   PieChart,
   HelpCircle,
-  CheckCircle2,
   AlertTriangle,
-  BookOpen
+  BookOpen,
+  CheckCircle2,
+  Info
 } from 'lucide-react';
 import { generateMarketingImage } from '../services/geminiService';
 
@@ -61,258 +62,258 @@ export const Home: React.FC = () => {
   };
 
   return (
-    <main className="flex-grow bg-white text-slate-900 font-sans leading-relaxed">
+    <main className="flex-grow bg-white text-slate-900 font-sans leading-relaxed selection:bg-blue-100">
       
       {/* =====================================================================================
-          HERO SECTION: H1 & Main Identity
+          1. HEADER SECTION (H1)
+          페이지의 핵심 주제를 정의하고 사용자에게 신뢰성을 전달하는 도입부
           ===================================================================================== */}
-      <section className="relative min-h-[500px] flex items-center bg-slate-900 overflow-hidden">
-        {heroImage ? (
+      <section className="relative bg-slate-900 text-white pt-24 pb-32 overflow-hidden">
+        {heroImage && (
           <>
             <img 
               src={heroImage} 
-              alt="스마트한 금융 라이프를 위한 데이터 시각화" 
-              className="absolute inset-0 w-full h-full object-cover opacity-30 scale-105 transition-opacity duration-1000" 
+              alt="금융 데이터 시각화 배경" 
+              className="absolute inset-0 w-full h-full object-cover opacity-20 scale-105" 
             />
-            <div className="absolute inset-0 bg-gradient-to-r from-slate-950 via-slate-900/95 to-slate-900/50"></div>
+            <div className="absolute inset-0 bg-gradient-to-b from-slate-900/80 via-slate-900/95 to-slate-900"></div>
           </>
-        ) : (
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,_var(--tw-gradient-stops))] from-blue-900 via-slate-950 to-slate-950"></div>
         )}
+        
+        <div className="container mx-auto px-4 relative z-10 max-w-5xl text-center">
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-slate-800/80 border border-slate-700 text-slate-300 text-sm font-medium mb-8 backdrop-blur-sm">
+            <ShieldCheck size={16} className="text-blue-400" />
+            <span>금융감독원 가이드라인 기반 정보 제공</span>
+          </div>
 
-        <div className="container mx-auto px-4 relative z-10 py-20">
-          <div className="max-w-4xl">
-            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-300 text-sm font-semibold mb-6 backdrop-blur-md">
-              <ShieldCheck size={16} />
-              <span>금융감독원 가이드라인 준수 · 신뢰할 수 있는 정보</span>
-            </div>
-            
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-black text-white leading-[1.3] mb-6 tracking-tight break-keep">
-              금융 정보의 불균형을 해소하고,<br />
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-emerald-400">
-                당신의 소중한 자산을 지키는 가이드
-              </span>
-            </h1>
-            
-            <p className="text-lg md:text-xl text-slate-300 mb-10 max-w-3xl font-light leading-relaxed break-keep opacity-90">
-              우리는 누구나 금융 전문가가 될 수 있다고 믿습니다. 
-              복잡한 약관 속에 숨겨진 <strong>소액 대출</strong>의 안전한 활용법부터, 
-              잠들어 있는 <strong>신용카드 포인트 현금화</strong> 전략, 
-              그리고 미래를 위한 <strong>투자와 복지</strong> 정보까지. 
-              머니와이즈는 당신의 현명한 금융 결정을 위한 나침반이 되겠습니다.
-            </p>
+          <h1 className="text-4xl md:text-6xl font-black leading-tight tracking-tight mb-8 break-keep">
+            금융의 불확실성을 <br className="hidden md:block"/>
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-emerald-400 to-teal-400">
+              확실한 자산 증식의 기회
+            </span>로 전환하십시오.
+          </h1>
 
-            <div className="flex flex-col sm:flex-row gap-4">
-              <Link 
-                to="/finance" 
-                className="inline-flex items-center justify-center px-8 py-4 bg-blue-600 hover:bg-blue-500 text-white font-bold rounded-xl transition-all shadow-lg hover:shadow-blue-500/30"
-              >
-                <BookOpen size={20} className="mr-2" />
-                금융 가이드 읽기
-              </Link>
-              
-              <button 
-                onClick={handleGenerateImages}
-                disabled={isGenerating}
-                className="inline-flex items-center justify-center px-8 py-4 bg-white/5 hover:bg-white/10 text-white font-medium rounded-xl border border-white/10 backdrop-blur-sm transition-all"
-              >
-                {isGenerating ? <Loader2 size={20} className="animate-spin mr-2" /> : <Sparkles size={20} className="mr-2 text-yellow-400" />}
-                {isGenerating ? 'AI 디자인 생성 중...' : 'AI 테마 적용'}
-              </button>
-            </div>
+          <p className="text-lg md:text-xl text-slate-400 leading-relaxed max-w-3xl mx-auto mb-12 font-light break-keep">
+            머니와이즈는 정보의 홍수 속에서 검증된 금융 지식만을 선별하여 제공합니다. 
+            <strong>안전한 소액 대출</strong>의 구조적 이해부터, 
+            잠들어 있는 <strong>신용카드 포인트의 현금화</strong> 프로세스, 
+            그리고 경제적 자유를 위한 <strong>투자와 복지 정책</strong>까지. 
+            당신의 금융 생활을 업그레이드할 실질적인 가이드를 만나보세요.
+          </p>
+
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+            <Link 
+              to="/finance" 
+              className="w-full sm:w-auto px-8 py-4 bg-blue-600 hover:bg-blue-500 text-white font-bold rounded-xl transition-all shadow-[0_0_20px_rgba(37,99,235,0.3)] hover:translate-y-[-2px]"
+            >
+              종합 가이드 읽기
+            </Link>
+            <button 
+              onClick={handleGenerateImages}
+              disabled={isGenerating}
+              className="w-full sm:w-auto px-8 py-4 bg-slate-800 hover:bg-slate-700 text-slate-300 font-medium rounded-xl border border-slate-700 transition-all flex items-center justify-center gap-2"
+            >
+              {isGenerating ? <Loader2 size={20} className="animate-spin" /> : <Sparkles size={20} className="text-yellow-400" />}
+              <span>AI 테마 적용</span>
+            </button>
           </div>
         </div>
       </section>
 
       {/* =====================================================================================
-          MAIN CONTENT BODY: Article Style Structure
+          2. CORE CONTENT: LOAN SAFETY (H2)
+          주제: 소액 대출의 정의, 메커니즘, 안전한 활용법
           ===================================================================================== */}
-      
-      {/* Section 1: Loans (Safe Lending) */}
-      <section className="py-20 bg-white">
-        <div className="container mx-auto px-4 max-w-5xl">
-          <div className="flex flex-col lg:flex-row gap-12 items-start">
-            <div className="lg:w-3/5">
-              <div className="flex items-center gap-2 text-blue-600 font-bold mb-4">
-                <span className="flex items-center justify-center w-8 h-8 rounded-lg bg-blue-100"><ShieldCheck size={18}/></span>
-                <span className="tracking-wide uppercase text-sm">Safe Lending Strategy</span>
-              </div>
-              
-              <h2 className="text-3xl md:text-4xl font-extrabold text-slate-900 mb-6 leading-tight break-keep">
-                급전이 필요할 때,<br/>
-                <span className="text-blue-600">안전한 소액 대출</span>을 구분하는 기준
-              </h2>
-              
-              <div className="prose prose-lg text-slate-600 space-y-6">
-                <p>
-                  갑작스러운 병원비나 경조사비로 현금이 필요할 때, 많은 분들이 '간편함'을 이유로 고금리 대출의 유혹에 빠집니다. 
-                  하지만 <strong>소액 대출</strong>을 선택할 때 가장 먼저 고려해야 할 것은 금리가 아닌 <strong>'신용점수 방어'</strong>입니다.
-                </p>
-                
-                <h3 className="text-xl font-bold text-slate-800 pt-4">1금융권 비상금 대출 우선 조회</h3>
-                <p>
-                  300만 원 이하의 소액은 소득 증빙이 없어도 1금융권(카카오뱅크, 토스뱅크 등)에서 서울보증보험의 보증을 통해 대출이 가능합니다. 
-                  이는 2금융권이나 현금서비스를 이용하는 것보다 신용점수 하락 폭이 훨씬 적습니다. 
-                  대출 신청 전, 반드시 '나의 대출 한도 조회'를 통해 1금융권 가능 여부를 먼저 확인해야 합니다.
-                </p>
-
-                <div className="bg-slate-50 p-6 rounded-2xl border-l-4 border-blue-500 my-6">
-                  <h4 className="text-base font-bold text-slate-900 mb-2 flex items-center gap-2">
-                    <AlertTriangle size={18} className="text-blue-500" /> 주의해야 할 '무직자 대출' 광고
-                  </h4>
-                  <p className="text-sm text-slate-600">
-                    SNS나 문자로 오는 "누구나 100% 승인" 광고는 불법 사금융일 확률이 높습니다. 
-                    법정 최고 금리(연 20%)를 초과하거나 선이자를 요구하는 곳은 절대 이용해선 안 됩니다. 
-                    반드시 금융감독원 '등록대부업체 통합조회'를 통해 정식 등록 업체인지 확인하세요.
-                  </p>
-                </div>
-              </div>
-
-              <div className="mt-8 pt-6 border-t border-slate-100">
-                <Link to="/loan" className="inline-flex items-center font-bold text-blue-700 hover:text-blue-500 transition-colors">
-                  대출 금리 비교 및 안전 가이드 보기 <ArrowRight size={18} className="ml-2" />
-                </Link>
-              </div>
+      <section className="py-24 bg-white">
+        <div className="container mx-auto px-4 max-w-4xl">
+          <div className="flex items-center gap-3 mb-6">
+            <div className="p-3 bg-blue-50 rounded-xl text-blue-600">
+              <ShieldCheck size={28} />
             </div>
+            <span className="text-blue-600 font-bold tracking-wider text-sm uppercase">Safe Lending Guide</span>
+          </div>
 
-            <div className="lg:w-2/5 w-full">
-              <div className="sticky top-24">
-                <div className="aspect-[4/5] rounded-3xl overflow-hidden bg-blue-50 shadow-xl border border-blue-100 relative group">
-                  {sectionImages.loan ? (
-                    <img src={sectionImages.loan} alt="안전한 금융 대출 금고 이미지" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
-                  ) : (
-                    <div className="w-full h-full flex flex-col items-center justify-center p-8 text-center">
-                      <ShieldCheck size={80} className="text-blue-200 mb-6" />
-                      <p className="text-blue-300 font-bold text-lg">AI 이미지를 생성하여<br/>시각적 정보를 확인하세요</p>
-                    </div>
-                  )}
-                </div>
-              </div>
+          <h2 className="text-3xl md:text-4xl font-extrabold text-slate-900 mb-8 leading-snug break-keep">
+            긴급 자금 마련의 정석: <br/>
+            <span className="text-blue-600">소액 비상금 대출</span>의 구조와 활용
+          </h2>
+
+          <div className="prose prose-lg text-slate-600 max-w-none">
+            <p>
+              살다 보면 예기치 못한 순간에 현금 유동성이 필요한 상황이 발생합니다. 
+              이때 많은 분들이 단순히 '빠르다'는 이유로 고금리 대출이나 현금서비스를 이용하곤 합니다. 
+              하지만 금융 지식이 있다면, 신용점수를 지키면서도 안전하게 자금을 융통할 수 있습니다.
+            </p>
+
+            <h3 className="text-xl font-bold text-slate-900 mt-10 mb-4">1. 비상금 대출의 작동 원리</h3>
+            <p>
+              일반적으로 300만 원 이하의 <strong>소액 대출</strong>은 재직 증명이나 소득 증빙 없이도 실행이 가능합니다. 
+              이것이 가능한 이유는 <strong>서울보증보험</strong>이 개인의 통신 등급(Telco Score)이나 금융 거래 이력을 바탕으로 
+              은행에 보증서를 발급해주기 때문입니다. 즉, 은행은 개인의 신용이 아닌 보증보험의 보증서를 믿고 돈을 빌려주는 구조입니다.
+            </p>
+
+            <h3 className="text-xl font-bold text-slate-900 mt-10 mb-4">2. 왜 1금융권을 고집해야 하는가?</h3>
+            <p>
+              대출을 실행하면 신용점수 하락은 필연적입니다. 그러나 <strong>1금융권(시중은행, 인터넷전문은행)</strong> 대출은 
+              2금융권(저축은행, 캐피탈)이나 대부업체 대출에 비해 신용점수 하락 폭이 현저히 적습니다. 
+              또한, 대출 이력이 '건전한 금융 거래'로 인식되어 성실 상환 시 오히려 신용점수 가산 요인이 될 수 있습니다.
+            </p>
+
+            <div className="my-10 p-6 bg-slate-50 border border-slate-200 rounded-2xl">
+              <h4 className="text-base font-bold text-slate-900 mb-3 flex items-center gap-2">
+                <CheckCircle2 size={20} className="text-blue-600" />
+                대출 신청 전 체크리스트
+              </h4>
+              <ul className="space-y-3 text-sm">
+                <li className="flex gap-2">
+                  <span className="text-blue-400">•</span>
+                  <span>'마이너스 통장' 방식을 선택하여 사용한 금액에 대해서만 이자를 납부하는 것이 유리합니다.</span>
+                </li>
+                <li className="flex gap-2">
+                  <span className="text-blue-400">•</span>
+                  <span>금리인하요구권 적용 대상 상품인지 확인하여, 추후 신용 개선 시 금리 인하를 요청하십시오.</span>
+                </li>
+                <li className="flex gap-2">
+                  <span className="text-blue-400">•</span>
+                  <span>법정 최고 금리(연 20%)를 초과하거나 선이자를 요구하는 곳은 불법 사금융이므로 절대 피해야 합니다.</span>
+                </li>
+              </ul>
             </div>
+          </div>
+
+          <div className="mt-8 flex justify-end">
+            <Link to="/loan" className="inline-flex items-center text-blue-600 font-bold hover:gap-2 transition-all">
+              안전한 대출 상품 비교하기 <ArrowRight size={20} className="ml-2" />
+            </Link>
           </div>
         </div>
       </section>
 
-      {/* Section 2: Cash Out (Hidden Assets) */}
-      <section className="py-20 bg-slate-50 border-y border-slate-200">
-        <div className="container mx-auto px-4 max-w-5xl">
-          <div className="flex flex-col lg:flex-row-reverse gap-12 items-start">
-            <div className="lg:w-3/5">
-              <div className="flex items-center gap-2 text-amber-600 font-bold mb-4">
-                <span className="flex items-center justify-center w-8 h-8 rounded-lg bg-amber-100"><Coins size={18}/></span>
-                <span className="tracking-wide uppercase text-sm">Asset Liquidation</span>
-              </div>
-
-              <h2 className="text-3xl md:text-4xl font-extrabold text-slate-900 mb-6 leading-tight break-keep">
-                <span className="text-amber-600">신용카드 현금화</span>,<br/>
-                불법과 합법의 경계에서 자산 찾기
-              </h2>
-
-              <div className="prose prose-lg text-slate-600 space-y-6">
-                <p>
-                  '카드깡'이나 불법 수수료를 떼는 현금화는 명백한 불법이며 금융 질서 문란 행위입니다. 
-                  하지만 우리가 주목해야 할 <strong>현금화</strong>는 소비자의 정당한 권리인 
-                  <strong>'포인트 계좌 입금'</strong> 서비스입니다.
-                </p>
-
-                <h3 className="text-xl font-bold text-slate-800 pt-4">여신금융협회 포인트 통합 조회</h3>
-                <p>
-                  매년 소멸되는 카드 포인트만 수천억 원에 달합니다. 
-                  과거에는 카드사별로 포인트를 확인해야 했지만, 이제는 <strong>여신금융협회</strong> 시스템을 통해 
-                  모든 카드사의 포인트를 한 번에 조회하고, 1포인트당 1원으로 환산하여 
-                  본인 명의 계좌로 즉시 입금받을 수 있습니다.
-                </p>
-
-                <h3 className="text-xl font-bold text-slate-800 pt-4">상테크(상품권 재테크)의 활용</h3>
-                <p>
-                  합법적인 테두리 안에서 카드 실적을 채우고 현금 유동성을 확보하는 방법으로 '상테크'가 있습니다. 
-                  상품권을 구매하여 포인트나 마일리지를 적립하고, 이를 다시 현금화하는 과정입니다. 
-                  단, 환급 한도와 수수료율을 정확히 계산해야 손해를 보지 않습니다.
-                </p>
-              </div>
-
-              <div className="mt-8 pt-6 border-t border-slate-200 flex flex-wrap gap-4">
-                <Link to="/life" className="inline-flex items-center px-6 py-3 bg-amber-500 hover:bg-amber-600 text-white font-bold rounded-xl transition-colors shadow-md">
-                  <Coins size={18} className="mr-2" />
-                  포인트 현금화 방법 보기
-                </Link>
-                <Link to="/life" className="inline-flex items-center px-6 py-3 bg-white border border-slate-300 text-slate-700 font-bold rounded-xl hover:bg-slate-50 transition-colors">
-                  상테크 가이드
-                </Link>
-              </div>
+      {/* =====================================================================================
+          3. CORE CONTENT: ASSET LIQUIDATION (H2)
+          주제: 신용카드 포인트 현금화, 합법과 불법의 차이
+          ===================================================================================== */}
+      <section className="py-24 bg-slate-50 border-y border-slate-200">
+        <div className="container mx-auto px-4 max-w-4xl">
+          <div className="flex items-center gap-3 mb-6">
+            <div className="p-3 bg-amber-50 rounded-xl text-amber-600">
+              <Coins size={28} />
             </div>
+            <span className="text-amber-600 font-bold tracking-wider text-sm uppercase">Asset Liquidation</span>
+          </div>
 
-            <div className="lg:w-2/5 w-full">
-              <div className="sticky top-24">
-                 <div className="aspect-[4/5] rounded-3xl overflow-hidden bg-amber-50 shadow-xl border border-amber-100 relative group">
-                  {sectionImages.cash ? (
-                    <img src={sectionImages.cash} alt="카드 포인트 현금화 일러스트" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
-                  ) : (
-                    <div className="w-full h-full flex flex-col items-center justify-center p-8 text-center">
-                      <CreditCard size={80} className="text-amber-200 mb-6" />
-                      <p className="text-amber-300 font-bold text-lg">AI 이미지를 생성하여<br/>관련 이미지를 확인하세요</p>
-                    </div>
-                  )}
+          <h2 className="text-3xl md:text-4xl font-extrabold text-slate-900 mb-8 leading-snug break-keep">
+            잠자는 자산의 재발견: <br/>
+            <span className="text-amber-600">신용카드 현금화</span>와 포인트 유동화 전략
+          </h2>
+
+          <div className="prose prose-lg text-slate-600 max-w-none">
+            <p>
+              '현금화'라는 단어를 들으면 불법적인 '카드깡'을 떠올리기 쉽습니다. 
+              하지만 금융 소비자가 정당하게 행사해야 할 권리로서의 <strong>합법적 현금화</strong>는 
+              자산 관리의 중요한 한 축을 담당합니다. 매년 소멸되는 수천억 원의 카드 포인트를 내 계좌로 옮기는 것부터 시작하십시오.
+            </p>
+
+            <h3 className="text-xl font-bold text-slate-900 mt-10 mb-4">1. 여신금융협회 통합 조회 시스템</h3>
+            <p>
+              과거에는 각 카드사 앱을 일일이 접속해야 했지만, 현재는 <strong>여신금융협회</strong>의 
+              '카드포인트 통합조회' 서비스를 통해 모든 카드사의 잔여 포인트를 한 번에 조회할 수 있습니다. 
+              중요한 점은 이 포인트를 1:1 비율(1포인트 = 1원)로 본인 명의 계좌에 <strong>즉시 입금</strong>할 수 있다는 사실입니다. 
+              이는 카드사의 혜택이 아닌 소비자의 <strong>자산</strong>입니다.
+            </p>
+
+            <h3 className="text-xl font-bold text-slate-900 mt-10 mb-4">2. 상테크(상품권 재테크)의 이해</h3>
+            <p>
+              합법적인 테두리 내에서 카드 실적을 채우고 현금 유동성을 확보하는 방법으로 '상테크'가 있습니다. 
+              온라인 쇼핑몰에서 상품권을 할인된 가격에 구매하고, 이를 포인트로 전환하거나 페이 앱을 통해 환급받는 방식입니다. 
+              단, 환급 한도(월 100만 원~200만 원)와 수수료율(약 8%)을 정확히 계산해야 손해를 보지 않습니다.
+            </p>
+
+            <div className="flex flex-col md:flex-row gap-6 mt-10">
+              <div className="flex-1 bg-white p-6 rounded-2xl shadow-sm border border-amber-100">
+                <div className="text-amber-600 font-bold mb-2 flex items-center gap-2">
+                  <CreditCard size={20} /> 합법적 포인트 현금화
                 </div>
+                <p className="text-sm">적립된 포인트를 계좌로 이체하는 것으로, 100% 합법이며 권장되는 소비자의 권리입니다.</p>
+              </div>
+              <div className="flex-1 bg-white p-6 rounded-2xl shadow-sm border border-red-100">
+                <div className="text-red-600 font-bold mb-2 flex items-center gap-2">
+                  <AlertTriangle size={20} /> 불법 카드깡 주의
+                </div>
+                <p className="text-sm">실제 물품 거래 없이 허위 매출을 일으켜 현금을 융통하는 행위는 여신전문금융업법 위반으로 형사 처벌 대상입니다.</p>
               </div>
             </div>
+          </div>
+
+          <div className="mt-8 flex justify-end">
+            <Link to="/life" className="inline-flex items-center text-amber-600 font-bold hover:gap-2 transition-all">
+              포인트 통합 조회 가이드 보기 <ArrowRight size={20} className="ml-2" />
+            </Link>
           </div>
         </div>
       </section>
 
-      {/* Section 3: Investment & Welfare (Grid Layout) */}
-      <section className="py-20 bg-white">
+      {/* =====================================================================================
+          4. COMPREHENSIVE GUIDE: INVESTMENT & WELFARE (H2/H3)
+          주제: 투자 전략, 복지 정책, 재테크 기초
+          ===================================================================================== */}
+      <section className="py-24 bg-white">
         <div className="container mx-auto px-4 max-w-6xl">
           <div className="text-center mb-16 max-w-3xl mx-auto">
-            <h2 className="text-3xl md:text-4xl font-extrabold text-slate-900 mb-4">
-              미래를 위한 투자와<br/>놓치지 말아야 할 복지
+            <h2 className="text-3xl md:text-4xl font-extrabold text-slate-900 mb-6">
+              자산을 지키고 불리는<br/>
+              스마트한 금융 포트폴리오
             </h2>
-            <p className="text-slate-500 text-lg">
-              자산을 불리는 공격적인 투자 전략과, 정부가 보장하는 든든한 복지 혜택을 동시에 챙기세요.
+            <p className="text-slate-500 text-lg leading-relaxed">
+              공격적인 투자보다는 잃지 않는 투자를, <br/>
+              모르면 못 받는 정부 지원금은 꼼꼼하게 챙기는 것이 재테크의 핵심입니다.
             </p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-8">
-            <div className="p-8 rounded-3xl bg-slate-50 border border-slate-100 hover:shadow-lg transition-all">
+          <div className="grid md:grid-cols-3 gap-8 mb-16">
+            {/* 투자 */}
+            <div className="bg-slate-50 rounded-3xl p-8 border border-slate-100 transition-all hover:shadow-lg">
               <div className="w-12 h-12 bg-white rounded-xl flex items-center justify-center text-red-600 mb-6 shadow-sm">
                 <TrendingUp size={24} />
               </div>
-              <h3 className="text-xl font-bold text-slate-900 mb-4">초보자를 위한 주식 투자</h3>
-              <p className="text-slate-600 mb-6 leading-relaxed">
-                개별 종목 분석이 어렵다면 시장 전체를 사는 <strong>ETF</strong>가 정답입니다. 
-                S&P500, 나스닥100 등 우상향하는 지수에 적립식으로 투자하고, 
-                배당주를 통해 제2의 월급 시스템을 구축하는 방법을 안내합니다.
+              <h3 className="text-xl font-bold text-slate-900 mb-4">ETF & 배당주 투자</h3>
+              <p className="text-slate-600 text-sm leading-relaxed mb-6">
+                개별 주식의 변동성이 두렵다면 시장 지수(S&P500 등)를 추종하는 <strong>ETF 적립식 투자</strong>가 정답입니다. 
+                여기에 분기별로 배당금을 지급하는 우량 배당주를 포트폴리오에 담아 '제2의 월급' 시스템을 구축하십시오.
               </p>
-              <Link to="/investment" className="text-sm font-bold text-red-600 hover:text-red-700 flex items-center">
-                투자 포트폴리오 보기 <ChevronRight size={16} />
+              <Link to="/investment" className="text-sm font-bold text-red-600 flex items-center hover:gap-2 transition-all">
+                포트폴리오 예시 보기 <ChevronRight size={16} />
               </Link>
             </div>
 
-            <div className="p-8 rounded-3xl bg-slate-50 border border-slate-100 hover:shadow-lg transition-all">
+            {/* 복지 */}
+            <div className="bg-slate-50 rounded-3xl p-8 border border-slate-100 transition-all hover:shadow-lg">
               <div className="w-12 h-12 bg-white rounded-xl flex items-center justify-center text-purple-600 mb-6 shadow-sm">
                 <Landmark size={24} />
               </div>
               <h3 className="text-xl font-bold text-slate-900 mb-4">2024 필수 복지 정책</h3>
-              <p className="text-slate-600 mb-6 leading-relaxed">
-                <strong>청년도약계좌</strong>, 부모급여, 근로장려금 등 신청하지 않으면 받을 수 없는 정부 지원금이 많습니다. 
-                나이, 소득, 가구원 수에 따라 내가 받을 수 있는 숨은 지원금을 찾아드립니다.
+              <p className="text-slate-600 text-sm leading-relaxed mb-6">
+                <strong>청년도약계좌</strong>, <strong>부모급여</strong>, <strong>근로장려금</strong> 등 
+                정부가 지원하는 금융 혜택은 신청 기간을 놓치면 받을 수 없습니다. 
+                소득 요건과 가구원 수에 따라 나에게 해당되는 정책을 미리 파악하고 준비해야 합니다.
               </p>
-              <Link to="/welfare" className="text-sm font-bold text-purple-600 hover:text-purple-700 flex items-center">
+              <Link to="/welfare" className="text-sm font-bold text-purple-600 flex items-center hover:gap-2 transition-all">
                 지원금 리스트 확인 <ChevronRight size={16} />
               </Link>
             </div>
 
-            <div className="p-8 rounded-3xl bg-slate-50 border border-slate-100 hover:shadow-lg transition-all">
+            {/* 재테크 */}
+            <div className="bg-slate-50 rounded-3xl p-8 border border-slate-100 transition-all hover:shadow-lg">
               <div className="w-12 h-12 bg-white rounded-xl flex items-center justify-center text-emerald-600 mb-6 shadow-sm">
                 <PieChart size={24} />
               </div>
-              <h3 className="text-xl font-bold text-slate-900 mb-4">월급 관리와 통장 쪼개기</h3>
-              <p className="text-slate-600 mb-6 leading-relaxed">
-                재테크의 시작은 '지출 통제'입니다. 급여 통장, 생활비 통장, 비상금 통장, 투자 통장으로 
-                자금의 흐름을 자동화하는 <strong>통장 쪼개기</strong> 시스템으로 돈이 모이는 구조를 만드세요.
+              <h3 className="text-xl font-bold text-slate-900 mb-4">통장 쪼개기 시스템</h3>
+              <p className="text-slate-600 text-sm leading-relaxed mb-6">
+                재테크의 시작은 지출 통제입니다. 급여가 들어오는 즉시 생활비, 비상금, 투자금 통장으로 
+                자동 이체되는 <strong>시스템</strong>을 만드십시오. 돈이 머물지 않고 흐르도록 설계하는 것이 자산 관리의 첫걸음입니다.
               </p>
-              <Link to="/finance" className="text-sm font-bold text-emerald-600 hover:text-emerald-700 flex items-center">
-                통장 관리법 보기 <ChevronRight size={16} />
+              <Link to="/finance" className="text-sm font-bold text-emerald-600 flex items-center hover:gap-2 transition-all">
+                시스템 구축하기 <ChevronRight size={16} />
               </Link>
             </div>
           </div>
@@ -320,24 +321,26 @@ export const Home: React.FC = () => {
       </section>
 
       {/* =====================================================================================
-          LATEST INSIGHTS
+          5. DYNAMIC CONTENT: LATEST INSIGHTS
           ===================================================================================== */}
-      <section className="py-20 bg-white border-t border-slate-100">
+      <section className="py-24 bg-white border-t border-slate-100">
         <div className="container mx-auto px-4 max-w-6xl">
-          <div className="flex justify-between items-end mb-10">
+          <div className="flex flex-col md:flex-row justify-between items-end mb-10 gap-4">
             <div>
-              <h2 className="text-2xl font-bold text-slate-900">최신 금융 인사이트</h2>
-              <p className="text-slate-500 mt-2">전문가가 분석한 깊이 있는 금융 칼럼</p>
+              <h2 className="text-3xl font-bold text-slate-900">최신 금융 인사이트</h2>
+              <p className="text-slate-500 mt-2">금융 에디터가 작성한 심층 분석 칼럼을 확인하세요.</p>
             </div>
             <Link to="/finance" className="hidden md:flex items-center text-sm font-bold text-slate-600 hover:text-blue-600 transition-colors">
-              전체 게시글 보기 <ArrowRight size={16} className="ml-1" />
+              전체 아티클 보기 <ArrowRight size={16} className="ml-1" />
             </Link>
           </div>
+          
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {recentArticles.map(article => (
               <ArticleCard key={article.id} article={article} />
             ))}
           </div>
+
           <div className="mt-8 md:hidden">
             <Link to="/finance" className="block w-full py-4 text-center border border-slate-200 rounded-xl font-bold text-slate-600 hover:bg-slate-50">
               더 많은 글 보기
@@ -347,65 +350,69 @@ export const Home: React.FC = () => {
       </section>
 
       {/* =====================================================================================
-          FAQ SECTION (SEO Focused)
+          6. FAQ SECTION & DISCLAIMER
+          SEO 타겟팅: 롱테일 키워드 (질문형 검색어) 대응
           ===================================================================================== */}
-      <section className="py-20 bg-slate-50">
+      <section className="py-24 bg-slate-50">
         <div className="container mx-auto px-4 max-w-3xl">
           <div className="text-center mb-12">
             <h2 className="text-2xl font-bold text-slate-900 flex items-center justify-center gap-2">
               <HelpCircle className="text-blue-600" /> 자주 묻는 질문 (FAQ)
             </h2>
-            <p className="text-slate-500 mt-2">금융 초보자들이 가장 많이 검색하는 질문을 모았습니다.</p>
+            <p className="text-slate-500 mt-2">금융 초보자들이 가장 많이 검색하는 질문에 답해드립니다.</p>
           </div>
 
           <div className="space-y-4">
             <details className="group bg-white rounded-2xl p-6 shadow-sm open:shadow-md transition-all cursor-pointer">
               <summary className="flex items-center justify-between font-bold text-lg text-slate-800 list-none select-none">
-                Q. 소액 대출도 신용점수가 떨어지나요?
+                Q. 소액 대출을 받으면 신용점수가 많이 떨어지나요?
                 <span className="text-slate-400 group-open:rotate-180 transition-transform"><ChevronRight /></span>
               </summary>
               <div className="mt-4 text-slate-600 leading-relaxed pl-4 border-l-2 border-blue-500">
                 <p>
-                  대출 실행 시 신용점수 변동은 불가피합니다. 하지만 <strong>1금융권 비상금 대출</strong>은 
-                  2금융권(저축은행, 카드론)이나 현금서비스에 비해 하락 폭이 매우 작습니다. 
-                  연체 없이 성실하게 상환한다면 신용점수는 금방 회복되며, 오히려 긍정적인 신용 거래 이력으로 남을 수 있습니다.
+                  대출 실행 시 일시적인 신용점수 하락은 발생합니다. 하지만 <strong>1금융권(카카오, 토스 등)</strong>의 
+                  비상금 대출을 이용하고 연체 없이 상환한다면 하락 폭은 미미하며 금방 회복됩니다. 
+                  반면, 카드론이나 현금서비스를 빈번하게 이용하면 신용평가사에서 '자금 사정 악화'로 판단하여 점수가 크게 하락할 수 있습니다.
                 </p>
               </div>
             </details>
 
             <details className="group bg-white rounded-2xl p-6 shadow-sm open:shadow-md transition-all cursor-pointer">
               <summary className="flex items-center justify-between font-bold text-lg text-slate-800 list-none select-none">
-                Q. 신용카드 현금화, 정말 합법인가요?
+                Q. 신용카드 포인트 현금화는 어떻게 하나요?
                 <span className="text-slate-400 group-open:rotate-180 transition-transform"><ChevronRight /></span>
               </summary>
               <div className="mt-4 text-slate-600 leading-relaxed pl-4 border-l-2 border-amber-500">
                 <p>
-                  네, 머니와이즈에서 안내하는 방법은 <strong>'여신금융협회 포인트 통합 조회 및 계좌 입금'</strong> 서비스로, 
-                  금융당국이 장려하는 합법적인 제도입니다. 허위 매출을 일으켜 현금을 융통하는 '카드깡'과는 완전히 다릅니다. 
-                  내 카드에 적립된 포인트를 현금으로 전환하여 통장으로 받는 것은 소비자의 정당한 권리입니다.
+                  <strong>여신금융협회</strong>의 '카드포인트 통합조회' 서비스를 이용하면 됩니다. 
+                  별도의 회원가입 없이 본인 인증만으로 모든 카드사의 포인트를 조회하고, 본인 명의 계좌로 입금 신청이 가능합니다. 
+                  신청 후 대부분 즉시 입금되거나 다음 영업일에 입금됩니다.
                 </p>
               </div>
             </details>
 
             <details className="group bg-white rounded-2xl p-6 shadow-sm open:shadow-md transition-all cursor-pointer">
               <summary className="flex items-center justify-between font-bold text-lg text-slate-800 list-none select-none">
-                Q. 사회초년생 재테크, 무엇부터 해야 하나요?
+                Q. 주식 투자는 얼마부터 시작하는 게 좋은가요?
                 <span className="text-slate-400 group-open:rotate-180 transition-transform"><ChevronRight /></span>
               </summary>
               <div className="mt-4 text-slate-600 leading-relaxed pl-4 border-l-2 border-emerald-500">
                 <p>
-                  가장 먼저 해야 할 일은 '통장 쪼개기'입니다. 급여 통장, 소비 통장, 비상금 통장, 투자 통장을 분리하여 
-                  돈의 흐름을 파악하세요. 그 후, 청년도약계좌와 같은 정부 지원 고금리 적금 상품을 1순위로 가입하고, 
-                  여유 자금으로 ETF 투자를 병행하는 것을 추천합니다.
+                  금액보다는 <strong>시작하는 시기</strong>가 중요합니다. 최근에는 '천 원' 단위로 해외 우량주에 투자할 수 있는 
+                  미니스탁이나 소수점 투자 서비스가 많습니다. 커피 한 잔 값을 아껴 S&P500 ETF를 꾸준히 매수하는 것만으로도 
+                  복리의 효과를 누릴 수 있습니다.
                 </p>
               </div>
             </details>
           </div>
 
-          <div className="mt-12 text-center text-xs text-slate-400 leading-relaxed">
-            <p className="font-bold mb-1">[법적 고지]</p>
-            머니와이즈는 금융상품 판매 및 중개 대행사가 아니며, 특정 금융 상품 가입을 권유하지 않습니다.<br/>
-            제공되는 정보는 일반적인 금융 지식 전달을 목적으로 하며, 최종 투자 및 대출 결정의 책임은 본인에게 있습니다.
+          <div className="mt-16 pt-8 border-t border-slate-200 text-center text-xs text-slate-400 leading-relaxed">
+            <p className="font-bold mb-2">[면책 조항 및 법적 고지]</p>
+            <p>
+              머니와이즈는 금융상품 판매 및 중개 대행사가 아니며, 특정 금융 상품의 가입을 권유하지 않습니다.<br/>
+              제공되는 모든 정보는 일반적인 금융 지식 전달을 목적으로 하며, 정보의 정확성과 최신성을 보장하기 위해 노력하지만 법적 책임을 지지는 않습니다.<br/>
+              최종 투자 및 대출 결정에 대한 책임은 본인에게 있으며, 과도한 빚은 고통의 시작이 될 수 있음을 유의하시기 바랍니다.
+            </p>
           </div>
         </div>
       </section>
