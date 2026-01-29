@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useMemo } from 'react';
 import { Link } from 'react-router-dom';
 import { ArticleCard } from '../components/ArticleCard';
 import { INITIAL_ARTICLES } from '../constants';
@@ -6,28 +6,30 @@ import {
   ArrowRight, 
   ShieldCheck, 
   Coins, 
-  CreditCard, 
-  Landmark, 
-  ChevronRight, 
   HelpCircle,
   CheckCircle2,
   TrendingUp,
   PieChart,
-  AlertTriangle
+  ChevronRight,
+  Landmark
 } from 'lucide-react';
 
 export const Home: React.FC = () => {
-  const recentArticles = INITIAL_ARTICLES.slice(0, 3);
+  // Automatically sort articles by date (newest first) and take the top 3
+  // This ensures new articles added to constants.ts automatically appear here.
+  const recentArticles = useMemo(() => {
+    return [...INITIAL_ARTICLES]
+      .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())
+      .slice(0, 3);
+  }, []);
 
   return (
     <main className="flex-grow bg-white text-slate-900 font-sans leading-relaxed selection:bg-blue-100">
       
       {/* =====================================================================================
           1. HEADER SECTION (H1)
-          페이지의 핵심 주제를 정의하고 사용자에게 신뢰성을 전달하는 도입부
           ===================================================================================== */}
       <section className="relative bg-slate-900 text-white pt-32 pb-40 overflow-hidden">
-        {/* Professional Gradient Background instead of Slow AI Image */}
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-slate-800 via-slate-900 to-black"></div>
         <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-5"></div>
         
@@ -68,7 +70,6 @@ export const Home: React.FC = () => {
 
       {/* =====================================================================================
           2. CORE CONTENT: LOAN SAFETY (H2)
-          주제: 소액 대출의 정의, 메커니즘, 안전한 활용법
           ===================================================================================== */}
       <section className="py-24 bg-white">
         <div className="container mx-auto px-4 max-w-4xl">
@@ -137,7 +138,6 @@ export const Home: React.FC = () => {
 
       {/* =====================================================================================
           3. CORE CONTENT: ASSET LIQUIDATION (H2)
-          주제: 신용카드 포인트 현금화, 합법과 불법의 차이
           ===================================================================================== */}
       <section className="py-24 bg-slate-50 border-y border-slate-200">
         <div className="container mx-auto px-4 max-w-4xl">
@@ -174,21 +174,6 @@ export const Home: React.FC = () => {
               온라인 쇼핑몰에서 상품권을 할인된 가격에 구매하고, 이를 포인트로 전환하거나 페이 앱을 통해 환급받는 방식입니다. 
               단, 환급 한도(월 100만 원~200만 원)와 수수료율(약 8%)을 정확히 계산해야 손해를 보지 않습니다.
             </p>
-
-            <div className="flex flex-col md:flex-row gap-6 mt-10">
-              <div className="flex-1 bg-white p-6 rounded-2xl shadow-sm border border-amber-100">
-                <div className="text-amber-600 font-bold mb-2 flex items-center gap-2">
-                  <CreditCard size={20} /> 합법적 포인트 현금화
-                </div>
-                <p className="text-sm">적립된 포인트를 계좌로 이체하는 것으로, 100% 합법이며 권장되는 소비자의 권리입니다.</p>
-              </div>
-              <div className="flex-1 bg-white p-6 rounded-2xl shadow-sm border border-red-100">
-                <div className="text-red-600 font-bold mb-2 flex items-center gap-2">
-                  <AlertTriangle size={20} /> 불법 카드깡 주의
-                </div>
-                <p className="text-sm">실제 물품 거래 없이 허위 매출을 일으켜 현금을 융통하는 행위는 여신전문금융업법 위반으로 형사 처벌 대상입니다.</p>
-              </div>
-            </div>
           </div>
 
           <div className="mt-8 flex justify-end">
@@ -201,7 +186,6 @@ export const Home: React.FC = () => {
 
       {/* =====================================================================================
           4. COMPREHENSIVE GUIDE: INVESTMENT & WELFARE (H2/H3)
-          주제: 투자 전략, 복지 정책, 재테크 기초
           ===================================================================================== */}
       <section className="py-24 bg-white">
         <div className="container mx-auto px-4 max-w-6xl">
@@ -297,7 +281,6 @@ export const Home: React.FC = () => {
 
       {/* =====================================================================================
           6. FAQ SECTION & DISCLAIMER
-          SEO 타겟팅: 롱테일 키워드 (질문형 검색어) 대응
           ===================================================================================== */}
       <section className="py-24 bg-slate-50">
         <div className="container mx-auto px-4 max-w-3xl">

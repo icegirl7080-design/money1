@@ -19,6 +19,227 @@ export const NAV_ITEMS: NavItem[] = [
 
 export const INITIAL_ARTICLES: Article[] = [
   {
+    id: '10',
+    category: Category.FINANCE,
+    title: '돈이 새는 구조부터 막아라: 대부분이 평생 반복하는 잘못된 금융 선택',
+    summary: '소득이 늘어도 돈이 모이지 않는다면? 문제는 버는 돈이 아니라 새는 돈에 있습니다. 당신의 재정을 위협하는 6가지 구조적 누수를 점검하고, 탄탄한 현금 흐름을 만드는 법을 공개합니다.',
+    imageUrl: 'https://picsum.photos/seed/money_leak/800/600',
+    date: '2023-11-15',
+    author: '금융 에디터',
+    tags: ['재테크', '지출관리', '신용카드', '현금흐름', '돈관리', '대출'],
+    content: `
+      <p class="mb-6 text-lg leading-relaxed">많은 사람들이 "월급이 조금만 더 오르면 돈 걱정이 없을 텐데"라고 말합니다. 하지만 현실은 냉정합니다. 연봉이 3천만 원일 때 돈이 부족했던 사람은 연봉이 6천만 원이 되어도 여전히 돈이 부족합니다. 이는 <strong>수입(Income)</strong>의 문제가 아니라 돈을 관리하는 <strong>구조(Structure)</strong>의 문제이기 때문입니다.</p>
+      <p class="mb-6 text-lg leading-relaxed">재테크의 기본은 '밑 빠진 독에 물 붓기'를 멈추는 것에서 시작합니다. 아무리 좋은 투자 정보를 알고 있어도, 일상에서 돈이 줄줄 새고 있다면 자산은 절대 쌓이지 않습니다. 본 글에서는 대부분의 사람들이 무심코 반복하는 <strong>잘못된 금융 선택</strong> 6가지를 진단하고, 이를 바로잡는 구조적 해결책을 제시합니다.</p>
+
+      <div class="bg-slate-50 border-l-4 border-slate-900 p-6 mb-10 rounded-r-xl">
+        <strong class="block text-slate-900 text-lg mb-2">💡 이 글의 핵심 포인트</strong>
+        <ul class="list-disc list-inside space-y-1 text-slate-700">
+          <li>소액이라 무시했던 소비가 만드는 거대한 누수</li>
+          <li>신용카드가 당신의 미래 소득을 훔쳐가는 방식</li>
+          <li>대출을 '자산'이 아닌 '소비'로 사용할 때의 위험</li>
+          <li>준비 없는 투자가 오히려 독이 되는 이유</li>
+        </ul>
+      </div>
+
+      <h3 class="text-2xl font-bold text-slate-900 mt-12 mb-4">1. 무심코 반복되는 소비 습관: '라떼 효과'의 진실</h3>
+      <p class="mb-6 leading-relaxed">돈이 새는 첫 번째 구멍은 '이 정도는 괜찮겠지'라는 안일함입니다. 매일 마시는 커피, 택시비, 무심코 결제한 OTT 구독료 등 <strong>소액 지출</strong>이 모이면 무시할 수 없는 금액이 됩니다. 이를 재테크 용어로 '라떼 효과(Latte Factor)'라고 합니다.</p>
+      <div class="mb-6">
+        <p class="text-slate-700 font-medium mb-2">⚠️ 왜 문제가 되는가?</p>
+        <p class="text-slate-600">이런 지출은 가계부에 기록되지 않거나 무시되기 쉽습니다. 하지만 월 30만 원의 누수는 연간 360만 원의 <strong>현금 흐름</strong>을 막는 것과 같습니다. 이는 종잣돈(Seed Money) 형성을 방해하는 가장 큰 적입니다.</p>
+      </div>
+
+      <h3 class="text-2xl font-bold text-slate-900 mt-12 mb-4">2. 생활비 구조의 부재: 통장을 섞어 쓰는 실수</h3>
+      <p class="mb-6 leading-relaxed">많은 분들이 급여가 들어오면 카드 값과 공과금이 빠져나가고, 남은 돈으로 생활하다가 부족하면 다시 카드를 씁니다. 이는 <strong>생활비 관리</strong> 시스템이 없다는 증거입니다. 고정비와 변동비가 한 통장에서 섞이면, 내가 한 달에 얼마를 쓰고 얼마를 저축할 수 있는지 파악할 수 없습니다.</p>
+      <div class="bg-slate-50 p-6 rounded-xl border border-slate-200 mb-6">
+        <strong class="block text-slate-900 mb-2">흔한 오해</strong>
+        <p class="text-slate-600">"아껴 쓰면 남는다"고 생각하지만, 예산(Budget)이 정해지지 않은 절약은 실패할 확률이 높습니다. '선저축 후지출' 시스템을 위해 <strong>통장 쪼개기</strong>를 실천해야 합니다.</p>
+      </div>
+
+      <h3 class="text-2xl font-bold text-slate-900 mt-12 mb-4">3. 신용카드(Credit Card): 미래의 나에게 빚지기</h3>
+      <p class="mb-6 leading-relaxed"><strong>신용카드</strong>는 편리하지만, 할부와 리볼빙이라는 달콤한 유혹을 숨기고 있습니다. "이번 달은 힘들지만 다음 달의 내가 갚겠지"라는 생각으로 긁는 순간, 당신의 미래 소득은 저당 잡히게 됩니다.</p>
+      <p class="mb-6 leading-relaxed">특히 할부가 누적되면 매달 갚아야 할 돈이 늘어나, 정작 저축이나 투자를 할 여력은 사라집니다. 포인트 적립 혜택보다 무서운 것이 과소비 습관입니다. 금융 질서가 잡히지 않았다면 과감하게 <strong>체크카드</strong>로 돌아가야 합니다.</p>
+
+      <h3 class="text-2xl font-bold text-slate-900 mt-12 mb-4">4. 대출(Loan)과 신용점수: 쉬운 돈의 함정</h3>
+      <p class="mb-6 leading-relaxed">자산 증식을 위한 레버리지가 아닌, 단순 소비를 위한 <strong>대출</strong>은 재정을 가장 빠르게 무너뜨립니다. 특히 모바일로 쉽게 받을 수 있는 소액 비상금 대출이나 카드론을 '내 돈'처럼 쓰다 보면, 이자 부담이 눈덩이처럼 불어납니다.</p>
+      <div class="mb-6">
+        <p class="text-slate-700 font-medium mb-2">⚠️ 결정적 실수</p>
+        <p class="text-slate-600">잦은 대출 실행은 <strong>신용점수</strong> 하락으로 이어집니다. 신용점수가 떨어지면 나중에 전세자금 대출이나 주택 담보 대출처럼 정말 중요한 순간에 금융권의 도움을 받지 못하거나, 고금리를 부담해야 하는 페널티를 받게 됩니다.</p>
+      </div>
+
+      <h3 class="text-2xl font-bold text-slate-900 mt-12 mb-4">5. 준비 없는 소액 투자(Investment): 조급함이 부르는 손실</h3>
+      <p class="mb-6 leading-relaxed">"월급만으로는 안 돼"라는 불안감에 준비 없이 <strong>투자</strong> 시장에 뛰어드는 것도 돈이 새는 구조입니다. 비상금도 없이 생활비를 쪼개 주식이나 코인에 넣었다가, 돈이 필요해지면 손해를 보고 파는 패턴을 반복합니다.</p>
+      <p class="mb-6 leading-relaxed">투자는 여유 자금으로 장기적인 관점에서 해야 합니다. <strong>소액</strong>이라도 원칙 없이 '단타'나 '테마주'를 쫓는 것은 투자가 아니라 도박에 가깝습니다. 이는 자산을 불리는 것이 아니라 까먹는 행위입니다.</p>
+
+      <h3 class="text-2xl font-bold text-slate-900 mt-12 mb-4">6. 복지(Welfare) 정보의 부재: 찾지 않는 권리</h3>
+      <p class="mb-6 leading-relaxed">마지막으로 간과하기 쉬운 누수는 '받을 수 있는 돈'을 놓치는 것입니다. 정부는 청년, 근로자, 서민을 위한 다양한 <strong>금융 복지 정책</strong>(청년도약계좌, 근로장려금, 저금리 대환 대출 등)을 운영합니다. 정보를 몰라서 신청하지 않는 것은 명백한 손해입니다. 세금을 내는 만큼 혜택을 챙기는 것도 중요한 재테크 능력입니다.</p>
+
+      <hr class="border-slate-200 my-10" />
+
+      <h3 class="text-2xl font-bold text-slate-900 mt-8 mb-4">결론: 문제는 능력이 아니라 구조입니다</h3>
+      <p class="mb-4 leading-relaxed">지금까지 돈이 모이지 않았던 것은 당신의 능력이 부족해서가 아닙니다. 돈이 들어오고 나가는 시스템을 점검하지 않았기 때문입니다. 오늘부터 당장 카드 명세서를 확인하고, 불필요한 구독을 해지하고, 통장을 나누십시오.</p>
+      <p class="mb-4 leading-relaxed text-slate-600">
+        구멍 난 독을 막는 구체적인 방법이 궁금하다면, 다음 단계로 <strong>[생활비 관리 가이드]</strong>나 <strong>[신용점수 올리는 법]</strong>을 참고하여 튼튼한 금융 성벽을 쌓으시기 바랍니다.
+      </p>
+    `
+  },
+  {
+    id: '9',
+    category: Category.FINANCE,
+    title: '개인 금융이 무너지는 순간들: 대부분이 놓치는 돈 관리의 결정적 지점',
+    summary: '열심히 버는데 왜 돈이 모이지 않을까요? 금융 위기는 소득 부족이 아닌 구조적 결함에서 시작됩니다. 당신의 돈 관리가 무너지는 5가지 결정적 순간을 진단합니다.',
+    imageUrl: 'https://picsum.photos/seed/finance_collapse/800/600',
+    date: '2023-11-10',
+    author: '금융 에디터',
+    tags: ['금융', '재테크', '신용점수', '대출', '현금흐름', '리스크관리'],
+    content: `
+      <p class="mb-6 text-lg leading-relaxed">"돈을 더 많이 벌면 모든 문제가 해결될 거야." 많은 사람들이 이렇게 믿습니다. 하지만 연봉이 1억 원이 넘는데도 마이너스 통장을 전전하는 사람들이 의외로 많습니다. 반대로 평범한 월급으로도 착실하게 자산을 불려 나가는 사람들도 있습니다.</p>
+      <p class="mb-6 text-lg leading-relaxed">이 차이는 <strong>금융 구조</strong>에서 옵니다. 재테크가 실패하거나 개인 파산에 이르는 과정은 갑작스러운 사고보다는, 우리가 무심코 지나친 <strong>잘못된 돈 관리의 결정적 지점</strong>들이 누적된 결과입니다. 이 글에서는 당신의 금융 생활을 위협하는 구조적 문제들을 진단하고, 이를 바로잡기 위한 핵심 기준을 제시합니다.</p>
+
+      <div class="bg-red-50 border-l-4 border-red-500 p-6 mb-10 rounded-r-xl">
+        <strong class="block text-red-900 text-lg mb-2">🚨 금융이 무너지는 5가지 신호</strong>
+        <ul class="list-disc list-inside space-y-1 text-red-800/80">
+          <li>수입은 늘었는데 저축액은 그대로일 때</li>
+          <li>신용카드 대금을 갚느라 월급의 50% 이상이 사라질 때</li>
+          <li>대출 이자가 생활비를 잠식하기 시작할 때</li>
+          <li>공부 없이 '카더라' 정보로 소액 투자를 반복할 때</li>
+          <li>내가 받을 수 있는 정부 지원금을 전혀 모를 때</li>
+        </ul>
+      </div>
+
+      <h3 class="text-2xl font-bold text-slate-900 mt-12 mb-4">1. 수입(Income)에만 매몰된 사고의 함정</h3>
+      <p class="mb-6 leading-relaxed">돈 관리가 무너지는 첫 번째 지점은 '얼마를 버느냐'에만 집착할 때 발생합니다. 많은 사람들이 소득이 늘어나면 소비 수준도 똑같이 높여버립니다. 이를 <strong>생활 수준의 인플레이션</strong>이라고 합니다.</p>
+      <div class="mb-6">
+        <p class="text-slate-700 font-medium mb-2">⚠️ 왜 문제가 되는가?</p>
+        <p class="text-slate-600">소득이 끊기거나 줄어드는 순간, 높아진 고정 지출을 감당하지 못해 순식간에 <strong>유동성 위기</strong>에 빠지기 때문입니다. 중요한 것은 소득의 크기가 아니라, 들어온 돈이 잉여 자금으로 남는 <strong>현금 흐름(Cash Flow)</strong>의 건전성입니다.</p>
+      </div>
+
+      <h3 class="text-2xl font-bold text-slate-900 mt-12 mb-4">2. 지출(Expenses) 구조의 구멍: 생활비 관리의 부재</h3>
+      <p class="mb-6 leading-relaxed">"어디에 썼는지 모르겠는데 돈이 없다"는 말은 금융 구조가 무너졌다는 가장 확실한 증거입니다. <strong>생활비 관리</strong>의 핵심은 지출을 통제 가능한 영역(변동비)과 불가능한 영역(고정비)으로 나누는 것입니다.</p>
+      <div class="bg-slate-50 p-6 rounded-xl border border-slate-200 mb-6">
+        <strong class="block text-slate-900 mb-2">흔한 오해</strong>
+        <p class="text-slate-600">"가계부를 쓰면 돈이 모인다"고 생각하지만, 단순히 기록만 하는 것은 의미가 없습니다. 예산을 세우고 그 안에서 소비를 강제하는 <strong>시스템(예: 통장 쪼개기)</strong>이 없으면 지출은 절대 줄어들지 않습니다.</p>
+      </div>
+
+      <h3 class="text-2xl font-bold text-slate-900 mt-12 mb-4">3. 신용카드(Credit Card): 편의성이 독이 되는 순간</h3>
+      <p class="mb-6 leading-relaxed"><strong>신용카드</strong>는 편리한 결제 수단이지만, 본질적으로는 '미래의 소득을 당겨 쓰는 빚'입니다. 카드가 위험해지는 순간은 '할부'와 '리볼빙'이 일상화될 때입니다.</p>
+      <p class="mb-6 leading-relaxed">이번 달 월급으로 지난달의 소비를 메우는 구조가 고착화되면, 미래를 위한 저축이나 투자는 불가능해집니다. 특히 포인트 적립을 핑계로 불필요한 소비를 하거나, <strong>현금화</strong>를 위해 불법적인 경로(카드깡)를 이용하는 것은 금융 생명을 끊는 행위임을 명심해야 합니다.</p>
+
+      <h3 class="text-2xl font-bold text-slate-900 mt-12 mb-4">4. 대출(Loan)과 신용점수: 레버리지와 빚의 경계</h3>
+      <p class="mb-6 leading-relaxed">자본주의에서 <strong>대출</strong>은 자산 증식을 위한 레버리지(지렛대)가 될 수 있습니다. 하지만 이는 '투자 수익률이 대출 이자보다 확실히 높을 때'만 성립합니다.</p>
+      <div class="mb-6">
+        <p class="text-slate-700 font-medium mb-2">⚠️ 결정적 실수</p>
+        <p class="text-slate-600">단순 소비(여행, 명품, 유흥)를 위해 <strong>소액 대출</strong>이나 카드론을 받는 것입니다. 이는 나쁜 빚의 전형이며, <strong>신용점수</strong>를 떨어뜨려 나중에 정말 필요한 주택 대출이나 사업 자금 대출을 막는 원인이 됩니다.</p>
+      </div>
+
+      <h3 class="text-2xl font-bold text-slate-900 mt-12 mb-4">5. 준비 없는 투자(Investment): 소액이라도 원칙이 필요하다</h3>
+      <p class="mb-6 leading-relaxed">근로 소득만으로는 불안함을 느껴 <strong>재테크</strong> 시장에 뛰어들지만, 대부분 실패하는 이유는 '준비 없는 욕심' 때문입니다. "누가 이거 좋다더라"는 말만 믿고 <strong>주식</strong>이나 코인에 돈을 넣는 것은 투자가 아니라 도박입니다.</p>
+      <p class="mb-6 leading-relaxed">성공적인 <strong>투자</strong>는 잃지 않는 것에서 시작합니다. 비상금이 확보되지 않은 상태에서 무리하게 투자하거나, 리스크 분산 없이 한 종목에 올인하는 패턴은 개인 금융을 가장 빠르게 무너뜨리는 지름길입니다.</p>
+
+      <h3 class="text-2xl font-bold text-slate-900 mt-12 mb-4">6. 복지(Welfare)와 정책: 놓치고 있는 안전망</h3>
+      <p class="mb-6 leading-relaxed">많은 사람들이 세금은 아까워하면서, 정작 내가 받을 수 있는 <strong>복지 정책</strong>은 귀찮아서 찾아보지 않습니다. 정부는 청년, 서민, 근로자를 위한 다양한 금융 지원책(청년도약계좌, 근로장려금, 저금리 대환 대출 등)을 제공합니다. 이러한 '공짜 점심'을 챙기지 않는 것도 돈 관리의 큰 구멍 중 하나입니다.</p>
+
+      <hr class="border-slate-200 my-10" />
+
+      <h3 class="text-2xl font-bold text-slate-900 mt-8 mb-4">결론: 금융은 능력의 문제가 아니라 순서의 문제입니다</h3>
+      <p class="mb-4 leading-relaxed">개인 금융이 무너지는 것은 하루아침의 일이 아닙니다. 잘못된 습관과 구조적 결함이 쌓여 임계점을 넘을 때 발생합니다. 지금 당장 화려한 투자 기술을 좇기보다, 내 돈 관리의 <strong>기초 체력</strong>을 점검해야 할 때입니다.</p>
+      
+      <div class="mt-8 p-6 bg-slate-100 rounded-2xl">
+        <strong class="block text-slate-900 mb-4">🚀 다음 단계로 나아가기 위한 추천 가이드</strong>
+        <div class="grid gap-3">
+          <a href="#/finance-guide" class="flex items-center text-blue-600 hover:underline font-medium">
+            1. 새는 돈을 막는 통장 쪼개기와 예산 수립법 👉
+          </a>
+          <a href="#/loan-guide" class="flex items-center text-blue-600 hover:underline font-medium">
+            2. 내 신용점수를 지키는 안전한 대출 활용법 👉
+          </a>
+          <a href="#/investment-guide" class="flex items-center text-blue-600 hover:underline font-medium">
+            3. 투기와 투자를 가르는 주식 투자 기초 👉
+          </a>
+        </div>
+      </div>
+    `
+  },
+  {
+    id: '8',
+    category: Category.FINANCE,
+    title: '돈 관리의 순서: 소득·지출·대출·투자를 한 번에 이해하는 법',
+    summary: '재테크의 실패는 방법이 아니라 순서에서 옵니다. 소득 파악부터 지출 통제, 대출 활용, 그리고 투자까지. 개인 금융의 전체 지도를 그려드립니다.',
+    imageUrl: 'https://picsum.photos/seed/finance_hub/800/600',
+    date: '2023-11-01',
+    author: '금융 에디터',
+    tags: ['재테크', '돈관리', '금융기초', '대출', '투자', '소액'],
+    content: `
+      <p class="mb-6 text-lg leading-relaxed">우리는 종종 "어디에 투자해야 돈을 벌까?"라는 질문부터 시작합니다. 하지만 이것은 마치 기초 공사도 하지 않은 땅에 고층 빌딩을 올리려는 것과 같습니다. 아무리 좋은 주식 정보나 대출 꿀팁을 알아도, 개인의 재무 구조가 튼튼하지 않으면 작은 충격에도 무너지고 맙니다. <strong>돈 관리에는 반드시 지켜야 할 순서</strong>가 있습니다. 본 글에서는 소득, 지출, 대출, 신용, 그리고 투자로 이어지는 <strong>개인 금융의 전체 로드맵</strong>을 제시합니다.</p>
+      
+      <div class="bg-slate-50 border-l-4 border-slate-900 p-6 mb-10 rounded-r-xl">
+        <strong class="block text-slate-900 text-lg mb-2">💡 핵심 요약: 돈 관리의 5단계 원칙</strong>
+        <ol class="list-decimal list-inside space-y-1 text-slate-700">
+          <li><strong>소득:</strong> 내 현금 흐름의 원천을 정확히 파악한다.</li>
+          <li><strong>지출:</strong> 새는 돈을 막고 잉여 자금을 확보한다.</li>
+          <li><strong>대출/신용:</strong> 미래의 소득을 당겨쓸 때의 리스크를 관리한다.</li>
+          <li><strong>복지/정책:</strong> 국가가 제공하는 안전망을 최대한 활용한다.</li>
+          <li><strong>투자:</strong> 확보된 잉여 자금으로 자산을 증식한다.</li>
+        </ol>
+      </div>
+
+      <h3 class="text-2xl font-bold text-slate-900 mt-12 mb-4">1. 소득(Income): 모든 금융 활동의 연료</h3>
+      <p class="mb-6 leading-relaxed">재테크의 시작은 내가 얼마를 버는지, 그리고 그 소득이 얼마나 안정적인지를 객관적으로 파악하는 것입니다. 근로 소득은 자산을 만드는 연료입니다. 연료가 끊기면 자동차(재테크)는 멈춥니다.</p>
+      <div class="mb-6">
+        <h4 class="font-bold text-slate-800 mb-2">흔한 오해: "월급만으로는 부자가 될 수 없다?"</h4>
+        <p class="text-slate-600">반은 맞고 반은 틀립니다. 월급만으로 부자가 되긴 어렵지만, <strong>월급 없이는 투자의 종잣돈(Seed Money)을 모을 수 없습니다.</strong> 초기 단계에서는 부업이나 자기계발을 통해 '몸값'을 올려 소득의 절대량을 늘리는 것이 주식 투자보다 훨씬 확실한 수익률을 보장합니다.</p>
+      </div>
+
+      <h3 class="text-2xl font-bold text-slate-900 mt-12 mb-4">2. 지출(Expenses): 밑 빠진 독 막기</h3>
+      <p class="mb-6 leading-relaxed">소득이 아무리 높아도 관리가 안 되면 돈은 모이지 않습니다. <strong>생활비 관리</strong>의 핵심은 '예산 수립'과 '통제'입니다. 여기서 '통장 쪼개기'의 개념이 등장합니다. 소비 목적에 따라 통장을 나누어, 생활비가 저축액을 침범하지 못하도록 강제하는 시스템이 필요합니다.</p>
+      <ul class="list-disc list-inside bg-slate-50 p-6 rounded-xl border border-slate-100 text-slate-700 mb-6">
+        <li><strong>고정 지출:</strong> 주거비, 통신비, 보험료 등 숨만 쉬어도 나가는 돈</li>
+        <li><strong>변동 지출:</strong> 식비, 쇼핑, 유흥비 등 내가 조절할 수 있는 돈 (통제의 핵심)</li>
+        <li><strong>계절 지출:</strong> 경조사, 휴가비, 명절 비용 등 비정기적인 큰 지출 (비상금으로 대비)</li>
+      </ul>
+
+      <h3 class="text-2xl font-bold text-slate-900 mt-12 mb-4">3. 대출(Loan)과 신용(Credit): 양날의 검</h3>
+      <p class="mb-6 leading-relaxed">자본주의에서 <strong>대출</strong>은 빚인 동시에 자산 증식을 위한 레버리지(지렛대)입니다. 하지만 준비되지 않은 사람에게 대출은 파멸의 지름길입니다. 대출을 '내 돈'이 아니라 '비용을 지불하고 빌려온 남의 돈'으로 인식해야 합니다.</p>
+      
+      <div class="grid md:grid-cols-2 gap-6 mb-6">
+        <div class="bg-blue-50 p-5 rounded-lg border border-blue-100">
+          <strong class="text-blue-800 block mb-2">좋은 대출의 조건</strong>
+          <p class="text-sm text-blue-900/80">대출 이자보다 더 높은 수익이나 가치를 창출할 수 있을 때 (예: 주택 담보 대출, 사업 확장 자금).</p>
+        </div>
+        <div class="bg-red-50 p-5 rounded-lg border border-red-100">
+          <strong class="text-red-800 block mb-2">나쁜 대출의 전형</strong>
+          <p class="text-sm text-red-900/80">단순 소비나 갚을 계획이 불투명한 <strong>소액 대출</strong>, 고금리 카드론, 현금서비스. 이는 자산을 갉아먹습니다.</p>
+        </div>
+      </div>
+      <p class="mb-6 leading-relaxed">이 모든 것을 가능하게 하는 것이 바로 <strong>신용점수</strong>입니다. 신용점수는 금융 사회의 신분증이므로, 평소 연체 없는 신용카드 사용과 공과금 납부를 통해 꾸준히 관리해야 합니다.</p>
+
+      <h3 class="text-2xl font-bold text-slate-900 mt-12 mb-4">4. 신용카드와 현금 흐름</h3>
+      <p class="mb-6 leading-relaxed"><strong>신용카드</strong>는 편리한 결제 수단이지만, 본질적으로는 '외상'입니다. 카드를 긁는 순간 미래의 소득이 저당 잡히는 것입니다. 포인트 적립이나 할인 혜택은 현명하게 챙기되, 할부의 늪에 빠지지 않도록 주의해야 합니다.</p>
+      <p class="mb-6 leading-relaxed">최근 유행하는 포인트 <strong>현금화</strong>나 상테크(상품권 재테크)도 합법적인 테두리 안에서 활용하면 쏠쏠한 부수입이 되지만, 이를 넘어선 불법적인 현금 융통(카드깡)은 금융 질서 문란자로 등록되는 지름길임을 명심해야 합니다.</p>
+
+      <h3 class="text-2xl font-bold text-slate-900 mt-12 mb-4">5. 복지(Welfare)와 정책: 놓치면 손해 보는 권리</h3>
+      <p class="mb-6 leading-relaxed">개인의 노력만으로는 해결하기 힘든 순간, 국가의 시스템이 개입합니다. <strong>정부 지원금</strong>이나 정책 서민 금융은 경제적 위기 상황에서 강력한 안전망이 됩니다. 근로장려금, 청년도약계좌, 햇살론 등은 내가 낸 세금으로 운영되는 제도이므로, 자격 요건이 된다면 반드시 신청하여 혜택을 누려야 합니다.</p>
+
+      <h3 class="text-2xl font-bold text-slate-900 mt-12 mb-4">6. 투자(Investment): 잉여 자금의 증식</h3>
+      <p class="mb-6 leading-relaxed">위의 1~5단계가 탄탄하게 다져졌을 때, 비로소 <strong>투자</strong>를 시작할 자격이 주어집니다. 빚을 내서 하거나 당장 다음 달 생활비로 주식을 사는 것은 투자가 아니라 투기입니다.</p>
+      <div class="bg-slate-50 p-6 rounded-xl border border-slate-200 mb-6">
+        <h4 class="font-bold text-slate-800 mb-3">초보 투자자가 지켜야 할 원칙</h4>
+        <ul class="space-y-2 text-slate-700">
+          <li>✔ <strong>여유 자금:</strong> 없어도 당장 생활에 지장이 없는 돈으로 시작한다.</li>
+          <li>✔ <strong>분산 투자:</strong> ETF 등을 활용해 리스크를 시장 전체로 분산한다.</li>
+          <li>✔ <strong>장기 관점:</strong> 단기적인 시세 차익보다 자산의 성장에 집중한다.</li>
+        </ul>
+      </div>
+
+      <hr class="border-slate-200 my-10" />
+
+      <h3 class="text-2xl font-bold text-slate-900 mt-8 mb-4">결론: 순서를 지키는 것이 가장 빠른 길입니다</h3>
+      <p class="mb-4 leading-relaxed">돈 관리에는 왕도가 없습니다. 소득을 늘리고, 지출을 통제하여 남은 돈을 만들고, 그 돈을 안전하게 불리는 정공법만이 경제적 자유로 가는 유일한 길입니다. 지금 당장 여러분의 재무 상태표를 점검해 보십시오. 어느 단계가 흔들리고 있습니까?</p>
+      <p class="mb-4 leading-relaxed text-slate-600">
+        다음 단계로 나아가기 위해, <strong>[통장 쪼개기]</strong>, <strong>[신용점수 관리]</strong>, <strong>[안전한 대출 가이드]</strong> 등의 상세 내용을 확인해 보시기를 권장합니다.
+      </p>
+    `
+  },
+  {
     id: '1',
     category: Category.LOAN,
     title: '급할 때 유용한 소액 비상금 대출: 구조적 이해와 활용 전략',
