@@ -2,6 +2,7 @@ import { Article, Category, NavItem } from './types';
 
 export const NAV_ITEMS: NavItem[] = [
   { label: '홈', path: '/' },
+  { label: '대출가이드', path: '/loan-guide' },
   { label: '금융/재테크', path: '/finance', category: Category.FINANCE },
   { label: '대출꿀팁', path: '/loan', category: Category.LOAN },
   { label: '투자/주식', path: '/investment', category: Category.INVESTMENT },
