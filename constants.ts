@@ -2,9 +2,12 @@ import { Article, Category, NavItem } from './types';
 
 export const NAV_ITEMS: NavItem[] = [
   { label: '홈', path: '/', inMenu: true },
+  { label: '금융가이드', path: '/finance-guide', inMenu: true }, // New Page
   { label: '대출가이드', path: '/loan-guide', inMenu: true },
   { label: '신용카드가이드', path: '/credit-card-guide', inMenu: true },
-  { label: '주식투자가이드', path: '/investment-guide', inMenu: true }, // New Page
+  { label: '주식투자가이드', path: '/investment-guide', inMenu: true },
+  { label: '복지정책가이드', path: '/welfare-guide', inMenu: true },
+  { label: '생활꿀팁가이드', path: '/life-hacks-guide', inMenu: true },
   { label: '블로그', path: '/blog', inMenu: true }, 
   // The following items are hidden from the menu but used for routing/categorization
   { label: '금융/재테크', path: '/finance', category: Category.FINANCE, inMenu: false },

@@ -8,6 +8,9 @@ import { CategoryPage } from './pages/CategoryPage';
 import { LoanGuide } from './pages/LoanGuide';
 import { CreditCardGuide } from './pages/CreditCardGuide';
 import { InvestmentGuide } from './pages/InvestmentGuide';
+import { WelfareGuide } from './pages/WelfareGuide';
+import { LifeHacksGuide } from './pages/LifeHacksGuide';
+import { FinanceGuide } from './pages/FinanceGuide';
 import { BlogOverview } from './pages/BlogOverview';
 import { ScrollToTop } from './components/ScrollToTop';
 
@@ -23,6 +26,9 @@ const App: React.FC = () => {
           <Route path="/loan-guide" element={<LoanGuide />} />
           <Route path="/credit-card-guide" element={<CreditCardGuide />} />
           <Route path="/investment-guide" element={<InvestmentGuide />} />
+          <Route path="/welfare-guide" element={<WelfareGuide />} />
+          <Route path="/life-hacks-guide" element={<LifeHacksGuide />} />
+          <Route path="/finance-guide" element={<FinanceGuide />} />
           <Route path="/blog" element={<BlogOverview />} />
           
           {/* Category Routes */}
