@@ -1,65 +1,23 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
 import { ArticleCard } from '../components/ArticleCard';
 import { INITIAL_ARTICLES } from '../constants';
 import { 
   ArrowRight, 
-  TrendingUp, 
   ShieldCheck, 
   Coins, 
   CreditCard, 
   Landmark, 
   ChevronRight, 
-  Sparkles,
-  Loader2,
-  PieChart,
   HelpCircle,
-  AlertTriangle,
-  BookOpen,
   CheckCircle2,
-  Info
+  TrendingUp,
+  PieChart,
+  AlertTriangle
 } from 'lucide-react';
-import { generateMarketingImage } from '../services/geminiService';
-
-const HERO_PROMPT = "Futuristic and clean financial data center, glowing blue digital graphs and shield symbols, 8k resolution, cinematic lighting, representing trust and growth";
-const LOAN_IMAGE_PROMPT = "3D isometric illustration of a secure bank vault door, clean and minimal style, soft blue lighting, representing financial security";
-const CASH_IMAGE_PROMPT = "3D isometric illustration of gold coins flowing into a smartphone wallet from credit cards, warm lighting, representing asset liquidity";
 
 export const Home: React.FC = () => {
-  const [heroImage, setHeroImage] = useState<string | null>(null);
-  const [sectionImages, setSectionImages] = useState<{loan?: string, cash?: string}>({});
-  const [isGenerating, setIsGenerating] = useState(false);
-
   const recentArticles = INITIAL_ARTICLES.slice(0, 3);
-
-  const handleGenerateImages = async () => {
-    const aiStudio = (window as any).aistudio;
-    if (aiStudio) {
-      const hasKey = await aiStudio.hasSelectedApiKey();
-      if (!hasKey) {
-        const success = await aiStudio.openSelectKey();
-        if (!success) return;
-      }
-    }
-
-    setIsGenerating(true);
-    try {
-      const heroUrl = await generateMarketingImage(HERO_PROMPT, 'hero');
-      if (heroUrl) setHeroImage(heroUrl);
-
-      const loanUrl = await generateMarketingImage(LOAN_IMAGE_PROMPT, 'card');
-      const cashUrl = await generateMarketingImage(CASH_IMAGE_PROMPT, 'card');
-      
-      setSectionImages({
-        loan: loanUrl || undefined,
-        cash: cashUrl || undefined
-      });
-    } catch (e) {
-      console.error(e);
-    } finally {
-      setIsGenerating(false);
-    }
-  };
 
   return (
     <main className="flex-grow bg-white text-slate-900 font-sans leading-relaxed selection:bg-blue-100">
@@ -68,22 +26,15 @@ export const Home: React.FC = () => {
           1. HEADER SECTION (H1)
           페이지의 핵심 주제를 정의하고 사용자에게 신뢰성을 전달하는 도입부
           ===================================================================================== */}
-      <section className="relative bg-slate-900 text-white pt-24 pb-32 overflow-hidden">
-        {heroImage && (
-          <>
-            <img 
-              src={heroImage} 
-              alt="금융 데이터 시각화 배경" 
-              className="absolute inset-0 w-full h-full object-cover opacity-20 scale-105" 
-            />
-            <div className="absolute inset-0 bg-gradient-to-b from-slate-900/80 via-slate-900/95 to-slate-900"></div>
-          </>
-        )}
+      <section className="relative bg-slate-900 text-white pt-32 pb-40 overflow-hidden">
+        {/* Professional Gradient Background instead of Slow AI Image */}
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-slate-800 via-slate-900 to-black"></div>
+        <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-5"></div>
         
         <div className="container mx-auto px-4 relative z-10 max-w-5xl text-center">
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-slate-800/80 border border-slate-700 text-slate-300 text-sm font-medium mb-8 backdrop-blur-sm">
-            <ShieldCheck size={16} className="text-blue-400" />
-            <span>금융감독원 가이드라인 기반 정보 제공</span>
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-slate-800/80 border border-slate-700 text-blue-400 text-sm font-bold mb-8 backdrop-blur-sm shadow-lg">
+            <ShieldCheck size={16} />
+            <span>검증된 금융 정보 포털</span>
           </div>
 
           <h1 className="text-4xl md:text-6xl font-black leading-tight tracking-tight mb-8 break-keep">
@@ -94,28 +45,23 @@ export const Home: React.FC = () => {
           </h1>
 
           <p className="text-lg md:text-xl text-slate-400 leading-relaxed max-w-3xl mx-auto mb-12 font-light break-keep">
-            머니와이즈는 정보의 홍수 속에서 검증된 금융 지식만을 선별하여 제공합니다. 
-            <strong>안전한 소액 대출</strong>의 구조적 이해부터, 
-            잠들어 있는 <strong>신용카드 포인트의 현금화</strong> 프로세스, 
-            그리고 경제적 자유를 위한 <strong>투자와 복지 정책</strong>까지. 
-            당신의 금융 생활을 업그레이드할 실질적인 가이드를 만나보세요.
+            머니와이즈는 정보의 홍수 속에서 <strong>실질적인 금융 솔루션</strong>만을 선별하여 제공합니다. 
+            기초 자산 관리부터 심화 투자 전략까지, 당신의 경제적 자유를 위한 로드맵을 지금 확인하세요.
           </p>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <Link 
-              to="/finance" 
-              className="w-full sm:w-auto px-8 py-4 bg-blue-600 hover:bg-blue-500 text-white font-bold rounded-xl transition-all shadow-[0_0_20px_rgba(37,99,235,0.3)] hover:translate-y-[-2px]"
+              to="/finance-guide" 
+              className="w-full sm:w-auto px-8 py-4 bg-blue-600 hover:bg-blue-500 text-white font-bold rounded-xl transition-all shadow-[0_0_20px_rgba(37,99,235,0.3)] hover:translate-y-[-2px] flex items-center justify-center gap-2"
             >
-              종합 가이드 읽기
+              돈 관리 기초부터 시작하기 <ArrowRight size={20} />
             </Link>
-            <button 
-              onClick={handleGenerateImages}
-              disabled={isGenerating}
+            <Link 
+              to="/blog" 
               className="w-full sm:w-auto px-8 py-4 bg-slate-800 hover:bg-slate-700 text-slate-300 font-medium rounded-xl border border-slate-700 transition-all flex items-center justify-center gap-2"
             >
-              {isGenerating ? <Loader2 size={20} className="animate-spin" /> : <Sparkles size={20} className="text-yellow-400" />}
-              <span>AI 테마 적용</span>
-            </button>
+              <span>전체 칼럼 보기</span>
+            </Link>
           </div>
         </div>
       </section>
@@ -182,8 +128,8 @@ export const Home: React.FC = () => {
           </div>
 
           <div className="mt-8 flex justify-end">
-            <Link to="/loan" className="inline-flex items-center text-blue-600 font-bold hover:gap-2 transition-all">
-              안전한 대출 상품 비교하기 <ArrowRight size={20} className="ml-2" />
+            <Link to="/loan-guide" className="inline-flex items-center text-blue-600 font-bold hover:gap-2 transition-all">
+              안전한 대출 가이드 전체 읽기 <ArrowRight size={20} className="ml-2" />
             </Link>
           </div>
         </div>
@@ -246,8 +192,8 @@ export const Home: React.FC = () => {
           </div>
 
           <div className="mt-8 flex justify-end">
-            <Link to="/life" className="inline-flex items-center text-amber-600 font-bold hover:gap-2 transition-all">
-              포인트 통합 조회 가이드 보기 <ArrowRight size={20} className="ml-2" />
+            <Link to="/life-hacks-guide" className="inline-flex items-center text-amber-600 font-bold hover:gap-2 transition-all">
+              생활 금융 꿀팁 더 보기 <ArrowRight size={20} className="ml-2" />
             </Link>
           </div>
         </div>
@@ -281,8 +227,8 @@ export const Home: React.FC = () => {
                 개별 주식의 변동성이 두렵다면 시장 지수(S&P500 등)를 추종하는 <strong>ETF 적립식 투자</strong>가 정답입니다. 
                 여기에 분기별로 배당금을 지급하는 우량 배당주를 포트폴리오에 담아 '제2의 월급' 시스템을 구축하십시오.
               </p>
-              <Link to="/investment" className="text-sm font-bold text-red-600 flex items-center hover:gap-2 transition-all">
-                포트폴리오 예시 보기 <ChevronRight size={16} />
+              <Link to="/investment-guide" className="text-sm font-bold text-red-600 flex items-center hover:gap-2 transition-all">
+                투자의 정석 가이드 <ChevronRight size={16} />
               </Link>
             </div>
 
@@ -295,10 +241,10 @@ export const Home: React.FC = () => {
               <p className="text-slate-600 text-sm leading-relaxed mb-6">
                 <strong>청년도약계좌</strong>, <strong>부모급여</strong>, <strong>근로장려금</strong> 등 
                 정부가 지원하는 금융 혜택은 신청 기간을 놓치면 받을 수 없습니다. 
-                소득 요건과 가구원 수에 따라 나에게 해당되는 정책을 미리 파악하고 준비해야 합니다.
+                소득 요건이 완화되었으니 꼭 확인해 보세요.
               </p>
-              <Link to="/welfare" className="text-sm font-bold text-purple-600 flex items-center hover:gap-2 transition-all">
-                지원금 리스트 확인 <ChevronRight size={16} />
+              <Link to="/welfare-guide" className="text-sm font-bold text-purple-600 flex items-center hover:gap-2 transition-all">
+                복지 정책 가이드 <ChevronRight size={16} />
               </Link>
             </div>
 
@@ -312,8 +258,8 @@ export const Home: React.FC = () => {
                 재테크의 시작은 지출 통제입니다. 급여가 들어오는 즉시 생활비, 비상금, 투자금 통장으로 
                 자동 이체되는 <strong>시스템</strong>을 만드십시오. 돈이 머물지 않고 흐르도록 설계하는 것이 자산 관리의 첫걸음입니다.
               </p>
-              <Link to="/finance" className="text-sm font-bold text-emerald-600 flex items-center hover:gap-2 transition-all">
-                시스템 구축하기 <ChevronRight size={16} />
+              <Link to="/finance-guide" className="text-sm font-bold text-emerald-600 flex items-center hover:gap-2 transition-all">
+                돈 관리 기초 가이드 <ChevronRight size={16} />
               </Link>
             </div>
           </div>
@@ -330,8 +276,8 @@ export const Home: React.FC = () => {
               <h2 className="text-3xl font-bold text-slate-900">최신 금융 인사이트</h2>
               <p className="text-slate-500 mt-2">금융 에디터가 작성한 심층 분석 칼럼을 확인하세요.</p>
             </div>
-            <Link to="/finance" className="hidden md:flex items-center text-sm font-bold text-slate-600 hover:text-blue-600 transition-colors">
-              전체 아티클 보기 <ArrowRight size={16} className="ml-1" />
+            <Link to="/blog" className="hidden md:flex items-center text-sm font-bold text-slate-600 hover:text-blue-600 transition-colors">
+              전체 칼럼 보기 <ArrowRight size={16} className="ml-1" />
             </Link>
           </div>
           
@@ -342,7 +288,7 @@ export const Home: React.FC = () => {
           </div>
 
           <div className="mt-8 md:hidden">
-            <Link to="/finance" className="block w-full py-4 text-center border border-slate-200 rounded-xl font-bold text-slate-600 hover:bg-slate-50">
+            <Link to="/blog" className="block w-full py-4 text-center border border-slate-200 rounded-xl font-bold text-slate-600 hover:bg-slate-50">
               더 많은 글 보기
             </Link>
           </div>

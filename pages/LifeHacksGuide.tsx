@@ -1,63 +1,24 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { 
   Coffee, 
   ShoppingBag, 
   CreditCard, 
-  PiggyBank, 
-  AlertTriangle, 
   Lightbulb,
-  Smartphone,
   Repeat,
-  Sparkles,
-  Loader2,
   CheckCircle2,
   Wallet
 } from 'lucide-react';
-import { generateMarketingImage } from '../services/geminiService';
-
-const HERO_PROMPT = "3D isometric illustration of a modern home interior with organized financial items, piggy bank, and smartphone, soft pastel colors, cozy and smart atmosphere, representing smart living and financial balance";
 
 export const LifeHacksGuide: React.FC = () => {
-  const [heroImage, setHeroImage] = useState<string | null>(null);
-  const [isGenerating, setIsGenerating] = useState(false);
-
-  const handleGenerateImage = async () => {
-    const aiStudio = (window as any).aistudio;
-    if (aiStudio) {
-      const hasKey = await aiStudio.hasSelectedApiKey();
-      if (!hasKey) {
-        const success = await aiStudio.openSelectKey();
-        if (!success) return;
-      }
-    }
-
-    setIsGenerating(true);
-    try {
-      const url = await generateMarketingImage(HERO_PROMPT, 'hero');
-      if (url) setHeroImage(url);
-    } catch (e) {
-      console.error(e);
-    } finally {
-      setIsGenerating(false);
-    }
-  };
-
   return (
     <main className="flex-grow bg-white text-slate-900 font-sans leading-relaxed selection:bg-amber-100">
       {/* =====================================================================================
           1. HEADER SECTION (H1)
           ===================================================================================== */}
-      <section className="relative bg-slate-900 text-white py-20 overflow-hidden">
-        {heroImage && (
-          <>
-            <img 
-              src={heroImage} 
-              alt="생활 금융 꿀팁 배경" 
-              className="absolute inset-0 w-full h-full object-cover opacity-20" 
-            />
-            <div className="absolute inset-0 bg-gradient-to-r from-slate-900 via-slate-900/95 to-slate-900/60"></div>
-          </>
-        )}
+      <section className="relative bg-slate-900 text-white py-24 overflow-hidden">
+        {/* Professional Gradient Background */}
+        <div className="absolute inset-0 bg-gradient-to-t from-amber-900 via-slate-900 to-slate-900"></div>
+        <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/wood-pattern.png')] opacity-10"></div>
 
         <div className="container mx-auto px-4 relative z-10 max-w-4xl">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-500/10 border border-amber-500/20 text-amber-300 text-xs font-bold mb-6 backdrop-blur-md uppercase tracking-wider">
@@ -72,20 +33,11 @@ export const LifeHacksGuide: React.FC = () => {
             </span>
           </h1>
 
-          <p className="text-lg text-slate-400 leading-relaxed max-w-2xl font-light mb-8 break-keep">
+          <p className="text-lg text-slate-400 leading-relaxed max-w-2xl font-light mb-0 break-keep">
             금융 생활의 성패는 거창한 투자 전략이 아닌, 매일 반복되는 <strong>작은 소비 습관</strong>에서 결정됩니다.
             우리가 무심코 하는 선택들이 모여 미래의 자산 규모를 형성합니다.
             본 페이지는 일상 속에서 놓치기 쉬운 지출 관리의 중요성과 올바른 금융 습관을 제시합니다.
           </p>
-
-          <button 
-            onClick={handleGenerateImage}
-            disabled={isGenerating}
-            className="inline-flex items-center gap-2 px-5 py-2.5 bg-slate-800 hover:bg-slate-700 border border-slate-700 rounded-lg text-sm text-slate-300 transition-all"
-          >
-            {isGenerating ? <Loader2 size={16} className="animate-spin" /> : <Sparkles size={16} className="text-yellow-400" />}
-            <span>AI 테마 이미지 생성</span>
-          </button>
         </div>
       </section>
 

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { 
   TrendingUp, 
   BarChart3, 
@@ -7,56 +7,20 @@ import {
   Target, 
   Hourglass,
   Wallet,
-  Sparkles,
-  Loader2,
   BrainCircuit
 } from 'lucide-react';
-import { generateMarketingImage } from '../services/geminiService';
-
-const HERO_PROMPT = "Cinematic 3D render of a golden seed growing into a small tree on a stack of coins, warm and hopeful lighting, representing long-term investment and patience, 8k resolution";
 
 export const InvestmentGuide: React.FC = () => {
-  const [heroImage, setHeroImage] = useState<string | null>(null);
-  const [isGenerating, setIsGenerating] = useState(false);
-
-  const handleGenerateImage = async () => {
-    const aiStudio = (window as any).aistudio;
-    if (aiStudio) {
-      const hasKey = await aiStudio.hasSelectedApiKey();
-      if (!hasKey) {
-        const success = await aiStudio.openSelectKey();
-        if (!success) return;
-      }
-    }
-
-    setIsGenerating(true);
-    try {
-      const url = await generateMarketingImage(HERO_PROMPT, 'hero');
-      if (url) setHeroImage(url);
-    } catch (e) {
-      console.error(e);
-    } finally {
-      setIsGenerating(false);
-    }
-  };
-
   return (
     <main className="flex-grow bg-white text-slate-900 font-sans leading-relaxed selection:bg-red-100">
       {/* =====================================================================================
           1. HEADER SECTION (H1)
           ===================================================================================== */}
-      <section className="relative bg-slate-900 text-white py-20 overflow-hidden">
-        {heroImage && (
-          <>
-            <img 
-              src={heroImage} 
-              alt="주식 투자 원칙과 가이드 배경" 
-              className="absolute inset-0 w-full h-full object-cover opacity-20" 
-            />
-            <div className="absolute inset-0 bg-gradient-to-r from-slate-900 via-slate-900/95 to-slate-900/60"></div>
-          </>
-        )}
-
+      <section className="relative bg-slate-900 text-white py-24 overflow-hidden">
+        {/* Professional Gradient Background */}
+        <div className="absolute inset-0 bg-gradient-to-br from-red-900 via-slate-900 to-slate-900"></div>
+        <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/stardust.png')] opacity-10"></div>
+        
         <div className="container mx-auto px-4 relative z-10 max-w-4xl">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-red-500/10 border border-red-500/20 text-red-300 text-xs font-bold mb-6 backdrop-blur-md uppercase tracking-wider">
             <TrendingUp size={14} />
@@ -70,21 +34,12 @@ export const InvestmentGuide: React.FC = () => {
             </span>
           </h1>
 
-          <p className="text-lg text-slate-400 leading-relaxed max-w-2xl font-light mb-8 break-keep">
+          <p className="text-lg text-slate-400 leading-relaxed max-w-2xl font-light mb-0 break-keep">
             주식 투자를 '운에 맡기는 도박'이나 '전문가들의 전유물'로 오해하고 계신가요? 
             많은 사람들이 단기간에 큰돈을 벌려는 욕심으로 시장에 뛰어들었다가 실패를 맛보곤 합니다. 
             하지만 <strong>투자</strong>는 자본주의 사회에서 내 자산을 지키고 불리는 가장 정직한 수단입니다. 
             본 페이지는 막연한 두려움을 걷어내고, 평생 자산 관리를 위한 투자의 기본 골격을 제시합니다.
           </p>
-
-          <button 
-            onClick={handleGenerateImage}
-            disabled={isGenerating}
-            className="inline-flex items-center gap-2 px-5 py-2.5 bg-slate-800 hover:bg-slate-700 border border-slate-700 rounded-lg text-sm text-slate-300 transition-all"
-          >
-            {isGenerating ? <Loader2 size={16} className="animate-spin" /> : <Sparkles size={16} className="text-yellow-400" />}
-            <span>AI 테마 이미지 생성</span>
-          </button>
         </div>
       </section>
 

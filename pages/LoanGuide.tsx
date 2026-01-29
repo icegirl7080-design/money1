@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import React from 'react';
+import { Link } from 'react-router-dom';
 import { 
   BookOpen, 
   Scale, 
@@ -6,56 +7,22 @@ import {
   CheckCircle2, 
   Landmark,
   ShieldAlert,
-  Wallet,
-  Sparkles,
-  Loader2,
-  Coins
+  Coins,
+  CreditCard,
+  ArrowRight
 } from 'lucide-react';
-import { generateMarketingImage } from '../services/geminiService';
-
-const HERO_PROMPT = "Minimalist 3D illustration of a balanced scale with gold coins on one side and a document on the other, clean blue and white background, representing financial balance and loan agreement";
 
 export const LoanGuide: React.FC = () => {
-  const [heroImage, setHeroImage] = useState<string | null>(null);
-  const [isGenerating, setIsGenerating] = useState(false);
-
-  const handleGenerateImage = async () => {
-    const aiStudio = (window as any).aistudio;
-    if (aiStudio) {
-      const hasKey = await aiStudio.hasSelectedApiKey();
-      if (!hasKey) {
-        const success = await aiStudio.openSelectKey();
-        if (!success) return;
-      }
-    }
-
-    setIsGenerating(true);
-    try {
-      const url = await generateMarketingImage(HERO_PROMPT, 'hero');
-      if (url) setHeroImage(url);
-    } catch (e) {
-      console.error(e);
-    } finally {
-      setIsGenerating(false);
-    }
-  };
-
   return (
     <main className="flex-grow bg-white text-slate-900 font-sans leading-relaxed selection:bg-blue-100">
       {/* =====================================================================================
           1. HEADER SECTION (H1)
           ===================================================================================== */}
-      <section className="relative bg-slate-900 text-white py-20 overflow-hidden">
-        {heroImage && (
-          <>
-            <img 
-              src={heroImage} 
-              alt="대출 기본 가이드 배경" 
-              className="absolute inset-0 w-full h-full object-cover opacity-20" 
-            />
-            <div className="absolute inset-0 bg-gradient-to-r from-slate-900 via-slate-900/95 to-slate-900/60"></div>
-          </>
-        )}
+      <section className="relative bg-slate-900 text-white py-24 overflow-hidden">
+        {/* Professional Gradient Background */}
+        <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900"></div>
+        <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')] opacity-10"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-slate-900 via-transparent to-slate-900/50"></div>
 
         <div className="container mx-auto px-4 relative z-10 max-w-4xl">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-300 text-xs font-bold mb-6 backdrop-blur-md uppercase tracking-wider">
@@ -70,21 +37,32 @@ export const LoanGuide: React.FC = () => {
             </span>
           </h1>
 
-          <p className="text-lg text-slate-400 leading-relaxed max-w-2xl font-light mb-8 break-keep">
+          <p className="text-lg text-slate-400 leading-relaxed max-w-2xl font-light mb-0 break-keep">
             대출을 고민할 때 가장 많이 하는 오해는 "빚은 무조건 나쁜 것"이라는 생각입니다. 
             하지만 자본주의 사회에서 대출은 자산 증식을 위한 레버리지이자, 삶의 유동성을 공급하는 핵심 도구입니다. 
             중요한 것은 대출 그 자체가 아니라, 그것을 다루는 <strong>사용자의 기준과 전략</strong>입니다.
             본 페이지는 대출을 처음 고민하는 분들을 위해 금융의 관점에서 대출을 해석하고 올바른 활용법을 제시합니다.
           </p>
+        </div>
+      </section>
 
-          <button 
-            onClick={handleGenerateImage}
-            disabled={isGenerating}
-            className="inline-flex items-center gap-2 px-5 py-2.5 bg-slate-800 hover:bg-slate-700 border border-slate-700 rounded-lg text-sm text-slate-300 transition-all"
-          >
-            {isGenerating ? <Loader2 size={16} className="animate-spin" /> : <Sparkles size={16} className="text-yellow-400" />}
-            <span>AI 테마 이미지 생성</span>
-          </button>
+      {/* =====================================================================================
+          NAVIGATION LINK FOR CREDIT CARDS (NEW)
+          ===================================================================================== */}
+      <section className="bg-slate-50 border-b border-slate-200">
+        <div className="container mx-auto px-4 py-8">
+           <Link to="/credit-card-guide" className="group flex items-center justify-between bg-white border border-slate-200 p-6 rounded-xl hover:border-indigo-300 hover:shadow-md transition-all max-w-4xl mx-auto">
+              <div className="flex items-center gap-4">
+                <div className="bg-indigo-100 text-indigo-600 p-3 rounded-lg group-hover:bg-indigo-600 group-hover:text-white transition-colors">
+                  <CreditCard size={24} />
+                </div>
+                <div>
+                  <h3 className="font-bold text-slate-900 text-lg group-hover:text-indigo-700 transition-colors">신용카드 가이드가 필요하신가요?</h3>
+                  <p className="text-sm text-slate-500">신용점수 관리와 현명한 카드 사용법을 확인하세요.</p>
+                </div>
+              </div>
+              <ArrowRight className="text-slate-300 group-hover:text-indigo-600 group-hover:translate-x-1 transition-all" />
+           </Link>
         </div>
       </section>
 

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { 
   CreditCard, 
   Scale, 
@@ -6,56 +6,19 @@ import {
   ShieldCheck, 
   TrendingUp,
   Landmark,
-  CheckCircle2,
-  Sparkles,
-  Loader2,
-  ArrowRight
+  CheckCircle2
 } from 'lucide-react';
-import { generateMarketingImage } from '../services/geminiService';
-
-const HERO_PROMPT = "High quality 3D render of a premium credit card floating above a financial graph, clean white and gold aesthetic, professional lighting, representing financial power and responsibility";
 
 export const CreditCardGuide: React.FC = () => {
-  const [heroImage, setHeroImage] = useState<string | null>(null);
-  const [isGenerating, setIsGenerating] = useState(false);
-
-  const handleGenerateImage = async () => {
-    const aiStudio = (window as any).aistudio;
-    if (aiStudio) {
-      const hasKey = await aiStudio.hasSelectedApiKey();
-      if (!hasKey) {
-        const success = await aiStudio.openSelectKey();
-        if (!success) return;
-      }
-    }
-
-    setIsGenerating(true);
-    try {
-      const url = await generateMarketingImage(HERO_PROMPT, 'hero');
-      if (url) setHeroImage(url);
-    } catch (e) {
-      console.error(e);
-    } finally {
-      setIsGenerating(false);
-    }
-  };
-
   return (
     <main className="flex-grow bg-white text-slate-900 font-sans leading-relaxed selection:bg-indigo-100">
       {/* =====================================================================================
           1. HEADER SECTION (H1)
           ===================================================================================== */}
-      <section className="relative bg-slate-900 text-white py-20 overflow-hidden">
-        {heroImage && (
-          <>
-            <img 
-              src={heroImage} 
-              alt="신용카드 구조와 활용 가이드 배경" 
-              className="absolute inset-0 w-full h-full object-cover opacity-20" 
-            />
-            <div className="absolute inset-0 bg-gradient-to-r from-slate-900 via-slate-900/95 to-slate-900/60"></div>
-          </>
-        )}
+      <section className="relative bg-slate-900 text-white py-24 overflow-hidden">
+        {/* Professional Gradient Background */}
+        <div className="absolute inset-0 bg-gradient-to-tr from-indigo-900 via-slate-900 to-slate-900"></div>
+        <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/black-scales.png')] opacity-10"></div>
 
         <div className="container mx-auto px-4 relative z-10 max-w-4xl">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-indigo-500/10 border border-indigo-500/20 text-indigo-300 text-xs font-bold mb-6 backdrop-blur-md uppercase tracking-wider">
@@ -70,20 +33,11 @@ export const CreditCardGuide: React.FC = () => {
             </span>
           </h1>
 
-          <p className="text-lg text-slate-400 leading-relaxed max-w-2xl font-light mb-8 break-keep">
+          <p className="text-lg text-slate-400 leading-relaxed max-w-2xl font-light mb-0 break-keep">
             신용카드는 단순한 결제 수단이 아닙니다. 이는 당신의 <strong>신용(Credit)</strong>을 담보로 한 단기 대출 도구이자, 
             현금 흐름을 유연하게 만드는 양날의 검입니다. 본 페이지는 신용카드의 작동 원리부터 신용점수에 미치는 영향, 
             그리고 위험을 피하는 올바른 사용법까지 금융 소비자가 반드시 알아야 할 핵심 정보를 담고 있습니다.
           </p>
-
-          <button 
-            onClick={handleGenerateImage}
-            disabled={isGenerating}
-            className="inline-flex items-center gap-2 px-5 py-2.5 bg-slate-800 hover:bg-slate-700 border border-slate-700 rounded-lg text-sm text-slate-300 transition-all"
-          >
-            {isGenerating ? <Loader2 size={16} className="animate-spin" /> : <Sparkles size={16} className="text-yellow-400" />}
-            <span>AI 테마 이미지 생성</span>
-          </button>
         </div>
       </section>
 

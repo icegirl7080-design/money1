@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import React from 'react';
+import { Link } from 'react-router-dom';
 import { 
   Wallet, 
   TrendingUp, 
@@ -7,56 +8,21 @@ import {
   Landmark, 
   Target,
   ShieldCheck,
-  Sparkles,
-  Loader2,
-  Lightbulb
+  Lightbulb,
+  ArrowRight
 } from 'lucide-react';
-import { generateMarketingImage } from '../services/geminiService';
-
-const HERO_PROMPT = "3D isometric illustration of a balanced financial ecosystem with coins, growing plants, and digital charts, clean blue and gold color palette, representing financial wisdom and growth";
 
 export const FinanceGuide: React.FC = () => {
-  const [heroImage, setHeroImage] = useState<string | null>(null);
-  const [isGenerating, setIsGenerating] = useState(false);
-
-  const handleGenerateImage = async () => {
-    const aiStudio = (window as any).aistudio;
-    if (aiStudio) {
-      const hasKey = await aiStudio.hasSelectedApiKey();
-      if (!hasKey) {
-        const success = await aiStudio.openSelectKey();
-        if (!success) return;
-      }
-    }
-
-    setIsGenerating(true);
-    try {
-      const url = await generateMarketingImage(HERO_PROMPT, 'hero');
-      if (url) setHeroImage(url);
-    } catch (e) {
-      console.error(e);
-    } finally {
-      setIsGenerating(false);
-    }
-  };
-
   return (
     <main className="flex-grow bg-white text-slate-900 font-sans leading-relaxed selection:bg-emerald-100">
       {/* =====================================================================================
           1. HEADER SECTION (H1)
           ===================================================================================== */}
-      <section className="relative bg-slate-900 text-white py-20 overflow-hidden">
-        {heroImage && (
-          <>
-            <img 
-              src={heroImage} 
-              alt="금융과 재테크 기초 가이드 배경" 
-              className="absolute inset-0 w-full h-full object-cover opacity-20" 
-            />
-            <div className="absolute inset-0 bg-gradient-to-r from-slate-900 via-slate-900/95 to-slate-900/60"></div>
-          </>
-        )}
-
+      <section className="relative bg-slate-900 text-white py-24 overflow-hidden">
+         {/* Professional Gradient Background */}
+        <div className="absolute inset-0 bg-gradient-to-br from-emerald-900 via-slate-900 to-slate-900"></div>
+        <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-5"></div>
+        
         <div className="container mx-auto px-4 relative z-10 max-w-4xl">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-300 text-xs font-bold mb-6 backdrop-blur-md uppercase tracking-wider">
             <Wallet size={14} />
@@ -70,21 +36,32 @@ export const FinanceGuide: React.FC = () => {
             </span>
           </h1>
 
-          <p className="text-lg text-slate-400 leading-relaxed max-w-2xl font-light mb-8 break-keep">
+          <p className="text-lg text-slate-400 leading-relaxed max-w-2xl font-light mb-0 break-keep">
             돈을 많이 버는 것과 돈을 잘 모으는 것은 다른 영역의 능력입니다. 
             현대 사회에서 <strong>금융 지식</strong>은 생존을 위한 필수 교양이며, 
             <strong>재테크</strong>는 자본주의 시스템 안에서 나의 자산을 지키고 불리는 기술입니다.
             본 페이지는 금융 생활을 처음 시작하는 분들을 위해 돈 관리의 핵심 원칙과 구조를 정리했습니다.
           </p>
+        </div>
+      </section>
 
-          <button 
-            onClick={handleGenerateImage}
-            disabled={isGenerating}
-            className="inline-flex items-center gap-2 px-5 py-2.5 bg-slate-800 hover:bg-slate-700 border border-slate-700 rounded-lg text-sm text-slate-300 transition-all"
-          >
-            {isGenerating ? <Loader2 size={16} className="animate-spin" /> : <Sparkles size={16} className="text-yellow-400" />}
-            <span>AI 테마 이미지 생성</span>
-          </button>
+      {/* =====================================================================================
+          NAVIGATION LINK FOR LIFE HACKS (NEW)
+          ===================================================================================== */}
+      <section className="bg-slate-50 border-b border-slate-200">
+        <div className="container mx-auto px-4 py-8">
+           <Link to="/life-hacks-guide" className="group flex items-center justify-between bg-white border border-slate-200 p-6 rounded-xl hover:border-amber-300 hover:shadow-md transition-all max-w-4xl mx-auto">
+              <div className="flex items-center gap-4">
+                <div className="bg-amber-100 text-amber-600 p-3 rounded-lg group-hover:bg-amber-500 group-hover:text-white transition-colors">
+                  <Lightbulb size={24} />
+                </div>
+                <div>
+                  <h3 className="font-bold text-slate-900 text-lg group-hover:text-amber-700 transition-colors">생활 속 금융 꿀팁이 궁금하신가요?</h3>
+                  <p className="text-sm text-slate-500">소비 습관 개선과 절약 노하우를 확인하세요.</p>
+                </div>
+              </div>
+              <ArrowRight className="text-slate-300 group-hover:text-amber-500 group-hover:translate-x-1 transition-all" />
+           </Link>
         </div>
       </section>
 
