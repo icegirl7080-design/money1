@@ -15,14 +15,10 @@ import {
   PieChart,
   HelpCircle,
   CheckCircle2,
-  AlertTriangle,
-  Banknote,
-  Info
+  Banknote
 } from 'lucide-react';
 import { generateMarketingImage } from '../services/geminiService';
 
-// --- SEO & Visual Strategy ---
-// 고품질 이미지를 위한 프롬프트 설정
 const HERO_PROMPT = "Futuristic and clean financial data center, glowing blue digital graphs and shield symbols, 8k resolution, cinematic lighting, representing trust and growth";
 const LOAN_IMAGE_PROMPT = "3D minimalist illustration of a bank vault door open with a golden shield inside, soft blue background, symbolizing safe lending";
 const CASH_IMAGE_PROMPT = "3D minimalist illustration of credit cards melting into liquid gold coins, flowing into a digital wallet, amber background, symbolizing liquidity";
@@ -66,18 +62,13 @@ export const Home: React.FC = () => {
   return (
     <main className="flex-grow bg-white text-slate-900 font-sans leading-relaxed">
       
-      {/* 
-        =====================================================================================
-        [H1 Section] HERO: Authority & Trust 
-        목적: 사이트의 정체성(정보 비대칭 해소) 선언 및 사용자 몰입 유도
-        ===================================================================================== 
-      */}
+      {/* HERO SECTION */}
       <section className="relative min-h-[600px] flex items-center bg-slate-900 overflow-hidden">
         {heroImage ? (
           <>
             <img 
               src={heroImage} 
-              alt="금융 데이터 분석 및 자산 관리 배경" 
+              alt="금융 데이터 분석 및 자산 관리" 
               className="absolute inset-0 w-full h-full object-cover opacity-30 scale-105 transition-opacity duration-1000" 
             />
             <div className="absolute inset-0 bg-gradient-to-r from-slate-950 via-slate-900/95 to-slate-900/40"></div>
@@ -129,12 +120,7 @@ export const Home: React.FC = () => {
         </div>
       </section>
 
-      {/* 
-        =====================================================================================
-        [Intro Section] 브랜드 철학 및 가치 제안
-        목적: 단순 정보 사이트가 아님을 강조하여 체류 시간 증대
-        ===================================================================================== 
-      */}
+      {/* INTRODUCTION */}
       <section className="py-16 bg-white border-b border-slate-100">
         <div className="container mx-auto px-4 max-w-4xl text-center">
           <h2 className="text-sm font-bold text-blue-600 tracking-widest uppercase mb-3">MoneyWise Philosophy</h2>
@@ -150,17 +136,10 @@ export const Home: React.FC = () => {
         </div>
       </section>
 
-      {/* 
-        =====================================================================================
-        [Content Block 1] LOANS & CREDIT SCORE
-        키워드: 소액 대출, 비상금, 신용점수, 1금융권
-        구조: 문제 제기 -> 해결책(소액대출 정의) -> 구체적 실행 방안
-        ===================================================================================== 
-      */}
+      {/* LOAN SECTION (H2) */}
       <section className="py-20 bg-slate-50">
         <div className="container mx-auto px-4">
           <div className="flex flex-col lg:flex-row items-start gap-12 lg:gap-20">
-            {/* 텍스트 콘텐츠 영역 */}
             <div className="lg:w-1/2">
               <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-100 text-blue-700 text-xs font-bold mb-6">
                 <ShieldCheck size={14} />
@@ -213,17 +192,15 @@ export const Home: React.FC = () => {
               </Link>
             </div>
 
-            {/* 이미지 영역 */}
             <div className="lg:w-1/2 w-full">
               <div className="aspect-[4/3] rounded-3xl overflow-hidden bg-white shadow-xl border border-slate-100 relative group">
                 {sectionImages.loan ? (
-                  <img src={sectionImages.loan} alt="Safe Banking Vault" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
+                  <img src={sectionImages.loan} alt="안전한 금융 대출" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
                 ) : (
                   <div className="w-full h-full flex items-center justify-center bg-blue-50">
                     <ShieldCheck size={80} className="text-blue-200" />
                   </div>
                 )}
-                {/* 툴팁 효과 */}
                 <div className="absolute bottom-6 left-6 bg-white/95 backdrop-blur px-4 py-3 rounded-xl shadow-lg border-l-4 border-blue-500 max-w-xs">
                   <p className="text-xs font-bold text-slate-400 uppercase mb-1">Expert Tip</p>
                   <p className="text-sm font-semibold text-slate-800">
@@ -237,17 +214,10 @@ export const Home: React.FC = () => {
         </div>
       </section>
 
-      {/* 
-        =====================================================================================
-        [Content Block 2] CASH OUT & HIDDEN ASSETS
-        키워드: 신용카드 현금화, 현금화, 포인트, 자산관리
-        구조: 오해 해소(불법vs합법) -> 포인트 통합조회 소개 -> 이점 강조
-        ===================================================================================== 
-      */}
+      {/* CASH OUT SECTION (H2) */}
       <section className="py-20 bg-white border-y border-slate-100">
         <div className="container mx-auto px-4">
           <div className="flex flex-col lg:flex-row-reverse items-center gap-12 lg:gap-20">
-            {/* 텍스트 콘텐츠 영역 */}
             <div className="lg:w-1/2">
               <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-100 text-amber-700 text-xs font-bold mb-6">
                 <Coins size={14} />
@@ -300,11 +270,10 @@ export const Home: React.FC = () => {
               </div>
             </div>
 
-            {/* 이미지 영역 */}
             <div className="lg:w-1/2 w-full">
               <div className="aspect-[4/3] rounded-3xl overflow-hidden bg-amber-50 shadow-xl border border-amber-100 relative group">
                 {sectionImages.cash ? (
-                  <img src={sectionImages.cash} alt="Credit Card Points to Cash" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
+                  <img src={sectionImages.cash} alt="신용카드 포인트 현금화" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
                 ) : (
                   <div className="w-full h-full flex items-center justify-center">
                     <Coins size={80} className="text-amber-300" />
@@ -316,13 +285,7 @@ export const Home: React.FC = () => {
         </div>
       </section>
 
-      {/* 
-        =====================================================================================
-        [Content Block 3] INVESTMENT & WELFARE
-        키워드: 투자, 주식, 복지, 정책, 재테크
-        구조: 3칼럼 그리드로 다양한 주제 포괄
-        ===================================================================================== 
-      */}
+      {/* INVESTMENT & WELFARE (H2/H3) */}
       <section className="py-20 bg-slate-50">
         <div className="container mx-auto px-4">
           <div className="text-center max-w-3xl mx-auto mb-16">
@@ -336,7 +299,6 @@ export const Home: React.FC = () => {
           </div>
 
           <div className="grid md:grid-cols-3 gap-8">
-            {/* 투자 섹션 */}
             <div className="bg-white p-8 rounded-3xl border border-slate-100 shadow-sm hover:shadow-xl transition-all duration-300">
               <div className="w-12 h-12 bg-red-50 rounded-xl flex items-center justify-center text-red-600 mb-6">
                 <TrendingUp size={24} />
@@ -351,7 +313,6 @@ export const Home: React.FC = () => {
               </Link>
             </div>
 
-            {/* 복지 섹션 */}
             <div className="bg-white p-8 rounded-3xl border border-slate-100 shadow-sm hover:shadow-xl transition-all duration-300">
               <div className="w-12 h-12 bg-purple-50 rounded-xl flex items-center justify-center text-purple-600 mb-6">
                 <Landmark size={24} />
@@ -366,7 +327,6 @@ export const Home: React.FC = () => {
               </Link>
             </div>
 
-            {/* 재테크 기초 섹션 */}
             <div className="bg-white p-8 rounded-3xl border border-slate-100 shadow-sm hover:shadow-xl transition-all duration-300">
               <div className="w-12 h-12 bg-emerald-50 rounded-xl flex items-center justify-center text-emerald-600 mb-6">
                 <PieChart size={24} />
@@ -384,11 +344,7 @@ export const Home: React.FC = () => {
         </div>
       </section>
 
-      {/* 
-        =====================================================================================
-        [Latest Articles] 최신 정보 목록
-        ===================================================================================== 
-      */}
+      {/* LATEST INSIGHTS */}
       <section className="py-20 bg-white border-t border-slate-100">
         <div className="container mx-auto px-4">
           <div className="flex justify-between items-end mb-10">
@@ -413,12 +369,7 @@ export const Home: React.FC = () => {
         </div>
       </section>
 
-      {/* 
-        =====================================================================================
-        [SEO FAQ] 자주 묻는 질문
-        목적: 롱테일 키워드(Long-tail Keywords) 공략 및 풍부한 텍스트 제공
-        ===================================================================================== 
-      */}
+      {/* FAQ SECTION */}
       <section className="py-20 bg-slate-50">
         <div className="container mx-auto px-4 max-w-3xl">
           <div className="text-center mb-12">
