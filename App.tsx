@@ -7,6 +7,7 @@ import { ArticleDetail } from './pages/ArticleDetail';
 import { CategoryPage } from './pages/CategoryPage';
 import { LoanGuide } from './pages/LoanGuide';
 import { CreditCardGuide } from './pages/CreditCardGuide';
+import { InvestmentGuide } from './pages/InvestmentGuide';
 import { BlogOverview } from './pages/BlogOverview';
 import { ScrollToTop } from './components/ScrollToTop';
 
@@ -21,6 +22,7 @@ const App: React.FC = () => {
           <Route path="/article/:id" element={<ArticleDetail />} />
           <Route path="/loan-guide" element={<LoanGuide />} />
           <Route path="/credit-card-guide" element={<CreditCardGuide />} />
+          <Route path="/investment-guide" element={<InvestmentGuide />} />
           <Route path="/blog" element={<BlogOverview />} />
           
           {/* Category Routes */}

@@ -3,7 +3,8 @@ import { Article, Category, NavItem } from './types';
 export const NAV_ITEMS: NavItem[] = [
   { label: '홈', path: '/', inMenu: true },
   { label: '대출가이드', path: '/loan-guide', inMenu: true },
-  { label: '신용카드가이드', path: '/credit-card-guide', inMenu: true }, // New Page
+  { label: '신용카드가이드', path: '/credit-card-guide', inMenu: true },
+  { label: '주식투자가이드', path: '/investment-guide', inMenu: true }, // New Page
   { label: '블로그', path: '/blog', inMenu: true }, 
   // The following items are hidden from the menu but used for routing/categorization
   { label: '금융/재테크', path: '/finance', category: Category.FINANCE, inMenu: false },
@@ -127,7 +128,7 @@ export const INITIAL_ARTICLES: Article[] = [
         <li><strong>급여 통장:</strong> 월급이 들어오고 고정 지출(월세, 보험료 등)이 빠져나가는 통장</li>
         <li><strong>소비 통장:</strong> 한 달 생활비(식비, 교통비)를 체크카드와 연동해 넣어두고 쓰는 통장</li>
         <li><strong>비상금 통장:</strong> 월급의 5~10%를 적립하여 경조사나 병원비 등 예기치 못한 지출 대비 (CMA 추천)</li>
-        <li><strong>투자 통장:</strong> 적금, 펀드 등 목적 자금을 모으는 통장</li>
+        <li><strong>투자 통장:</strong> 적금,펀드 등 목적 자금을 모으는 통장</li>
       </ul>
     `
   },
