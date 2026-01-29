@@ -6,6 +6,8 @@ import { Home } from './pages/Home';
 import { ArticleDetail } from './pages/ArticleDetail';
 import { CategoryPage } from './pages/CategoryPage';
 import { LoanGuide } from './pages/LoanGuide';
+import { CreditCardGuide } from './pages/CreditCardGuide';
+import { BlogOverview } from './pages/BlogOverview';
 import { ScrollToTop } from './components/ScrollToTop';
 
 const App: React.FC = () => {
@@ -18,6 +20,8 @@ const App: React.FC = () => {
           <Route path="/" element={<Home />} />
           <Route path="/article/:id" element={<ArticleDetail />} />
           <Route path="/loan-guide" element={<LoanGuide />} />
+          <Route path="/credit-card-guide" element={<CreditCardGuide />} />
+          <Route path="/blog" element={<BlogOverview />} />
           
           {/* Category Routes */}
           <Route path="/finance" element={<CategoryPage />} />

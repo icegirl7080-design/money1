@@ -1,3 +1,4 @@
+
 export enum Category {
   FINANCE = '금융/재테크',
   LOAN = '대출꿀팁',
@@ -22,4 +23,5 @@ export interface NavItem {
   label: string;
   path: string;
   category?: Category;
+  inMenu?: boolean; // Controls visibility in the header menu
 }

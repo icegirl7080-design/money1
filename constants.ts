@@ -1,13 +1,16 @@
 import { Article, Category, NavItem } from './types';
 
 export const NAV_ITEMS: NavItem[] = [
-  { label: '홈', path: '/' },
-  { label: '대출가이드', path: '/loan-guide' },
-  { label: '금융/재테크', path: '/finance', category: Category.FINANCE },
-  { label: '대출꿀팁', path: '/loan', category: Category.LOAN },
-  { label: '투자/주식', path: '/investment', category: Category.INVESTMENT },
-  { label: '복지/정책', path: '/welfare', category: Category.WELFARE },
-  { label: '생활꿀팁', path: '/life', category: Category.LIFE },
+  { label: '홈', path: '/', inMenu: true },
+  { label: '대출가이드', path: '/loan-guide', inMenu: true },
+  { label: '신용카드가이드', path: '/credit-card-guide', inMenu: true }, // New Page
+  { label: '블로그', path: '/blog', inMenu: true }, 
+  // The following items are hidden from the menu but used for routing/categorization
+  { label: '금융/재테크', path: '/finance', category: Category.FINANCE, inMenu: false },
+  { label: '대출꿀팁', path: '/loan', category: Category.LOAN, inMenu: false },
+  { label: '투자/주식', path: '/investment', category: Category.INVESTMENT, inMenu: false },
+  { label: '복지/정책', path: '/welfare', category: Category.WELFARE, inMenu: false },
+  { label: '생활꿀팁', path: '/life', category: Category.LIFE, inMenu: false },
 ];
 
 export const INITIAL_ARTICLES: Article[] = [

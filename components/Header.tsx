@@ -5,6 +5,9 @@ import { NAV_ITEMS } from '../constants';
 export const Header: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
+  // Filter items that should appear in the menu
+  const menuItems = NAV_ITEMS.filter(item => item.inMenu !== false);
+
   return (
     <header className="sticky top-0 z-50 w-full border-b border-slate-200 bg-white/90 backdrop-blur-md">
       <div className="container mx-auto px-4 h-16 flex items-center justify-between">
@@ -20,7 +23,7 @@ export const Header: React.FC = () => {
 
         {/* Desktop Nav */}
         <nav className="hidden md:flex items-center gap-8">
-          {NAV_ITEMS.map((item) => (
+          {menuItems.map((item) => (
             <a
               key={item.path}
               href={`#${item.path}`}
@@ -49,7 +52,7 @@ export const Header: React.FC = () => {
       {isMenuOpen && (
         <div className="md:hidden border-t border-slate-100 bg-white absolute w-full shadow-lg">
           <div className="flex flex-col p-4 gap-4">
-            {NAV_ITEMS.map((item) => (
+            {menuItems.map((item) => (
               <a
                 key={item.path}
                 href={`#${item.path}`}
