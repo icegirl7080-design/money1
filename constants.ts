@@ -18,12 +18,131 @@ export const NAV_ITEMS: NavItem[] = [
 
 export const INITIAL_ARTICLES: Article[] = [
   {
+    id: '15',
+    slug: 'sunshine-loan-master-guide',
+    category: Category.LOAN,
+    title: '햇살론 정부지원 대출 완벽 가이드: 나에게 가장 유리한 선택은?',
+    summary: '낮은 신용점수나 소득으로 인해 1금융권 이용이 어려운 분들을 위한 햇살론의 종류별 조건과 승인율 높이는 법을 상세히 안내합니다.',
+    imageUrl: 'https://images.unsplash.com/photo-1550565118-3a14e8d0386f?q=80&w=1200&auto=format&fit=crop',
+    date: '2024-03-25',
+    author: '금융 정책 에디터',
+    tags: ['햇살론', '정부지원대출', '서민금융', '근로자햇살론', '햇살론15', '햇살론유스', '저신용자대출'],
+    content: `
+      <p class="mb-8 text-xl leading-relaxed font-bold text-slate-800 break-keep">
+        고물가 상황에서 갑작스러운 자금이 필요하지만, 낮은 신용점수나 소득 때문에 고민이신가요? <strong>햇살론</strong>은 대표적인 <strong>정부지원 대출</strong> 상품으로, 1금융권 이용이 어려운 분들을 위한 실질적인 금융 안전망입니다. 이 글에서는 <strong>저신용자 대출</strong>의 핵심인 햇살론의 종류별 자격 조건과 나에게 맞는 상품을 찾는 법을 상세히 가이드해 드립니다.
+      </p>
+
+      <h2 class="text-2xl md:text-3xl font-black text-slate-900 mt-16 mb-8 tracking-tight">1. 햇살론이란 무엇인가: 서민을 위한 금융 제도</h2>
+      <p class="mb-6 leading-8 text-slate-700">
+        햇살론은 신용점수가 낮거나 소득이 적어 제도권 금융 이용에 제약을 받는 서민들을 위해 <strong>서민금융진흥원</strong>과 민간 금융사가 협력하여 제공하는 보증부 대출입니다. 정부가 대출금의 상당 부분을 보증하기 때문에, 금융사는 리스크를 줄이면서도 상대적으로 낮은 금리로 자금을 공급할 수 있습니다.
+      </p>
+      <p class="mb-6 leading-8 text-slate-700">
+        단순히 자금을 융통하는 것을 넘어, 고금리 채무의 악순환을 예방하고 경제적 자립을 돕는 <a href="/#/finance-guide" class="text-blue-600 font-bold">사회적 금융 정책</a>의 일환으로 운영됩니다.
+      </p>
+
+      <h2 class="text-2xl md:text-3xl font-black text-slate-900 mt-16 mb-8 tracking-tight">2. 햇살론 종류별 자격 조건과 상세 혜택</h2>
+      <p class="mb-6 leading-8 text-slate-700">
+        햇살론은 신청자의 직업, 연령, 신용 상태에 따라 세 가지 대표 상품으로 나뉩니다. 각 조건에 맞는 최적의 상품을 선택해야 이자 부담을 최소화할 수 있습니다.
+      </p>
+
+      <h3 class="text-xl md:text-2xl font-black text-slate-800 mb-4 flex items-center gap-2">
+        근로자햇살론: 직장인을 위한 대표 지원 상품
+      </h3>
+      <ul class="list-disc pl-6 mb-6 space-y-2 text-slate-700">
+        <li><strong>대상:</strong> 3개월 이상 재직 중인 근로자</li>
+        <li><strong>소득기준:</strong> 연 소득 3,500만 원 이하 (신용점수 무관) 또는 연 소득 4,500만 원 이하 (신용점수 하위 20% 이하)</li>
+        <li><strong>한도 및 금리:</strong> 최대 2,000만 원 / 연 11.5% 내외 (변동 가능)</li>
+      </ul>
+      <p class="p-4 bg-blue-50 text-blue-800 rounded-xl mb-8 font-medium">
+        💡 <strong>추천 대상:</strong> 소득 증빙이 가능한 직장인 중 기존 채무가 많아 추가 한도가 필요한 분
+      </p>
+
+      <h3 class="text-xl md:text-2xl font-black text-slate-800 mb-4 flex items-center gap-2">
+        햇살론15: 최저신용자를 위한 고정 금리 상품
+      </h3>
+      <ul class="list-disc pl-6 mb-6 space-y-2 text-slate-700">
+        <li><strong>대상:</strong> 연 소득 4,500만 원 이하이면서 신용점수 하위 20% 이하인 자</li>
+        <li><strong>특징:</strong> 대부업 등 고금리 대출 이용이 불가피한 경우를 위한 대안</li>
+        <li><strong>금리 혜택:</strong> 연 15.9% (성실 상환 시 매년 금리 인하 혜택 제공)</li>
+      </ul>
+      <p class="p-4 bg-slate-100 text-slate-700 rounded-xl mb-8 font-medium">
+        💡 <strong>추천 대상:</strong> 신용점수가 매우 낮아 2금융권에서도 승인이 어려운 분
+      </p>
+
+      <h3 class="text-xl md:text-2xl font-black text-slate-800 mb-4 flex items-center gap-2">
+        햇살론유스(Youth): 대학생 및 청년을 위한 저금리 지원
+      </h3>
+      <ul class="list-disc pl-6 mb-6 space-y-2 text-slate-700">
+        <li><strong>대상:</strong> 만 34세 이하의 대학생, 미취업 청년 또는 사회초년생 (재직 1년 이하)</li>
+        <li><strong>한도 및 금리:</strong> 최대 1,200만 원 / 연 3.5% 고정 금리</li>
+        <li><strong>거치 기간:</strong> 군 복무나 학업 기간을 고려하여 넉넉한 상환 유예 제공</li>
+      </ul>
+      <p class="p-4 bg-purple-50 text-purple-800 rounded-xl mb-8 font-medium">
+        💡 <strong>추천 대상:</strong> 취업을 준비 중이거나 이제 막 사회에 첫발을 내디딘 청년층
+      </p>
+
+      <h2 class="text-2xl md:text-3xl font-black text-slate-900 mt-16 mb-8 tracking-tight">3. 햇살론 승인 가능성을 높이는 핵심 전략</h2>
+      <p class="mb-6 leading-8 text-slate-700">
+        햇살론은 일반 신용대출보다 문턱이 낮지만, 서민금융진흥원의 보증 심사가 핵심입니다. 승인율을 높이기 위해 다음 사항을 점검하십시오.
+      </p>
+      <ul class="list-disc pl-6 mb-8 space-y-3 text-slate-700 font-medium">
+        <li><strong>최근 연체 이력:</strong> 최근 3개월 내 10일 이상의 연체가 없어야 합니다.</li>
+        <li><strong>금융 교육 이수:</strong> 서민금융진흥원 온라인 교육을 이수하면 금리 인하 및 심사 가점을 받을 수 있습니다.</li>
+        <li><strong>서류 구비:</strong> 건강보험 자격득실 확인서 등 소득과 재직을 증빙하는 서류를 정확히 준비하십시오.</li>
+      </ul>
+
+      <div class="bg-slate-50 border-l-8 border-slate-400 p-8 my-12 rounded-r-3xl">
+        <h2 class="text-slate-900 text-xl font-black mb-4 flex items-center gap-2">
+          이용 시 주의사항 및 안전한 신청 경로
+        </h2>
+        <p class="mb-4 text-slate-700 leading-relaxed">
+          정부지원 대출을 사칭한 불법 금융 광고에 주의해야 합니다. 아래의 안전 수칙을 반드시 지키십시오.
+        </p>
+        <ul class="space-y-3 text-slate-800 font-medium">
+          <li class="flex gap-2"><span>•</span> <span><strong>공식 신청 경로:</strong> 모든 햇살론 상담은 <strong>서민금융진흥원(국번없이 1397)</strong> 또는 공식 앱 '서민금융 잇다'를 통해서만 진행하십시오.</span></li>
+          <li class="flex gap-2"><span>•</span> <span><strong>선입금 요구 거절:</strong> 보증료나 수수료를 이유로 먼저 입금을 요구하는 것은 100% 사기입니다.</span></li>
+          <li class="flex gap-2"><span>•</span> <span><strong>전화 권유 주의:</strong> 금융기관은 먼저 전화를 걸어 대출을 권유하지 않습니다.</span></li>
+        </ul>
+      </div>
+
+      <div class="p-10 bg-slate-900 text-white rounded-[3rem] mt-16 shadow-2xl relative overflow-hidden">
+        <div class="absolute top-0 right-0 p-8 opacity-10">
+          <svg width="120" height="120" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+        </div>
+        <h4 class="text-blue-400 font-black mb-6 text-2xl uppercase tracking-tighter">Sunshine Loan Key Takeaways</h4>
+        <div class="space-y-4 text-slate-300 font-medium leading-relaxed">
+          <p class="flex items-start gap-3"><span class="text-blue-500 mt-1">●</span> <span>햇살론은 <strong>저신용자 대출</strong> 대안 중 가장 안정적인 정부 지원 정책입니다.</span></p>
+          <p class="flex items-start gap-3"><span class="text-blue-500 mt-1">●</span> <span>본인의 소득과 상황에 따라 <strong>근로자, 15, 유스</strong> 중 금리가 가장 낮은 상품부터 확인해야 합니다.</span></p>
+          <p class="flex items-start gap-3"><span class="text-blue-500 mt-1">●</span> <span>서민금융진흥원 공식 채널을 통한 상담이 가장 안전하며, 불법 사금융 광고에 현혹되지 않는 것이 중요합니다.</span></p>
+        </div>
+      </div>
+
+      <div class="mt-16 border-t border-slate-200 pt-12">
+        <p class="text-slate-500 mb-6 font-medium">금융 생활에 더 필요한 정보가 있다면 아래 가이드를 참고해 보세요.</p>
+        <div class="grid sm:grid-cols-2 gap-6">
+          <a href="/#/loan-guide" class="group p-8 bg-white rounded-3xl border border-slate-100 hover:border-blue-600 transition-all shadow-soft flex flex-col items-center text-center">
+            <div class="w-12 h-12 bg-blue-50 text-blue-600 rounded-2xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+            </div>
+            <p class="font-black text-slate-900 mb-1 group-hover:text-blue-600">신용점수 관리와 대출 상환의 정석, 대출 마스터 가이드 →</p>
+          </a>
+          <a href="/#/welfare-guide" class="group p-8 bg-white rounded-3xl border border-slate-100 hover:border-purple-600 transition-all shadow-soft flex flex-col items-center text-center">
+            <div class="w-12 h-12 bg-purple-50 text-purple-600 rounded-2xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+            </div>
+            <p class="font-black text-slate-900 mb-1 group-hover:text-purple-600">나만 모르는 정부 지원금 찾기, 최신 복지정책 확인 →</p>
+          </a>
+        </div>
+      </div>
+    `
+  },
+  {
     id: '1',
     slug: 'emergency-loan-guide',
     category: Category.LOAN,
     title: '소액 비상금 대출 완벽 가이드: 급전 마련의 구조와 안전한 활용법',
     summary: '갑작스러운 유동성 위기 시, 신용점수 하락을 최소화하며 안전하게 자금을 융통하는 1금융권 소액 대출의 메커니즘과 주의사항을 심층 분석합니다.',
-    imageUrl: 'https://images.unsplash.com/photo-1450101499163-c8848c66ca85?q=80&w=1200&auto=format&fit=crop',
+    imageUrl: 'https://images.unsplash.com/photo-1542222024-c39e2281f121?q=80&w=1200&auto=format&fit=crop',
     date: '2023-10-24',
     author: '금융 에디터',
     tags: ['소액', '대출', '비상금', '신용점수', '서울보증보험', '비상금대출', '1금융권대출', '무직자대출'],
@@ -104,7 +223,7 @@ export const INITIAL_ARTICLES: Article[] = [
     category: Category.LOAN,
     title: '신용카드 소액결제 및 현금화의 늪: 30% 수수료를 아끼는 합법적 대출 대안',
     summary: '급전이 필요해 신용카드 현금화나 소액결제를 고민 중이신가요? 겉보기엔 편리하지만 실제로는 연 300% 이상의 살인적인 금리를 부담하는 것과 같습니다. 안전하게 자금을 융통할 수 있는 정부 지원 소액 대출과 1금융권 비상금 대출의 실체를 공개합니다.',
-    imageUrl: 'https://images.unsplash.com/photo-1559526324-4b87b5e36e44?q=80&w=1200&auto=format&fit=crop',
+    imageUrl: 'https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?q=80&w=1200&auto=format&fit=crop',
     date: '2024-03-20',
     author: '금융 전략 에디터',
     tags: ['소액', '신용카드', '현금화', '대출', '비상금대출', '카드깡', '금융사기'],
@@ -153,7 +272,7 @@ export const INITIAL_ARTICLES: Article[] = [
     category: Category.INVESTMENT,
     title: '주식 투자 입문 가이드: 잃지 않는 포트폴리오 구성 전략',
     summary: '주식 투자를 처음 시작하는 분들을 위해 포트폴리오의 개념과 리스크를 낮추는 분산 투자 전략을 알기 쉽게 설명합니다.',
-    imageUrl: 'https://images.unsplash.com/photo-1535320903710-d993d3d77d29?q=80&w=1200&auto=format&fit=crop',
+    imageUrl: 'https://images.unsplash.com/photo-1611974714024-463ef9c7416b?q=80&w=1200&auto=format&fit=crop',
     date: '2023-10-22',
     author: '투자 분석가',
     tags: ['주식투자 입문', '포트폴리오 구성', '분산투자 전략', '주식 기초', '자산배분'],
