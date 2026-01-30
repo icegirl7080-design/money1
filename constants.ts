@@ -18,6 +18,111 @@ export const NAV_ITEMS: NavItem[] = [
 
 export const INITIAL_ARTICLES: Article[] = [
   {
+    id: '14',
+    slug: 'credit-card-cash-out-risk-alternatives',
+    category: Category.LOAN,
+    title: '신용카드 소액결제 및 현금화의 늪: 30% 수수료를 아끼는 합법적 대출 대안',
+    summary: '급전이 필요해 신용카드 현금화나 소액결제를 고민 중이신가요? 겉보기엔 편리하지만 실제로는 연 300% 이상의 살인적인 금리를 부담하는 것과 같습니다. 안전하게 자금을 융통할 수 있는 정부 지원 소액 대출과 1금융권 비상금 대출의 실체를 공개합니다.',
+    imageUrl: 'https://images.unsplash.com/photo-1559526324-4b87b5e36e44?q=80&w=1200&auto=format&fit=crop',
+    date: '2024-03-20',
+    author: '금융 전략 에디터',
+    tags: ['소액', '신용카드', '현금화', '대출', '비상금대출', '카드깡', '금융사기'],
+    content: `
+      <p class="mb-6 text-lg leading-relaxed font-medium">
+        지갑은 텅 비어있고, 다음 달 카드 대금은 다가오는데 당장 현금은 필요할 때. 스마트폰을 켜면 눈에 띄는 "신용카드 한도 즉시 현금화" 광고는 마법처럼 느껴질 수 있습니다. 하지만 이 '마법'은 당신의 금융 미래를 갉아먹는 치명적인 독이 될 수 있습니다.
+      </p>
+
+      <div class="my-10 rounded-3xl overflow-hidden shadow-2xl border border-slate-100">
+        <div class="aspect-video relative bg-slate-900">
+           <img src="https://images.unsplash.com/photo-1580519542036-c47de6196ba5?q=80&w=1200&auto=format&fit=crop" alt="금융 리스크 경고" class="absolute inset-0 w-full h-full object-cover opacity-80" />
+           <div class="absolute inset-0 flex items-center justify-center p-8 text-center">
+             <div class="bg-black/60 backdrop-blur-md p-6 rounded-2xl border border-white/20">
+               <p class="text-white font-black text-2xl md:text-3xl mb-2">"30%의 수수료는 단순한 비용이 아닙니다"</p>
+               <p class="text-slate-300 text-sm">신용 파산으로 가는 고속도로의 통행료입니다.</p>
+             </div>
+           </div>
+        </div>
+      </div>
+
+      <div class="bg-indigo-50 border-l-8 border-indigo-600 p-8 mb-12 rounded-r-3xl shadow-sm">
+        <h2 class="text-indigo-900 text-xl font-black mb-4 flex items-center gap-2">
+          🔍 이번 글에서 다룰 핵심 질문
+        </h2>
+        <ul class="space-y-3 text-indigo-800 font-medium">
+          <li class="flex gap-2"><span>✅</span> <span>현금화 업체가 말하지 않는 '실제 금리'의 진실은?</span></li>
+          <li class="flex gap-2"><span>✅</span> <span>신용카드 결제 후 즉시 환불/취소 시 발생하는 불이익</span></li>
+          <li class="flex gap-2"><span>✅</span> <span>정부 지원 '햇살론 유스'와 '소액생계비대출' 활용법</span></li>
+          <li class="flex gap-2"><span>✅</span> <span>1금융권 비상금 대출, 부결 없이 받는 꿀팁</span></li>
+        </ul>
+      </div>
+
+      <h2 class="text-2xl md:text-3xl font-black text-slate-900 mt-16 mb-8 tracking-tight">1. 신용카드 현금화, 왜 법적으로 금지되나요?</h2>
+      <p class="mb-6 leading-8 text-slate-700">
+        이른바 '카드깡'으로 불리는 신용카드 현금화는 <strong>여신전문금융업법</strong> 위반 사항입니다. 실제 물품의 구매 없이 허위 매출을 발생시키는 행위는 금융 질서를 문란하게 할 뿐만 아니라, 이용자 본인도 처벌 대상이 될 수 있습니다. 
+      </p>
+      <p class="mb-8 leading-8 text-slate-700">
+        무엇보다 무서운 것은 <strong>금융질서문란자</strong> 등록입니다. 한 번 등록되면 최장 12년 동안 대출, 카드 발급 등 모든 금융 거래가 불가능해집니다. 당장의 100만 원 때문에 인생의 중요한 시기에 전세자금 대출이나 결혼 자금을 마련하지 못하는 참사가 벌어질 수 있습니다.
+      </p>
+
+      <h2 class="text-2xl md:text-3xl font-black text-slate-900 mt-16 mb-8 tracking-tight">2. 수수료 30%의 실체: 연 이자율로 환산하면?</h2>
+      <div class="bg-white border-2 border-red-100 p-8 rounded-3xl mb-10 shadow-lg">
+        <h3 class="text-xl font-bold text-red-600 mb-6 flex items-center gap-2 italic underline">
+          이자 계산 시뮬레이션
+        </h3>
+        <p class="mb-4 text-slate-800 font-bold">100만 원을 현금화하여 70만 원을 손에 쥐었을 때:</p>
+        <ul class="space-y-3 text-slate-600 text-sm md:text-base">
+          <li class="flex justify-between border-b pb-2"><span>원금 (다음 달 청구액)</span> <span class="font-bold">1,000,000원</span></li>
+          <li class="flex justify-between border-b pb-2"><span>수령액</span> <span class="font-bold">700,000원</span></li>
+          <li class="flex justify-between border-b pb-2"><span>한 달 이자</span> <span class="text-red-600 font-bold">300,000원</span></li>
+          <li class="flex justify-between pt-2"><span>연 환산 이자율</span> <span class="text-red-600 font-black text-xl">약 514%</span></li>
+        </ul>
+        <p class="mt-6 text-xs text-slate-400 leading-relaxed italic">
+          *법정 최고 금리(연 20%)를 약 25배 초과하는 살인적인 고금리입니다. 이는 금융 상품이 아니라 수탈에 가깝습니다.
+        </p>
+      </div>
+
+      <h2 class="text-2xl md:text-3xl font-black text-slate-900 mt-16 mb-8 tracking-tight">3. 안전하고 합법적인 소액 자금 마련 대안</h2>
+      <p class="mb-10 leading-8 text-slate-700">
+        급전이 필요할수록 차분해져야 합니다. 현재 대한민국에는 신용이 낮아도, 소득이 적어도 이용할 수 있는 안전한 <strong>정부 지원 금융 시스템</strong>이 잘 구축되어 있습니다.
+      </p>
+
+      <div class="grid md:grid-cols-2 gap-8 mb-16">
+        <div class="bg-slate-50 p-8 rounded-3xl border border-slate-200 hover:border-indigo-400 transition-all group">
+          <div class="w-12 h-12 bg-indigo-600 text-white rounded-2xl flex items-center justify-center mb-6 shadow-lg shadow-indigo-200">
+            <span class="font-black">01</span>
+          </div>
+          <h4 class="text-xl font-bold text-slate-900 mb-4">소액생계비대출 (서민금융진흥원)</h4>
+          <p class="text-sm text-slate-600 leading-relaxed mb-6">연체자나 소득 증빙이 어려운 분들도 <strong>당일 최대 100만 원</strong>까지 대출이 가능합니다. 불법 업체 대신 국가가 운영하는 창구를 먼저 두드리세요.</p>
+          <a href="https://www.kinfa.or.kr" target="_blank" class="text-xs font-bold text-indigo-600 flex items-center gap-1 group-hover:gap-2 transition-all">공식 홈페이지 확인 <span class="text-lg">→</span></a>
+        </div>
+
+        <div class="bg-slate-50 p-8 rounded-3xl border border-slate-200 hover:border-emerald-400 transition-all group">
+          <div class="w-12 h-12 bg-emerald-600 text-white rounded-2xl flex items-center justify-center mb-6 shadow-lg shadow-emerald-200">
+            <span class="font-black">02</span>
+          </div>
+          <h4 class="text-xl font-bold text-slate-900 mb-4">1금융권 비상금 대출</h4>
+          <p class="text-sm text-slate-600 leading-relaxed mb-6">카카오뱅크, 토스뱅크 등에서 제공하는 비상금 대출은 신용점수에 미치는 영향이 적고 <strong>연 5~8%대</strong>의 합리적인 금리로 이용할 수 있습니다.</p>
+          <Link to="/loan-guide" class="text-xs font-bold text-emerald-600 flex items-center gap-1 group-hover:gap-2 transition-all">이용 가이드 읽기 <span class="text-lg">→</span></Link>
+        </div>
+      </div>
+
+      <h2 class="text-2xl md:text-3xl font-black text-slate-900 mt-16 mb-8 tracking-tight">결론: 신용은 당신의 가장 큰 재산입니다</h2>
+      <p class="mb-6 leading-8 text-slate-700">
+        <strong>소액</strong>이라는 단어에 현혹되지 마십시오. <strong>신용카드 현금화</strong>는 당장의 목마름을 해결하기 위해 바닷물을 마시는 것과 같습니다. 결국 더 큰 갈증(빚)을 부르고 당신의 신용이라는 우물을 영원히 오염시킬 수 있습니다.
+      </p>
+      <p class="mb-10 leading-8 text-slate-700">
+        지금 바로 머니와이즈의 다른 가이드들을 통해 <strong>대출</strong>의 구조를 이해하고, 지출을 통제하는 시스템을 구축하십시오. 건강한 금융 습관이 당신을 가난의 늪에서 건져줄 유일한 밧줄입니다.
+      </p>
+      
+      <div class="p-8 bg-slate-900 rounded-[2.5rem] text-center">
+        <p class="text-slate-400 text-sm mb-6">금융에 관한 더 깊은 인사이트가 필요하다면?</p>
+        <Link to="/blog" class="inline-flex items-center gap-2 px-10 py-4 bg-white text-slate-900 font-bold rounded-2xl hover:bg-slate-50 transition-all shadow-xl">
+          에디터 추천 칼럼 더 보기
+        </Link>
+      </div>
+    `
+  },
+  {
     id: '13',
     slug: 'google-info-fee-cash-truth',
     category: Category.FINANCE,
@@ -223,7 +328,7 @@ export const INITIAL_ARTICLES: Article[] = [
 
       <div class="my-8 rounded-2xl overflow-hidden shadow-lg border border-slate-100">
         <div class="aspect-video relative bg-slate-100">
-           <img src="https://images.unsplash.com/photo-1556742208-999815fca738?q=80&w=800&auto=format&fit=crop" alt="금융 앱 사용 모습" class="absolute inset-0 w-full h-full object-cover" />
+           <img src="https://images.unsplash.com/photo-1556742208-999815fca738?q=80&w=1200&auto=format&fit=crop" alt="금융 앱 사용 모습" class="absolute inset-0 w-full h-full object-cover" />
            <div class="absolute bottom-0 left-0 w-full bg-gradient-to-t from-black/60 to-transparent p-6">
              <p class="font-bold text-white mb-1">모바일 소액결제</p>
              <p class="text-xs text-slate-200">편리함 뒤에 숨겨진 높은 수수료</p>
