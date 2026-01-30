@@ -125,6 +125,16 @@ export const INITIAL_ARTICLES: Article[] = [
         단순히 "돈을 구한다"는 목적은 같지만, 그 결과는 천양지차입니다. 본 글에서는 신용카드 현금화의 구조를 명확히 파헤치고, 합법과 불법의 경계에서 소비자가 취해야 할 올바른 포지션을 제시합니다.
       </p>
 
+      <div class="my-8 rounded-2xl overflow-hidden shadow-lg border border-slate-100">
+        <div class="aspect-video relative">
+           <img src="https://images.unsplash.com/photo-1556742049-0cfed4f7a07d?q=80&w=800&auto=format&fit=crop" alt="카드 결제 단말기와 신용카드" class="absolute inset-0 w-full h-full object-cover" />
+           <div class="absolute bottom-0 left-0 w-full bg-gradient-to-t from-black/60 to-transparent p-6">
+             <p class="font-bold text-white mb-1">편리함의 대가</p>
+             <p class="text-xs text-slate-200">높은 수수료 구조를 주의해야 합니다</p>
+           </div>
+        </div>
+      </div>
+
       <div class="bg-slate-50 border-l-4 border-slate-900 p-6 mb-10 rounded-r-xl">
         <strong class="block text-slate-900 text-lg mb-2">💡 이 글의 핵심 포인트</strong>
         <ul class="list-disc list-inside space-y-1 text-slate-700">
@@ -217,6 +227,16 @@ export const INITIAL_ARTICLES: Article[] = [
       <p class="mb-6 text-lg leading-relaxed">
         하지만 이 용어는 금융 시장에서 가장 오해받고 있으며, 동시에 가장 주의 깊게 다뤄져야 할 개념 중 하나입니다. 단순히 "핸드폰으로 돈을 구한다"는 표면적인 기능 뒤에는, <strong>높은 기회비용과 신용상의 리스크</strong>가 숨어 있기 때문입니다. 본 글에서는 금융 소비자의 관점에서 소액결제현금화가 실제로 어떻게 작동하는지, 그리고 이것이 개인의 재무 건전성에 어떤 영향을 미치는지 구조적으로 파헤쳐봅니다.
       </p>
+
+      <div class="my-8 rounded-2xl overflow-hidden shadow-lg border border-slate-100">
+        <div class="aspect-video relative">
+           <img src="https://images.unsplash.com/photo-1556745757-8d76bdb6984b?q=80&w=800&auto=format&fit=crop" alt="스마트폰을 이용한 금융 거래" class="absolute inset-0 w-full h-full object-cover" />
+           <div class="absolute bottom-0 left-0 w-full bg-gradient-to-t from-black/60 to-transparent p-6">
+             <p class="font-bold text-white mb-1">모바일 소액결제</p>
+             <p class="text-xs text-slate-200">편리함 뒤에 숨겨진 높은 수수료</p>
+           </div>
+        </div>
+      </div>
 
       <div class="bg-slate-50 border-l-4 border-slate-900 p-6 mb-10 rounded-r-xl">
         <strong class="block text-slate-900 text-lg mb-2">💡 이 글의 핵심 포인트</strong>
@@ -320,6 +340,16 @@ export const INITIAL_ARTICLES: Article[] = [
       <p class="mb-6 text-lg leading-relaxed">많은 사람들이 "월급이 조금만 더 오르면 돈 걱정이 없을 텐데"라고 말합니다. 하지만 현실은 냉정합니다. 연봉이 3천만 원일 때 돈이 부족했던 사람은 연봉이 6천만 원이 되어도 여전히 돈이 부족합니다. 이는 <strong>수입(Income)</strong>의 문제가 아니라 돈을 관리하는 <strong>구조(Structure)</strong>의 문제이기 때문입니다.</p>
       <p class="mb-6 text-lg leading-relaxed">재테크의 기본은 '밑 빠진 독에 물 붓기'를 멈추는 것에서 시작합니다. 아무리 좋은 투자 정보를 알고 있어도, 일상에서 돈이 줄줄 새고 있다면 자산은 절대 쌓이지 않습니다. 본 글에서는 대부분의 사람들이 무심코 반복하는 <strong>잘못된 금융 선택</strong> 6가지를 진단하고, 이를 바로잡는 구조적 해결책을 제시합니다.</p>
 
+      <div class="my-8 rounded-2xl overflow-hidden shadow-lg border border-slate-100">
+        <div class="aspect-video relative">
+           <img src="https://images.unsplash.com/photo-1579621970795-87facc2f976d?q=80&w=800&auto=format&fit=crop" alt="동전이 쏟아지는 지갑" class="absolute inset-0 w-full h-full object-cover" />
+           <div class="absolute bottom-0 left-0 w-full bg-gradient-to-t from-black/60 to-transparent p-6">
+             <p class="font-bold text-white mb-1">소액 지출의 함정</p>
+             <p class="text-xs text-slate-200">작은 구멍이 거대한 배를 침몰시킵니다</p>
+           </div>
+        </div>
+      </div>
+
       <div class="bg-slate-50 border-l-4 border-slate-900 p-6 mb-10 rounded-r-xl">
         <strong class="block text-slate-900 text-lg mb-2">💡 이 글의 핵심 포인트</strong>
         <ul class="list-disc list-inside space-y-1 text-slate-700">
@@ -385,6 +415,16 @@ export const INITIAL_ARTICLES: Article[] = [
       <p class="mb-6 text-lg leading-relaxed">살다 보면 갑자기 현금이 필요한 순간이 찾아옵니다. 경조사비, 병원비, 혹은 예기치 못한 수리비 등 급전이 필요할 때 대부분의 사람들은 당황하여 가장 빠르고 쉬운 방법을 찾게 됩니다. 이 과정에서 많은 이들이 고금리의 카드론이나 현금서비스를 이용하며 신용점수를 깎아먹는 실수를 범합니다.</p>
       <p class="mb-6 text-lg leading-relaxed">하지만 금융 지식이 있다면, <strong>신용점수 하락을 최소화</strong>하면서도 1금융권에서 안전하게 소액을 융통할 수 있습니다. 본 글에서는 이른바 '비상금 대출'이라 불리는 소액 대출 상품의 구조와 올바른 활용 전략을 제시합니다.</p>
 
+      <div class="my-8 rounded-2xl overflow-hidden shadow-lg border border-slate-100">
+        <div class="aspect-video relative">
+           <img src="https://images.unsplash.com/photo-1573164713988-8665fc963095?q=80&w=800&auto=format&fit=crop" alt="금융 상담을 받고 있는 모습" class="absolute inset-0 w-full h-full object-cover" />
+           <div class="absolute bottom-0 left-0 w-full bg-gradient-to-t from-black/60 to-transparent p-6">
+             <p class="font-bold text-white mb-1">안전한 자금 융통</p>
+             <p class="text-xs text-slate-200">1금융권 비상금 대출부터 확인하세요</p>
+           </div>
+        </div>
+      </div>
+
       <div class="my-8 p-6 bg-blue-50 border border-blue-100 rounded-xl">
         <strong class="block text-blue-900 text-lg mb-3">🚀 핵심 요약</strong>
         <ul class="list-disc list-inside space-y-2 text-slate-700">
@@ -434,6 +474,16 @@ export const INITIAL_ARTICLES: Article[] = [
       <p class="mb-6 text-lg leading-relaxed">"계란을 한 바구니에 담지 말라"는 격언은 투자의 세계에서 진리에 가깝습니다. 하지만 많은 초보 투자자들은 수익률 대박을 꿈꾸며 특정 종목에 전 재산을 쏟아붓는 '몰빵 투자'를 감행합니다. 이는 투자가 아니라 <strong>도박</strong>입니다.</p>
       <p class="mb-6 text-lg leading-relaxed">주식 시장에서 개인이 기관과 외국인을 이길 수 있는 유일한 무기는 <strong>시간</strong>과 <strong>분산</strong>입니다. 시장의 등락에 일희일비하지 않고 꾸준히 우상향하는 자산을 만드는 <strong>포트폴리오 구성법</strong>을 소개합니다.</p>
 
+      <div class="my-8 rounded-2xl overflow-hidden shadow-lg border border-slate-100">
+        <div class="aspect-video relative">
+           <img src="https://images.unsplash.com/photo-1590283603385-17ffb3a7f29f?q=80&w=800&auto=format&fit=crop" alt="주식 차트를 분석하는 모습" class="absolute inset-0 w-full h-full object-cover" />
+           <div class="absolute bottom-0 left-0 w-full bg-gradient-to-t from-black/60 to-transparent p-6">
+             <p class="font-bold text-white mb-1">분산 투자의 중요성</p>
+             <p class="text-xs text-slate-200">리스크를 관리해야 수익이 따라옵니다</p>
+           </div>
+        </div>
+      </div>
+
       <div class="my-8 p-6 bg-red-50 border border-red-100 rounded-xl">
          <strong class="block text-red-900 text-lg mb-3">📈 투자 성공의 3원칙</strong>
          <ol class="list-decimal list-inside space-y-2 text-slate-700">
@@ -478,6 +528,16 @@ export const INITIAL_ARTICLES: Article[] = [
     content: `
       <p class="mb-6 text-lg leading-relaxed">매년 수많은 복지 정책이 쏟아지지만, 정작 내가 받을 수 있는 혜택이 무엇인지 아는 사람은 드뭅니다. 복잡한 신청 조건과 낯선 용어들 때문입니다. 하지만 정부 지원금은 '신청주의'를 원칙으로 합니다. <strong>가만히 있으면 아무도 챙겨주지 않는다</strong>는 뜻입니다.</p>
       <p class="mb-6 text-lg leading-relaxed">세금을 내는 국민으로서 정당한 권리를 누리기 위해, 2024년에 주목해야 할 핵심 정부 지원 정책들을 정리했습니다. 자격 요건이 된다면 반드시 신청하여 금융 혜택을 누리시길 바랍니다.</p>
+
+      <div class="my-8 rounded-2xl overflow-hidden shadow-lg border border-slate-100">
+        <div class="aspect-video relative">
+           <img src="https://images.unsplash.com/photo-1555421689-d68471e189f2?q=80&w=800&auto=format&fit=crop" alt="행복한 가족과 육아 지원" class="absolute inset-0 w-full h-full object-cover" />
+           <div class="absolute bottom-0 left-0 w-full bg-gradient-to-t from-black/60 to-transparent p-6">
+             <p class="font-bold text-white mb-1">놓치지 말아야 할 혜택</p>
+             <p class="text-xs text-slate-200">정부 지원금은 신청하는 자의 권리입니다</p>
+           </div>
+        </div>
+      </div>
 
       <div class="my-8 p-6 bg-purple-50 border border-purple-100 rounded-xl">
          <strong class="block text-purple-900 text-lg mb-3">🏛️ 2024 핵심 정책 키워드</strong>
@@ -526,6 +586,16 @@ export const INITIAL_ARTICLES: Article[] = [
       <p class="mb-6 text-lg leading-relaxed">
         개인 파산이나 신용 불량은 하루아침에 일어나는 일이 아닙니다. 잘못된 금융 습관이 쌓이고 쌓여 임계점을 넘는 순간 무너지는 것입니다. 본 글에서는 개인 금융이 무너지는 결정적인 5가지 순간을 진단하고, 이를 미리 감지하여 방어하는 방법을 제시합니다.
       </p>
+
+      <div class="my-8 rounded-2xl overflow-hidden shadow-lg border border-slate-100">
+        <div class="aspect-video relative">
+           <img src="https://images.unsplash.com/photo-1634733988685-a91a790e4a64?q=80&w=800&auto=format&fit=crop" alt="스트레스를 받는 직장인과 하락하는 그래프" class="absolute inset-0 w-full h-full object-cover" />
+           <div class="absolute bottom-0 left-0 w-full bg-gradient-to-t from-black/60 to-transparent p-6">
+             <p class="font-bold text-white mb-1">위기의 전조 증상</p>
+             <p class="text-xs text-slate-200">금융 건강을 미리 체크하세요</p>
+           </div>
+        </div>
+      </div>
 
       <div class="bg-red-50 border-l-4 border-red-600 p-6 mb-10 rounded-r-xl">
         <strong class="block text-red-900 text-lg mb-2">🚨 위험 신호 체크리스트</strong>
@@ -594,6 +664,16 @@ export const INITIAL_ARTICLES: Article[] = [
         재테크에 실패하는 가장 큰 이유는 '방법'을 몰라서가 아니라 <strong>'순서'</strong>가 틀렸기 때문입니다. 
         튼튼한 자산을 쌓아 올리기 위해 반드시 지켜야 할 돈 관리의 절대적인 순서(Roadmap)를 정리해 드립니다.
       </p>
+
+      <div class="my-8 rounded-2xl overflow-hidden shadow-lg border border-slate-100">
+        <div class="aspect-video relative">
+           <img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?q=80&w=800&auto=format&fit=crop" alt="체계적인 재무 계획 수립" class="absolute inset-0 w-full h-full object-cover" />
+           <div class="absolute bottom-0 left-0 w-full bg-gradient-to-t from-black/60 to-transparent p-6">
+             <p class="font-bold text-white mb-1">체계적인 계획</p>
+             <p class="text-xs text-slate-200">순서만 지켜도 자산은 늘어납니다</p>
+           </div>
+        </div>
+      </div>
 
       <div class="my-8 p-6 bg-emerald-50 border border-emerald-100 rounded-xl">
          <strong class="block text-emerald-900 text-lg mb-3">🧭 돈 관리 5단계 로드맵</strong>
@@ -668,6 +748,16 @@ export const INITIAL_ARTICLES: Article[] = [
         모든 카드사의 포인트를 한 번에 조회하고 단 1초 만에 현금화할 수 있습니다. 
         숨어있는 내 돈을 찾는 가장 확실한 방법을 단계별로 안내해 드립니다.
       </p>
+
+      <div class="my-8 rounded-2xl overflow-hidden shadow-lg border border-slate-100">
+        <div class="aspect-video relative">
+           <img src="https://images.unsplash.com/photo-1559526324-593bc814228e?q=80&w=800&auto=format&fit=crop" alt="스마트폰으로 포인트 조회 중" class="absolute inset-0 w-full h-full object-cover" />
+           <div class="absolute bottom-0 left-0 w-full bg-gradient-to-t from-black/60 to-transparent p-6">
+             <p class="font-bold text-white mb-1">포인트는 현금이다</p>
+             <p class="text-xs text-slate-200">1포인트도 놓치지 말고 현금화하세요</p>
+           </div>
+        </div>
+      </div>
 
       <div class="my-8 rounded-2xl overflow-hidden shadow-lg border border-slate-100">
         <div class="bg-blue-600 p-8 text-center text-white">
@@ -746,6 +836,16 @@ export const INITIAL_ARTICLES: Article[] = [
         자동으로 저축이 되는 시스템을 구축하는 방법을 소개합니다. 딱 4개의 통장만 준비하면 됩니다.
       </p>
 
+      <div class="my-8 rounded-2xl overflow-hidden shadow-lg border border-slate-100">
+        <div class="aspect-video relative">
+           <img src="https://images.unsplash.com/photo-1628348068343-c6a848d2b6dd?q=80&w=800&auto=format&fit=crop" alt="돼지 저금통과 계산기" class="absolute inset-0 w-full h-full object-cover" />
+           <div class="absolute bottom-0 left-0 w-full bg-gradient-to-t from-black/60 to-transparent p-6">
+             <p class="font-bold text-white mb-1">통장 쪼개기</p>
+             <p class="text-xs text-slate-200">돈의 목적을 명확히 하여 누수를 막습니다</p>
+           </div>
+        </div>
+      </div>
+
       <div class="grid grid-cols-1 md:grid-cols-2 gap-6 my-10">
         <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm">
           <strong class="block text-slate-900 text-lg mb-2">1. 급여 통장 (Hub)</strong>
@@ -816,6 +916,16 @@ export const INITIAL_ARTICLES: Article[] = [
         해외 주식 투자자가 반드시 알아야 할 양도소득세의 구조와 합법적인 절세 전략을 정리해 드립니다.
       </p>
 
+      <div class="my-8 rounded-2xl overflow-hidden shadow-lg border border-slate-100">
+        <div class="aspect-video relative">
+           <img src="https://images.unsplash.com/photo-1628172960251-6979683796d7?q=80&w=800&auto=format&fit=crop" alt="세금 계산서와 계산기" class="absolute inset-0 w-full h-full object-cover" />
+           <div class="absolute bottom-0 left-0 w-full bg-gradient-to-t from-black/60 to-transparent p-6">
+             <p class="font-bold text-white mb-1">절세도 수익이다</p>
+             <p class="text-xs text-slate-200">세금 구조를 알아야 실질 수익률이 올라갑니다</p>
+           </div>
+        </div>
+      </div>
+
       <div class="my-8 p-6 bg-slate-100 border border-slate-200 rounded-xl">
          <strong class="block text-slate-900 text-lg mb-3">🧾 해외 주식 세금 3줄 요약</strong>
          <ul class="list-disc list-inside space-y-2 text-slate-700">
@@ -880,6 +990,16 @@ export const INITIAL_ARTICLES: Article[] = [
         신용점수는 한 번 떨어지면 올리기 어렵다고 생각하지만, 평가 알고리즘을 이해하면 누구나 점수를 올릴 수 있습니다. 
         NICE지키미와 KCB(올크레딧) 점수를 동시에 관리하는 5가지 실전 전략을 공개합니다.
       </p>
+
+      <div class="my-8 rounded-2xl overflow-hidden shadow-lg border border-slate-100">
+        <div class="aspect-video relative">
+           <img src="https://images.unsplash.com/photo-1620714223084-874191b36c3f?q=80&w=800&auto=format&fit=crop" alt="상승하는 그래프와 성취감" class="absolute inset-0 w-full h-full object-cover" />
+           <div class="absolute bottom-0 left-0 w-full bg-gradient-to-t from-black/60 to-transparent p-6">
+             <p class="font-bold text-white mb-1">신용점수 관리</p>
+             <p class="text-xs text-slate-200">금융 생활의 첫걸음이자 가장 강력한 무기</p>
+           </div>
+        </div>
+      </div>
 
       <div class="bg-indigo-50 border-l-4 border-indigo-600 p-6 mb-10 rounded-r-xl">
         <strong class="block text-indigo-900 text-lg mb-2">⭐ 신용점수 올리기 5계명</strong>
