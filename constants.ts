@@ -23,7 +23,7 @@ export const INITIAL_ARTICLES: Article[] = [
     category: Category.FINANCE,
     title: '구글정보이용료현금화의 실체: 수수료 40%의 진실과 계정 정지 리스크',
     summary: '휴대폰 소액결제 한도가 막혔을 때 찾는 마지막 수단, 정보이용료(콘텐츠이용료). 왜 수수료가 비정상적으로 높은지, 그리고 구글 계정 영구 정지라는 치명적 위험을 피하는 방법은 무엇인지 분석합니다.',
-    imageUrl: 'https://images.unsplash.com/photo-1556740738-b6a63e27c4df?q=80&w=800&auto=format&fit=crop',
+    imageUrl: 'https://images.unsplash.com/photo-1611162617474-5b21e879e113?q=80&w=800&auto=format&fit=crop',
     date: '2023-11-30',
     author: '금융 에디터',
     tags: ['구글정보이용료', '콘텐츠이용료', '정보이용료현금화', '구글깡', '리니지m', '소액결제'],
@@ -36,7 +36,7 @@ export const INITIAL_ARTICLES: Article[] = [
       </p>
 
       <div class="my-8 rounded-2xl overflow-hidden shadow-lg border border-slate-100">
-        <div class="bg-slate-200 aspect-video flex items-center justify-center relative">
+        <div class="aspect-video flex items-center justify-center relative bg-slate-100">
            <img src="https://images.unsplash.com/photo-1616077168079-7e09a677fb2c?q=80&w=800&auto=format&fit=crop" alt="스마트폰을 보며 고민하는 모습" class="absolute inset-0 w-full h-full object-cover" />
            <div class="absolute bottom-0 left-0 w-full bg-gradient-to-t from-black/70 to-transparent p-6">
              <p class="font-bold text-white mb-1">한도 부족과 결제 오류</p>
@@ -126,7 +126,7 @@ export const INITIAL_ARTICLES: Article[] = [
       </p>
 
       <div class="my-8 rounded-2xl overflow-hidden shadow-lg border border-slate-100">
-        <div class="aspect-video relative">
+        <div class="aspect-video relative bg-slate-100">
            <img src="https://images.unsplash.com/photo-1556742049-0cfed4f7a07d?q=80&w=800&auto=format&fit=crop" alt="카드 결제 단말기와 신용카드" class="absolute inset-0 w-full h-full object-cover" />
            <div class="absolute bottom-0 left-0 w-full bg-gradient-to-t from-black/60 to-transparent p-6">
              <p class="font-bold text-white mb-1">편리함의 대가</p>
@@ -216,7 +216,7 @@ export const INITIAL_ARTICLES: Article[] = [
     category: Category.FINANCE,
     title: '소액결제현금화의 구조적 이해와 금융 소비자가 알아야 할 진실',
     summary: '급전이 필요할 때 검색하게 되는 소액결제현금화. 단순한 현금 마련 수단으로 접근하면 위험합니다. 그 이면에 숨겨진 수수료 구조와 신용상의 리스크, 그리고 안전한 대안까지 심층 분석합니다.',
-    imageUrl: 'https://images.unsplash.com/photo-1512428559087-560fa5ce7d87?q=80&w=800&auto=format&fit=crop',
+    imageUrl: 'https://images.unsplash.com/photo-1604594849809-dfedbc827105?q=80&w=800&auto=format&fit=crop',
     date: '2023-11-20',
     author: '금융 에디터',
     tags: ['소액결제현금화', '재테크', '금융상식', '신용관리', '현금유동성', '급전'],
@@ -229,8 +229,8 @@ export const INITIAL_ARTICLES: Article[] = [
       </p>
 
       <div class="my-8 rounded-2xl overflow-hidden shadow-lg border border-slate-100">
-        <div class="aspect-video relative">
-           <img src="https://images.unsplash.com/photo-1556745757-8d76bdb6984b?q=80&w=800&auto=format&fit=crop" alt="스마트폰을 이용한 금융 거래" class="absolute inset-0 w-full h-full object-cover" />
+        <div class="aspect-video relative bg-slate-100">
+           <img src="https://images.unsplash.com/photo-1556742031-c6961e8560b0?q=80&w=800&auto=format&fit=crop" alt="스마트폰을 이용한 금융 거래" class="absolute inset-0 w-full h-full object-cover" />
            <div class="absolute bottom-0 left-0 w-full bg-gradient-to-t from-black/60 to-transparent p-6">
              <p class="font-bold text-white mb-1">모바일 소액결제</p>
              <p class="text-xs text-slate-200">편리함 뒤에 숨겨진 높은 수수료</p>
@@ -258,10 +258,10 @@ export const INITIAL_ARTICLES: Article[] = [
 
       <h2 class="text-2xl font-bold text-slate-900 mt-12 mb-4">2. 왜 위험한가? 숨겨진 비용과 리스크 구조</h2>
       <p class="mb-6 leading-relaxed">
-        급전이 필요할 때 간편함은 큰 유혹입니다. 하지만 그 편리함에는 반드시 대가가 따릅니다. 소액결제현금화를 고려하기 전, 반드시 다음의 리스크 구조를 이해해야 합니다.
+        급전이 필요한 사람들에게 간편함은 큰 유혹입니다. 하지만 그 편리함에는 반드시 대가가 따릅니다. 소액결제현금화를 고려하기 전, 반드시 다음의 리스크 구조를 이해해야 합니다.
       </p>
 
-      <h3 class="text-xl font-bold text-slate-800 mt-6 mb-3">① 살인적인 수수료율 (Disount Rate)</h3>
+      <h3 class="text-xl font-bold text-slate-800 mt-6 mb-3">① 살인적인 수수료율 (Discount Rate)</h3>
       <p class="mb-4 leading-relaxed">
         10만 원짜리 상품권을 소액결제로 구매해서 되팔 때, 10만 원을 그대로 받을 수 있을까요? 불가능합니다. 매입 업체나 중개 사이트는 일정 비율의 수수료를 떼고 매입합니다.
         보통 시장에서 형성된 수수료율은 10%에서 많게는 30%에 달합니다. 
@@ -341,7 +341,7 @@ export const INITIAL_ARTICLES: Article[] = [
       <p class="mb-6 text-lg leading-relaxed">재테크의 기본은 '밑 빠진 독에 물 붓기'를 멈추는 것에서 시작합니다. 아무리 좋은 투자 정보를 알고 있어도, 일상에서 돈이 줄줄 새고 있다면 자산은 절대 쌓이지 않습니다. 본 글에서는 대부분의 사람들이 무심코 반복하는 <strong>잘못된 금융 선택</strong> 6가지를 진단하고, 이를 바로잡는 구조적 해결책을 제시합니다.</p>
 
       <div class="my-8 rounded-2xl overflow-hidden shadow-lg border border-slate-100">
-        <div class="aspect-video relative">
+        <div class="aspect-video relative bg-slate-100">
            <img src="https://images.unsplash.com/photo-1579621970795-87facc2f976d?q=80&w=800&auto=format&fit=crop" alt="동전이 쏟아지는 지갑" class="absolute inset-0 w-full h-full object-cover" />
            <div class="absolute bottom-0 left-0 w-full bg-gradient-to-t from-black/60 to-transparent p-6">
              <p class="font-bold text-white mb-1">소액 지출의 함정</p>
@@ -416,7 +416,7 @@ export const INITIAL_ARTICLES: Article[] = [
       <p class="mb-6 text-lg leading-relaxed">하지만 금융 지식이 있다면, <strong>신용점수 하락을 최소화</strong>하면서도 1금융권에서 안전하게 소액을 융통할 수 있습니다. 본 글에서는 이른바 '비상금 대출'이라 불리는 소액 대출 상품의 구조와 올바른 활용 전략을 제시합니다.</p>
 
       <div class="my-8 rounded-2xl overflow-hidden shadow-lg border border-slate-100">
-        <div class="aspect-video relative">
+        <div class="aspect-video relative bg-slate-100">
            <img src="https://images.unsplash.com/photo-1573164713988-8665fc963095?q=80&w=800&auto=format&fit=crop" alt="금융 상담을 받고 있는 모습" class="absolute inset-0 w-full h-full object-cover" />
            <div class="absolute bottom-0 left-0 w-full bg-gradient-to-t from-black/60 to-transparent p-6">
              <p class="font-bold text-white mb-1">안전한 자금 융통</p>
@@ -475,7 +475,7 @@ export const INITIAL_ARTICLES: Article[] = [
       <p class="mb-6 text-lg leading-relaxed">주식 시장에서 개인이 기관과 외국인을 이길 수 있는 유일한 무기는 <strong>시간</strong>과 <strong>분산</strong>입니다. 시장의 등락에 일희일비하지 않고 꾸준히 우상향하는 자산을 만드는 <strong>포트폴리오 구성법</strong>을 소개합니다.</p>
 
       <div class="my-8 rounded-2xl overflow-hidden shadow-lg border border-slate-100">
-        <div class="aspect-video relative">
+        <div class="aspect-video relative bg-slate-100">
            <img src="https://images.unsplash.com/photo-1590283603385-17ffb3a7f29f?q=80&w=800&auto=format&fit=crop" alt="주식 차트를 분석하는 모습" class="absolute inset-0 w-full h-full object-cover" />
            <div class="absolute bottom-0 left-0 w-full bg-gradient-to-t from-black/60 to-transparent p-6">
              <p class="font-bold text-white mb-1">분산 투자의 중요성</p>
@@ -530,7 +530,7 @@ export const INITIAL_ARTICLES: Article[] = [
       <p class="mb-6 text-lg leading-relaxed">세금을 내는 국민으로서 정당한 권리를 누리기 위해, 2024년에 주목해야 할 핵심 정부 지원 정책들을 정리했습니다. 자격 요건이 된다면 반드시 신청하여 금융 혜택을 누리시길 바랍니다.</p>
 
       <div class="my-8 rounded-2xl overflow-hidden shadow-lg border border-slate-100">
-        <div class="aspect-video relative">
+        <div class="aspect-video relative bg-slate-100">
            <img src="https://images.unsplash.com/photo-1555421689-d68471e189f2?q=80&w=800&auto=format&fit=crop" alt="행복한 가족과 육아 지원" class="absolute inset-0 w-full h-full object-cover" />
            <div class="absolute bottom-0 left-0 w-full bg-gradient-to-t from-black/60 to-transparent p-6">
              <p class="font-bold text-white mb-1">놓치지 말아야 할 혜택</p>
@@ -588,7 +588,7 @@ export const INITIAL_ARTICLES: Article[] = [
       </p>
 
       <div class="my-8 rounded-2xl overflow-hidden shadow-lg border border-slate-100">
-        <div class="aspect-video relative">
+        <div class="aspect-video relative bg-slate-100">
            <img src="https://images.unsplash.com/photo-1634733988685-a91a790e4a64?q=80&w=800&auto=format&fit=crop" alt="스트레스를 받는 직장인과 하락하는 그래프" class="absolute inset-0 w-full h-full object-cover" />
            <div class="absolute bottom-0 left-0 w-full bg-gradient-to-t from-black/60 to-transparent p-6">
              <p class="font-bold text-white mb-1">위기의 전조 증상</p>
@@ -666,7 +666,7 @@ export const INITIAL_ARTICLES: Article[] = [
       </p>
 
       <div class="my-8 rounded-2xl overflow-hidden shadow-lg border border-slate-100">
-        <div class="aspect-video relative">
+        <div class="aspect-video relative bg-slate-100">
            <img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?q=80&w=800&auto=format&fit=crop" alt="체계적인 재무 계획 수립" class="absolute inset-0 w-full h-full object-cover" />
            <div class="absolute bottom-0 left-0 w-full bg-gradient-to-t from-black/60 to-transparent p-6">
              <p class="font-bold text-white mb-1">체계적인 계획</p>
@@ -750,7 +750,7 @@ export const INITIAL_ARTICLES: Article[] = [
       </p>
 
       <div class="my-8 rounded-2xl overflow-hidden shadow-lg border border-slate-100">
-        <div class="aspect-video relative">
+        <div class="aspect-video relative bg-slate-100">
            <img src="https://images.unsplash.com/photo-1559526324-593bc814228e?q=80&w=800&auto=format&fit=crop" alt="스마트폰으로 포인트 조회 중" class="absolute inset-0 w-full h-full object-cover" />
            <div class="absolute bottom-0 left-0 w-full bg-gradient-to-t from-black/60 to-transparent p-6">
              <p class="font-bold text-white mb-1">포인트는 현금이다</p>
@@ -837,7 +837,7 @@ export const INITIAL_ARTICLES: Article[] = [
       </p>
 
       <div class="my-8 rounded-2xl overflow-hidden shadow-lg border border-slate-100">
-        <div class="aspect-video relative">
+        <div class="aspect-video relative bg-slate-100">
            <img src="https://images.unsplash.com/photo-1628348068343-c6a848d2b6dd?q=80&w=800&auto=format&fit=crop" alt="돼지 저금통과 계산기" class="absolute inset-0 w-full h-full object-cover" />
            <div class="absolute bottom-0 left-0 w-full bg-gradient-to-t from-black/60 to-transparent p-6">
              <p class="font-bold text-white mb-1">통장 쪼개기</p>
@@ -917,7 +917,7 @@ export const INITIAL_ARTICLES: Article[] = [
       </p>
 
       <div class="my-8 rounded-2xl overflow-hidden shadow-lg border border-slate-100">
-        <div class="aspect-video relative">
+        <div class="aspect-video relative bg-slate-100">
            <img src="https://images.unsplash.com/photo-1628172960251-6979683796d7?q=80&w=800&auto=format&fit=crop" alt="세금 계산서와 계산기" class="absolute inset-0 w-full h-full object-cover" />
            <div class="absolute bottom-0 left-0 w-full bg-gradient-to-t from-black/60 to-transparent p-6">
              <p class="font-bold text-white mb-1">절세도 수익이다</p>
@@ -992,7 +992,7 @@ export const INITIAL_ARTICLES: Article[] = [
       </p>
 
       <div class="my-8 rounded-2xl overflow-hidden shadow-lg border border-slate-100">
-        <div class="aspect-video relative">
+        <div class="aspect-video relative bg-slate-100">
            <img src="https://images.unsplash.com/photo-1620714223084-874191b36c3f?q=80&w=800&auto=format&fit=crop" alt="상승하는 그래프와 성취감" class="absolute inset-0 w-full h-full object-cover" />
            <div class="absolute bottom-0 left-0 w-full bg-gradient-to-t from-black/60 to-transparent p-6">
              <p class="font-bold text-white mb-1">신용점수 관리</p>
