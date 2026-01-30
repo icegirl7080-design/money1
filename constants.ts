@@ -18,6 +18,101 @@ export const NAV_ITEMS: NavItem[] = [
 
 export const INITIAL_ARTICLES: Article[] = [
   {
+    id: '16',
+    slug: 'isa-tax-saving-guide',
+    category: Category.INVESTMENT,
+    title: 'ISA(개인종합자산관리계좌) 완벽 가이드: 재테크 초보를 위한 절세 전략',
+    summary: '투자와 절세를 동시에 잡고 싶다면 ISA 계좌는 필수입니다. 비과세 혜택부터 중개형 ISA 선택 기준까지, 당신의 수익률을 높여줄 만능 통장의 모든 것을 정리했습니다.',
+    imageUrl: 'https://images.unsplash.com/photo-1590283603385-17ffb3a7f29f?q=80&w=1200&auto=format&fit=crop',
+    date: '2024-03-26',
+    author: '투자 전략 에디터',
+    tags: ['ISA', '절세혜택', '비과세', '중개형ISA', '재테크기초', '자산관리'],
+    content: `
+      <p class="mb-8 text-xl leading-relaxed font-bold text-slate-800 break-keep">
+        열심히 투자해서 수익을 냈는데, 세금으로 상당 부분이 나간다면 허무하지 않으신가요? <strong>ISA(개인종합자산관리계좌)</strong>는 정부가 국민의 자산 형성을 돕기 위해 만든 '세금 방패'와 같은 계좌입니다. 이 글에서는 <strong>ISA 혜택</strong>을 극대화하여 실질 수익률을 높이는 방법을 상세히 가이드해 드립니다.
+      </p>
+
+      <h2 class="text-2xl md:text-3xl font-black text-slate-900 mt-16 mb-8 tracking-tight">1. ISA란 무엇인가: 왜 '만능 통장'이라 불리는가?</h2>
+      <p class="mb-6 leading-8 text-slate-700">
+        ISA는 하나의 계좌에서 주식, 펀드, ETF, 예적금 등 다양한 금융 상품을 담아 운용하면서, 발생한 이익에 대해 비과세 및 저율과세 혜택을 주는 계좌입니다. 과거에는 가입 조건이 까다로웠으나, 최근 <strong>중개형 ISA</strong>의 도입으로 누구나 쉽게 주식 투자를 하면서 절세 혜택을 누릴 수 있게 되었습니다.
+      </p>
+      <p class="mb-6 leading-8 text-slate-700">
+        특히 일반 계좌에서 배당금이나 이자를 받을 때 내야 하는 15.4%의 세금을 아낄 수 있다는 점이 가장 큰 매력입니다. 이는 <a href="/#/investment-guide" class="text-blue-600 font-bold">장기 투자 전략</a>에서 복리 효과를 극대화하는 핵심 요소가 됩니다.
+      </p>
+
+      <h2 class="text-2xl md:text-3xl font-black text-slate-900 mt-16 mb-8 tracking-tight">2. ISA 계좌의 종류와 나에게 맞는 선택 기준</h2>
+      <p class="mb-6 leading-8 text-slate-700">
+        ISA는 운용 방식에 따라 세 가지로 나뉩니다. 본인의 투자 성향에 따라 선택이 달라져야 합니다.
+      </p>
+
+      <h3 class="text-xl md:text-2xl font-black text-slate-800 mb-4 flex items-center gap-2">
+        중개형 ISA: 직접 투자를 선호하는 분들을 위해
+      </h3>
+      <p class="mb-6 leading-8 text-slate-700">
+        가장 추천하는 형태입니다. 가입자가 직접 국내 주식이나 ETF를 사고팔 수 있습니다. 주식 투자 수익에 대해 손익 통산이 가능하여 세금을 줄이는 데 매우 유리합니다.
+      </p>
+
+      <h3 class="text-xl md:text-2xl font-black text-slate-800 mb-4 flex items-center gap-2">
+        신탁형 및 일임형 ISA
+      </h3>
+      <p class="mb-6 leading-8 text-slate-700">
+        신탁형은 가입자가 지시한 상품을 금융사가 대신 운용하며, 일임형은 금융사가 구성한 포트폴리오에 따라 자동으로 운용됩니다. 직접 투자가 부담스러운 초보자에게 적합할 수 있으나 수수료가 발생한다는 단점이 있습니다.
+      </p>
+
+      <div class="bg-blue-50 border-l-8 border-blue-500 p-8 my-12 rounded-r-3xl">
+        <h4 class="text-blue-900 text-xl font-black mb-4 flex items-center gap-2">
+          💡 ISA 가입 전 핵심 체크리스트
+        </h4>
+        <ul class="list-disc pl-6 mb-4 space-y-2 text-slate-700 font-medium">
+          <li><strong>가입 자격:</strong> 19세 이상 거주자 (근로소득이 있다면 15세 이상도 가능)</li>
+          <li><strong>납입 한도:</strong> 연간 2,000만 원 (최대 1억 원까지 이월 가능)</li>
+          <li><strong>의무 가입 기간:</strong> 3년 (이 기간을 채워야 비과세 혜택이 확정됩니다)</li>
+          <li><strong>비과세 한도:</strong> 일반형 200만 원, 서민형 400만 원까지 이익에 대해 세금 0원</li>
+        </ul>
+      </div>
+
+      <h2 class="text-2xl md:text-3xl font-black text-slate-900 mt-16 mb-8 tracking-tight">3. ISA 수익률을 높이는 실전 활용 전략</h2>
+      <p class="mb-6 leading-8 text-slate-700">
+        단순히 가입하는 것보다 어떻게 활용하느냐가 중요합니다. 전문가들이 추천하는 두 가지 전략은 다음과 같습니다.
+      </p>
+      <ul class="list-disc pl-6 mb-8 space-y-3 text-slate-700 font-medium">
+        <li><strong>손익 통산 활용:</strong> A종목에서 500만 원 이익이 나고 B종목에서 300만 원 손실이 났다면, ISA에서는 순이익 200만 원에 대해서만 세금을 계산합니다. (일반 계좌는 500만 원 전체에 대해 과세)</li>
+        <li><strong>해외주식형 ETF 담기:</strong> 일반 계좌에서 해외 ETF 투자 시 배당소득세(15.4%)가 발생하지만, ISA 내에서는 비과세 혜택을 받을 수 있어 매우 효과적입니다.</li>
+      </ul>
+
+      <div class="p-10 bg-slate-900 text-white rounded-[3rem] mt-16 shadow-2xl relative overflow-hidden">
+        <div class="absolute top-0 right-0 p-8 opacity-10">
+          <svg width="120" height="120" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+        </div>
+        <h4 class="text-emerald-400 font-black mb-6 text-2xl uppercase tracking-tighter">ISA Summary (30초 요약)</h4>
+        <div class="space-y-4 text-slate-300 font-medium leading-relaxed">
+          <p class="flex items-start gap-3"><span class="text-emerald-500 mt-1">●</span> <span>ISA는 투자 수익에 대해 최대 400만 원까지 <strong>비과세</strong> 혜택을 주는 만능 절세 계좌입니다.</span></p>
+          <p class="flex items-start gap-3"><span class="text-emerald-500 mt-1">●</span> <span>주식 직접 투자를 선호한다면 증권사에서 <strong>중개형 ISA</strong>를 개설하는 것이 가장 유리합니다.</span></p>
+          <p class="flex items-start gap-3"><span class="text-emerald-500 mt-1">●</span> <span>의무 기간 3년을 채우지 못하고 해지하면 혜택이 사라지므로 <strong>장기적인 자금 계획</strong>이 필요합니다.</span></p>
+          <p class="flex items-start gap-3"><span class="text-emerald-500 mt-1">●</span> <span>더 정교한 자산 배분법은 <a href="/#/finance-guide" class="text-emerald-400 underline font-bold">금융 기초 가이드</a>를 참고하세요.</span></p>
+        </div>
+      </div>
+
+      <div class="mt-16 border-t border-slate-200 pt-12">
+        <p class="text-slate-500 mb-6 font-medium">효율적인 자산 관리를 위해 다음 단계의 가이드를 확인해 보세요.</p>
+        <div class="grid sm:grid-cols-2 gap-6">
+          <a href="/#/investment-guide" class="group p-8 bg-white rounded-3xl border border-slate-100 hover:border-red-600 transition-all shadow-soft flex flex-col items-center text-center">
+            <div class="w-12 h-12 bg-red-50 text-red-600 rounded-2xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21.21 15.89A10 10 0 1 1 8 2.83"></path><path d="M22 12A10 10 0 0 0 12 2v10z"></path></svg>
+            </div>
+            <p class="font-black text-slate-900 mb-1 group-hover:text-red-600">잃지 않는 투자를 위한 주식 투자 기초 가이드 →</p>
+          </a>
+          <a href="/#/finance-guide" class="group p-8 bg-white rounded-3xl border border-slate-100 hover:border-emerald-600 transition-all shadow-soft flex flex-col items-center text-center">
+            <div class="w-12 h-12 bg-emerald-50 text-emerald-600 rounded-2xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path></svg>
+            </div>
+            <p class="font-black text-slate-900 mb-1 group-hover:text-emerald-600">종잣돈을 만드는 시스템, 금융 기초 마스터 가이드 →</p>
+          </a>
+        </div>
+      </div>
+    `
+  },
+  {
     id: '15',
     slug: 'sunshine-loan-master-guide',
     category: Category.LOAN,
