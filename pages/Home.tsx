@@ -7,7 +7,7 @@ import {
   ArrowRight, 
   ShieldCheck, 
   HelpCircle,
-  CheckCircle2,
+  CheckCircle,
   TrendingUp,
   PieChart,
   ChevronRight,
@@ -192,7 +192,7 @@ export const Home: React.FC = () => {
 
             <div className="my-10 p-6 bg-white border border-slate-200 rounded-2xl shadow-soft">
               <h4 className="text-base font-bold text-slate-900 mb-3 flex items-center gap-2">
-                <CheckCircle2 size={20} className="text-sky-600" />
+                <CheckCircle size={20} className="text-sky-600" />
                 대출 신청 전 체크리스트
               </h4>
               <ul className="space-y-3 text-sm font-medium text-slate-700">

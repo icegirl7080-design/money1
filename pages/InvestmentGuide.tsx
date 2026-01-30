@@ -2,7 +2,7 @@ import React, { useMemo } from 'react';
 import { Link } from 'react-router-dom';
 import { 
   TrendingUp, 
-  BarChart3, 
+  BarChart, 
   AlertOctagon, 
   Target, 
   BrainCircuit,
@@ -108,7 +108,7 @@ export const InvestmentGuide: React.FC = () => {
         <div className="container mx-auto px-4 max-w-4xl animate-on-scroll">
           <div className="flex items-center gap-4 mb-10 justify-center md:justify-start">
             <div className="p-3 bg-orange-50 text-orange-600 rounded-2xl shadow-inner">
-              <BarChart3 size={28} />
+              <BarChart size={28} />
             </div>
             <h2 className="text-2xl md:text-3xl font-black text-slate-900">
               초보자를 위한 필승 전략
