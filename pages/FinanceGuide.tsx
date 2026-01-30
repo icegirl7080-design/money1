@@ -9,44 +9,64 @@ import {
   CheckCircle2,
   ArrowDown,
   BookOpen,
-  ChevronsDown,
   CreditCard,
   Target,
   Calculator,
   Layers,
   Umbrella,
-  Scissors,
   Briefcase,
   ShoppingBag,
   Safe,
   HelpCircle,
   ChevronRight,
-  Landmark,
   BarChart3,
   Quote,
   Lightbulb,
   AlertTriangle,
-  MousePointerClick
+  MousePointerClick,
+  Scale,
+  DollarSign,
+  Landmark,
+  Scissors
 } from 'lucide-react';
 import { INITIAL_ARTICLES } from '../constants';
 import { Category } from '../types';
 import { ArticleCard } from '../components/ArticleCard';
 import { SEO } from '../components/SEO';
 
-// Navigation for long content
+// Table of Contents Component
 const TableOfContents = () => (
-  <nav className="hidden lg:block sticky top-24 self-start w-64 p-6 bg-white rounded-2xl border border-slate-100 shadow-sm ml-8">
-    <h4 className="font-bold text-slate-900 mb-4 flex items-center gap-2">
-      <span className="w-1 h-5 bg-emerald-500 rounded-full"></span>
+  <nav className="hidden lg:block sticky top-28 self-start w-72 p-6 bg-white rounded-2xl border border-slate-100 shadow-sm ml-8">
+    <h4 className="font-bold text-slate-900 mb-4 flex items-center gap-2 text-lg">
+      <span className="w-1.5 h-6 bg-emerald-600 rounded-full"></span>
       목차 (Index)
     </h4>
-    <ul className="space-y-3 text-sm text-slate-600">
-      <li><a href="#intro" className="hover:text-emerald-600 transition-colors block border-l-2 border-transparent hover:border-emerald-200 pl-3">1. 자본주의와 돈의 본질</a></li>
-      <li><a href="#mindset" className="hover:text-emerald-600 transition-colors block border-l-2 border-transparent hover:border-emerald-200 pl-3">2. 부자의 심리 vs 빈자의 심리</a></li>
-      <li><a href="#roadmap" className="hover:text-emerald-600 transition-colors block border-l-2 border-transparent hover:border-emerald-200 pl-3">3. 5단계 재테크 로드맵</a></li>
-      <li><a href="#system" className="hover:text-emerald-600 transition-colors block border-l-2 border-transparent hover:border-emerald-200 pl-3">4. 실전! 4개의 통장 시스템</a></li>
-      <li><a href="#spending" className="hover:text-emerald-600 transition-colors block border-l-2 border-transparent hover:border-emerald-200 pl-3">5. 소비 통제와 저축의 기술</a></li>
-      <li><a href="#faq" className="hover:text-emerald-600 transition-colors block border-l-2 border-transparent hover:border-emerald-200 pl-3">자주 묻는 질문 (FAQ)</a></li>
+    <ul className="space-y-4 text-sm text-slate-600 font-medium">
+      <li>
+        <a href="#intro" className="hover:text-emerald-600 transition-colors block border-l-2 border-transparent hover:border-emerald-200 pl-3 py-1">
+          1. 금융과 재테크의 본질
+        </a>
+      </li>
+      <li>
+        <a href="#income-structure" className="hover:text-emerald-600 transition-colors block border-l-2 border-transparent hover:border-emerald-200 pl-3 py-1">
+          2. 돈 관리의 4가지 기둥
+        </a>
+      </li>
+      <li>
+        <a href="#consumption" className="hover:text-emerald-600 transition-colors block border-l-2 border-transparent hover:border-emerald-200 pl-3 py-1">
+          3. 소비 통제와 심리학
+        </a>
+      </li>
+      <li>
+        <a href="#system" className="hover:text-emerald-600 transition-colors block border-l-2 border-transparent hover:border-emerald-200 pl-3 py-1">
+          4. 자동화 시스템 구축
+        </a>
+      </li>
+      <li>
+        <a href="#faq" className="hover:text-emerald-600 transition-colors block border-l-2 border-transparent hover:border-emerald-200 pl-3 py-1">
+          자주 묻는 질문 (FAQ)
+        </a>
+      </li>
     </ul>
   </nav>
 );
@@ -61,88 +81,83 @@ export const FinanceGuide: React.FC = () => {
   return (
     <main className="flex-grow bg-slate-50 font-sans text-slate-900 selection:bg-emerald-100 leading-relaxed">
       <SEO 
-        title="금융 기초 완전 정복: 사회초년생 돈 관리의 모든 것"
-        description="월급 관리, 통장 쪼개기, 복리 효과, 인플레이션 방어까지. 부자가 되기 위해 반드시 알아야 할 금융 지식과 실전 로드맵을 총정리했습니다."
-        keywords={['금융기초', '재테크', '돈관리', '사회초년생', '통장쪼개기', '복리', '자산관리', '현금흐름', '경제적자유']}
+        title="금융 기초 완전 가이드: 시스템으로 만드는 부"
+        description="돈을 많이 버는 것과 부자가 되는 것은 다릅니다. 소득, 지출, 저축, 투자의 4가지 기둥을 세우고 자동으로 자산이 불어나는 머니 시스템을 구축하는 완벽 가이드입니다."
+        keywords={['금융기초', '재테크', '돈관리', '시스템수익', '자산관리', '현금흐름', '복리', '소비통제', '파이프라인']}
       />
       
       {/* 
-        H1: Main Title Section 
+        H1: Hero Section 
       */}
       <section className="relative bg-white pt-24 pb-20 md:pt-32 md:pb-28 overflow-hidden border-b border-slate-100">
-        <div className="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-emerald-50/60 to-transparent pointer-events-none"></div>
-        <div className="absolute top-20 right-20 w-[500px] h-[500px] bg-emerald-100/20 rounded-full blur-[80px] pointer-events-none"></div>
+        <div className="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-emerald-50/40 to-transparent pointer-events-none"></div>
+        <div className="absolute bottom-0 left-0 w-full h-32 bg-gradient-to-t from-white to-transparent pointer-events-none"></div>
         
         <div className="container mx-auto px-4 relative z-10 max-w-6xl">
           <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-20">
             <div className="flex-1 text-center lg:text-left animate-on-scroll">
-              <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-slate-900 text-white text-xs font-bold mb-6 shadow-lg shadow-slate-200 uppercase tracking-wider hover:scale-105 transition-transform cursor-default">
+              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-slate-900 text-white text-xs font-bold mb-8 shadow-xl shadow-slate-200/50 uppercase tracking-widest hover:scale-105 transition-transform cursor-default ring-1 ring-slate-700">
                 <Wallet size={14} className="text-emerald-400" />
-                <span>Financial Mastery Course 101</span>
+                <span>Wealth Building System 101</span>
               </div>
 
-              <h1 className="text-4xl md:text-6xl lg:text-7xl font-black leading-[1.1] mb-8 break-keep text-slate-900 tracking-tight">
-                금융 문맹 탈출,<br/>
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-600 to-teal-600">
-                  부의 추월차선에<br/>올라타라
+              <h1 className="text-4xl md:text-6xl lg:text-7xl font-black leading-[1.15] mb-8 break-keep text-slate-900 tracking-tight">
+                금융과 재테크의 본질:<br/>
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-600 to-teal-500">
+                  시스템으로 만드는 부
                 </span>
               </h1>
               
               <p className="text-lg md:text-xl text-slate-600 mb-10 leading-relaxed max-w-2xl mx-auto lg:mx-0 break-keep font-medium">
-                열심히 일만 해서 부자가 될 수 있을까요? <br className="hidden md:block"/>
-                자본주의 사회에서 노동 소득만으로는 인플레이션을 이길 수 없습니다. <br className="hidden md:block"/>
-                돈이 나를 위해 일하게 만드는 <strong>'금융 시스템'</strong>을 구축하는 법을 지금 시작합니다.
+                돈을 많이 버는 것(High Income)과 부자가 되는 것(High Net Worth)은 완전히 다른 영역입니다. <br className="hidden md:block"/>
+                단순히 아끼는 것을 넘어, 자본주의 시스템 안에서 나의 자산을 지키고 불리는 <strong>구조적인 머니 시스템</strong>을 만드는 법을 안내합니다.
               </p>
 
               <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-                <a href="#intro" className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-4 bg-emerald-600 text-white font-bold rounded-2xl shadow-lg shadow-emerald-200 hover:bg-emerald-700 hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+                <a href="#intro" className="w-full sm:w-auto inline-flex items-center justify-center gap-3 px-8 py-4 bg-emerald-600 text-white font-bold rounded-2xl shadow-lg shadow-emerald-200 hover:bg-emerald-700 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 text-lg">
                   가이드 정독하기 <ArrowDown size={20} className="animate-bounce" />
                 </a>
-                <Link to="/blog" className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-4 bg-white text-slate-700 border border-slate-200 font-bold rounded-2xl hover:bg-slate-50 hover:border-slate-300 transition-all duration-300">
-                  칼럼 전체 보기 <ArrowRight size={20} />
-                </Link>
               </div>
             </div>
             
-            {/* Visual Element: Money Growth Concept */}
-            <div className="hidden lg:block w-[450px] relative animate-on-scroll delay-200">
-               <div className="relative z-10 bg-white p-8 rounded-[2.5rem] border border-slate-100 shadow-2xl transform rotate-2 hover:rotate-0 transition-all duration-500 group cursor-default">
-                 <div className="absolute top-0 right-0 p-8 opacity-10">
-                   <BarChart3 size={120} className="text-emerald-600" />
+            {/* Visual Element */}
+            <div className="hidden lg:block w-[480px] relative animate-on-scroll delay-200">
+               <div className="relative z-10 bg-white p-10 rounded-[2.5rem] border border-slate-100 shadow-2xl transform rotate-1 hover:rotate-0 transition-all duration-500 group cursor-default">
+                 <div className="absolute top-0 right-0 p-8 opacity-5">
+                   <Landmark size={140} className="text-emerald-900" />
                  </div>
-                 <div className="relative z-10">
-                   <span className="inline-block px-3 py-1 bg-emerald-100 text-emerald-700 text-xs font-bold rounded-lg mb-4">Compound Effect</span>
-                   <h3 className="text-3xl font-black text-slate-900 mb-2">복리의 마법</h3>
-                   <p className="text-slate-500 mb-6 text-sm">시간이 지날수록 자산은 기하급수적으로 성장합니다.</p>
-                   
-                   <div className="space-y-4">
-                     <div className="flex items-center justify-between">
-                        <span className="text-sm font-bold text-slate-400">Year 1</span>
-                        <div className="w-1/4 h-2 bg-emerald-200 rounded-full"></div>
+                 
+                 <div className="space-y-8">
+                   <div className="flex items-start gap-4">
+                     <div className="w-12 h-12 rounded-2xl bg-emerald-100 text-emerald-600 flex items-center justify-center shrink-0">
+                       <Scale size={24} />
                      </div>
-                     <div className="flex items-center justify-between">
-                        <span className="text-sm font-bold text-slate-400">Year 5</span>
-                        <div className="w-1/2 h-2 bg-emerald-300 rounded-full"></div>
+                     <div>
+                       <h3 className="text-lg font-bold text-slate-900 mb-1">금융 (Finance)</h3>
+                       <p className="text-sm text-slate-500 leading-relaxed">돈이 흐르는 전체적인 생태계를 이해하는 기초 체력입니다.</p>
                      </div>
-                     <div className="flex items-center justify-between">
-                        <span className="text-sm font-bold text-slate-400">Year 10</span>
-                        <div className="w-3/4 h-2 bg-emerald-500 rounded-full shadow-[0_0_15px_rgba(16,185,129,0.5)]"></div>
+                   </div>
+
+                   <div className="w-px h-8 bg-slate-200 ml-6"></div>
+
+                   <div className="flex items-start gap-4">
+                     <div className="w-12 h-12 rounded-2xl bg-blue-100 text-blue-600 flex items-center justify-center shrink-0">
+                       <TrendingUp size={24} />
                      </div>
-                     <div className="flex items-center justify-between">
-                        <span className="text-sm font-bold text-slate-800">Year 20</span>
-                        <div className="w-full h-3 bg-gradient-to-r from-emerald-500 to-teal-500 rounded-full shadow-[0_0_20px_rgba(20,184,166,0.6)]"></div>
+                     <div>
+                       <h3 className="text-lg font-bold text-slate-900 mb-1">재테크 (Investment)</h3>
+                       <p className="text-sm text-slate-500 leading-relaxed">기초 체력을 바탕으로 자산을 불리는 실행 기술입니다.</p>
                      </div>
                    </div>
                  </div>
-               </div>
-               
-               {/* Floating Badges */}
-               <div className="absolute -top-6 -right-6 bg-white p-4 rounded-2xl shadow-xl border border-slate-50 animate-bounce duration-[3000ms]">
-                 <div className="flex items-center gap-3">
-                   <div className="bg-blue-50 p-2 rounded-full text-blue-600"><Target size={20} /></div>
-                   <div>
-                     <div className="text-[10px] text-slate-400 font-bold uppercase">Goal</div>
-                     <div className="text-sm font-black text-slate-900">1억 모으기</div>
+
+                 <div className="mt-8 pt-8 border-t border-slate-100">
+                   <div className="flex items-center justify-between text-xs font-bold uppercase tracking-wider text-slate-400 mb-2">
+                     <span>Growth Potential</span>
+                     <span>Infinite</span>
+                   </div>
+                   <div className="w-full h-2 bg-slate-100 rounded-full overflow-hidden">
+                     <div className="w-full h-full bg-gradient-to-r from-emerald-400 to-blue-500 origin-left animate-[grow_2s_ease-out]"></div>
                    </div>
                  </div>
                </div>
@@ -151,377 +166,320 @@ export const FinanceGuide: React.FC = () => {
         </div>
       </section>
 
-      <div className="container mx-auto px-4 max-w-7xl flex items-start gap-8 py-12 md:py-20">
+      <div className="container mx-auto px-4 max-w-7xl flex items-start gap-12 py-16 md:py-24">
         
         {/* Main Content Body */}
         <article className="flex-1 max-w-4xl mx-auto">
           
-          {/* Section 1: Intro */}
-          <section id="intro" className="mb-20 scroll-mt-24 animate-on-scroll">
-            <div className="flex items-center gap-3 mb-6">
-              <span className="text-emerald-600 font-black text-6xl opacity-20 -ml-1">01</span>
-              <h2 className="text-3xl md:text-4xl font-black text-slate-900">자본주의와 돈의 본질</h2>
+          {/* Section 1: Essence */}
+          <section id="intro" className="mb-24 scroll-mt-32 animate-on-scroll">
+            <div className="flex items-center gap-4 mb-8">
+              <span className="flex items-center justify-center w-12 h-12 rounded-2xl bg-slate-900 text-white font-black text-xl shadow-lg shadow-slate-200">01</span>
+              <h2 className="text-3xl md:text-4xl font-black text-slate-900 tracking-tight">금융(Finance) vs 재테크</h2>
             </div>
             
             <div className="prose prose-lg prose-slate max-w-none text-slate-600 leading-8">
-              <p className="lead text-xl text-slate-700 font-medium border-l-4 border-emerald-500 pl-6 italic mb-8 bg-emerald-50/50 py-4 rounded-r-xl">
-                "돈을 좇지 마라, 돈이 따라오게 하라." <br/>
-                우리는 이 말을 수없이 들었지만, 정작 돈이 어떻게 움직이는지 학교에서 배운 적은 없습니다.
+              <p className="lead text-xl md:text-2xl text-slate-800 font-bold mb-8">
+                "기초 체력 없이 기술만 배우려 한다면, <br/>작은 시장 충격에도 공들여 모은 자산이 무너질 수 있습니다."
               </p>
 
-              <h3 className="text-2xl font-bold text-slate-900 mt-12 mb-6 flex items-center gap-2">
-                <AlertTriangle className="text-amber-500" />
-                왜 열심히 일하는데 가난해질까?
-              </h3>
               <p>
-                자본주의 사회에는 보이지 않는 세금이 있습니다. 바로 <strong>인플레이션(Inflation)</strong>입니다. 
-                정부가 화폐를 찍어낼수록 돈의 가치는 하락하고 물가는 오릅니다. 
-                여러분이 은행 예금(연 3%)에 돈을 넣어두는 동안, 실제 물가 상승률이 4~5%라면 여러분의 자산은 
-                매년 <strong>마이너스 성장</strong>을 하고 있는 것입니다.
+                많은 사람들이 '금융'과 '재테크'를 혼용해서 사용하지만, 이 둘은 명확히 다릅니다. 
+                <strong>금융(Finance)</strong>은 자본주의 사회에서 돈이 흐르는 원리, 금리, 환율, 신용, 세금 등 
+                돈을 다루는 전체적인 생태계와 규칙을 이해하는 <strong>'기초 체력'</strong>에 해당합니다.
               </p>
               <p>
-                가만히 있으면 벼락거지가 된다는 말은 농담이 아닙니다. 
-                현금을 그대로 보유하는 것은 가장 위험한 투자입니다. 
-                우리는 자산을 방어하기 위해 반드시 투자를 해야만 하는 시스템 속에 살고 있습니다.
+                반면 <strong>재테크(Investment Tech)</strong>는 이러한 기초 위에서 주식, 부동산, 채권 등 
+                구체적인 자산을 매매하여 수익을 내는 <strong>'실전 기술'</strong>입니다. 
+                축구로 비유하자면 금융은 '체력과 룰에 대한 이해'이고, 재테크는 '드리블이나 슛 기술'입니다.
               </p>
 
-              <h3 className="text-2xl font-bold text-slate-900 mt-12 mb-6">금융 문맹(Financial Illiteracy)의 대가</h3>
-              <p>
-                앨런 그린스펀 전 미 연준 의장은 이렇게 말했습니다. 
-                <strong>"글을 모르는 문맹은 생활을 불편하게 하지만, 금융 문맹은 생존을 불가능하게 만든다."</strong>
-              </p>
-              <ul className="grid md:grid-cols-2 gap-4 list-none pl-0 my-8">
-                <li className="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm">
-                  <strong className="block text-slate-900 mb-2 text-lg">📉 기회 비용 상실</strong>
-                  복리 효과를 누리지 못하고 평생 노동 소득에만 의존하게 됩니다.
-                </li>
-                <li className="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm">
-                  <strong className="block text-slate-900 mb-2 text-lg">🏦 금융 사기 노출</strong>
-                  폰지 사기, 리딩방 등 비정상적인 수익률 유혹에 쉽게 빠집니다.
-                </li>
-              </ul>
-            </div>
-          </section>
-
-          <hr className="border-slate-200 my-16" />
-
-          {/* Section 2: Mindset */}
-          <section id="mindset" className="mb-20 scroll-mt-24 animate-on-scroll">
-            <div className="flex items-center gap-3 mb-6">
-              <span className="text-emerald-600 font-black text-6xl opacity-20 -ml-1">02</span>
-              <h2 className="text-3xl md:text-4xl font-black text-slate-900">부자의 심리 vs 빈자의 심리</h2>
-            </div>
-
-            <div className="prose prose-lg prose-slate max-w-none text-slate-600">
-              <p>
-                재테크 기술보다 중요한 것은 마인드셋입니다. 
-                로또 1등 당첨자의 90%가 다시 가난해지는 이유는 돈을 담을 그릇이 준비되지 않았기 때문입니다.
-              </p>
-
-              <div className="bg-slate-900 text-slate-300 rounded-3xl p-8 md:p-10 my-10 shadow-2xl">
-                <div className="grid md:grid-cols-2 gap-8 md:gap-12">
-                  <div className="space-y-4">
-                    <h4 className="text-2xl font-bold text-white border-b border-slate-700 pb-4 mb-4">빈자의 사고방식</h4>
-                    <p className="flex gap-3"><span className="text-red-500">✕</span> <span>돈을 소비의 수단으로만 본다.</span></p>
-                    <p className="flex gap-3"><span className="text-red-500">✕</span> <span>"월급날만 기다린다." (시간을 팔아 돈을 범)</span></p>
-                    <p className="flex gap-3"><span className="text-red-500">✕</span> <span>남에게 보이기 위한 부채(차, 명품)를 산다.</span></p>
-                    <p className="flex gap-3"><span className="text-red-500">✕</span> <span>즉각적인 만족을 추구한다.</span></p>
-                  </div>
-                  <div className="space-y-4">
-                    <h4 className="text-2xl font-bold text-emerald-400 border-b border-slate-700 pb-4 mb-4">부자의 사고방식</h4>
-                    <p className="flex gap-3"><span className="text-emerald-500">○</span> <span>돈을 자산 증식의 씨앗으로 본다.</span></p>
-                    <p className="flex gap-3"><span className="text-emerald-500">○</span> <span>"돈이 나를 위해 일하게 한다." (시스템 구축)</span></p>
-                    <p className="flex gap-3"><span className="text-emerald-500">○</span> <span>현금 흐름을 만드는 자산(주식, 부동산)을 산다.</span></p>
-                    <p className="flex gap-3"><span className="text-emerald-500">○</span> <span>만족 지연(Delayed Gratification)을 실천한다.</span></p>
-                  </div>
-                </div>
+              <div className="bg-slate-50 p-8 rounded-3xl border border-slate-200 my-10">
+                <h3 className="text-xl font-bold text-slate-900 mb-4 flex items-center gap-2">
+                  <AlertTriangle className="text-red-500" />
+                  왜 기초가 중요한가요?
+                </h3>
+                <p className="mb-0">
+                  체력이 없는 선수가 화려한 기술만 연습하다 경기 후반에 쓰러지듯, 
+                  금융 지식 없이 재테크 기술만 쫓는 사람은 경제 위기(인플레이션, 금리 인상 등)가 왔을 때 
+                  대응하지 못하고 자산을 잃게 됩니다. 
+                  우리가 먼저 집중해야 할 것은 <strong>'잃지 않는 시스템'</strong>을 만드는 금융 기초입니다.
+                </p>
               </div>
-              
-              <p>
-                부자들은 <strong>자산(Asset)</strong>과 <strong>부채(Liability)</strong>를 명확히 구분합니다. 
-                내 주머니에 돈을 넣어주는 것은 자산이고, 내 주머니에서 돈을 빼가는 것은 부채입니다. 
-                여러분이 타고 다니는 자동차는 자산일까요, 부채일까요? 유지비와 감가상각을 고려하면 그것은 명백한 부채입니다.
-              </p>
             </div>
           </section>
 
-          <hr className="border-slate-200 my-16" />
-
-          {/* Section 3: Roadmap */}
-          <section id="roadmap" className="mb-20 scroll-mt-24 animate-on-scroll">
-            <div className="flex items-center gap-3 mb-6">
-              <span className="text-emerald-600 font-black text-6xl opacity-20 -ml-1">03</span>
-              <h2 className="text-3xl md:text-4xl font-black text-slate-900">금융 초보 탈출 5단계 로드맵</h2>
+          {/* Section 2: 4 Pillars */}
+          <section id="income-structure" className="mb-24 scroll-mt-32 animate-on-scroll">
+            <div className="flex items-center gap-4 mb-8">
+              <span className="flex items-center justify-center w-12 h-12 rounded-2xl bg-emerald-600 text-white font-black text-xl shadow-lg shadow-emerald-200">02</span>
+              <h2 className="text-3xl md:text-4xl font-black text-slate-900 tracking-tight">돈 관리의 4가지 기둥</h2>
             </div>
-            <p className="text-lg text-slate-600 mb-10">
-              재테크는 순서가 생명입니다. 빚이 있는데 투자를 하거나, 비상금도 없이 주식에 올인하는 것은 모래성 쌓기입니다.
-              다음 5단계를 차근차근 밟아가세요.
+            
+            <p className="text-lg text-slate-600 mb-10 leading-relaxed">
+              건물이 튼튼하게 서 있으려면 기둥이 필요하듯, 부(Wealth)를 쌓기 위해서도 4가지 핵심 기둥이 균형을 이루어야 합니다. 
+              어느 하나라도 부실하면 자산은 쌓이지 않고 흘러내립니다.
             </p>
 
-            <div className="space-y-6">
-              <div className="flex gap-6 items-start p-6 bg-white rounded-2xl border border-slate-200 shadow-sm hover:shadow-md transition-shadow">
-                <div className="w-12 h-12 rounded-xl bg-slate-100 flex items-center justify-center text-xl font-black text-slate-500 shrink-0">1</div>
-                <div>
-                  <h3 className="text-xl font-bold text-slate-900 mb-2">현금 흐름 파악 (자기 객관화)</h3>
-                  <p className="text-slate-600">
-                    '숨만 쉬어도 나가는 돈'을 정확히 아는 것부터 시작입니다. 
-                    지난 3개월간의 카드 명세서와 입출금 내역을 엑셀이나 가계부 앱으로 정리하세요. 
-                    소득(Net Income)에서 고정 지출을 뺀 <strong>잉여 자금</strong>이 얼마인지 10원 단위까지 파악해야 합니다.
-                  </p>
-                </div>
-              </div>
-
-              <div className="flex gap-6 items-start p-6 bg-white rounded-2xl border border-slate-200 shadow-sm hover:shadow-md transition-shadow">
-                <div className="w-12 h-12 rounded-xl bg-slate-100 flex items-center justify-center text-xl font-black text-slate-500 shrink-0">2</div>
-                <div>
-                  <h3 className="text-xl font-bold text-slate-900 mb-2">통장 쪼개기 (시스템 구축)</h3>
-                  <p className="text-slate-600">
-                    의지에 의존하지 마세요. 월급이 들어오는 순간 자동으로 분류되도록 시스템을 만드세요. 
-                    급여, 투자, 소비, 비상금 통장을 물리적으로 분리하는 것이 핵심입니다. (4장 상세 설명)
-                  </p>
-                </div>
-              </div>
-
-              <div className="flex gap-6 items-start p-6 bg-white rounded-2xl border border-slate-200 shadow-sm hover:shadow-md transition-shadow">
-                <div className="w-12 h-12 rounded-xl bg-slate-100 flex items-center justify-center text-xl font-black text-slate-500 shrink-0">3</div>
-                <div>
-                  <h3 className="text-xl font-bold text-slate-900 mb-2">비상금 확보 (방어막)</h3>
-                  <p className="text-slate-600">
-                    투자를 시작하기 전, 최소 <strong>월 생활비의 3~6개월 치</strong>를 현금으로 확보하세요. 
-                    이 돈은 실직, 질병 등 인생의 위기 상황에서 당신의 자산을 지켜줄 최후의 보루입니다. 
-                    이자율이 높은 CMA(파킹통장)에 넣어두세요.
-                  </p>
-                </div>
-              </div>
-
-              <div className="flex gap-6 items-start p-6 bg-white rounded-2xl border border-slate-200 shadow-sm hover:shadow-md transition-shadow">
-                <div className="w-12 h-12 rounded-xl bg-slate-100 flex items-center justify-center text-xl font-black text-slate-500 shrink-0">4</div>
-                <div>
-                  <h3 className="text-xl font-bold text-slate-900 mb-2">나쁜 부채 상환 (누수 차단)</h3>
-                  <p className="text-slate-600">
-                    주식 기대 수익률(연 8%)보다 높은 금리의 대출(연 10%~)이 있다면, 투자는 미루고 빚부터 갚아야 합니다. 
-                    특히 카드론, 현금서비스, 리볼빙은 자산 증식의 암적인 존재이므로 최우선으로 제거하세요.
-                  </p>
-                </div>
-              </div>
-
-              <div className="flex gap-6 items-start p-6 bg-white rounded-2xl border border-slate-200 shadow-sm hover:shadow-md transition-shadow">
-                <div className="w-12 h-12 rounded-xl bg-slate-100 flex items-center justify-center text-xl font-black text-slate-500 shrink-0">5</div>
-                <div>
-                  <h3 className="text-xl font-bold text-slate-900 mb-2">종잣돈 모으기 & 투자 (성장)</h3>
-                  <p className="text-slate-600">
-                    방어막이 갖춰졌다면, 이제는 공격입니다. 
-                    '선저축 후지출'로 1천만 원, 3천만 원, 1억 원 단위의 종잣돈(Seed Money)을 모으고, 
-                    이를 ETF나 우량 자산에 투자하여 <strong>복리 효과</strong>를 누리세요.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </section>
-
-          <hr className="border-slate-200 my-16" />
-
-          {/* Section 4: System (4 Accounts) */}
-          <section id="system" className="mb-20 scroll-mt-24 animate-on-scroll">
-            <div className="flex items-center gap-3 mb-6">
-              <span className="text-emerald-600 font-black text-6xl opacity-20 -ml-1">04</span>
-              <h2 className="text-3xl md:text-4xl font-black text-slate-900">실전! 4개의 통장 시스템</h2>
-            </div>
-            
-            <div className="bg-emerald-900 text-emerald-50 p-8 rounded-3xl mb-12 shadow-xl relative overflow-hidden">
-               <div className="absolute top-0 right-0 w-64 h-64 bg-emerald-500/20 rounded-full blur-3xl pointer-events-none"></div>
-               <h3 className="text-2xl font-bold mb-4 relative z-10">왜 통장을 쪼개야 하나요?</h3>
-               <p className="leading-relaxed relative z-10">
-                 하나의 통장에 월급이 들어오고, 카드값이 나가고, 저축도 하면 
-                 내가 한 달에 정확히 얼마를 쓰는지 파악할 수 없습니다. 
-                 돈에 <strong>이름표(목적)</strong>를 붙여주어 서로 섞이지 않게 관리해야 합니다.
-               </p>
-            </div>
-
             <div className="grid md:grid-cols-2 gap-8">
-              <article className="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm hover:border-blue-300 transition-colors group">
-                <div className="w-12 h-12 rounded-xl bg-blue-50 text-blue-600 flex items-center justify-center mb-4">
-                  <Briefcase size={24} />
+              {/* Pillar 1: Income */}
+              <div className="bg-white p-8 rounded-3xl border border-slate-100 shadow-xl shadow-slate-100/50 hover:-translate-y-1 transition-transform duration-300">
+                <div className="w-14 h-14 bg-blue-50 text-blue-600 rounded-2xl flex items-center justify-center mb-6">
+                  <Briefcase size={28} />
                 </div>
-                <h4 className="text-xl font-bold text-slate-900 mb-2 group-hover:text-blue-600">1. 급여 통장 (Hub)</h4>
-                <p className="text-sm text-slate-600 mb-4 h-12">
-                  수입의 관문. 모든 돈은 이곳으로 들어오고, 고정비를 납부한 뒤 각 통장으로 흩어집니다.
+                <h3 className="text-2xl font-black text-slate-900 mb-4">1. 소득 (Income)</h3>
+                <p className="text-slate-600 leading-relaxed mb-4">
+                  재테크의 엔진입니다. 초기에는 근로 소득을 높여 시드 머니를 확보하는 것이 최우선입니다. 
+                  많은 사람들이 투자 수익률에만 집착하지만, 시드 머니가 작으면 수익금도 작을 수밖에 없습니다.
                 </p>
-                <div className="bg-slate-50 p-3 rounded-lg text-xs text-slate-500">
-                  <strong>Tip:</strong> 통신비, 보험료 등 고정 지출 자동이체 설정. 잔액은 항상 0원으로 유지.
+                <div className="bg-blue-50/50 p-4 rounded-xl text-sm font-medium text-blue-800">
+                  Action: 몸값 높이기, 부업(Side Hustle)으로 파이프라인 추가하기
                 </div>
-              </article>
+              </div>
 
-              <article className="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm hover:border-emerald-300 transition-colors group">
-                <div className="w-12 h-12 rounded-xl bg-emerald-50 text-emerald-600 flex items-center justify-center mb-4">
-                  <PiggyBank size={24} />
+              {/* Pillar 2: Expense */}
+              <div className="bg-white p-8 rounded-3xl border border-slate-100 shadow-xl shadow-slate-100/50 hover:-translate-y-1 transition-transform duration-300">
+                <div className="w-14 h-14 bg-red-50 text-red-600 rounded-2xl flex items-center justify-center mb-6">
+                  <Scissors size={28} />
                 </div>
-                <h4 className="text-xl font-bold text-slate-900 mb-2 group-hover:text-emerald-600">2. 투자 통장 (Saving)</h4>
-                <p className="text-sm text-slate-600 mb-4 h-12">
-                  '선저축'을 위한 통장. 미래의 나를 위해 떼어놓는 돈입니다.
+                <h3 className="text-2xl font-black text-slate-900 mb-4">2. 지출 (Expense)</h3>
+                <p className="text-slate-600 leading-relaxed mb-4">
+                  통제 가능한 영역입니다. 아무리 많이 벌어도 지출 구멍이 크면 물은 고이지 않습니다. 
+                  '선저축 후지출' 원칙이 기본이며, 고정비와 변동비를 명확히 구분해야 합니다.
                 </p>
-                <div className="bg-slate-50 p-3 rounded-lg text-xs text-slate-500">
-                  <strong>Tip:</strong> 월급일 다음 날 자동이체 설정. 절대 출금 카드를 만들지 말 것.
+                <div className="bg-red-50/50 p-4 rounded-xl text-sm font-medium text-red-800">
+                  Action: 가계부 쓰기, 신용카드 리볼빙 금지, 구독 서비스 다이어트
                 </div>
-              </article>
+              </div>
 
-              <article className="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm hover:border-amber-300 transition-colors group">
-                <div className="w-12 h-12 rounded-xl bg-amber-50 text-amber-600 flex items-center justify-center mb-4">
-                  <ShoppingBag size={24} />
+              {/* Pillar 3: Saving */}
+              <div className="bg-white p-8 rounded-3xl border border-slate-100 shadow-xl shadow-slate-100/50 hover:-translate-y-1 transition-transform duration-300">
+                <div className="w-14 h-14 bg-emerald-50 text-emerald-600 rounded-2xl flex items-center justify-center mb-6">
+                  <Safe size={28} />
                 </div>
-                <h4 className="text-xl font-bold text-slate-900 mb-2 group-hover:text-amber-600">3. 소비 통장 (Spending)</h4>
-                <p className="text-sm text-slate-600 mb-4 h-12">
-                  한 달 용돈. 식비, 교통비, 쇼핑 등 변동 지출을 관리합니다.
+                <h3 className="text-2xl font-black text-slate-900 mb-4">3. 저축 (Saving)</h3>
+                <p className="text-slate-600 leading-relaxed mb-4">
+                  투자를 위한 총알이자 방어막입니다. 투자를 시작하기 전, 최소 3~6개월 치 생활비를 
+                  '비상금'으로 확보하여 인생의 리스크(실직, 질병)에 대비해야 합니다.
                 </p>
-                <div className="bg-slate-50 p-3 rounded-lg text-xs text-slate-500">
-                  <strong>Tip:</strong> 체크카드와 연동. 잔액이 부족하면? 그 달은 굶어야 합니다.
+                <div className="bg-emerald-50/50 p-4 rounded-xl text-sm font-medium text-emerald-800">
+                  Action: CMA 통장(파킹통장) 활용, 통장 쪼개기로 자동 저축
                 </div>
-              </article>
+              </div>
 
-              <article className="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm hover:border-slate-400 transition-colors group">
-                <div className="w-12 h-12 rounded-xl bg-slate-100 text-slate-600 flex items-center justify-center mb-4">
-                  <Safe size={24} />
+              {/* Pillar 4: Invest */}
+              <div className="bg-white p-8 rounded-3xl border border-slate-100 shadow-xl shadow-slate-100/50 hover:-translate-y-1 transition-transform duration-300">
+                <div className="w-14 h-14 bg-purple-50 text-purple-600 rounded-2xl flex items-center justify-center mb-6">
+                  <TrendingUp size={28} />
                 </div>
-                <h4 className="text-xl font-bold text-slate-900 mb-2 group-hover:text-slate-600">4. 비상금 통장 (Spare)</h4>
-                <p className="text-sm text-slate-600 mb-4 h-12">
-                  예비비. 경조사, 병원비 등 예상치 못한 지출에 대비합니다.
+                <h3 className="text-2xl font-black text-slate-900 mb-4">4. 투자 (Invest)</h3>
+                <p className="text-slate-600 leading-relaxed mb-4">
+                  돈이 나를 위해 일하게 만드는 단계입니다. 인플레이션을 방어하고 자산을 증식시킵니다. 
+                  장기 분산 투자로 복리 효과를 누리는 것이 핵심입니다.
                 </p>
-                <div className="bg-slate-50 p-3 rounded-lg text-xs text-slate-500">
-                  <strong>Tip:</strong> 매일 이자가 붙는 CMA 활용. 남은 생활비는 모두 이곳으로 이체.
+                <div className="bg-purple-50/50 p-4 rounded-xl text-sm font-medium text-purple-800">
+                  Action: ETF 적립식 매수, 배당주 투자, 연금저축펀드 활용
                 </div>
-              </article>
-            </div>
-          </section>
-
-          <hr className="border-slate-200 my-16" />
-
-          {/* Section 5: Spending Control */}
-          <section id="spending" className="mb-20 scroll-mt-24 animate-on-scroll">
-            <div className="flex items-center gap-3 mb-6">
-              <span className="text-emerald-600 font-black text-6xl opacity-20 -ml-1">05</span>
-              <h2 className="text-3xl md:text-4xl font-black text-slate-900">소비 통제와 저축의 기술</h2>
-            </div>
-            
-            <div className="prose prose-lg prose-slate max-w-none text-slate-600">
-              <h3 className="font-bold text-slate-900">라떼 효과 (The Latte Factor)</h3>
-              <p>
-                "고작 커피 한 잔 값인데..."라고 생각하시나요? 
-                하루 5,000원의 커피값은 한 달이면 15만 원, 1년이면 180만 원입니다. 
-                이 돈을 연 5% 수익률로 30년 투자한다면 <strong>약 1억 2천만 원</strong>이 됩니다. 
-                소액 지출을 무시하는 순간, 부자가 될 기회는 멀어집니다.
-              </p>
-
-              <h3 className="font-bold text-slate-900 mt-8">파킨슨의 법칙 (Parkinson's Law)</h3>
-              <p>
-                "소득이 늘어나면 지출도 그만큼 늘어난다." 
-                월급이 200만 원일 때 저축을 못 했던 사람은 500만 원을 벌어도 저축을 못 합니다. 
-                삶의 수준(Lifestyle)을 올리는 것은 쉽지만, 다시 내리는 것은 불가능에 가깝습니다. 
-                소득이 늘어나도 생활 수준을 일정 기간 유지하며 그 차액을 모두 투자해야 부의 추월차선을 탈 수 있습니다.
-              </p>
-              
-              <div className="bg-yellow-50 border-l-4 border-yellow-400 p-6 my-8 rounded-r-xl">
-                 <strong className="block text-yellow-800 text-lg mb-2 flex items-center gap-2"><Lightbulb size={20}/> 72의 법칙 (Rule of 72)</strong>
-                 <p className="text-sm text-yellow-900 mb-0">
-                   내 자산이 2배가 되는 데 걸리는 시간을 계산하는 공식입니다.<br/>
-                   <strong>72 ÷ 연 수익률(%) = 걸리는 시간(년)</strong><br/>
-                   예를 들어, 연 6% 수익률로 투자한다면 72 ÷ 6 = 12년 뒤에 자산이 2배가 됩니다.
-                 </p>
               </div>
             </div>
           </section>
 
-          <hr className="border-slate-200 my-16" />
+          {/* Section 3: Consumption & Life Hacks */}
+          <section id="consumption" className="mb-24 scroll-mt-32 animate-on-scroll">
+             <div className="flex items-center gap-4 mb-8">
+              <span className="flex items-center justify-center w-12 h-12 rounded-2xl bg-amber-500 text-white font-black text-xl shadow-lg shadow-amber-200">03</span>
+              <h2 className="text-3xl md:text-4xl font-black text-slate-900 tracking-tight">소비 통제가 안 되시나요?</h2>
+            </div>
 
-          {/* Section 6: FAQ */}
-          <section id="faq" className="mb-20 scroll-mt-24 animate-on-scroll">
+            <div className="prose prose-lg prose-slate max-w-none text-slate-600 leading-8">
+              <p>
+                현대 사회는 소비를 부추기는 알고리즘으로 가득 차 있습니다. 
+                SNS의 화려한 삶, 원터치 결제의 편리함은 우리의 도파민을 자극하여 <strong>'감정적 소비'</strong>를 유도합니다. 
+                소비는 심리전입니다. 이기기 위해서는 전략이 필요합니다.
+              </p>
+
+              <h3 className="text-2xl font-bold text-slate-900 mt-12 mb-6">지출을 줄이는 생활 속 금융 꿀팁</h3>
+              
+              <div className="space-y-6">
+                <div className="flex gap-6 items-start">
+                  <div className="w-12 h-12 rounded-full bg-slate-100 flex items-center justify-center shrink-0 mt-1">
+                    <ShoppingBag size={20} className="text-slate-600"/>
+                  </div>
+                  <div>
+                    <h4 className="text-xl font-bold text-slate-900 mb-2">1. 3일의 법칙 (Cooling-off Period)</h4>
+                    <p>
+                      사고 싶은 물건이 생기면 장바구니에 담아두고 딱 3일만 기다리세요. 
+                      대부분의 충동구매 욕구는 72시간 내에 사라집니다. 3일 뒤에도 꼭 필요하다면 그때 구매하세요.
+                    </p>
+                  </div>
+                </div>
+
+                <div className="flex gap-6 items-start">
+                  <div className="w-12 h-12 rounded-full bg-slate-100 flex items-center justify-center shrink-0 mt-1">
+                    <CreditCard size={20} className="text-slate-600"/>
+                  </div>
+                  <div>
+                    <h4 className="text-xl font-bold text-slate-900 mb-2">2. 신용카드 다이어트</h4>
+                    <p>
+                      신용카드는 고통 없는 결제를 가능하게 하여 과소비를 유발합니다. 
+                      소비 통제가 어렵다면 과감하게 신용카드를 자르고 <strong>체크카드</strong>나 <strong>현금</strong>을 사용하세요. 
+                      통장 잔고가 줄어드는 것을 눈으로 확인하는 고통이 저축을 돕습니다.
+                    </p>
+                  </div>
+                </div>
+
+                <div className="flex gap-6 items-start">
+                  <div className="w-12 h-12 rounded-full bg-slate-100 flex items-center justify-center shrink-0 mt-1">
+                    <DollarSign size={20} className="text-slate-600"/>
+                  </div>
+                  <div>
+                    <h4 className="text-xl font-bold text-slate-900 mb-2">3. 소액의 힘 (Latte Factor)</h4>
+                    <p>
+                      매일 마시는 5,000원 커피, 택시비, 편의점 간식을 우습게 보지 마세요. 
+                      월 30만 원이면 1년에 360만 원입니다. 이 돈을 연 5% 배당주에 투자하면 10년 뒤 4,500만 원이 넘는 자산이 됩니다.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          {/* Section 4: System */}
+          <section id="system" className="mb-24 scroll-mt-32 animate-on-scroll">
+            <div className="flex items-center gap-4 mb-8">
+              <span className="flex items-center justify-center w-12 h-12 rounded-2xl bg-blue-600 text-white font-black text-xl shadow-lg shadow-blue-200">04</span>
+              <h2 className="text-3xl md:text-4xl font-black text-slate-900 tracking-tight">자동화 시스템 구축</h2>
+            </div>
+            
+            <div className="bg-slate-900 text-slate-300 rounded-[2.5rem] p-10 md:p-12 shadow-2xl relative overflow-hidden">
+               {/* Background Pattern */}
+               <div className="absolute top-0 right-0 w-full h-full bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-10"></div>
+               <div className="absolute bottom-0 right-0 w-96 h-96 bg-blue-600/20 rounded-full blur-[100px] pointer-events-none"></div>
+
+               <h3 className="text-2xl md:text-3xl font-bold text-white mb-6 relative z-10">
+                 "의지력을 믿지 마세요.<br/>시스템을 믿으세요."
+               </h3>
+               
+               <p className="text-lg leading-relaxed mb-10 max-w-2xl relative z-10">
+                 매달 월급날마다 '이번 달엔 아껴 써야지' 다짐하지만 실패하는 이유는 당신의 의지력이 약해서가 아닙니다. 
+                 돈이 자동으로 흘러가도록 길을 만들어두지 않았기 때문입니다.
+               </p>
+
+               <div className="grid md:grid-cols-2 gap-6 relative z-10">
+                 <div className="bg-slate-800 p-6 rounded-2xl border border-slate-700">
+                   <h4 className="font-bold text-white mb-2 flex items-center gap-2">
+                     <Layers className="text-blue-400" size={20} /> 통장 쪼개기
+                   </h4>
+                   <p className="text-sm">
+                     급여(수입) → 고정비 자동납부 → 저축/투자 자동이체 → 남은 돈으로 소비. 
+                     이 순서를 강제하는 시스템을 만드세요.
+                   </p>
+                 </div>
+                 <div className="bg-slate-800 p-6 rounded-2xl border border-slate-700">
+                   <h4 className="font-bold text-white mb-2 flex items-center gap-2">
+                     <Target className="text-emerald-400" size={20} /> 목적 자금 설정
+                   </h4>
+                   <p className="text-sm">
+                     여행, 자동차, 결혼 등 목적별로 통장을 나누세요. 
+                     목표가 명확하면 돈을 모으는 과정이 즐거워집니다.
+                   </p>
+                 </div>
+               </div>
+            </div>
+          </section>
+
+          {/* FAQ Section */}
+          <section id="faq" className="mb-24 scroll-mt-32 animate-on-scroll">
             <div className="flex items-center gap-3 mb-10">
               <HelpCircle size={36} className="text-emerald-600" />
-              <h2 className="text-3xl md:text-4xl font-black text-slate-900">자주 묻는 질문 (FAQ)</h2>
+              <h2 className="text-3xl md:text-4xl font-black text-slate-900">금융 기초 Q&A</h2>
             </div>
 
-            <div className="space-y-6">
+            <div className="space-y-4">
               <details className="group bg-white rounded-3xl border border-slate-200 open:shadow-lg transition-all duration-300">
                 <summary className="flex items-center justify-between p-6 md:p-8 font-bold text-lg md:text-xl text-slate-800 cursor-pointer list-none select-none hover:text-emerald-600 transition-colors">
-                  Q. 학자금 대출이 있는데 저축부터 해도 되나요?
+                  Q. 빚이 있는데 저축을 먼저 해야 하나요?
                   <span className="bg-slate-100 rounded-full p-2 group-open:rotate-180 transition-transform"><ChevronRight /></span>
                 </summary>
                 <div className="px-6 pb-8 md:px-8 text-slate-600 leading-relaxed border-t border-slate-100 pt-6">
                   <p>
-                    대출 금리를 확인해보세요. 학자금 대출 금리가 2~3%대로 낮다면, 굳이 전액 상환을 서두를 필요는 없습니다. 
-                    최소한의 상환만 하면서 여유 자금으로 시드머니를 모으거나 연 5% 이상의 투자처에 넣는 것이 유리할 수 있습니다. 
-                    단, 대출 금리가 5% 이상이라면 무조건 상환이 1순위 투자입니다.
+                    대출 금리를 확인하세요. 대출 금리가 <strong>6% 이상</strong>이라면, 어떤 재테크보다 빚 상환이 최고의 투자입니다. 
+                    확정 수익률 6% 이상을 내는 투자처는 거의 없습니다. 
+                    단, 금리가 2~3%대의 저금리 대출(학자금, 전세자금)이라면 최소 상환만 유지하고 투자를 병행하는 것이 유리할 수 있습니다.
                   </p>
                 </div>
               </details>
 
               <details className="group bg-white rounded-3xl border border-slate-200 open:shadow-lg transition-all duration-300">
                 <summary className="flex items-center justify-between p-6 md:p-8 font-bold text-lg md:text-xl text-slate-800 cursor-pointer list-none select-none hover:text-emerald-600 transition-colors">
-                  Q. 신용카드는 꼭 잘라버려야 하나요?
+                  Q. 비상금은 얼마나 모아야 하나요?
                   <span className="bg-slate-100 rounded-full p-2 group-open:rotate-180 transition-transform"><ChevronRight /></span>
                 </summary>
                 <div className="px-6 pb-8 md:px-8 text-slate-600 leading-relaxed border-t border-slate-100 pt-6">
-                  <p className="mb-4">
-                    아닙니다. 신용카드는 '양날의 검'입니다. 잘 쓰면 신용점수를 올리고 혜택을 받지만, 못 쓰면 빚쟁이가 됩니다. 
-                    사회초년생에게 추천하는 방법은 다음과 같습니다.
+                  <p>
+                    일반적으로 본인 <strong>월 생활비의 3~6개월 치</strong>를 권장합니다. 
+                    월 지출이 200만 원이라면 600만~1,200만 원입니다. 
+                    이 돈은 투자가 아닌 <strong>생존</strong>을 위한 자금이므로, 수익률보다는 언제든 뺄 수 있는 유동성이 중요합니다. 
+                    CMA나 파킹통장에 보관하세요.
                   </p>
-                  <ul className="list-disc pl-5 space-y-2 text-sm md:text-base">
-                    <li><strong>통제력이 약하다면:</strong> 체크카드 100% 사용 권장.</li>
-                    <li><strong>통제력이 있다면:</strong> 신용카드는 고정비(통신비, 교통비) 납부용으로만 사용하고, 한도의 30% 미만으로 유지.</li>
-                    <li><strong>할부 금지:</strong> 할부는 미래 소득을 당겨쓰는 마약입니다. 무조건 일시불만 사용하세요.</li>
-                  </ul>
                 </div>
               </details>
 
               <details className="group bg-white rounded-3xl border border-slate-200 open:shadow-lg transition-all duration-300">
                 <summary className="flex items-center justify-between p-6 md:p-8 font-bold text-lg md:text-xl text-slate-800 cursor-pointer list-none select-none hover:text-emerald-600 transition-colors">
-                  Q. CMA 통장이 뭔가요? 꼭 만들어야 하나요?
+                  Q. 신용카드를 없애면 신용점수가 떨어지나요?
                   <span className="bg-slate-100 rounded-full p-2 group-open:rotate-180 transition-transform"><ChevronRight /></span>
                 </summary>
                 <div className="px-6 pb-8 md:px-8 text-slate-600 leading-relaxed border-t border-slate-100 pt-6">
-                  <p className="mb-4">
-                    CMA(Cash Management Account)는 증권사에서 만드는 수시 입출금 통장입니다. 
-                    일반 은행 입출금 통장은 이자가 거의 없지만(0.1%), CMA는 <strong>하루만 맡겨도 연 2.5~3.5%의 이자</strong>를 줍니다.
-                  </p>
                   <p>
-                    비상금이나 잠시 머무르는 돈을 넣어두기에 가장 적합합니다. 
-                    예를 들어 500만 원의 비상금을 일반 통장에 두면 이자가 1년에 5,000원이지만, CMA에 두면 약 15만 원입니다. 
-                    반드시 만들어야 할 필수 통장입니다.
+                    오래 사용한 카드를 해지하면 신용 거래 기간이 줄어들어 점수가 소폭 하락할 수 있습니다. 
+                    하지만 과소비나 리볼빙으로 인한 연체 위험보다는 해지가 낫습니다. 
+                    신용점수는 <strong>체크카드</strong>를 꾸준히(월 30만 원 이상, 6개월 이상) 사용해도 충분히 올릴 수 있습니다.
                   </p>
                 </div>
               </details>
             </div>
           </section>
+
         </article>
         
         {/* Desktop Table of Contents (Sticky) */}
         <TableOfContents />
-
       </div>
 
       {/* 
         Next Step Link
       */}
-      <section className="py-20 md:py-32 bg-slate-900 text-white relative overflow-hidden">
+      <section className="py-24 bg-emerald-900 text-white relative overflow-hidden">
         <div className="absolute top-0 right-0 w-full h-full bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-5"></div>
-        <div className="absolute -bottom-40 -left-40 w-96 h-96 bg-emerald-500/20 rounded-full blur-[100px] pointer-events-none"></div>
+        <div className="absolute -top-40 -left-40 w-96 h-96 bg-teal-500/20 rounded-full blur-[100px] pointer-events-none"></div>
         
         <div className="container mx-auto px-4 max-w-4xl relative z-10 text-center animate-on-scroll">
-          <Quote className="mx-auto text-emerald-500 mb-6 opacity-50" size={48} />
+          <Quote className="mx-auto text-teal-400 mb-8 opacity-50" size={48} />
           <h2 className="text-3xl md:text-5xl font-black mb-8 leading-tight">
-            "가장 좋은 투자 시점은<br/> 10년 전이었고,<br/>
-            두 번째로 좋은 시점은 <span className="text-emerald-400">바로 지금</span>입니다."
+            "금융 지식은 <br className="md:hidden"/>당신의 자산을 지키는<br className="hidden md:block"/> 
+            <span className="text-teal-400">가장 강력한 방패</span>입니다."
           </h2>
-          <p className="text-slate-400 text-lg md:text-xl mb-12 max-w-2xl mx-auto leading-relaxed break-keep">
-            금융 기초를 다지셨나요? 이제는 실전 투자를 통해 자산을 증식시킬 차례입니다. 
-            초보자도 잃지 않는 안전한 ETF 투자 전략을 확인해보세요.
+          <p className="text-emerald-100/80 text-lg md:text-xl mb-12 max-w-2xl mx-auto leading-relaxed break-keep">
+            기초가 탄탄해졌다면, 이제는 실전 투자를 통해 자산을 증식시킬 차례입니다. 
+            리스크를 최소화하고 수익을 극대화하는 투자 전략을 확인해보세요.
           </p>
-          <Link 
-            to="/investment-guide" 
-            className="inline-flex items-center gap-3 bg-emerald-600 text-white font-bold text-lg px-10 py-5 rounded-full hover:bg-emerald-500 hover:scale-105 active:scale-95 transition-all shadow-xl shadow-emerald-900/50"
-          >
-            <MousePointerClick />
-            실전 투자 가이드 바로가기
-          </Link>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link 
+              to="/investment-guide" 
+              className="inline-flex items-center justify-center gap-3 bg-white text-emerald-900 font-bold text-lg px-8 py-4 rounded-xl hover:bg-emerald-50 hover:scale-105 transition-all shadow-xl"
+            >
+              <MousePointerClick />
+              실전 투자 가이드
+            </Link>
+            <Link 
+              to="/life-hacks-guide" 
+              className="inline-flex items-center justify-center gap-3 bg-emerald-800 text-emerald-100 border border-emerald-700 font-bold text-lg px-8 py-4 rounded-xl hover:bg-emerald-700 transition-all shadow-lg"
+            >
+              <Lightbulb />
+              생활비 절약 팁
+            </Link>
+          </div>
         </div>
       </section>
 
@@ -532,8 +490,8 @@ export const FinanceGuide: React.FC = () => {
         <div className="container mx-auto px-4 max-w-6xl animate-on-scroll">
           <div className="flex flex-col md:flex-row items-end justify-between mb-12 gap-4">
             <div>
-              <h2 className="text-3xl md:text-4xl font-black text-slate-900">함께 읽으면 좋은 칼럼</h2>
-              <p className="text-slate-500 mt-2 font-medium text-lg">금융 전문가들의 인사이트를 확인하세요.</p>
+              <h2 className="text-3xl md:text-4xl font-black text-slate-900">금융 에디터의 추천 칼럼</h2>
+              <p className="text-slate-500 mt-2 font-medium text-lg">금융 전문가들의 깊이 있는 인사이트를 확인하세요.</p>
             </div>
             <Link to="/finance" className="hidden md:flex items-center font-bold text-emerald-600 hover:underline text-lg">
               전체 보기 <ArrowRight size={20} className="ml-1" />
