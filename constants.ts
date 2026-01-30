@@ -23,7 +23,8 @@ export const INITIAL_ARTICLES: Article[] = [
     category: Category.FINANCE,
     title: '구글정보이용료현금화의 실체: 수수료 40%의 진실과 계정 정지 리스크',
     summary: '휴대폰 소액결제 한도가 막혔을 때 찾는 마지막 수단, 정보이용료(콘텐츠이용료). 왜 수수료가 비정상적으로 높은지, 그리고 구글 계정 영구 정지라는 치명적 위험을 피하는 방법은 무엇인지 분석합니다.',
-    imageUrl: 'https://images.unsplash.com/photo-1616077168079-7e09a677fb2c?q=80&w=800&auto=format&fit=crop',
+    // Image: Smartphone payment / App store concept
+    imageUrl: 'https://images.unsplash.com/photo-1556740738-b6a63e27c4df?q=80&w=800&auto=format&fit=crop',
     date: '2023-11-30',
     author: '금융 에디터',
     tags: ['구글정보이용료', '콘텐츠이용료', '정보이용료현금화', '구글깡', '리니지m', '소액결제'],
@@ -37,7 +38,7 @@ export const INITIAL_ARTICLES: Article[] = [
 
       <div class="my-8 rounded-2xl overflow-hidden shadow-lg border border-slate-100">
         <div class="bg-slate-200 aspect-video flex items-center justify-center relative">
-           <img src="https://images.unsplash.com/photo-1512428559087-560fa5ce7d87?q=80&w=800&auto=format&fit=crop" alt="스마트폰을 보며 고민하는 모습" class="absolute inset-0 w-full h-full object-cover" />
+           <img src="https://images.unsplash.com/photo-1616077168079-7e09a677fb2c?q=80&w=800&auto=format&fit=crop" alt="스마트폰을 보며 고민하는 모습" class="absolute inset-0 w-full h-full object-cover" />
            <div class="absolute bottom-0 left-0 w-full bg-gradient-to-t from-black/70 to-transparent p-6">
              <p class="font-bold text-white mb-1">한도 부족과 결제 오류</p>
              <p class="text-xs text-slate-300">유동성이 막힌 상황에서의 위험한 선택</p>
@@ -112,7 +113,8 @@ export const INITIAL_ARTICLES: Article[] = [
     category: Category.FINANCE,
     title: '신용카드현금화의 두 얼굴: 합법적 포인트 전환과 불법 융통의 경계',
     summary: '신용카드 현금화는 자산 관리의 꿀팁일 수도, 신용 불량으로 가는 지름길일 수도 있습니다. 여신금융협회 포인트 현금화부터 카드깡의 위험성까지, 금융 소비자가 반드시 알아야 할 구조적 진실을 분석합니다.',
-    imageUrl: 'https://images.unsplash.com/photo-1556742031-c6961e8560b0?q=80&w=800&auto=format&fit=crop',
+    // Image: Credit cards / POS terminal (Distinct from Google Info Fee)
+    imageUrl: 'https://images.unsplash.com/photo-1621416894569-0f39ed31d247?q=80&w=800&auto=format&fit=crop',
     date: '2023-11-25',
     author: '금융 에디터',
     tags: ['신용카드현금화', '카드깡', '신용카드포인트', '상테크', '금융사기', '신용등급'],
@@ -206,7 +208,8 @@ export const INITIAL_ARTICLES: Article[] = [
     category: Category.FINANCE,
     title: '소액결제현금화의 구조적 이해와 금융 소비자가 알아야 할 진실',
     summary: '급전이 필요할 때 검색하게 되는 소액결제현금화. 단순한 현금 마련 수단으로 접근하면 위험합니다. 그 이면에 숨겨진 수수료 구조와 신용상의 리스크, 그리고 안전한 대안까지 심층 분석합니다.',
-    imageUrl: 'https://images.unsplash.com/photo-1616077168079-7e09a677fb2c?q=80&w=800&auto=format&fit=crop',
+    // Image: Person using smartphone for finance / Digital Wallet
+    imageUrl: 'https://images.unsplash.com/photo-1512428559087-560fa5ce7d87?q=80&w=800&auto=format&fit=crop',
     date: '2023-11-20',
     author: '금융 에디터',
     tags: ['소액결제현금화', '재테크', '금융상식', '신용관리', '현금유동성', '급전'],
@@ -312,7 +315,8 @@ export const INITIAL_ARTICLES: Article[] = [
     category: Category.FINANCE,
     title: '돈이 새는 구조부터 막아라: 대부분이 평생 반복하는 잘못된 금융 선택',
     summary: '소득이 늘어도 돈이 모이지 않는다면? 문제는 버는 돈이 아니라 새는 돈에 있습니다. 당신의 재정을 위협하는 6가지 구조적 누수를 점검하고, 탄탄한 현금 흐름을 만드는 법을 공개합니다.',
-    imageUrl: 'https://images.unsplash.com/photo-1574607383476-f2c711c6a851?q=80&w=800&auto=format&fit=crop',
+    // Image: Coins stacking / Budget / Savings concept
+    imageUrl: 'https://images.unsplash.com/photo-1580519542036-c47de6196ba5?q=80&w=800&auto=format&fit=crop',
     date: '2023-11-15',
     author: '금융 에디터',
     tags: ['재테크', '지출관리', '신용카드', '현금흐름', '돈관리', '대출'],
@@ -349,7 +353,7 @@ export const INITIAL_ARTICLES: Article[] = [
       <p class="mb-6 leading-relaxed">특히 할부가 누적되면 매달 갚아야 할 돈이 늘어나, 정작 저축이나 투자를 할 여력은 사라집니다. 포인트 적립 혜택보다 무서운 것이 과소비 습관입니다. 금융 질서가 잡히지 않았다면 과감하게 <strong>체크카드</strong>로 돌아가야 합니다.</p>
 
       <h2 class="text-2xl font-bold text-slate-900 mt-12 mb-4">4. 대출(Loan)과 신용점수: 쉬운 돈의 함정</h2>
-      <p class="mb-6 leading-relaxed">자산 증식을 위한 레버리지가 아닌, 단순 소비를 위한 <strong>대출</strong>은 재정을 가장 빠르게 무너뜨립니다. 특히 모바일로 쉽게 받을 수 있는 소액 비상금 대출이나 카드론을 '내 돈'처럼 쓰다 보면, 이자 부담이 눈덩이처럼 불어납니다.</p>
+      <p class="mb-6 leading-relaxed">자산 증식을 위한 레버리지가 아닌, 단순 소비를 위한 <strong>대출</strong>은 재정을 가장 빠르게 무너뜨립니다. 특히 모바일로 쉽게 받을 수 있는 소액 비상금 대출이나 카드론을 '내 돈'처럼 쓰다 보면, 이자 부담이 눈덩이처럼 불어나는 것입니다.</p>
       <div class="mb-6">
         <p class="text-slate-700 font-medium mb-2">⚠️ 결정적 실수</p>
         <p class="text-slate-600">잦은 대출 실행은 <strong>신용점수</strong> 하락으로 이어집니다. 신용점수가 떨어지면 나중에 전세자금 대출이나 주택 담보 대출처럼 정말 중요한 순간에 금융권의 도움을 받지 못하거나, 고금리를 부담해야 하는 페널티를 받게 됩니다.</p>
@@ -377,7 +381,8 @@ export const INITIAL_ARTICLES: Article[] = [
     category: Category.LOAN,
     title: '급할 때 유용한 소액 비상금 대출: 구조적 이해와 활용 전략',
     summary: '갑작스러운 유동성 위기 시, 신용점수 하락을 최소화하며 안전하게 자금을 융통하는 1금융권 소액 대출의 메커니즘과 주의사항을 심층 분석합니다.',
-    imageUrl: 'https://images.unsplash.com/photo-1565514020176-db7934789531?q=80&w=800&auto=format&fit=crop',
+    // Image: Financial Audit / Planning (Clean)
+    imageUrl: 'https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?q=80&w=800&auto=format&fit=crop',
     date: '2023-10-24',
     author: '금융 에디터',
     tags: ['소액', '대출', '비상금', '신용점수', '서울보증보험'],
@@ -426,6 +431,7 @@ export const INITIAL_ARTICLES: Article[] = [
     category: Category.INVESTMENT,
     title: '주식 투자 입문: 초보자를 위한 포트폴리오 구성의 기초와 분산 투자 전략',
     summary: '변동성이 큰 주식 시장에서 리스크를 관리하는 자산 배분의 기본 원칙. ETF와 배당주를 활용한 포트폴리오의 구조와 장단점을 이해합니다.',
+    // Image: Stock chart / Bull market
     imageUrl: 'https://images.unsplash.com/photo-1611974765270-ca1258634369?q=80&w=800&auto=format&fit=crop',
     date: '2023-10-22',
     author: '투자 분석가',
@@ -471,7 +477,8 @@ export const INITIAL_ARTICLES: Article[] = [
     category: Category.WELFARE,
     title: '2024년 주요 정부 지원금 및 복지 정책의 이해와 활용 가이드',
     summary: '청년 자산 형성부터 출산 장려까지, 복잡한 정부 정책의 취지와 핵심 내용을 정리하고 올바른 신청 기준을 제시합니다.',
-    imageUrl: 'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?q=80&w=800&auto=format&fit=crop',
+    // Image: Helping hand / Family support
+    imageUrl: 'https://images.unsplash.com/photo-1532629345422-7515f3d16bb6?q=80&w=800&auto=format&fit=crop',
     date: '2023-10-21',
     author: '복지 알리미',
     tags: ['복지', '정책', '지원금', '정부정책', '청년정책', '부모급여'],
@@ -515,7 +522,8 @@ export const INITIAL_ARTICLES: Article[] = [
     category: Category.FINANCE,
     title: '개인 금융이 무너지는 순간들: 대부분이 놓치는 돈 관리의 결정적 지점',
     summary: '열심히 버는데 왜 돈이 모이지 않을까요? 금융 위기는 소득 부족이 아닌 구조적 결함에서 시작됩니다. 당신의 돈 관리가 무너지는 5가지 결정적 순간을 진단합니다.',
-    imageUrl: 'https://images.unsplash.com/photo-1579621970795-87facc2f976d?q=80&w=800&auto=format&fit=crop',
+    // Image: Financial Stress / Crisis graph
+    imageUrl: 'https://images.unsplash.com/photo-1507679799987-c73779587ccf?q=80&w=800&auto=format&fit=crop',
     date: '2023-11-10',
     author: '금융 에디터',
     tags: ['금융', '재테크', '신용점수', '대출', '현금흐름', '리스크관리'],
@@ -527,7 +535,8 @@ export const INITIAL_ARTICLES: Article[] = [
     category: Category.FINANCE,
     title: '돈 관리의 순서: 소득·지출·대출·투자를 한 번에 이해하는 법',
     summary: '재테크의 실패는 방법이 아니라 순서에서 옵니다. 소득 파악부터 지출 통제, 대출 활용, 그리고 투자까지. 개인 금융의 전체 지도를 그려드립니다.',
-    imageUrl: 'https://images.unsplash.com/photo-1554224155-6726b3ff858f?q=80&w=800&auto=format&fit=crop',
+    // Image: Notebook / Planning / Roadmap
+    imageUrl: 'https://images.unsplash.com/photo-1450101499163-c8848c66ca85?q=80&w=800&auto=format&fit=crop',
     date: '2023-11-01',
     author: '금융 에디터',
     tags: ['재테크', '돈관리', '금융기초', '대출', '투자', '소액'],
@@ -539,7 +548,8 @@ export const INITIAL_ARTICLES: Article[] = [
     category: Category.LIFE,
     title: '신용카드 포인트의 합법적 현금 전환: 여신금융협회 통합조회 활용법',
     summary: '흩어진 카드 포인트를 내 계좌로 입금받는 공식적인 절차와 방법. 여신금융협회 통합조회 서비스를 통한 안전한 자산 관리 가이드.',
-    imageUrl: 'https://images.unsplash.com/photo-1601597111158-2fceff292cd4?q=80&w=800&auto=format&fit=crop',
+    // Image: Shopping / Rewards / Coins
+    imageUrl: 'https://images.unsplash.com/photo-1563013544-824ae1b704d3?q=80&w=800&auto=format&fit=crop',
     date: '2023-10-23',
     author: '생활의 달인',
     tags: ['신용카드', '포인트조회', '계좌입금', '여신금융협회', '재테크'],
@@ -551,6 +561,7 @@ export const INITIAL_ARTICLES: Article[] = [
     category: Category.FINANCE,
     title: '사회초년생을 위한 월급 관리의 정석: 통장 쪼개기 시스템 구축',
     summary: '월급이 스쳐 지나가지 않도록 현금 흐름을 통제하는 통장 쪼개기 노하우. 4개의 통장으로 만드는 자동화된 자산 관리 시스템.',
+    // Image: Piggy bank / Savings
     imageUrl: 'https://images.unsplash.com/photo-1579621970563-ebec7560ff3e?q=80&w=800&auto=format&fit=crop',
     date: '2023-10-20',
     author: '재무 설계사',
@@ -563,6 +574,7 @@ export const INITIAL_ARTICLES: Article[] = [
     category: Category.INVESTMENT,
     title: '미국 주식 투자와 세금의 이해: 양도소득세 구조와 관리 원칙',
     summary: '해외 주식 투자 수익의 세금 구조를 명확히 이해하고, 합법적인 범위 내에서 실질 수익을 지키는 세금 관리 전략을 안내합니다.',
+    // Image: Tax forms / Calculator
     imageUrl: 'https://images.unsplash.com/photo-1586486855514-8c633cc6fd38?q=80&w=800&auto=format&fit=crop',
     date: '2023-10-19',
     author: '세무 전문가',
@@ -575,6 +587,7 @@ export const INITIAL_ARTICLES: Article[] = [
     category: Category.LOAN,
     title: '신용점수 관리의 정석: 등급을 올리는 5가지 실전 전략',
     summary: '대출 금리와 한도를 결정하는 금융 신분증, 신용점수. 체크카드 사용부터 비금융 정보 등록까지, 실질적인 점수 향상을 위한 행동 강령을 제시합니다.',
+    // Image: Analysis charts / Credit report
     imageUrl: 'https://images.unsplash.com/photo-1559526324-4b87b5e36e44?q=80&w=800&auto=format&fit=crop',
     date: '2023-10-18',
     author: '신용 관리자',
