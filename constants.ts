@@ -23,7 +23,6 @@ export const INITIAL_ARTICLES: Article[] = [
     category: Category.FINANCE,
     title: '구글정보이용료현금화의 실체: 수수료 40%의 진실과 계정 정지 리스크',
     summary: '휴대폰 소액결제 한도가 막혔을 때 찾는 마지막 수단, 정보이용료(콘텐츠이용료). 왜 수수료가 비정상적으로 높은지, 그리고 구글 계정 영구 정지라는 치명적 위험을 피하는 방법은 무엇인지 분석합니다.',
-    // Image: Smartphone payment / App store concept
     imageUrl: 'https://images.unsplash.com/photo-1556740738-b6a63e27c4df?q=80&w=800&auto=format&fit=crop',
     date: '2023-11-30',
     author: '금융 에디터',
@@ -113,7 +112,6 @@ export const INITIAL_ARTICLES: Article[] = [
     category: Category.FINANCE,
     title: '신용카드현금화의 두 얼굴: 합법적 포인트 전환과 불법 융통의 경계',
     summary: '신용카드 현금화는 자산 관리의 꿀팁일 수도, 신용 불량으로 가는 지름길일 수도 있습니다. 여신금융협회 포인트 현금화부터 카드깡의 위험성까지, 금융 소비자가 반드시 알아야 할 구조적 진실을 분석합니다.',
-    // Image: Credit cards / POS terminal (Distinct from Google Info Fee)
     imageUrl: 'https://images.unsplash.com/photo-1621416894569-0f39ed31d247?q=80&w=800&auto=format&fit=crop',
     date: '2023-11-25',
     author: '금융 에디터',
@@ -208,7 +206,6 @@ export const INITIAL_ARTICLES: Article[] = [
     category: Category.FINANCE,
     title: '소액결제현금화의 구조적 이해와 금융 소비자가 알아야 할 진실',
     summary: '급전이 필요할 때 검색하게 되는 소액결제현금화. 단순한 현금 마련 수단으로 접근하면 위험합니다. 그 이면에 숨겨진 수수료 구조와 신용상의 리스크, 그리고 안전한 대안까지 심층 분석합니다.',
-    // Image: Person using smartphone for finance / Digital Wallet
     imageUrl: 'https://images.unsplash.com/photo-1512428559087-560fa5ce7d87?q=80&w=800&auto=format&fit=crop',
     date: '2023-11-20',
     author: '금융 에디터',
@@ -315,7 +312,6 @@ export const INITIAL_ARTICLES: Article[] = [
     category: Category.FINANCE,
     title: '돈이 새는 구조부터 막아라: 대부분이 평생 반복하는 잘못된 금융 선택',
     summary: '소득이 늘어도 돈이 모이지 않는다면? 문제는 버는 돈이 아니라 새는 돈에 있습니다. 당신의 재정을 위협하는 6가지 구조적 누수를 점검하고, 탄탄한 현금 흐름을 만드는 법을 공개합니다.',
-    // Image: Coins stacking / Budget / Savings concept
     imageUrl: 'https://images.unsplash.com/photo-1580519542036-c47de6196ba5?q=80&w=800&auto=format&fit=crop',
     date: '2023-11-15',
     author: '금융 에디터',
@@ -381,7 +377,6 @@ export const INITIAL_ARTICLES: Article[] = [
     category: Category.LOAN,
     title: '급할 때 유용한 소액 비상금 대출: 구조적 이해와 활용 전략',
     summary: '갑작스러운 유동성 위기 시, 신용점수 하락을 최소화하며 안전하게 자금을 융통하는 1금융권 소액 대출의 메커니즘과 주의사항을 심층 분석합니다.',
-    // Image: Financial Audit / Planning (Clean)
     imageUrl: 'https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?q=80&w=800&auto=format&fit=crop',
     date: '2023-10-24',
     author: '금융 에디터',
@@ -431,7 +426,6 @@ export const INITIAL_ARTICLES: Article[] = [
     category: Category.INVESTMENT,
     title: '주식 투자 입문: 초보자를 위한 포트폴리오 구성의 기초와 분산 투자 전략',
     summary: '변동성이 큰 주식 시장에서 리스크를 관리하는 자산 배분의 기본 원칙. ETF와 배당주를 활용한 포트폴리오의 구조와 장단점을 이해합니다.',
-    // Image: Stock chart / Bull market
     imageUrl: 'https://images.unsplash.com/photo-1611974765270-ca1258634369?q=80&w=800&auto=format&fit=crop',
     date: '2023-10-22',
     author: '투자 분석가',
@@ -477,7 +471,6 @@ export const INITIAL_ARTICLES: Article[] = [
     category: Category.WELFARE,
     title: '2024년 주요 정부 지원금 및 복지 정책의 이해와 활용 가이드',
     summary: '청년 자산 형성부터 출산 장려까지, 복잡한 정부 정책의 취지와 핵심 내용을 정리하고 올바른 신청 기준을 제시합니다.',
-    // Image: Helping hand / Family support
     imageUrl: 'https://images.unsplash.com/photo-1532629345422-7515f3d16bb6?q=80&w=800&auto=format&fit=crop',
     date: '2023-10-21',
     author: '복지 알리미',
@@ -522,12 +515,65 @@ export const INITIAL_ARTICLES: Article[] = [
     category: Category.FINANCE,
     title: '개인 금융이 무너지는 순간들: 대부분이 놓치는 돈 관리의 결정적 지점',
     summary: '열심히 버는데 왜 돈이 모이지 않을까요? 금융 위기는 소득 부족이 아닌 구조적 결함에서 시작됩니다. 당신의 돈 관리가 무너지는 5가지 결정적 순간을 진단합니다.',
-    // Image: Financial Stress / Crisis graph
     imageUrl: 'https://images.unsplash.com/photo-1507679799987-c73779587ccf?q=80&w=800&auto=format&fit=crop',
     date: '2023-11-10',
     author: '금융 에디터',
     tags: ['금융', '재테크', '신용점수', '대출', '현금흐름', '리스크관리'],
-    content: `<p>콘텐츠 준비 중입니다.</p>`
+    content: `
+      <p class="mb-6 text-lg leading-relaxed">
+        금융 위기는 예고 없이 찾아오는 것처럼 보이지만, 사실 붕괴 전에는 반드시 <strong>전조 증상(Sign)</strong>이 있습니다. 많은 사람들이 이 신호를 무시하거나 "나는 괜찮겠지"라는 안일함으로 넘기다 돌이킬 수 없는 상황에 직면합니다.
+      </p>
+      <p class="mb-6 text-lg leading-relaxed">
+        개인 파산이나 신용 불량은 하루아침에 일어나는 일이 아닙니다. 잘못된 금융 습관이 쌓이고 쌓여 임계점을 넘는 순간 무너지는 것입니다. 본 글에서는 개인 금융이 무너지는 결정적인 5가지 순간을 진단하고, 이를 미리 감지하여 방어하는 방법을 제시합니다.
+      </p>
+
+      <div class="bg-red-50 border-l-4 border-red-600 p-6 mb-10 rounded-r-xl">
+        <strong class="block text-red-900 text-lg mb-2">🚨 위험 신호 체크리스트</strong>
+        <ul class="list-disc list-inside space-y-1 text-slate-700">
+          <li>월급이 들어오자마자 카드 값으로 70% 이상 빠져나간다.</li>
+          <li>비상금이 없어 급한 돈을 카드 현금서비스로 해결한다.</li>
+          <li>정확한 월 지출액을 모르고 감으로 소비한다.</li>
+          <li>보험이나 리스크 헤징 수단이 전혀 없다.</li>
+        </ul>
+      </div>
+
+      <h2 class="text-2xl font-bold text-slate-900 mt-12 mb-4">1. 과도한 레버리지: 감당할 수 없는 빚의 무게</h2>
+      <p class="mb-6 leading-relaxed">
+        가장 흔한 붕괴 원인은 <strong>부채 비율(Debt Ratio)</strong> 관리 실패입니다. 자신의 상환 능력(DSR)을 고려하지 않고, 영끌(영혼까지 끌어모음) 투자를 하거나 소비를 위해 대출을 일으키는 경우입니다.
+        금리가 오르거나 소득이 조금만 줄어도 이자를 감당하지 못해 연체의 늪에 빠지게 됩니다. 
+        <br/><br/>
+        <strong>Tip:</strong> 월 소득에서 원리금 상환액이 차지하는 비중이 40%를 넘지 않도록 관리해야 합니다.
+      </p>
+
+      <h2 class="text-2xl font-bold text-slate-900 mt-12 mb-4">2. 비상금의 부재: 작은 충격에 와르르</h2>
+      <p class="mb-6 leading-relaxed">
+        인생에는 반드시 예기치 못한 지출(병원비, 수리비, 경조사 등)이 발생합니다. 이때 <strong>비상금(Emergency Fund)</strong>이 없다면, 
+        울며 겨자 먹기로 고금리 대출을 쓰거나 투자 중인 자산을 손해 보고 팔아야 합니다. 
+        비상금은 금융의 에어백입니다. 이것이 없다는 것은 안전벨트 없이 고속도로를 달리는 것과 같습니다.
+      </p>
+
+      <h2 class="text-2xl font-bold text-slate-900 mt-12 mb-4">3. 라이프스타일 인플레이션: 버는 만큼 쓴다</h2>
+      <p class="mb-6 leading-relaxed">
+        소득이 늘어나면 저축이 늘어야 정상입니다. 하지만 많은 사람들이 소득 증가에 맞춰 소비 수준도 같이 올립니다(Lifestyle Inflation). 
+        더 비싼 차, 더 넓은 집, 명품 소비로 인해 정작 잉여 자금은 '0원'인 상태가 지속됩니다. 
+        이런 구조에서는 소득이 끊기는 순간 즉시 빈곤층으로 추락하게 됩니다.
+      </p>
+
+      <h2 class="text-2xl font-bold text-slate-900 mt-12 mb-4">4. 리스크 관리 부재: 보험과 헤징 무시</h2>
+      <p class="mb-6 leading-relaxed">
+        "나는 건강하니까 보험 필요 없어"라고 생각하시나요? 큰 질병이나 사고는 개인의 경제력을 한순간에 파괴할 수 있는 가장 큰 리스크입니다. 
+        과도한 보험은 독이지만, 실손보험이나 3대 질병 진단비 같은 <strong>필수 보장 자산</strong>은 나의 금융 성벽을 지키는 최후의 방어선입니다.
+      </p>
+
+      <hr class="border-slate-200 my-10" />
+
+      <h3 class="text-2xl font-bold text-slate-900 mt-8 mb-4">결론: 정기적인 금융 건강검진이 필요합니다</h3>
+      <p class="mb-4 leading-relaxed">
+        몸이 아프기 전에 건강검진을 받듯, 돈 관리도 정기적인 점검이 필요합니다. 
+        한 달에 한 번은 반드시 자신의 자산 현황표(대차대조표)를 작성하고, 현금 흐름에 막힌 곳은 없는지 확인하십시오. 
+        작은 균열을 미리 발견하고 보수하는 것이 평생의 부를 지키는 유일한 방법입니다.
+      </p>
+    `
   },
   {
     id: '8',
@@ -535,12 +581,72 @@ export const INITIAL_ARTICLES: Article[] = [
     category: Category.FINANCE,
     title: '돈 관리의 순서: 소득·지출·대출·투자를 한 번에 이해하는 법',
     summary: '재테크의 실패는 방법이 아니라 순서에서 옵니다. 소득 파악부터 지출 통제, 대출 활용, 그리고 투자까지. 개인 금융의 전체 지도를 그려드립니다.',
-    // Image: Notebook / Planning / Roadmap
     imageUrl: 'https://images.unsplash.com/photo-1450101499163-c8848c66ca85?q=80&w=800&auto=format&fit=crop',
     date: '2023-11-01',
     author: '금융 에디터',
     tags: ['재테크', '돈관리', '금융기초', '대출', '투자', '소액'],
-    content: `<p>콘텐츠 준비 중입니다.</p>`
+    content: `
+      <p class="mb-6 text-lg leading-relaxed">
+        건물을 지을 때 기초 공사 없이 지붕부터 올릴 수 있을까요? 불가능합니다. 하지만 놀랍게도 많은 사람들이 돈 관리를 할 때는 순서를 무시합니다. 
+        빚이 있는 상태에서 주식 투자를 하거나, 월급 관리도 안 되는데 보험부터 가입하는 식입니다.
+      </p>
+      <p class="mb-6 text-lg leading-relaxed">
+        재테크에 실패하는 가장 큰 이유는 '방법'을 몰라서가 아니라 <strong>'순서'</strong>가 틀렸기 때문입니다. 
+        튼튼한 자산을 쌓아 올리기 위해 반드시 지켜야 할 돈 관리의 절대적인 순서(Roadmap)를 정리해 드립니다.
+      </p>
+
+      <div class="my-8 p-6 bg-emerald-50 border border-emerald-100 rounded-xl">
+         <strong class="block text-emerald-900 text-lg mb-3">🧭 돈 관리 5단계 로드맵</strong>
+         <ol class="list-decimal list-inside space-y-3 text-slate-700 font-medium">
+           <li><strong>현금 흐름 파악:</strong> 내 수입과 지출을 10원 단위까지 알기</li>
+           <li><strong>지출 통제:</strong> 예산 수립 및 통장 쪼개기</li>
+           <li><strong>부채 상환:</strong> 고금리 악성 부채 제거</li>
+           <li><strong>비상금 확보:</strong> 삶의 안전판 구축 (생활비 3~6개월 치)</li>
+           <li><strong>투자 시작:</strong> 잉여 자금으로 자산 증식</li>
+         </ol>
+      </div>
+
+      <h2 class="text-2xl font-bold text-slate-900 mt-12 mb-4">1단계: 소득과 지출의 객관화</h2>
+      <p class="mb-6 leading-relaxed">
+        가장 먼저 해야 할 일은 '자기 객관화'입니다. 내가 실제로 얼마를 벌고(세후 실수령액), 얼마를 쓰는지 파악해야 합니다. 
+        대부분 "대충 이 정도 쓰겠지"라고 생각하지만, 카드 명세서를 뜯어보면 생각보다 훨씬 많은 돈이 새 나가는 것을 발견하게 됩니다. 
+        가계부 앱이나 엑셀을 통해 지난 3개월간의 평균 지출을 산출하십시오.
+      </p>
+
+      <h2 class="text-2xl font-bold text-slate-900 mt-12 mb-4">2단계: 지출 통제와 통장 쪼개기</h2>
+      <p class="mb-6 leading-relaxed">
+        현금 흐름을 파악했다면 이제 수도꼭지를 조절할 차례입니다. 고정비(숨만 쉬어도 나가는 돈)와 변동비(용돈)를 구분하고, 
+        저축 목표액을 먼저 떼어낸 뒤 남은 돈으로 생활하는 <strong>'선저축 후지출'</strong> 시스템을 만드십시오. 
+        이를 위해 급여 통장, 생활비 통장, 비상금 통장을 분리하는 '통장 쪼개기'가 필수입니다.
+      </p>
+
+      <h2 class="text-2xl font-bold text-slate-900 mt-12 mb-4">3단계: 나쁜 빚(Bad Debt) 청산</h2>
+      <p class="mb-6 leading-relaxed">
+        투자를 고민하기 전에 대출 금리를 확인하십시오. 대출 이자가 연 6% 이상이라면, 어떤 투자를 하는 것보다 <strong>빚을 갚는 것</strong>이 최고의 수익률(확정 수익)을 보장합니다. 
+        특히 카드론, 현금서비스, 리볼빙 같은 고금리 악성 부채는 자산 증식의 가장 큰 적이므로 0순위로 없애야 합니다.
+      </p>
+
+      <h2 class="text-2xl font-bold text-slate-900 mt-12 mb-4">4단계: 비상금이라는 방패 마련</h2>
+      <p class="mb-6 leading-relaxed">
+        빚을 다 갚았다면 바로 주식을 사야 할까요? 아닙니다. 갑작스러운 실직이나 병원비 등 인생의 위기에 대비한 <strong>비상금</strong>을 먼저 모아야 합니다. 
+        최소 월 생활비의 3개월 치 이상을 CMA 통장(파킹통장)에 넣어두십시오. 이 돈은 투자가 아니라 생존을 위한 자금입니다.
+      </p>
+
+      <h2 class="text-2xl font-bold text-slate-900 mt-12 mb-4">5단계: 비로소, 투자(Investment)</h2>
+      <p class="mb-6 leading-relaxed">
+        위 4단계가 완료되었다면, 이제 당신은 투자를 할 자격이 생겼습니다. 
+        안정적인 현금 흐름과 비상금이라는 방패가 있기 때문에, 시장이 흔들려도 심리적으로 버틸 수 있습니다. 
+        이때부터 ETF, 배당주, 부동산 등 자신의 성향에 맞는 투자처에 자금을 배분하여 복리 효과를 누리십시오.
+      </p>
+
+      <hr class="border-slate-200 my-10" />
+
+      <h3 class="text-2xl font-bold text-slate-900 mt-8 mb-4">결론: 지름길은 없습니다</h3>
+      <p class="mb-4 leading-relaxed">
+        많은 사람들이 빨리 부자가 되고 싶은 마음에 단계를 건너뛰려 합니다. 하지만 기초가 부실한 탑은 반드시 무너집니다. 
+        조금 느리게 느껴지더라도 이 순서를 차근차근 밟아나가는 것만이 경제적 자유로 가는 가장 확실하고 빠른 길입니다.
+      </p>
+    `
   },
   {
     id: '2',
@@ -548,12 +654,76 @@ export const INITIAL_ARTICLES: Article[] = [
     category: Category.LIFE,
     title: '신용카드 포인트의 합법적 현금 전환: 여신금융협회 통합조회 활용법',
     summary: '흩어진 카드 포인트를 내 계좌로 입금받는 공식적인 절차와 방법. 여신금융협회 통합조회 서비스를 통한 안전한 자산 관리 가이드.',
-    // Image: Shopping / Rewards / Coins
     imageUrl: 'https://images.unsplash.com/photo-1563013544-824ae1b704d3?q=80&w=800&auto=format&fit=crop',
     date: '2023-10-23',
     author: '생활의 달인',
     tags: ['신용카드', '포인트조회', '계좌입금', '여신금융협회', '재테크'],
-    content: `<p>콘텐츠 준비 중입니다.</p>`
+    content: `
+      <p class="mb-6 text-lg leading-relaxed">
+        "카드 포인트, 그냥 놔두면 소멸된다는 사실 알고 계셨나요?" 매년 소비자들이 찾아가지 않아 사라지는 카드 포인트가 수천억 원에 달합니다. 
+        많은 분들이 포인트는 카드 결제 대금을 깎거나 특정 쇼핑몰에서만 쓸 수 있다고 생각하지만, 사실은 <strong>100% 현금</strong>으로 내 계좌에 입금받을 수 있습니다.
+      </p>
+      <p class="mb-6 text-lg leading-relaxed">
+        과거에는 각 카드사 홈페이지마다 접속해서 확인해야 했지만, 이제는 <strong>여신금융협회</strong>에서 제공하는 통합 조회 서비스를 통해 
+        모든 카드사의 포인트를 한 번에 조회하고 단 1초 만에 현금화할 수 있습니다. 
+        숨어있는 내 돈을 찾는 가장 확실한 방법을 단계별로 안내해 드립니다.
+      </p>
+
+      <div class="my-8 rounded-2xl overflow-hidden shadow-lg border border-slate-100">
+        <div class="bg-blue-600 p-8 text-center text-white">
+           <h3 className="text-2xl font-bold mb-2">💰 1포인트 = 1원</h3>
+           <p>카드 포인트는 현금과 동일한 가치를 가집니다.<br/>지금 바로 잠자고 있는 자산을 깨우세요.</p>
+        </div>
+      </div>
+
+      <h2 class="text-2xl font-bold text-slate-900 mt-12 mb-4">1. 여신금융협회 통합조회란?</h2>
+      <p class="mb-6 leading-relaxed">
+        금융위원회와 여신금융협회가 주관하여 만든 서비스로, 국내 모든 카드사(신한, 삼성, 현대, 롯데, 국민, 농협 등)에 흩어져 있는 포인트를 
+        일괄적으로 조회하고, 본인 명의의 계좌로 즉시 입금 신청할 수 있는 공식 플랫폼입니다.
+      </p>
+
+      <h2 class="text-2xl font-bold text-slate-900 mt-12 mb-4">2. 포인트 현금화 따라하기 (Step-by-Step)</h2>
+      
+      <div class="space-y-6">
+        <div class="flex gap-4">
+          <div className="flex-shrink-0 w-8 h-8 rounded-full bg-blue-100 text-blue-600 font-bold flex items-center justify-center">1</div>
+          <div>
+            <strong className="block text-slate-900 mb-1">사이트 접속 및 인증</strong>
+            <p className="text-slate-600 text-sm">'여신금융협회 카드포인트 통합조회' 웹사이트(또는 모바일 앱)에 접속하여 본인 인증을 진행합니다. 별도의 회원가입 없이 비회원 로그인으로도 가능합니다.</p>
+          </div>
+        </div>
+        <div class="flex gap-4">
+          <div className="flex-shrink-0 w-8 h-8 rounded-full bg-blue-100 text-blue-600 font-bold flex items-center justify-center">2</div>
+          <div>
+            <strong className="block text-slate-900 mb-1">카드사별 통합 조회</strong>
+            <p className="text-slate-600 text-sm">'통합조회' 버튼을 누르면 내가 보유한 모든 카드의 잔여 포인트가 리스트로 뜹니다. 1포인트 단위까지 정확하게 표시됩니다.</p>
+          </div>
+        </div>
+        <div class="flex gap-4">
+          <div className="flex-shrink-0 w-8 h-8 rounded-full bg-blue-100 text-blue-600 font-bold flex items-center justify-center">3</div>
+          <div>
+            <strong className="block text-slate-900 mb-1">계좌 입금 신청</strong>
+            <p className="text-slate-600 text-sm">'포인트 계좌입금'을 선택하고, 입금받을 본인 명의의 은행 계좌 번호를 입력합니다. 신청 즉시(은행 영업시간 내) 또는 다음 영업일에 입금됩니다.</p>
+          </div>
+        </div>
+      </div>
+
+      <h2 class="text-2xl font-bold text-slate-900 mt-12 mb-4">3. 주의사항 및 꿀팁</h2>
+      <ul class="list-disc list-inside space-y-3 text-slate-700">
+        <li><strong>수수료 0원:</strong> 이 서비스는 정부 주도로 만들어진 것이라 수수료가 전혀 없습니다.</li>
+        <li><strong>1포인트부터:</strong> 카드사 정책에 따라 다르지만 대부분 1포인트부터 현금화가 가능합니다.</li>
+        <li><strong>현대카드 M포인트:</strong> M포인트 등 일부 포인트는 1:1 비율이 아닌 1.5:1(H-Coin 전환 필요) 비율로 현금화될 수 있으니, 전환 비율을 확인하세요.</li>
+      </ul>
+
+      <hr class="border-slate-200 my-10" />
+
+      <h3 class="text-2xl font-bold text-slate-900 mt-8 mb-4">결론: 잊지 말고 챙겨야 할 내 돈</h3>
+      <p class="mb-4 leading-relaxed">
+        카드 포인트 현금화는 혜택이 아니라 <strong>권리</strong>입니다. 
+        복잡한 절차 없이 3분이면 커피값, 점심값을 벌 수 있습니다. 
+        지금 바로 스마트폰을 켜서 숨어있는 비상금을 찾아보시기 바랍니다.
+      </p>
+    `
   },
   {
     id: '5',
@@ -561,12 +731,69 @@ export const INITIAL_ARTICLES: Article[] = [
     category: Category.FINANCE,
     title: '사회초년생을 위한 월급 관리의 정석: 통장 쪼개기 시스템 구축',
     summary: '월급이 스쳐 지나가지 않도록 현금 흐름을 통제하는 통장 쪼개기 노하우. 4개의 통장으로 만드는 자동화된 자산 관리 시스템.',
-    // Image: Piggy bank / Savings
     imageUrl: 'https://images.unsplash.com/photo-1579621970563-ebec7560ff3e?q=80&w=800&auto=format&fit=crop',
     date: '2023-10-20',
     author: '재무 설계사',
     tags: ['재테크', '금융', '통장쪼개기', '사회초년생', '월급관리'],
-    content: `<p>콘텐츠 준비 중입니다.</p>`
+    content: `
+      <p class="mb-6 text-lg leading-relaxed">
+        첫 월급의 기쁨도 잠시, "월급이 통장을 스쳐 지나간다(퍼가요~♡)"는 말에 깊이 공감하고 계신가요? 
+        돈을 모으지 못하는 이유는 월급이 적어서가 아니라, 돈이 섞여서 흐르기 때문입니다. 
+        목적이 다른 돈을 하나의 통장에 넣어두면, 내가 얼마를 썼고 얼마가 남았는지 파악할 수 없게 됩니다.
+      </p>
+      <p class="mb-6 text-lg leading-relaxed">
+        재테크의 기본 중의 기본, <strong>'통장 쪼개기'</strong>를 통해 돈의 흐름을 통제하고 
+        자동으로 저축이 되는 시스템을 구축하는 방법을 소개합니다. 딱 4개의 통장만 준비하면 됩니다.
+      </p>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 my-10">
+        <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm">
+          <strong class="block text-slate-900 text-lg mb-2">1. 급여 통장 (Hub)</strong>
+          <p class="text-slate-600 text-sm leading-relaxed">
+            모든 수입이 들어오고 고정 지출(통신비, 공과금, 월세)이 나가는 통장입니다. 
+            월급날 다음 날에 모든 고정비와 저축액이 빠져나가도록 자동이체를 설정해두세요. 
+            이 통장의 잔고 목표는 항상 <strong>'0원'</strong>입니다.
+          </p>
+        </div>
+        <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm">
+          <strong class="block text-slate-900 text-lg mb-2">2. 투자/저축 통장 (Saving)</strong>
+          <p class="text-slate-600 text-sm leading-relaxed">
+            '선저축 후지출'을 위한 통장입니다. 월급이 들어오자마자 강제로 이체되도록 설정합니다. 
+            적금, 주식 계좌 등이 해당되며, 이 돈은 <strong>'없는 돈'</strong>이라고 생각해야 모입니다.
+          </p>
+        </div>
+        <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm">
+          <strong class="block text-slate-900 text-lg mb-2">3. 소비 통장 (Spending)</strong>
+          <p class="text-slate-600 text-sm leading-relaxed">
+            한 달 생활비(식비, 교통비, 쇼핑)만 넣어두는 통장입니다. 체크카드를 연결하여 사용하세요. 
+            잔고가 부족하면 그 달은 더 이상 소비하지 않고 버티는 훈련이 필요합니다. 
+            절약의 핵심은 이 소비 통장의 예산을 지키는 것입니다.
+          </p>
+        </div>
+        <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm">
+          <strong class="block text-slate-900 text-lg mb-2">4. 비상금 통장 (Spare)</strong>
+          <p class="text-slate-600 text-sm leading-relaxed">
+            보너스, 명절 떡값 등 비정기 수입이나 생활비 남은 돈을 모아두는 곳입니다. 
+            경조사나 병원비 같은 예비비로 사용하며, 매일 이자가 붙는 <strong>CMA 통장</strong>을 추천합니다.
+          </p>
+        </div>
+      </div>
+
+      <h2 class="text-2xl font-bold text-slate-900 mt-12 mb-4">자동화 시스템의 마법</h2>
+      <p class="mb-6 leading-relaxed">
+        통장 쪼개기의 핵심은 <strong>'자동화'</strong>입니다. 매달 직접 이체하는 것이 아니라, 은행 앱의 자동이체 기능을 활용해 
+        내가 신경 쓰지 않아도 돈이 제자리를 찾아가도록 세팅해야 합니다. 
+        시스템을 한 번만 구축해두면, 의지력 소모 없이 평생 자산을 관리할 수 있습니다.
+      </p>
+
+      <hr class="border-slate-200 my-10" />
+
+      <h3 class="text-2xl font-bold text-slate-900 mt-8 mb-4">결론: 돈에 이름표를 붙여주세요</h3>
+      <p class="mb-4 leading-relaxed">
+        돈은 꼬리표가 없으면 어디론가 사라지려는 성질이 있습니다. 각 통장에 명확한 이름과 목적을 부여함으로써 돈을 가두고 통제하십시오. 
+        이 작은 습관이 10년 뒤 당신의 자산 규모를 결정할 것입니다.
+      </p>
+    `
   },
   {
     id: '6',
@@ -574,12 +801,64 @@ export const INITIAL_ARTICLES: Article[] = [
     category: Category.INVESTMENT,
     title: '미국 주식 투자와 세금의 이해: 양도소득세 구조와 관리 원칙',
     summary: '해외 주식 투자 수익의 세금 구조를 명확히 이해하고, 합법적인 범위 내에서 실질 수익을 지키는 세금 관리 전략을 안내합니다.',
-    // Image: Tax forms / Calculator
     imageUrl: 'https://images.unsplash.com/photo-1586486855514-8c633cc6fd38?q=80&w=800&auto=format&fit=crop',
     date: '2023-10-19',
     author: '세무 전문가',
     tags: ['주식', '미국주식', '세금', '절세', '양도소득세'],
-    content: `<p>콘텐츠 준비 중입니다.</p>`
+    content: `
+      <p class="mb-6 text-lg leading-relaxed">
+        '서학개미'라는 말이 일상이 될 정도로 미국 주식 투자가 보편화되었습니다. 테슬라, 엔비디아 등 글로벌 기업의 주주가 되어 수익을 내는 것은 즐거운 일입니다. 
+        하지만 수익의 기쁨 뒤에는 반드시 <strong>세금</strong>이라는 현실이 기다리고 있습니다.
+      </p>
+      <p class="mb-6 text-lg leading-relaxed">
+        국내 주식과 달리 해외 주식은 매매 차익에 대해 세금이 부과됩니다. 
+        세금 구조를 모르고 투자했다가는 나중에 '세금 폭탄' 고지서를 받고 당황할 수 있습니다. 
+        해외 주식 투자자가 반드시 알아야 할 양도소득세의 구조와 합법적인 절세 전략을 정리해 드립니다.
+      </p>
+
+      <div class="my-8 p-6 bg-slate-100 border border-slate-200 rounded-xl">
+         <strong class="block text-slate-900 text-lg mb-3">🧾 해외 주식 세금 3줄 요약</strong>
+         <ul class="list-disc list-inside space-y-2 text-slate-700">
+           <li><strong>양도소득세:</strong> 연간 매매 차익(수익-손실) 중 250만 원 공제 후 <strong>22%</strong> 부과</li>
+           <li><strong>배당소득세:</strong> 배당금 수령 시 현지에서 <strong>15%</strong> 원천징수 (미국 기준)</li>
+           <li><strong>신고 기간:</strong> 매년 5월 종합소득세 신고 기간에 자진 신고 및 납부</li>
+         </ul>
+      </div>
+
+      <h2 class="text-2xl font-bold text-slate-900 mt-12 mb-4">1. 양도소득세 계산 구조</h2>
+      <p class="mb-6 leading-relaxed">
+        해외 주식 세금의 핵심은 <strong>'실현 수익'</strong> 기준이라는 점입니다. 주가가 올랐어도 팔지 않으면(평가 수익) 세금을 내지 않습니다. 
+        1월 1일부터 12월 31일까지 매도해서 확정된 수익과 손실을 합산(통산)합니다.
+        <br/><br/>
+        예를 들어, A 종목에서 1,000만 원 이익을 보고 B 종목에서 500만 원 손실을 봤다면, 순수익은 500만 원입니다. 
+        여기서 기본 공제 250만 원을 뺀 나머지 250만 원에 대해 22%인 55만 원을 세금으로 냅니다.
+      </p>
+
+      <h2 class="text-2xl font-bold text-slate-900 mt-12 mb-4">2. 절세의 핵심: 손익 통산 (Tax Loss Harvesting)</h2>
+      <p class="mb-6 leading-relaxed">
+        세금을 줄이는 가장 확실한 방법은 <strong>'손실 확정'</strong>입니다. 만약 올해 큰 수익이 발생해서 세금이 걱정된다면, 
+        마이너스인 종목을 연말(12월 말일 기준 3영업일 전)에 매도하여 장부상 손실을 확정 짓는 것입니다.
+        <br/><br/>
+        수익을 손실로 상쇄시켜 전체 순수익을 줄이면 납부할 세금도 줄어듭니다. 
+        매도한 종목이 아깝다면, 하루 뒤에 다시 매수하거나 비슷한 다른 종목으로 갈아타는 전략을 쓸 수 있습니다. 
+        단, <strong>연간 공제액 250만 원</strong>은 매년 리셋되므로, 수익이 250만 원 이하라면 굳이 세금을 걱정할 필요가 없습니다.
+      </p>
+
+      <h2 class="text-2xl font-bold text-slate-900 mt-12 mb-4">3. 배당소득세와 종합소득과세</h2>
+      <p class="mb-6 leading-relaxed">
+        주가 상승 차익과 별개로 받는 배당금에는 15%(미국 기준)의 세금이 붙습니다. 이는 받을 때 이미 떼고 들어오므로(원천징수) 따로 신경 쓸 필요는 없습니다. 
+        하지만 만약 배당금을 포함한 연간 금융 소득(이자+배당)이 <strong>2,000만 원</strong>을 넘으면 '금융소득종합과세' 대상이 되어 
+        근로 소득과 합산 과세되므로, 고액 자산가라면 주의가 필요합니다.
+      </p>
+
+      <hr class="border-slate-200 my-10" />
+
+      <h3 class="text-2xl font-bold text-slate-900 mt-8 mb-4">결론: 세금도 수익률의 일부입니다</h3>
+      <p class="mb-4 leading-relaxed">
+        투자의 최종 목표는 '세후 수익'을 극대화하는 것입니다. 아무리 수익률이 좋아도 세금 관리를 못하면 실제 내 돈은 줄어듭니다. 
+        매년 12월이 되면 포트폴리오를 점검하고 전략적인 매매를 통해 세금을 아끼는 '스마트한 개미'가 되시길 바랍니다.
+      </p>
+    `
   },
   {
     id: '7',
@@ -587,11 +866,69 @@ export const INITIAL_ARTICLES: Article[] = [
     category: Category.LOAN,
     title: '신용점수 관리의 정석: 등급을 올리는 5가지 실전 전략',
     summary: '대출 금리와 한도를 결정하는 금융 신분증, 신용점수. 체크카드 사용부터 비금융 정보 등록까지, 실질적인 점수 향상을 위한 행동 강령을 제시합니다.',
-    // Image: Analysis charts / Credit report
     imageUrl: 'https://images.unsplash.com/photo-1559526324-4b87b5e36e44?q=80&w=800&auto=format&fit=crop',
     date: '2023-10-18',
     author: '신용 관리자',
     tags: ['신용점수', '대출', '금리인하', '금융팁', '신용관리'],
-    content: `<p>콘텐츠 준비 중입니다.</p>`
+    content: `
+      <p class="mb-6 text-lg leading-relaxed">
+        자본주의 사회에서 신용점수(Credit Score)는 <strong>'금융 신분증'</strong>과 같습니다. 
+        높은 신용점수를 가진 사람은 은행에서 "제발 돈 좀 빌려 가세요"라며 낮은 금리를 제시하지만, 
+        낮은 신용점수를 가진 사람은 돈을 빌리지 못하거나 고금리 사채 시장으로 내몰립니다.
+      </p>
+      <p class="mb-6 text-lg leading-relaxed">
+        신용점수는 한 번 떨어지면 올리기 어렵다고 생각하지만, 평가 알고리즘을 이해하면 누구나 점수를 올릴 수 있습니다. 
+        NICE지키미와 KCB(올크레딧) 점수를 동시에 관리하는 5가지 실전 전략을 공개합니다.
+      </p>
+
+      <div class="bg-indigo-50 border-l-4 border-indigo-600 p-6 mb-10 rounded-r-xl">
+        <strong class="block text-indigo-900 text-lg mb-2">⭐ 신용점수 올리기 5계명</strong>
+        <ol class="list-decimal list-inside space-y-2 text-slate-700 font-medium">
+          <li>연체는 절대 금물 (단돈 10만 원도 치명적)</li>
+          <li>신용카드 한도는 50% 미만으로 여유 있게 사용</li>
+          <li>체크카드를 꾸준히 사용하여 상환 능력 입증</li>
+          <li>비금융 정보(통신비, 건보료) 성실 납부 내역 제출</li>
+          <li>과도한 신용 조회 및 대출 개설 자제</li>
+        </ol>
+      </div>
+
+      <h2 class="text-2xl font-bold text-slate-900 mt-12 mb-4">1. 신용카드의 역설: 안 쓰면 점수가 없다?</h2>
+      <p class="mb-6 leading-relaxed">
+        많은 분들이 "빚이 없으면 신용이 좋다"고 생각합니다. 하지만 신용평가사 입장에서는 금융 거래 이력이 없는 사람(Thin Filer)을 평가할 데이터가 없어 오히려 등급을 낮게 매깁니다. 
+        신용점수를 올리려면 <strong>신용카드나 체크카드를 적절히 사용하고 잘 갚는 이력</strong>을 쌓아야 합니다. 
+        특히 신용카드는 한도를 꽉 채워 쓰지 말고, 한도의 30~50% 수준만 사용하여 "나는 자금 여력이 충분하다"는 시그널을 주는 것이 중요합니다.
+      </p>
+
+      <h2 class="text-2xl font-bold text-slate-900 mt-12 mb-4">2. 연체의 공포: 10만 원, 5일의 법칙</h2>
+      <p class="mb-6 leading-relaxed">
+        신용점수의 가장 큰 적은 연체입니다. 10만 원 이상의 금액을 5영업일 이상 연체하면 <strong>단기 연체 정보</strong>가 금융권에 공유됩니다. 
+        이 기록은 갚더라도 최장 3년간 남아서 신용점수를 갉아먹습니다. 깜빡하고 카드 대금을 놓치지 않도록 반드시 결제일 알림과 자동이체를 설정하세요.
+      </p>
+
+      <h2 class="text-2xl font-bold text-slate-900 mt-12 mb-4">3. 비금융 정보 등록: 1분 만에 점수 올리기</h2>
+      <p class="mb-6 leading-relaxed">
+        금융 이력이 부족한 사회초년생이나 주부를 위한 꿀팁입니다. 
+        통신비, 국민연금, 건강보험료, 아파트 관리비 등을 6개월 이상 성실하게 납부했다면, 
+        이 내역을 신용평가사(앱)에 제출하여 <strong>가점</strong>을 받을 수 있습니다. 
+        토스, 카카오뱅크, 네이버페이 등에서 '신용점수 올리기' 버튼 한 번만 누르면 실시간으로 반영됩니다.
+      </p>
+
+      <h2 class="text-2xl font-bold text-slate-900 mt-12 mb-4">4. 대출 관리: 건수보다는 금액</h2>
+      <p class="mb-6 leading-relaxed">
+        대출이 있다고 무조건 신용이 나쁜 것은 아닙니다. 하지만 <strong>대출 건수</strong>가 많은 것은 치명적입니다. 
+        1,000만 원짜리 대출 1건이 있는 사람이 300만 원짜리 대출 3건이 있는 사람보다 신용도가 높습니다. 
+        자금 여력이 생긴다면 소액 대출 여러 건을 하나로 묶는 '대환 대출'을 하거나, 건수를 줄이는 방향으로 상환하십시오. 
+        현금서비스(단기카드대출)는 신용점수 하락의 지름길이니 절대 사용하지 마십시오.
+      </p>
+
+      <hr class="border-slate-200 my-10" />
+
+      <h3 class="text-2xl font-bold text-slate-900 mt-8 mb-4">결론: 신용은 하루아침에 만들어지지 않습니다</h3>
+      <p class="mb-4 leading-relaxed">
+        신용점수 관리는 평소에는 티가 나지 않지만, 집을 사거나 사업을 시작할 때 결정적인 역할을 합니다. 
+        0.1%의 금리 차이가 수백, 수천만 원의 이자 차이로 이어집니다. 
+        오늘부터 작은 습관으로 당신의 금융 신분증을 업그레이드하십시오.
+      </p>
+    `
   }
 ];
