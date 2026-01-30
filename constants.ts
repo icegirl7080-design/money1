@@ -42,7 +42,7 @@ export const INITIAL_ARTICLES: Article[] = [
         서울보증보험(SGI)의 역할과 보증서 발급
       </h3>
       <p class="mb-6 leading-8 text-slate-700">
-        대부분의 1금융권 비상금 대출은 <strong>서울보증보험</strong>과 연계되어 있습니다. 은행은 고객의 소득을 보는 대신, 보증보험사가 발행한 '보증서'를 담보로 대출을 실행합니다. 즉, 보험사가 신청자의 신용도를 심사하여 "이 사람은 300만 원 정도는 충분히 갚을 수 있다"고 은행에 보증을 서주는 구조입니다.
+        대부분의 1금융권 비상금 대출은 <strong>서울보증보험</strong>과 연계되어 있습니다. 은행은 고객의 소득을 보는 대신, 보증보험사가 발행한 '보증서'를 담보로 대출을 실행합니다. 보험사가 신청자의 신용도를 심사하여 "이 사람은 300만 원 정도는 충분히 갚을 수 있다"고 은행에 보증을 서주는 구조입니다.
       </p>
       <p class="mb-6 leading-8 text-slate-700">
         만약 대출자가 돈을 갚지 못하면 보험사가 은행에 먼저 돈을 갚아줍니다(대위변제). 은행 입장에서는 리스크가 없기 때문에 무직자나 학생에게도 기꺼이 돈을 빌려줄 수 있는 것입니다. 이는 <a href="/#/finance-guide" class="text-blue-600 font-bold">금융 시스템의 신뢰 기반</a> 위에서 작동합니다.
@@ -85,19 +85,6 @@ export const INITIAL_ARTICLES: Article[] = [
         </ul>
       </div>
 
-      <h2 class="text-2xl md:text-3xl font-black text-slate-900 mt-16 mb-8 tracking-tight">4. 신용도 관리와 대출 실행 시 주의사항</h2>
-      <p class="mb-6 leading-8 text-slate-700">
-        많은 분이 "대출을 받으면 무조건 신용점수가 떨어진다"고 걱정합니다. 하지만 이는 대출의 종류에 따라 다릅니다.
-      </p>
-
-      <h3 class="text-xl md:text-2xl font-black text-slate-800 mb-4 flex items-center gap-2">
-        <span class="w-1.5 h-6 bg-blue-600 rounded-full inline-block"></span> 
-        1금융권 대출이 신용점수에 미치는 영향
-      </h3>
-      <p class="mb-6 leading-8 text-slate-700">
-        카카오뱅크, 토스뱅크 등 1금융권의 비상금 대출을 이용하면 신용점수 하락폭이 매우 미미합니다. 오히려 연체 없이 꾸준히 상환하는 이력은 추후 신용 평가에서 긍정적인 요소로 작용할 수도 있습니다.
-      </p>
-
       <div class="p-10 bg-slate-900 text-white rounded-[3rem] mt-16 shadow-2xl relative overflow-hidden">
         <div class="absolute top-0 right-0 p-8 opacity-10">
           <svg width="120" height="120" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
@@ -107,25 +94,7 @@ export const INITIAL_ARTICLES: Article[] = [
           <p class="flex items-start gap-3"><span class="text-blue-500 mt-1">●</span> <span>소액 비상금 대출은 <strong>서울보증보험 보증서</strong>를 기반으로 소득 없이도 실행 가능합니다.</span></p>
           <p class="flex items-start gap-3"><span class="text-blue-500 mt-1">●</span> <span><strong>마이너스 통장 방식</strong>을 선택하여 이자 비용을 일 단위로 최소화하는 것이 가장 똑똑한 활용법입니다.</span></p>
           <p class="flex items-start gap-3"><span class="text-blue-500 mt-1">●</span> <span>반드시 <strong>1금융권 상품</strong>을 먼저 확인하여 신용점수 타격을 방어해야 합니다.</span></p>
-          <p class="flex items-start gap-3"><span class="text-blue-500 mt-1">●</span> <span>대출 전 본인의 <a href="/#/loan-guide" class="text-blue-400 underline font-bold">상환 능력과 DSR 한도</a>를 반드시 자가 점검하세요.</span></p>
         </div>
-      </div>
-
-      <div class="grid sm:grid-cols-2 gap-6 mt-16">
-        <a href="/#/loan-guide" class="group p-8 bg-white rounded-3xl border border-slate-100 hover:border-blue-600 transition-all shadow-soft flex flex-col items-center text-center">
-          <div class="w-12 h-12 bg-blue-50 text-blue-600 rounded-2xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
-             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
-          </div>
-          <p class="font-black text-slate-900 mb-1 group-hover:text-blue-600">대출·신용 가이드 →</p>
-          <p class="text-xs text-slate-500">안전한 금융 생활의 첫걸음</p>
-        </a>
-        <a href="/#/finance-guide" class="group p-8 bg-white rounded-3xl border border-slate-100 hover:border-emerald-600 transition-all shadow-soft flex flex-col items-center text-center">
-          <div class="w-12 h-12 bg-emerald-50 text-emerald-600 rounded-2xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
-             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path></svg>
-          </div>
-          <p class="font-black text-slate-900 mb-1 group-hover:text-emerald-600">금융 기초 시스템 구축 →</p>
-          <p class="text-xs text-slate-500">돈이 모이는 구조를 만드세요</p>
-        </a>
       </div>
     `
   },
@@ -139,18 +108,77 @@ export const INITIAL_ARTICLES: Article[] = [
     date: '2024-03-20',
     author: '금융 전략 에디터',
     tags: ['소액', '신용카드', '현금화', '대출', '비상금대출', '카드깡', '금융사기'],
-    content: `<p>기존 내용 유지...</p>`
+    content: `
+      <p class="mb-8 text-xl leading-relaxed font-bold text-slate-800 break-keep">
+        인터넷을 검색하다 보면 '신용카드 현금화', '소액결제 매입'이라는 광고를 쉽게 접할 수 있습니다. 겉으로는 친절해 보이지만, 그 속에는 연 300%에 달하는 살인적인 금리와 범죄의 늪이 숨어 있습니다.
+      </p>
+
+      <h2 class="text-2xl md:text-3xl font-black text-slate-900 mt-16 mb-8 tracking-tight">1. 신용카드 현금화(카드깡), 왜 위험한가?</h2>
+      <p class="mb-6 leading-8 text-slate-700">
+        일명 '카드깡'으로 불리는 불법 현금화는 허위 매출을 발생시켜 현금을 융통하는 행위입니다. 업체들은 보통 20~30%의 수수료를 떼어갑니다. 예를 들어 100만 원을 결제하면 내 손에 들어오는 돈은 70만 원뿐이지만, 다음 달 카드사에는 100만 원을 고스란히 갚아야 합니다. 한 달 이자가 30%, 연리로 환산하면 360%라는 말도 안 되는 금리입니다.
+      </p>
+
+      <h3 class="text-xl md:text-2xl font-black text-slate-800 mb-4 flex items-center gap-2">
+        <span class="w-1.5 h-6 bg-red-600 rounded-full inline-block"></span> 
+        금융 질서 문란자 등록의 공포
+      </h3>
+      <p class="mb-6 leading-8 text-slate-700">
+        불법 현금화가 적발될 경우 '금융 질서 문란자'로 등록됩니다. 이 정보는 모든 금융사에 공유되어 향후 7~12년 동안 대출, 신용카드 발급 등 모든 금융 거래가 전면 차단됩니다. 한 번의 실수로 인생의 금융 사다리가 끊어지는 것입니다.
+      </p>
+
+      <h2 class="text-2xl md:text-3xl font-black text-slate-900 mt-16 mb-8 tracking-tight">2. 합법적이고 안전한 자금 마련 대안</h2>
+      <p class="mb-6 leading-8 text-slate-700">
+        급전이 필요할수록 차분해져야 합니다. 국가와 1금융권에는 신용도가 낮아도 이용 가능한 저렴한 상품들이 많습니다.
+      </p>
+
+      <h3 class="text-xl md:text-2xl font-black text-slate-800 mb-4 flex items-center gap-2">
+        <span class="w-1.5 h-6 bg-blue-600 rounded-full inline-block"></span> 
+        서민금융진흥원의 '소액생계비대출'
+      </h3>
+      <p class="mb-6 leading-8 text-slate-700">
+        신용점수가 낮아 은행 이용이 어렵다면 <strong>서민금융진흥원</strong>의 소액생계비대출을 먼저 확인하세요. 연 15.9%의 금리로 최대 100만 원까지 즉시 대출이 가능하며, 교육 이수 시 금리를 9%대까지 낮출 수 있습니다. 카드깡 수수료 30%에 비하면 훨씬 합리적인 선택입니다.
+      </p>
+
+      <div class="p-8 bg-blue-50 rounded-3xl mt-12 border border-blue-100">
+        <h4 class="font-bold text-slate-900 mb-4">💡 에디터의 조언</h4>
+        <p class="text-sm text-slate-600 leading-relaxed">
+          '당장 오늘 갚아야 할 돈' 때문에 불법 업체를 찾지 마세요. <strong>채무조정 제도(신용회복위원회)</strong>를 활용하면 이자 감면과 상환 기간 연장이라는 합법적인 도움을 받을 수 있습니다. 더 자세한 내용은 <a href="/#/loan-guide" class="text-blue-600 font-bold">대출·신용 가이드</a>에서 확인하세요.
+        </p>
+      </div>
+    `
   },
   {
     id: '3',
     slug: 'stock-investment-portfolio',
     category: Category.INVESTMENT,
-    title: '주식 투자 입문 가이드 – 포트폴리오 구성과 분산 투자 전략',
+    title: '주식 투자 입문 가이드: 잃지 않는 포트폴리오 구성 전략',
     summary: '주식 투자를 처음 시작하는 분들을 위해 포트폴리오의 개념과 리스크를 낮추는 분산 투자 전략을 알기 쉽게 설명합니다.',
     imageUrl: 'https://images.unsplash.com/photo-1535320903710-d993d3d77d29?q=80&w=1200&auto=format&fit=crop',
     date: '2023-10-22',
     author: '투자 분석가',
     tags: ['주식투자 입문', '포트폴리오 구성', '분산투자 전략', '주식 기초', '자산배분'],
-    content: `...기존 내용 유지...`
+    content: `
+      <p class="mb-8 text-xl leading-relaxed font-bold text-slate-800 break-keep">
+        "주식 투자는 도박이다"라고 말하는 사람들의 공통점은 공부 없이 '운'에 맡기는 투자를 했다는 것입니다. 주식은 기업의 소유권을 나누어 갖는 숭고한 자본주의 시스템입니다.
+      </p>
+
+      <h2 class="text-2xl md:text-3xl font-black text-slate-900 mt-16 mb-8 tracking-tight">1. 자산 배분의 기본: 분산 투자</h2>
+      <p class="mb-6 leading-8 text-slate-700">
+        "계란을 한 바구니에 담지 마라"는 격언은 주식 투자에서도 여전히 유효합니다. 한 기업에만 몰빵 투자하면 그 기업이 무너질 때 내 자산도 무너집니다. 업종별, 국가별, 그리고 자산군(주식, 채권, 현금)별로 나누어 투자하는 것이 포트폴리오 구성의 핵심입니다.
+      </p>
+
+      <h2 class="text-2xl md:text-3xl font-black text-slate-900 mt-16 mb-8 tracking-tight">2. 초보자에게 가장 강력한 무기: 지수 추종 ETF</h2>
+      <p class="mb-6 leading-8 text-slate-700">
+        어떤 주식을 살지 고르는 것이 어렵다면 시장 전체를 사세요. 미국의 <strong>S&P500</strong>이나 <strong>나스닥100</strong> 지수를 추종하는 ETF는 수십 년간 우상향해 왔습니다. 개별 주식은 망할 수 있지만, 한 나라의 시장이 망하기는 어렵습니다.
+      </p>
+
+      <h3 class="text-xl md:text-2xl font-black text-slate-800 mb-4 flex items-center gap-2">
+        <span class="w-1.5 h-6 bg-red-600 rounded-full inline-block"></span> 
+        복리의 마법을 누리는 적립식 매수
+      </h3>
+      <p class="mb-6 leading-8 text-slate-700">
+        주가는 매일 요동치지만, 매달 일정한 금액을 꾸준히 사는 '적립식 투자(DCA)'는 평균 매수 단가를 낮추는 효과가 있습니다. 시간이 흐를수록 이자가 이자를 낳는 복리의 마법은 당신의 자산을 기하급수적으로 불려줄 것입니다. 더 체계적인 돈 관리법은 <a href="/#/finance-guide" class="text-red-600 font-bold">금융 기초 가이드</a>를 참고하세요.
+      </p>
+    `
   }
 ];
