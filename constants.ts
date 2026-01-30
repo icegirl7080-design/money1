@@ -18,381 +18,196 @@ export const NAV_ITEMS: NavItem[] = [
 
 export const INITIAL_ARTICLES: Article[] = [
   {
-    id: '16',
-    slug: 'isa-tax-saving-guide',
-    category: Category.INVESTMENT,
-    title: 'ISA(개인종합자산관리계좌) 완벽 가이드: 재테크 초보를 위한 절세 전략',
-    summary: '투자와 절세를 동시에 잡고 싶다면 ISA 계좌는 필수입니다. 비과세 혜택부터 중개형 ISA 선택 기준까지, 당신의 수익률을 높여줄 만능 통장의 모든 것을 정리했습니다.',
-    imageUrl: 'https://images.unsplash.com/photo-1590283603385-17ffb3a7f29f?q=80&w=1200&auto=format&fit=crop',
-    date: '2024-03-26',
-    author: '투자 전략 에디터',
-    tags: ['ISA', '절세혜택', '비과세', '중개형ISA', '재테크기초', '자산관리'],
+    id: '101',
+    slug: 'bank-account-splitting-mastery',
+    category: Category.FINANCE,
+    title: '통장 쪼개기의 정석: 의지력이 아닌 시스템으로 모으는 법',
+    summary: '매달 월급날만 지나면 잔고가 바닥나나요? 저축에 실패하는 이유는 당신의 의지력이 부족해서가 아니라 시스템이 없기 때문입니다. 돈이 자동으로 모이는 4단계 통장 쪼개기 전략을 공개합니다.',
+    imageUrl: 'https://images.unsplash.com/photo-1579621970795-87faff2f9050?q=80&w=1200&auto=format&fit=crop',
+    date: '2024-03-29',
+    author: '자산관리 전문가',
+    tags: ['통장쪼개기', '돈관리시스템', '월급관리', '저축방법', '재테크기초', '자동저축'],
     content: `
       <p class="mb-8 text-xl leading-relaxed font-bold text-slate-800 break-keep">
-        열심히 투자해서 수익을 냈는데, 세금으로 상당 부분이 나간다면 허무하지 않으신가요? <strong>ISA(개인종합자산관리계좌)</strong>는 정부가 국민의 자산 형성을 돕기 위해 만든 '세금 방패'와 같은 계좌입니다. 이 글에서는 <strong>ISA 혜택</strong>을 극대화하여 실질 수익률을 높이는 방법을 상세히 가이드해 드립니다.
+        매달 "이번 달에는 꼭 100만 원 저축해야지"라고 다짐하지만, 정작 카드값이 빠져나간 뒤 남은 금액은 초라하기만 합니다. 왜 우리는 매번 저축에 실패할까요? 그것은 당신의 의지력이 약해서가 아닙니다. <strong>인간의 의지력은 한정된 자원</strong>이며, 유혹이 가득한 현대 사회에서 의지만으로 돈을 모으는 것은 불가능에 가깝기 때문입니다. 이제 의지가 아닌 <strong>'시스템'</strong>이 돈을 모으게 만들어야 합니다.
       </p>
 
-      <h2 class="text-2xl md:text-3xl font-black text-slate-900 mt-16 mb-8 tracking-tight">1. ISA란 무엇인가: 왜 '만능 통장'이라 불리는가?</h2>
+      <h2 class="text-2xl md:text-3xl font-black text-slate-900 mt-16 mb-8 tracking-tight">1. 통장 쪼개기란 무엇인가: 심리적 회계의 활용</h2>
       <p class="mb-6 leading-8 text-slate-700">
-        ISA는 하나의 계좌에서 주식, 펀드, ETF, 예적금 등 다양한 금융 상품을 담아 운용하면서, 발생한 이익에 대해 비과세 및 저율과세 혜택을 주는 계좌입니다. 과거에는 가입 조건이 까다로웠으나, 최근 <strong>중개형 ISA</strong>의 도입으로 누구나 쉽게 주식 투자를 하면서 절세 혜택을 누릴 수 있게 되었습니다.
-      </p>
-      <p class="mb-6 leading-8 text-slate-700">
-        특히 일반 계좌에서 배당금이나 이자를 받을 때 내야 하는 15.4%의 세금을 아낄 수 있다는 점이 가장 큰 매력입니다. 이는 <a href="/#/investment-guide" class="text-blue-600 font-bold">장기 투자 전략</a>에서 복리 효과를 극대화하는 핵심 요소가 됩니다.
+        통장 쪼개기는 단순히 여러 개의 계좌를 만드는 행위가 아닙니다. 이는 행동경제학의 <strong>'심리적 회계(Mental Accounting)'</strong> 원리를 이용해 용도별로 돈에 이름을 붙여주는 작업입니다. 돈에 이름이 붙는 순간, 우리는 그 돈을 함부로 쓰지 못하게 됩니다. '생활비' 통장의 돈은 쉽게 쓰지만, '자녀 교육비'나 '노후 자금' 통장의 돈을 꺼내 쓰기는 심리적으로 매우 고통스럽기 때문입니다.
       </p>
 
-      <h2 class="text-2xl md:text-3xl font-black text-slate-900 mt-16 mb-8 tracking-tight">2. ISA 계좌의 종류와 나에게 맞는 선택 기준</h2>
+      <h2 class="text-2xl md:text-3xl font-black text-slate-900 mt-16 mb-8 tracking-tight">2. 돈이 자동으로 흐르는 '4개 통장 시스템' 구축법</h2>
       <p class="mb-6 leading-8 text-slate-700">
-        ISA는 운용 방식에 따라 세 가지로 나뉩니다. 본인의 투자 성향에 따라 선택이 달라져야 합니다.
+        가장 효율적이고 검증된 시스템은 돈의 성격에 따라 4개의 통장으로 분리하는 것입니다.
       </p>
 
       <h3 class="text-xl md:text-2xl font-black text-slate-800 mb-4 flex items-center gap-2">
-        중개형 ISA: 직접 투자를 선호하는 분들을 위해
+        ① 급여 통장 (수입의 입구)
       </h3>
       <p class="mb-6 leading-8 text-slate-700">
-        가장 추천하는 형태입니다. 가입자가 직접 국내 주식이나 ETF를 사고팔 수 있습니다. 주식 투자 수익에 대해 손익 통산이 가능하여 세금을 줄이는 데 매우 유리합니다.
+        월급이 들어오고 각종 고정 지출(보험료, 공과금, 대출 이자)이 빠져나가는 통장입니다. 매달 일정 금액만 남기고 모든 돈을 다른 통장으로 보내어 <strong>잔액을 0으로 만드는 것</strong>이 핵심입니다.
       </p>
 
       <h3 class="text-xl md:text-2xl font-black text-slate-800 mb-4 flex items-center gap-2">
-        신탁형 및 일임형 ISA
+        ② 투자 통장 (미래를 위한 엔진)
       </h3>
       <p class="mb-6 leading-8 text-slate-700">
-        신탁형은 가입자가 지시한 상품을 금융사가 대신 운용하며, 일임형은 금융사가 구성한 포트폴리오에 따라 자동으로 운용됩니다. 직접 투자가 부담스러운 초보자에게 적합할 수 있으나 수수료가 발생한다는 단점이 있습니다.
+        급여 통장에서 가장 먼저 돈이 이동해야 할 곳입니다. 적금, 펀드, 주식 투자용 자금을 이곳으로 보냅니다. <strong>"쓰고 남은 돈을 저축하는 것이 아니라, 저축하고 남은 돈을 쓰는 것"</strong>이라는 재테크 제1원칙을 실현하는 장치입니다.
+      </p>
+
+      <h3 class="text-xl md:text-2xl font-black text-slate-800 mb-4 flex items-center gap-2">
+        ③ 소비 통장 (한도 내 지출의 통제)
+      </h3>
+      <p class="mb-6 leading-8 text-slate-700">
+        순수하게 한 달 동안 먹고, 마시고, 즐기는 데 사용하는 돈입니다. 이 통장과 연결된 체크카드를 사용하면 잔고가 눈에 보이기 때문에 과소비를 실시간으로 억제할 수 있습니다. 한 달 예산이 바닥나면 그달의 소비는 종료됩니다.
+      </p>
+
+      <h3 class="text-xl md:text-2xl font-black text-slate-800 mb-4 flex items-center gap-2">
+        ④ 예비 통장 (안전판)
+      </h3>
+      <p class="mb-6 leading-8 text-slate-700">
+        경조사비, 갑작스러운 병원비 등 예측 불가능한 지출을 위한 통장입니다. 평소에는 비상금으로 보관하다가 소비 통장의 잔고가 부족할 때 긴급 수혈하는 용도입니다. 월 지출액의 3~5배 정도를 유지하는 것이 좋습니다.
+      </p>
+
+      <div class="bg-emerald-50 border-l-8 border-emerald-500 p-8 my-12 rounded-r-3xl">
+        <h4 class="text-emerald-900 text-xl font-black mb-4 flex items-center gap-2">
+          💡 시스템 구축 시 주의사항
+        </h4>
+        <ul class="list-disc pl-6 mb-4 space-y-2 text-slate-700 font-medium">
+          <li><strong>자동이체 활용:</strong> 모든 자금 이동은 자동이체로 설정하여 '생각'할 틈을 주지 마세요.</li>
+          <li><strong>신용카드 자제:</strong> 신용카드는 이 시스템의 가장 큰 적입니다. 가급적 소비 통장과 연결된 체크카드를 쓰세요.</li>
+          <li><strong>정기적 점검:</strong> 6개월에 한 번씩 예산이 적절한지 복기하고 조정하십시오.</li>
+        </ul>
+      </div>
+
+      <h2 class="text-2xl md:text-3xl font-black text-slate-900 mt-16 mb-8 tracking-tight">3. 통장 쪼개기가 가져다주는 진짜 변화</h2>
+      <p class="mb-6 leading-8 text-slate-700">
+        이 시스템이 안착되면 더 이상 돈 때문에 스트레스를 받지 않게 됩니다. 얼마를 써야 할지 고민할 필요가 없고, 저축은 시스템이 알아서 해주기 때문입니다. 남는 에너지를 수익률을 높이는 <a href="/#/investment-guide" class="text-blue-600 font-bold">투자 공부</a>나 본인의 능력을 키우는 데 집중할 수 있습니다.
+      </p>
+
+      <div class="p-10 bg-slate-900 text-white rounded-[3rem] mt-16 shadow-2xl relative overflow-hidden">
+        <div class="absolute top-0 right-0 p-8 opacity-10">
+          <svg width="120" height="120" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+        </div>
+        <h4 class="text-emerald-400 font-black mb-6 text-2xl uppercase tracking-tighter">MoneyWise Summary</h4>
+        <div class="space-y-4 text-slate-300 font-medium leading-relaxed">
+          <p class="flex items-start gap-3"><span class="text-emerald-500 mt-1">●</span> <span>저축은 의지가 아니라 <strong>자동화된 시스템</strong>의 영역입니다.</span></p>
+          <p class="flex items-start gap-3"><span class="text-emerald-500 mt-1">●</span> <span>급여, 투자, 소비, 예비 통장으로 나누어 <strong>돈의 흐름을 통제</strong>하세요.</span></p>
+          <p class="flex items-start gap-3"><span class="text-emerald-500 mt-1">●</span> <span>시스템이 구축되었다면 다음 단계로 <a href="/#/finance-guide" class="text-emerald-400 underline font-bold">인플레이션 방어 전략</a>을 확인해 보세요.</span></p>
+        </div>
+      </div>
+
+      <div class="mt-16 border-t border-slate-200 pt-12">
+        <p class="text-slate-500 mb-6 font-medium">돈 관리 시스템을 구축했다면, 이제 내 자산을 지키는 법을 배울 차례입니다.</p>
+        <div class="grid sm:grid-cols-2 gap-6">
+          <a href="/article/inflation-cash-management-strategy" class="group p-8 bg-white rounded-3xl border border-slate-100 hover:border-emerald-600 transition-all shadow-soft flex flex-col items-center text-center">
+            <div class="w-12 h-12 bg-emerald-50 text-emerald-600 rounded-2xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+            </div>
+            <p class="font-black text-slate-900 mb-1 group-hover:text-emerald-600">인플레이션 시대, 내 돈의 가치를 지키는 법 →</p>
+          </a>
+          <a href="/#/investment-guide" class="group p-8 bg-white rounded-3xl border border-slate-100 hover:border-blue-600 transition-all shadow-soft flex flex-col items-center text-center">
+            <div class="w-12 h-12 bg-blue-50 text-blue-600 rounded-2xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21.21 15.89A10 10 0 1 1 8 2.83"></path><path d="M22 12A10 10 0 0 0 12 2v10z"></path></svg>
+            </div>
+            <p class="font-black text-slate-900 mb-1 group-hover:text-blue-600">잃지 않는 투자를 위한 주식 투자 가이드 →</p>
+          </a>
+        </div>
+      </div>
+    `
+  },
+  {
+    id: '18',
+    slug: 'inflation-cash-management-strategy',
+    category: Category.FINANCE,
+    title: '인플레이션 시대의 현금 관리: 내 돈의 가치를 지키는 방어 전략',
+    summary: '물가는 오르는데 내 월급만 그대로라면? 가만히 놔두면 녹아내리는 현금의 가치를 지키기 위한 인플레이션 헤지 방법과 실전 자산 방어 전략을 공개합니다.',
+    imageUrl: 'https://images.unsplash.com/photo-1574607383476-f517f260d30b?q=80&w=1200&auto=format&fit=crop',
+    date: '2024-03-28',
+    author: '거시경제 분석 에디터',
+    tags: ['인플레이션', '현금가치', '자산방어', '금리', '실물자산', '재테크전략'],
+    content: `
+      <p class="mb-8 text-xl leading-relaxed font-bold text-slate-800 break-keep">
+        어제와 똑같은 1만 원인데, 오늘 살 수 있는 사과의 개수가 줄어들었다면? 이것이 바로 <strong>인플레이션(Inflation)</strong>의 공포입니다. 물가가 오른다는 것은 반대로 내 지갑 속 <strong>현금의 가치가 하락</strong>한다는 의미입니다. 가만히 숨만 쉬어도 내 자산이 녹아내리는 시대, 우리는 어떻게 소중한 돈을 지켜내야 할까요?
+      </p>
+
+      <h2 class="text-2xl md:text-3xl font-black text-slate-900 mt-16 mb-8 tracking-tight">1. 인플레이션의 본질: 보이지 않는 세금</h2>
+      <p class="mb-6 leading-8 text-slate-700">
+        인플레이션은 정부가 걷지 않는 '가장 무서운 세금'이라 불립니다. 통화량이 늘어나 화폐 가치가 떨어지면, 현금을 보유한 사람은 손해를 보고 실물 자산을 가진 사람은 이득을 봅니다. 장기적으로 현금만 들고 있는 것은 가장 위험한 투자 전략이 될 수 있습니다. 우리는 이제 '저축'을 넘어 <strong>'자산 방어'</strong>의 개념으로 접근해야 합니다.
+      </p>
+
+      <h2 class="text-2xl md:text-3xl font-black text-slate-900 mt-16 mb-8 tracking-tight">2. 내 돈을 지키는 3가지 핵심 방어막</h2>
+      <p class="mb-6 leading-8 text-slate-700">
+        인플레이션을 이기기 위해서는 현금의 비중을 조절하고, 물가 상승률보다 높은 수익을 내는 자산으로 갈아타야 합니다.
+      </p>
+
+      <h3 class="text-xl md:text-2xl font-black text-slate-800 mb-4 flex items-center gap-2">
+        ① 실물 자산으로의 전환 (Real Assets)
+      </h3>
+      <p class="mb-6 leading-8 text-slate-700">
+        부동산, 금(Gold), 원자재와 같은 실물 자산은 인플레이션 시기에 화폐 가치 하락을 방어하는 대표적인 수단입니다. 특히 <strong>금</strong>은 인류 역사상 가장 신뢰받는 안전 자산으로, 통화량이 급증할 때 가치가 빛을 발합니다. 소액으로 시작하고 싶다면 금 ETF나 금 현물 계좌를 활용해 보세요.
+      </p>
+
+      <h3 class="text-xl md:text-2xl font-black text-slate-800 mb-4 flex items-center gap-2">
+        ② 주식과 배당 (Equity & Dividends)
+      </h3>
+      <p class="mb-6 leading-8 text-slate-700">
+        우량 기업은 물가 상승분을 제품 가격에 전가할 수 있는 '가격 결정력'을 가집니다. 기업의 이익이 늘어나면 주가가 오르고 배당금도 증가하므로, 인플레이션의 파도를 탈 수 있는 가장 강력한 엔진이 됩니다. 구체적인 방법은 <a href="/#/investment-guide" class="text-blue-600 font-bold">주식·투자 가이드</a>에서 확인할 수 있습니다.
+      </p>
+
+      <h3 class="text-xl md:text-2xl font-black text-slate-800 mb-4 flex items-center gap-2">
+        ③ 고금리 파킹 통장 활용 (High-Yield Cash)
+      </h3>
+      <p class="mb-6 leading-8 text-slate-700">
+        모든 돈을 투자할 수는 없습니다. 비상금이나 단기 자금은 금리 인상기에 발맞춰 빠르게 이율을 올려주는 <strong>파킹 통장</strong>이나 발행어음 등에 보관하여 현금의 '노는 시간'을 최소화해야 합니다. 지난 글 <a href="/article/bank-account-splitting-mastery" class="text-sky-600 font-bold">통장 쪼개기</a>에서 다룬 예비 통장 활용법을 기억하세요.
+      </p>
+
+      <h2 class="text-2xl md:text-3xl font-black text-slate-900 mt-16 mb-8 tracking-tight">3. 인플레이션 시기의 부채 관리 전략</h2>
+      <p class="mb-6 leading-8 text-slate-700">
+        흥미롭게도 인플레이션은 '빚을 진 사람'에게 유리할 수 있습니다. 화폐 가치가 떨어지면 갚아야 할 원금의 실질적인 가치도 낮아지기 때문입니다. 하지만 이는 <strong>'감당 가능한 고정 금리'</strong> 대출일 때만 해당합니다. 금리 인상기에는 변동 금리 대출이 가계 경제를 위협하는 가장 큰 적이 됩니다.
       </p>
 
       <div class="bg-blue-50 border-l-8 border-blue-500 p-8 my-12 rounded-r-3xl">
-        <h4 class="text-blue-900 text-xl font-black mb-4 flex items-center gap-2">
-          💡 ISA 가입 전 핵심 체크리스트
-        </h4>
+        <h2 class="text-blue-900 text-xl font-black mb-4 flex items-center gap-2">
+          💡 인플레이션 생존 체크리스트
+        </h2>
         <ul class="list-disc pl-6 mb-4 space-y-2 text-slate-700 font-medium">
-          <li><strong>가입 자격:</strong> 19세 이상 거주자 (근로소득이 있다면 15세 이상도 가능)</li>
-          <li><strong>납입 한도:</strong> 연간 2,000만 원 (최대 1억 원까지 이월 가능)</li>
-          <li><strong>의무 가입 기간:</strong> 3년 (이 기간을 채워야 비과세 혜택이 확정됩니다)</li>
-          <li><strong>비과세 한도:</strong> 일반형 200만 원, 서민형 400만 원까지 이익에 대해 세금 0원</li>
+          <li><strong>지출 리모델링:</strong> 물가 상승에 따라 불필요하게 새는 구독료나 고정비가 있는지 확인하세요.</li>
+          <li><strong>자산 배분 재검토:</strong> 현금 비중이 지나치게 높다면 주식이나 채권, 실물 자산으로 분산을 고려하세요.</li>
+          <li><strong>금리 쇼핑:</strong> 대출이 있다면 저금리 대환 대출이나 고정 금리 전환 가능성을 타진하세요.</li>
         </ul>
       </div>
-
-      <h2 class="text-2xl md:text-3xl font-black text-slate-900 mt-16 mb-8 tracking-tight">3. ISA 수익률을 높이는 실전 활용 전략</h2>
-      <p class="mb-6 leading-8 text-slate-700">
-        단순히 가입하는 것보다 어떻게 활용하느냐가 중요합니다. 전문가들이 추천하는 두 가지 전략은 다음과 같습니다.
-      </p>
-      <ul class="list-disc pl-6 mb-8 space-y-3 text-slate-700 font-medium">
-        <li><strong>손익 통산 활용:</strong> A종목에서 500만 원 이익이 나고 B종목에서 300만 원 손실이 났다면, ISA에서는 순이익 200만 원에 대해서만 세금을 계산합니다. (일반 계좌는 500만 원 전체에 대해 과세)</li>
-        <li><strong>해외주식형 ETF 담기:</strong> 일반 계좌에서 해외 ETF 투자 시 배당소득세(15.4%)가 발생하지만, ISA 내에서는 비과세 혜택을 받을 수 있어 매우 효과적입니다.</li>
-      </ul>
 
       <div class="p-10 bg-slate-900 text-white rounded-[3rem] mt-16 shadow-2xl relative overflow-hidden">
         <div class="absolute top-0 right-0 p-8 opacity-10">
           <svg width="120" height="120" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
         </div>
-        <h4 class="text-emerald-400 font-black mb-6 text-2xl uppercase tracking-tighter">ISA Summary (30초 요약)</h4>
+        <h4 class="text-sky-400 font-black mb-6 text-2xl uppercase tracking-tighter">Inflation Survival Summary</h4>
         <div class="space-y-4 text-slate-300 font-medium leading-relaxed">
-          <p class="flex items-start gap-3"><span class="text-emerald-500 mt-1">●</span> <span>ISA는 투자 수익에 대해 최대 400만 원까지 <strong>비과세</strong> 혜택을 주는 만능 절세 계좌입니다.</span></p>
-          <p class="flex items-start gap-3"><span class="text-emerald-500 mt-1">●</span> <span>주식 직접 투자를 선호한다면 증권사에서 <strong>중개형 ISA</strong>를 개설하는 것이 가장 유리합니다.</span></p>
-          <p class="flex items-start gap-3"><span class="text-emerald-500 mt-1">●</span> <span>의무 기간 3년을 채우지 못하고 해지하면 혜택이 사라지므로 <strong>장기적인 자금 계획</strong>이 필요합니다.</span></p>
-          <p class="flex items-start gap-3"><span class="text-emerald-500 mt-1">●</span> <span>더 정교한 자산 배분법은 <a href="/#/finance-guide" class="text-emerald-400 underline font-bold">금융 기초 가이드</a>를 참고하세요.</span></p>
+          <p class="flex items-start gap-3"><span class="text-sky-500 mt-1">●</span> <span>현금만 보유하는 것은 인플레이션이라는 <strong>보이지 않는 세금</strong>을 매일 내는 것과 같습니다.</span></p>
+          <p class="flex items-start gap-3"><span class="text-sky-500 mt-1">●</span> <span>수익률이 물가 상승률을 앞서는 <strong>우량 주식, 배당주, 실물 자산</strong>으로 포트폴리오를 방어하세요.</span></p>
+          <p class="flex items-start gap-3"><span class="text-sky-500 mt-1">●</span> <span>금리 인상기에는 <strong>대출 상환과 파킹 통장 활용</strong>을 병행하여 자금 효율을 극대화해야 합니다.</span></p>
         </div>
       </div>
 
       <div class="mt-16 border-t border-slate-200 pt-12">
-        <p class="text-slate-500 mb-6 font-medium">효율적인 자산 관리를 위해 다음 단계의 가이드를 확인해 보세요.</p>
+        <p class="text-slate-500 mb-6 font-medium">자산 방어의 기초를 다졌다면, 이제 돈이 스스로 불어나는 원리를 알아볼까요?</p>
         <div class="grid sm:grid-cols-2 gap-6">
+          <a href="/article/bank-account-splitting-mastery" class="group p-8 bg-white rounded-3xl border border-slate-100 hover:border-emerald-600 transition-all shadow-soft flex flex-col items-center text-center">
+            <div class="w-12 h-12 bg-emerald-50 text-emerald-600 rounded-2xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><line x1="3" y1="9" x2="21" y2="9"></line><line x1="9" y1="21" x2="9" y2="9"></line></svg>
+            </div>
+            <p class="font-black text-slate-900 mb-1 group-hover:text-emerald-600">돈이 모이는 시스템, 통장 쪼개기 마스터 →</p>
+          </a>
           <a href="/#/investment-guide" class="group p-8 bg-white rounded-3xl border border-slate-100 hover:border-red-600 transition-all shadow-soft flex flex-col items-center text-center">
             <div class="w-12 h-12 bg-red-50 text-red-600 rounded-2xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
-               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21.21 15.89A10 10 0 1 1 8 2.83"></path><path d="M22 12A10 10 0 0 0 12 2v10z"></path></svg>
+               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline></svg>
             </div>
-            <p class="font-black text-slate-900 mb-1 group-hover:text-red-600">잃지 않는 투자를 위한 주식 투자 기초 가이드 →</p>
-          </a>
-          <a href="/#/finance-guide" class="group p-8 bg-white rounded-3xl border border-slate-100 hover:border-emerald-600 transition-all shadow-soft flex flex-col items-center text-center">
-            <div class="w-12 h-12 bg-emerald-50 text-emerald-600 rounded-2xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
-               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path></svg>
-            </div>
-            <p class="font-black text-slate-900 mb-1 group-hover:text-emerald-600">종잣돈을 만드는 시스템, 금융 기초 마스터 가이드 →</p>
+            <p class="font-black text-slate-900 mb-1 group-hover:text-red-600">수익률의 비밀, 복리의 마법 이해하기 →</p>
           </a>
         </div>
       </div>
-    `
-  },
-  {
-    id: '15',
-    slug: 'sunshine-loan-master-guide',
-    category: Category.LOAN,
-    title: '햇살론 정부지원 대출 완벽 가이드: 나에게 가장 유리한 선택은?',
-    summary: '낮은 신용점수나 소득으로 인해 1금융권 이용이 어려운 분들을 위한 햇살론의 종류별 조건과 승인율 높이는 법을 상세히 안내합니다.',
-    imageUrl: 'https://images.unsplash.com/photo-1550565118-3a14e8d0386f?q=80&w=1200&auto=format&fit=crop',
-    date: '2024-03-25',
-    author: '금융 정책 에디터',
-    tags: ['햇살론', '정부지원대출', '서민금융', '근로자햇살론', '햇살론15', '햇살론유스', '저신용자대출'],
-    content: `
-      <p class="mb-8 text-xl leading-relaxed font-bold text-slate-800 break-keep">
-        고물가 상황에서 갑작스러운 자금이 필요하지만, 낮은 신용점수나 소득 때문에 고민이신가요? <strong>햇살론</strong>은 대표적인 <strong>정부지원 대출</strong> 상품으로, 1금융권 이용이 어려운 분들을 위한 실질적인 금융 안전망입니다. 이 글에서는 <strong>저신용자 대출</strong>의 핵심인 햇살론의 종류별 자격 조건과 나에게 맞는 상품을 찾는 법을 상세히 가이드해 드립니다.
-      </p>
-
-      <h2 class="text-2xl md:text-3xl font-black text-slate-900 mt-16 mb-8 tracking-tight">1. 햇살론이란 무엇인가: 서민을 위한 금융 제도</h2>
-      <p class="mb-6 leading-8 text-slate-700">
-        햇살론은 신용점수가 낮거나 소득이 적어 제도권 금융 이용에 제약을 받는 서민들을 위해 <strong>서민금융진흥원</strong>과 민간 금융사가 협력하여 제공하는 보증부 대출입니다. 정부가 대출금의 상당 부분을 보증하기 때문에, 금융사는 리스크를 줄이면서도 상대적으로 낮은 금리로 자금을 공급할 수 있습니다.
-      </p>
-      <p class="mb-6 leading-8 text-slate-700">
-        단순히 자금을 융통하는 것을 넘어, 고금리 채무의 악순환을 예방하고 경제적 자립을 돕는 <a href="/#/finance-guide" class="text-blue-600 font-bold">사회적 금융 정책</a>의 일환으로 운영됩니다.
-      </p>
-
-      <h2 class="text-2xl md:text-3xl font-black text-slate-900 mt-16 mb-8 tracking-tight">2. 햇살론 종류별 자격 조건과 상세 혜택</h2>
-      <p class="mb-6 leading-8 text-slate-700">
-        햇살론은 신청자의 직업, 연령, 신용 상태에 따라 세 가지 대표 상품으로 나뉩니다. 각 조건에 맞는 최적의 상품을 선택해야 이자 부담을 최소화할 수 있습니다.
-      </p>
-
-      <h3 class="text-xl md:text-2xl font-black text-slate-800 mb-4 flex items-center gap-2">
-        근로자햇살론: 직장인을 위한 대표 지원 상품
-      </h3>
-      <ul class="list-disc pl-6 mb-6 space-y-2 text-slate-700">
-        <li><strong>대상:</strong> 3개월 이상 재직 중인 근로자</li>
-        <li><strong>소득기준:</strong> 연 소득 3,500만 원 이하 (신용점수 무관) 또는 연 소득 4,500만 원 이하 (신용점수 하위 20% 이하)</li>
-        <li><strong>한도 및 금리:</strong> 최대 2,000만 원 / 연 11.5% 내외 (변동 가능)</li>
-      </ul>
-      <p class="p-4 bg-blue-50 text-blue-800 rounded-xl mb-8 font-medium">
-        💡 <strong>추천 대상:</strong> 소득 증빙이 가능한 직장인 중 기존 채무가 많아 추가 한도가 필요한 분
-      </p>
-
-      <h3 class="text-xl md:text-2xl font-black text-slate-800 mb-4 flex items-center gap-2">
-        햇살론15: 최저신용자를 위한 고정 금리 상품
-      </h3>
-      <ul class="list-disc pl-6 mb-6 space-y-2 text-slate-700">
-        <li><strong>대상:</strong> 연 소득 4,500만 원 이하이면서 신용점수 하위 20% 이하인 자</li>
-        <li><strong>특징:</strong> 대부업 등 고금리 대출 이용이 불가피한 경우를 위한 대안</li>
-        <li><strong>금리 혜택:</strong> 연 15.9% (성실 상환 시 매년 금리 인하 혜택 제공)</li>
-      </ul>
-      <p class="p-4 bg-slate-100 text-slate-700 rounded-xl mb-8 font-medium">
-        💡 <strong>추천 대상:</strong> 신용점수가 매우 낮아 2금융권에서도 승인이 어려운 분
-      </p>
-
-      <h3 class="text-xl md:text-2xl font-black text-slate-800 mb-4 flex items-center gap-2">
-        햇살론유스(Youth): 대학생 및 청년을 위한 저금리 지원
-      </h3>
-      <ul class="list-disc pl-6 mb-6 space-y-2 text-slate-700">
-        <li><strong>대상:</strong> 만 34세 이하의 대학생, 미취업 청년 또는 사회초년생 (재직 1년 이하)</li>
-        <li><strong>한도 및 금리:</strong> 최대 1,200만 원 / 연 3.5% 고정 금리</li>
-        <li><strong>거치 기간:</strong> 군 복무나 학업 기간을 고려하여 넉넉한 상환 유예 제공</li>
-      </ul>
-      <p class="p-4 bg-purple-50 text-purple-800 rounded-xl mb-8 font-medium">
-        💡 <strong>추천 대상:</strong> 취업을 준비 중이거나 이제 막 사회에 첫발을 내디딘 청년층
-      </p>
-
-      <h2 class="text-2xl md:text-3xl font-black text-slate-900 mt-16 mb-8 tracking-tight">3. 햇살론 승인 가능성을 높이는 핵심 전략</h2>
-      <p class="mb-6 leading-8 text-slate-700">
-        햇살론은 일반 신용대출보다 문턱이 낮지만, 서민금융진흥원의 보증 심사가 핵심입니다. 승인율을 높이기 위해 다음 사항을 점검하십시오.
-      </p>
-      <ul class="list-disc pl-6 mb-8 space-y-3 text-slate-700 font-medium">
-        <li><strong>최근 연체 이력:</strong> 최근 3개월 내 10일 이상의 연체가 없어야 합니다.</li>
-        <li><strong>금융 교육 이수:</strong> 서민금융진흥원 온라인 교육을 이수하면 금리 인하 및 심사 가점을 받을 수 있습니다.</li>
-        <li><strong>서류 구비:</strong> 건강보험 자격득실 확인서 등 소득과 재직을 증빙하는 서류를 정확히 준비하십시오.</li>
-      </ul>
-
-      <div class="bg-slate-50 border-l-8 border-slate-400 p-8 my-12 rounded-r-3xl">
-        <h2 class="text-slate-900 text-xl font-black mb-4 flex items-center gap-2">
-          이용 시 주의사항 및 안전한 신청 경로
-        </h2>
-        <p class="mb-4 text-slate-700 leading-relaxed">
-          정부지원 대출을 사칭한 불법 금융 광고에 주의해야 합니다. 아래의 안전 수칙을 반드시 지키십시오.
-        </p>
-        <ul class="space-y-3 text-slate-800 font-medium">
-          <li class="flex gap-2"><span>•</span> <span><strong>공식 신청 경로:</strong> 모든 햇살론 상담은 <strong>서민금융진흥원(국번없이 1397)</strong> 또는 공식 앱 '서민금융 잇다'를 통해서만 진행하십시오.</span></li>
-          <li class="flex gap-2"><span>•</span> <span><strong>선입금 요구 거절:</strong> 보증료나 수수료를 이유로 먼저 입금을 요구하는 것은 100% 사기입니다.</span></li>
-          <li class="flex gap-2"><span>•</span> <span><strong>전화 권유 주의:</strong> 금융기관은 먼저 전화를 걸어 대출을 권유하지 않습니다.</span></li>
-        </ul>
-      </div>
-
-      <div class="p-10 bg-slate-900 text-white rounded-[3rem] mt-16 shadow-2xl relative overflow-hidden">
-        <div class="absolute top-0 right-0 p-8 opacity-10">
-          <svg width="120" height="120" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
-        </div>
-        <h4 class="text-blue-400 font-black mb-6 text-2xl uppercase tracking-tighter">Sunshine Loan Key Takeaways</h4>
-        <div class="space-y-4 text-slate-300 font-medium leading-relaxed">
-          <p class="flex items-start gap-3"><span class="text-blue-500 mt-1">●</span> <span>햇살론은 <strong>저신용자 대출</strong> 대안 중 가장 안정적인 정부 지원 정책입니다.</span></p>
-          <p class="flex items-start gap-3"><span class="text-blue-500 mt-1">●</span> <span>본인의 소득과 상황에 따라 <strong>근로자, 15, 유스</strong> 중 금리가 가장 낮은 상품부터 확인해야 합니다.</span></p>
-          <p class="flex items-start gap-3"><span class="text-blue-500 mt-1">●</span> <span>서민금융진흥원 공식 채널을 통한 상담이 가장 안전하며, 불법 사금융 광고에 현혹되지 않는 것이 중요합니다.</span></p>
-        </div>
-      </div>
-
-      <div class="mt-16 border-t border-slate-200 pt-12">
-        <p class="text-slate-500 mb-6 font-medium">금융 생활에 더 필요한 정보가 있다면 아래 가이드를 참고해 보세요.</p>
-        <div class="grid sm:grid-cols-2 gap-6">
-          <a href="/#/loan-guide" class="group p-8 bg-white rounded-3xl border border-slate-100 hover:border-blue-600 transition-all shadow-soft flex flex-col items-center text-center">
-            <div class="w-12 h-12 bg-blue-50 text-blue-600 rounded-2xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
-               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
-            </div>
-            <p class="font-black text-slate-900 mb-1 group-hover:text-blue-600">신용점수 관리와 대출 상환의 정석, 대출 마스터 가이드 →</p>
-          </a>
-          <a href="/#/welfare-guide" class="group p-8 bg-white rounded-3xl border border-slate-100 hover:border-purple-600 transition-all shadow-soft flex flex-col items-center text-center">
-            <div class="w-12 h-12 bg-purple-50 text-purple-600 rounded-2xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
-               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
-            </div>
-            <p class="font-black text-slate-900 mb-1 group-hover:text-purple-600">나만 모르는 정부 지원금 찾기, 최신 복지정책 확인 →</p>
-          </a>
-        </div>
-      </div>
-    `
-  },
-  {
-    id: '1',
-    slug: 'emergency-loan-guide',
-    category: Category.LOAN,
-    title: '소액 비상금 대출 완벽 가이드: 급전 마련의 구조와 안전한 활용법',
-    summary: '갑작스러운 유동성 위기 시, 신용점수 하락을 최소화하며 안전하게 자금을 융통하는 1금융권 소액 대출의 메커니즘과 주의사항을 심층 분석합니다.',
-    imageUrl: 'https://images.unsplash.com/photo-1542222024-c39e2281f121?q=80&w=1200&auto=format&fit=crop',
-    date: '2023-10-24',
-    author: '금융 에디터',
-    tags: ['소액', '대출', '비상금', '신용점수', '서울보증보험', '비상금대출', '1금융권대출', '무직자대출'],
-    content: `
-      <p class="mb-8 text-xl leading-relaxed font-bold text-slate-800 break-keep">
-        살다 보면 누구나 갑작스럽게 100만 원, 200만 원 정도의 급전이 필요한 순간을 맞이합니다. 이때 가장 위험한 선택은 '무조건 빠른 것'만 찾는 것입니다. <a href="/#/loan-guide" class="text-blue-600 underline decoration-blue-200 underline-offset-4">1금융권 소액 비상금 대출</a>의 구조를 이해하면 신용을 지키면서도 가장 저렴한 비용으로 자금을 마련할 수 있습니다.
-      </p>
-
-      <h2 class="text-2xl md:text-3xl font-black text-slate-900 mt-16 mb-8 tracking-tight">1. 소액 비상금 대출이란 무엇인가: 작동 원리의 이해</h2>
-      <p class="mb-6 leading-8 text-slate-700">
-        비상금 대출은 일반적인 신용대출과 달리 서류 제출이나 소득 증빙이 필요 없는 경우가 많습니다. "소득이 없는데 어떻게 돈을 빌려주지?"라는 의문이 생길 수 있지만, 이는 금융권의 고도화된 보증 시스템 덕분입니다.
-      </p>
-      
-      <h3 class="text-xl md:text-2xl font-black text-slate-800 mb-4 flex items-center gap-2">
-        <span class="w-1.5 h-6 bg-blue-600 rounded-full inline-block"></span> 
-        서울보증보험(SGI)의 역할과 보증서 발급
-      </h3>
-      <p class="mb-6 leading-8 text-slate-700">
-        대부분의 1금융권 비상금 대출은 <strong>서울보증보험</strong>과 연계되어 있습니다. 은행은 고객의 소득을 보는 대신, 보증보험사가 발행한 '보증서'를 담보로 대출을 실행합니다. 보험사가 신청자의 신용도를 심사하여 "이 사람은 300만 원 정도는 충분히 갚을 수 있다"고 은행에 보증을 서주는 구조입니다.
-      </p>
-      <p class="mb-6 leading-8 text-slate-700">
-        만약 대출자가 돈을 갚지 못하면 보험사가 은행에 먼저 돈을 갚아줍니다(대위변제). 은행 입장에서는 리스크가 없기 때문에 무직자나 학생에게도 기꺼이 돈을 빌려줄 수 있는 것입니다. 이는 <a href="/#/finance-guide" class="text-blue-600 font-bold">금융 시스템의 신뢰 기반</a> 위에서 작동합니다.
-      </p>
-
-      <h2 class="text-2xl md:text-3xl font-black text-slate-900 mt-16 mb-8 tracking-tight">2. 비상금 대출의 자격 조건과 심사 기준</h2>
-      <p class="mb-6 leading-8 text-slate-700">
-        소득 증빙은 없지만, 아무에게나 빌려주는 것은 아닙니다. 금융사는 신청자의 '상환 의지'를 다른 지표로 확인합니다.
-      </p>
-
-      <h3 class="text-xl md:text-2xl font-black text-slate-800 mb-4 flex items-center gap-2">
-        <span class="w-1.5 h-6 bg-blue-600 rounded-full inline-block"></span> 
-        소득 증빙이 필요 없는 '통신 등급'의 비밀
-      </h3>
-      <p class="mb-6 leading-8 text-slate-700">
-        최근 많은 은행이 활용하는 지표는 <strong>통신 등급(Telco Score)</strong>입니다. 휴대폰 요금을 밀리지 않고 성실하게 냈다면 금융 이력이 부족해도 우량한 등급을 받을 수 있습니다. 이는 평소 <a href="/#/credit-card-guide" class="text-blue-600 font-bold">신용 관리 습관</a>이 얼마나 중요한지를 단적으로 보여줍니다.
-      </p>
-
-      <h2 class="text-2xl md:text-3xl font-black text-slate-900 mt-16 mb-8 tracking-tight">3. 이자와 상환 방식: 나에게 유리한 선택은?</h2>
-      <p class="mb-6 leading-8 text-slate-700">
-        비상금 대출은 빌리는 방식에 따라 실제 내는 이자가 크게 달라집니다. 본인의 자산 흐름에 맞는 방식을 선택해야 합니다.
-      </p>
-
-      <h3 class="text-xl md:text-2xl font-black text-slate-800 mb-4 flex items-center gap-2">
-        <span class="w-1.5 h-6 bg-blue-600 rounded-full inline-block"></span> 
-        마이너스 통장 방식의 일할 계산 이자 장점
-      </h3>
-      <p class="mb-6 leading-8 text-slate-700">
-        대부분의 비상금 대출은 <strong>마이너스 통장(한도대출)</strong> 방식으로 실행됩니다. 300만 원 한도를 받아두었어도 실제로 10만 원만 썼다면, 그 10만 원에 대해서만 이자가 붙습니다. 특히 '일할 계산' 방식이므로 돈을 쓰고 며칠 뒤에 바로 갚으면 딱 며칠치 이자만 내면 됩니다.
-      </p>
-
-      <div class="bg-red-50 border-l-8 border-red-500 p-8 my-12 rounded-r-3xl">
-        <h2 class="text-red-900 text-xl font-black mb-4 flex items-center gap-2">
-          ⚠️ 이런 경우엔 조심하세요! (위험 요인)
-        </h2>
-        <ul class="space-y-3 text-red-800 font-medium">
-          <li class="flex gap-2"><span>🚨</span> <span><strong>DSR 한도 잠식:</strong> 소액 대출도 엄연한 대출입니다. 추후 큰 금액의 주택담보대출을 받을 때 한도가 줄어들 수 있습니다.</span></li>
-          <li class="flex gap-2"><span>🚨</span> <span><strong>무분별한 습관화:</strong> '언제든 빌릴 수 있다'는 생각은 과소비의 지름길입니다. 비상금은 말 그대로 '비상시'에만 써야 합니다.</span></li>
-          <li class="flex gap-2"><span>🚨</span> <span><strong>연체 시 가혹한 페널티:</strong> 1금융권 대출이라도 연체 시 신용점수는 즉각 폭락하며, 향후 5년간 금융 거래에 제약이 생깁니다.</span></li>
-        </ul>
-      </div>
-
-      <div class="p-10 bg-slate-900 text-white rounded-[3rem] mt-16 shadow-2xl relative overflow-hidden">
-        <div class="absolute top-0 right-0 p-8 opacity-10">
-          <svg width="120" height="120" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
-        </div>
-        <h4 class="text-blue-400 font-black mb-6 text-2xl uppercase tracking-tighter">SEO Final Summary (30초 요약)</h4>
-        <div class="space-y-4 text-slate-300 font-medium">
-          <p class="flex items-start gap-3"><span class="text-blue-500 mt-1">●</span> <span>소액 비상금 대출은 <strong>서울보증보험 보증서</strong>를 기반으로 소득 없이도 실행 가능합니다.</span></p>
-          <p class="flex items-start gap-3"><span class="text-blue-500 mt-1">●</span> <span><strong>마이너스 통장 방식</strong>을 선택하여 이자 비용을 일 단위로 최소화하는 것이 가장 똑똑한 활용법입니다.</span></p>
-          <p class="flex items-start gap-3"><span class="text-blue-500 mt-1">●</span> <span>반드시 <strong>1금융권 상품</strong>을 먼저 확인하여 신용점수 타격을 방어해야 합니다.</span></p>
-        </div>
-      </div>
-    `
-  },
-  {
-    id: '14',
-    slug: 'credit-card-cash-out-risk-alternatives',
-    category: Category.LOAN,
-    title: '신용카드 소액결제 및 현금화의 늪: 30% 수수료를 아끼는 합법적 대출 대안',
-    summary: '급전이 필요해 신용카드 현금화나 소액결제를 고민 중이신가요? 겉보기엔 편리하지만 실제로는 연 300% 이상의 살인적인 금리를 부담하는 것과 같습니다. 안전하게 자금을 융통할 수 있는 정부 지원 소액 대출과 1금융권 비상금 대출의 실체를 공개합니다.',
-    imageUrl: 'https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?q=80&w=1200&auto=format&fit=crop',
-    date: '2024-03-20',
-    author: '금융 전략 에디터',
-    tags: ['소액', '신용카드', '현금화', '대출', '비상금대출', '카드깡', '금융사기'],
-    content: `
-      <p class="mb-8 text-xl leading-relaxed font-bold text-slate-800 break-keep">
-        인터넷을 검색하다 보면 '신용카드 현금화', '소액결제 매입'이라는 광고를 쉽게 접할 수 있습니다. 겉으로는 친절해 보이지만, 그 속에는 연 300%에 달하는 살인적인 금리와 범죄의 늪이 숨어 있습니다.
-      </p>
-
-      <h2 class="text-2xl md:text-3xl font-black text-slate-900 mt-16 mb-8 tracking-tight">1. 신용카드 현금화(카드깡), 왜 위험한가?</h2>
-      <p class="mb-6 leading-8 text-slate-700">
-        일명 '카드깡'으로 불리는 불법 현금화는 허위 매출을 발생시켜 현금을 융통하는 행위입니다. 업체들은 보통 20~30%의 수수료를 떼어갑니다. 예를 들어 100만 원을 결제하면 내 손에 들어오는 돈은 70만 원뿐이지만, 다음 달 카드사에는 100만 원을 고스란히 갚아야 합니다. 한 달 이자가 30%, 연리로 환산하면 360%라는 말도 안 되는 금리입니다.
-      </p>
-
-      <h3 class="text-xl md:text-2xl font-black text-slate-800 mb-4 flex items-center gap-2">
-        <span class="w-1.5 h-6 bg-red-600 rounded-full inline-block"></span> 
-        금융 질서 문란자 등록의 공포
-      </h3>
-      <p class="mb-6 leading-8 text-slate-700">
-        불법 현금화가 적발될 경우 '금융 질서 문란자'로 등록됩니다. 이 정보는 모든 금융사에 공유되어 향후 7~12년 동안 대출, 신용카드 발급 등 모든 금융 거래가 전면 차단됩니다. 한 번의 실수로 인생의 금융 사다리가 끊어지는 것입니다.
-      </p>
-
-      <h2 class="text-2xl md:text-3xl font-black text-slate-900 mt-16 mb-8 tracking-tight">2. 합법적이고 안전한 자금 마련 대안</h2>
-      <p class="mb-6 leading-8 text-slate-700">
-        급전이 필요할수록 차분해져야 합니다. 국가와 1금융권에는 신용도가 낮아도 이용 가능한 저렴한 상품들이 많습니다.
-      </p>
-
-      <h3 class="text-xl md:text-2xl font-black text-slate-800 mb-4 flex items-center gap-2">
-        <span class="w-1.5 h-6 bg-blue-600 rounded-full inline-block"></span> 
-        서민금융진흥원의 '소액생계비대출'
-      </h3>
-      <p class="mb-6 leading-8 text-slate-700">
-        신용점수가 낮아 은행 이용이 어렵다면 <strong>서민금융진흥원</strong>의 소액생계비대출을 먼저 확인하세요. 연 15.9%의 금리로 최대 100만 원까지 즉시 대출이 가능하며, 교육 이수 시 금리를 9%대까지 낮출 수 있습니다. 카드깡 수수료 30%에 비하면 훨씬 합리적인 선택입니다.
-      </p>
-
-      <div class="p-8 bg-blue-50 rounded-3xl mt-12 border border-blue-100">
-        <h4 class="font-bold text-slate-900 mb-4">💡 에디터의 조언</h4>
-        <p class="text-sm text-slate-600 leading-relaxed">
-          '당장 오늘 갚아야 할 돈' 때문에 불법 업체를 찾지 마세요. <strong>채무조정 제도(신용회복위원회)</strong>를 활용하면 이자 감면과 상환 기간 연장이라는 합법적인 도움을 받을 수 있습니다. 더 자세한 내용은 <a href="/#/loan-guide" class="text-blue-600 font-bold">대출·신용 가이드</a>에서 확인하세요.
-        </p>
-      </div>
-    `
-  },
-  {
-    id: '3',
-    slug: 'stock-investment-portfolio',
-    category: Category.INVESTMENT,
-    title: '주식 투자 입문 가이드: 잃지 않는 포트폴리오 구성 전략',
-    summary: '주식 투자를 처음 시작하는 분들을 위해 포트폴리오의 개념과 리스크를 낮추는 분산 투자 전략을 알기 쉽게 설명합니다.',
-    imageUrl: 'https://images.unsplash.com/photo-1611974714024-463ef9c7416b?q=80&w=1200&auto=format&fit=crop',
-    date: '2023-10-22',
-    author: '투자 분석가',
-    tags: ['주식투자 입문', '포트폴리오 구성', '분산투자 전략', '주식 기초', '자산배분'],
-    content: `
-      <p class="mb-8 text-xl leading-relaxed font-bold text-slate-800 break-keep">
-        "주식 투자는 도박이다"라고 말하는 사람들의 공통점은 공부 없이 '운'에 맡기는 투자를 했다는 것입니다. 주식은 기업의 소유권을 나누어 갖는 숭고한 자본주의 시스템입니다.
-      </p>
-
-      <h2 class="text-2xl md:text-3xl font-black text-slate-900 mt-16 mb-8 tracking-tight">1. 자산 배분의 기본: 분산 투자</h2>
-      <p class="mb-6 leading-8 text-slate-700">
-        "계란을 한 바구니에 담지 마라"는 격언은 주식 투자에서도 여전히 유효합니다. 한 기업에만 몰빵 투자하면 그 기업이 무너질 때 내 자산도 무너집니다. 업종별, 국가별, 그리고 자산군(주식, 채권, 현금)별로 나누어 투자하는 것이 포트폴리오 구성의 핵심입니다.
-      </p>
-
-      <h2 class="text-2xl md:text-3xl font-black text-slate-900 mt-16 mb-8 tracking-tight">2. 초보자에게 가장 강력한 무기: 지수 추종 ETF</h2>
-      <p class="mb-6 leading-8 text-slate-700">
-        어떤 주식을 살지 고르는 것이 어렵다면 시장 전체를 사세요. 미국의 <strong>S&P500</strong>이나 <strong>나스닥100</strong> 지수를 추종하는 ETF는 수십 년간 우상향해 왔습니다. 개별 주식은 망할 수 있지만, 한 나라의 시장이 망하기는 어렵습니다.
-      </p>
-
-      <h3 class="text-xl md:text-2xl font-black text-slate-800 mb-4 flex items-center gap-2">
-        <span class="w-1.5 h-6 bg-red-600 rounded-full inline-block"></span> 
-        복리의 마법을 누리는 적립식 매수
-      </h3>
-      <p class="mb-6 leading-8 text-slate-700">
-        주가는 매일 요동치지만, 매달 일정한 금액을 꾸준히 사는 '적립식 투자(DCA)'는 평균 매수 단가를 낮추는 효과가 있습니다. 시간이 흐를수록 이자가 이자를 낳는 복리의 마법은 당신의 자산을 기하급수적으로 불려줄 것입니다. 더 체계적인 돈 관리법은 <a href="/#/finance-guide" class="text-red-600 font-bold">금융 기초 가이드</a>를 참고하세요.
-      </p>
     `
   }
 ];
