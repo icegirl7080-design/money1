@@ -5,7 +5,6 @@ import {
   BarChart3, 
   AlertOctagon, 
   Target, 
-  Hourglass,
   BrainCircuit,
   ArrowRight,
   ArrowDown

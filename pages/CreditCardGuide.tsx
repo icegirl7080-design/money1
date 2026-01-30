@@ -3,10 +3,7 @@ import {
   CreditCard, 
   Scale, 
   AlertTriangle, 
-  ShieldCheck, 
-  TrendingUp,
   Landmark,
-  CheckCircle2,
   ArrowDown
 } from 'lucide-react';
 import { SEO } from '../components/SEO';

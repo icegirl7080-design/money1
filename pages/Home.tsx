@@ -6,7 +6,6 @@ import { SEO } from '../components/SEO';
 import { 
   ArrowRight, 
   ShieldCheck, 
-  Coins, 
   HelpCircle,
   CheckCircle2,
   TrendingUp,
