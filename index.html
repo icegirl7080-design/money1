@@ -6,12 +6,76 @@
     <title>머니와이즈 | 금융, 대출, 투자, 복지의 모든 것</title>
     <meta name="description" content="소액 대출, 신용카드 현금화 팁, 주식 투자 전략, 정부 복지 정책까지. 당신의 금융 생활을 업그레이드할 필수 정보를 제공합니다." />
     <meta name="keywords" content="소액, 대출, 신용카드, 현금화, 재테크, 주식, 복지" />
+    <meta name="theme-color" content="#ffffff" />
+    
+    <!-- Pretendard Font (High quality Korean Sans-serif) -->
+    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard-dynamic-subset.css" />
+    
     <script src="https://cdn.tailwindcss.com"></script>
-    <style>
-      @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&display=swap');
-      body {
-        font-family: 'Noto Sans KR', sans-serif;
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['Pretendard Variable', 'Pretendard', '-apple-system', 'BlinkMacSystemFont', 'system-ui', 'Roboto', 'Helvetica Neue', 'Segoe UI', 'Apple SD Gothic Neo', 'Noto Sans KR', 'Malgun Gothic', 'sans-serif'],
+            },
+            colors: {
+              slate: {
+                850: '#1e293b',
+                900: '#0f172a',
+                950: '#020617',
+              }
+            },
+            boxShadow: {
+              'soft': '0 4px 20px -2px rgba(0, 0, 0, 0.05)',
+              'glow': '0 0 15px rgba(14, 165, 233, 0.3)',
+            }
+          }
+        }
       }
+    </script>
+
+    <style>
+      /* Global Typography Settings */
+      body {
+        font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+        word-break: keep-all; /* 한글 단어 끊김 방지 */
+        letter-spacing: -0.015em; /* 가독성을 위한 자간 조정 */
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+      }
+      
+      /* Heading Styles override for better hierarchy */
+      h1, h2, h3, h4, h5, h6 {
+        letter-spacing: -0.025em;
+        font-weight: 700;
+        line-height: 1.35;
+      }
+
+      /* Body Text */
+      p, li {
+        line-height: 1.65;
+        font-weight: 400;
+        color: #475569; /* slate-600 */
+      }
+      
+      /* Scroll Animation Classes */
+      .animate-on-scroll {
+        opacity: 0;
+        transform: translateY(20px);
+        transition: opacity 0.8s cubic-bezier(0.22, 1, 0.36, 1), transform 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+        will-change: opacity, transform;
+      }
+      
+      .animate-on-scroll.is-visible {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      /* Staggered delays for children if needed */
+      .delay-100 { transition-delay: 100ms; }
+      .delay-200 { transition-delay: 200ms; }
+      .delay-300 { transition-delay: 300ms; }
     </style>
   <script type="importmap">
 {
@@ -26,8 +90,31 @@
 }
 </script>
 </head>
-  <body class="bg-slate-50 text-slate-900 antialiased">
+  <body class="bg-slate-50 text-slate-900 antialiased selection:bg-sky-100 selection:text-sky-900 min-h-screen">
     <div id="root"></div>
     <script type="module" src="/index.tsx"></script>
+    <script>
+      // Simple Intersection Observer for scroll animations
+      document.addEventListener('DOMContentLoaded', () => {
+        const observer = new IntersectionObserver((entries) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('is-visible');
+              observer.unobserve(entry.target); // Only animate once
+            }
+          });
+        }, { threshold: 0.1, rootMargin: "0px 0px -50px 0px" });
+
+        const observeElements = () => {
+          document.querySelectorAll('.animate-on-scroll:not(.is-visible)').forEach((el) => observer.observe(el));
+        };
+
+        // Initial check
+        observeElements();
+        
+        // Check periodically for new elements (React rendering)
+        setInterval(observeElements, 1000);
+      });
+    </script>
   </body>
 </html>

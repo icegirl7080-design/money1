@@ -2,21 +2,20 @@ import React, { useMemo } from 'react';
 import { Link } from 'react-router-dom';
 import { 
   Landmark, 
-  HelpingHand, 
-  FileText, 
-  AlertCircle, 
-  Scale, 
   Users,
-  Building2,
   SearchCheck,
-  ArrowRight
+  ArrowRight,
+  Baby,
+  GraduationCap,
+  Building2,
+  ArrowDown
 } from 'lucide-react';
 import { INITIAL_ARTICLES } from '../constants';
 import { Category } from '../types';
 import { ArticleCard } from '../components/ArticleCard';
+import { SEO } from '../components/SEO';
 
 export const WelfareGuide: React.FC = () => {
-  // Automatically fetch articles related to this guide's category
   const relatedArticles = useMemo(() => {
     return INITIAL_ARTICLES
       .filter(article => article.category === Category.WELFARE)
@@ -24,61 +23,58 @@ export const WelfareGuide: React.FC = () => {
   }, []);
 
   return (
-    <main className="flex-grow bg-white text-slate-900 font-sans leading-relaxed selection:bg-purple-100">
-      {/* =====================================================================================
-          1. HEADER SECTION (H1)
-          ===================================================================================== */}
-      <section className="relative bg-slate-900 text-white py-24 overflow-hidden">
-        {/* Professional Gradient Background */}
-        <div className="absolute inset-0 bg-gradient-to-bl from-purple-900 via-slate-900 to-slate-900"></div>
-        <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/diagmonds-light.png')] opacity-10"></div>
+    <main className="flex-grow bg-slate-50 font-sans text-slate-900 selection:bg-purple-100">
+      <SEO 
+        title="복지 정책 가이드 | 2024년 놓치면 안 될 정부 지원금"
+        description="청년도약계좌, 부모급여, 근로장려금 등 정부가 지원하는 다양한 금융 복지 혜택과 신청 방법을 알기 쉽게 정리해 드립니다."
+        keywords={['복지정책', '정부지원금', '청년도약계좌', '부모급여', '근로장려금', '청년정책']}
+      />
 
-        <div className="container mx-auto px-4 relative z-10 max-w-4xl">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-purple-500/10 border border-purple-500/20 text-purple-300 text-xs font-bold mb-6 backdrop-blur-md uppercase tracking-wider">
+      {/* Hero Section */}
+      <section className="relative bg-purple-50 pt-32 pb-24 overflow-hidden">
+        <div className="absolute top-0 right-0 w-2/3 h-full bg-gradient-to-bl from-white/80 via-transparent to-transparent pointer-events-none"></div>
+        <div className="absolute bottom-20 left-10 w-64 h-64 bg-pink-200/30 rounded-full blur-3xl pointer-events-none"></div>
+
+        <div className="container mx-auto px-4 relative z-10 max-w-5xl animate-on-scroll flex flex-col items-start md:items-center md:text-center">
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/90 border border-purple-200 text-purple-600 text-xs font-bold mb-6 shadow-sm backdrop-blur-sm uppercase tracking-wider">
             <Landmark size={14} />
             <span>Public Policy Guide</span>
           </div>
 
-          <h1 className="text-3xl md:text-5xl font-black leading-tight mb-6 break-keep">
+          <h1 className="text-4xl md:text-6xl font-black leading-tight mb-6 break-keep text-slate-900">
             금융과 생활 안정을 위한<br />
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400">
-              복지 정책 및 제도 이해하기
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-pink-600">
+              필수 복지 정책 가이드
             </span>
           </h1>
 
-          <p className="text-lg text-slate-400 leading-relaxed max-w-2xl font-light mb-0 break-keep">
-            복지와 정책은 우리 사회의 안전망이자, 개인의 삶을 지탱하는 중요한 기반입니다.
-            하지만 방대한 정보와 복잡한 용어 때문에 제도의 취지를 정확히 파악하기 어려운 경우가 많습니다.
-            본 페이지는 특정 혜택을 나열하기보다, <strong>복지 제도가 어떻게 설계되어 있고 어떤 원리로 작동하는지</strong>
-            그 구조적 본질을 설명하여 여러분의 이해를 돕고자 합니다.
+          <p className="text-lg md:text-xl text-slate-600 leading-relaxed max-w-3xl font-medium mb-8 break-keep">
+            복지는 어려운 사람만 받는 것이 아닙니다. 성실히 세금을 내는 국민이라면 누려야 할 당연한 권리입니다. 
+            복잡한 정책 용어는 걷어내고, <strong>내가 실제로 받을 수 있는 혜택</strong> 위주로 정리했습니다.
           </p>
+
+          <a href="#content" className="inline-flex items-center gap-2 px-8 py-4 bg-purple-600 text-white font-bold rounded-2xl shadow-lg shadow-purple-200 hover:shadow-purple-300 hover:bg-purple-700 transition-all hover:-translate-y-1">
+            지원금 확인하기 <ArrowDown size={20} />
+          </a>
         </div>
       </section>
 
-      {/* =====================================================================================
-          2. CORE CONTENT: DEFINITION & RELATIONSHIP (H2)
-          ===================================================================================== */}
-      <section className="py-20 bg-white">
-        <div className="container mx-auto px-4 max-w-4xl">
-          <div className="flex items-start gap-4 mb-8">
-            <div className="p-3 bg-purple-50 text-purple-600 rounded-xl mt-1">
-              <Users size={24} />
+      {/* Concept Section */}
+      <section id="content" className="py-16 bg-white relative z-20 -mt-10 rounded-t-[3rem] shadow-[0_-20px_40px_-15px_rgba(0,0,0,0.05)] scroll-mt-20">
+        <div className="container mx-auto px-4 max-w-4xl animate-on-scroll delay-100">
+          <div className="flex items-start gap-5 mb-10">
+            <div className="p-3 bg-purple-50 text-purple-600 rounded-2xl shadow-inner">
+              <Users size={28} />
             </div>
             <div>
-              <h2 className="text-2xl md:text-3xl font-extrabold text-slate-900 mb-4">
-                1. 복지와 정책의 역할: 개인과 사회의 연결 고리
+              <h2 className="text-2xl md:text-3xl font-black text-slate-900 mb-4">
+                1. 정책은 아는 만큼 보입니다
               </h2>
               <div className="prose prose-slate max-w-none text-slate-600 leading-loose">
                 <p>
-                  <strong>복지(Welfare)</strong>란 모든 국민이 최소한의 인간다운 생활을 영위하고, 
-                  더 나아가 삶의 질을 향상시킬 수 있도록 사회적으로 지원하는 활동을 말합니다. 
-                  그리고 <strong>정책(Policy)</strong>은 이러한 복지 이념을 실현하기 위해 정부나 공공기관이 수립한 
-                  구체적인 계획과 실행 방안을 의미합니다.
-                </p>
-                <p>
-                  개인의 노력만으로는 해결하기 어려운 경제적 위기나 사회적 위험(실업, 질병, 노령 등)에 대비하기 위해
-                  국가는 다양한 제도를 마련합니다. 즉, 정책은 개인의 삶과 국가 시스템을 연결하는 매개체이며, 
-                  우리가 내는 세금이 사회적 서비스나 급여 형태로 환원되는 과정으로 이해할 수 있습니다.
+                  정부 지원금은 대부분 <strong>'신청주의'</strong>를 원칙으로 합니다. 
+                  내가 자격 요건이 되어도 신청하지 않으면 10원도 받을 수 없습니다. 
+                  매년 바뀌는 정책 트렌드를 파악하고, 주기적으로 '복지로'나 '보조금24'를 확인하는 습관이 중요합니다.
                 </p>
               </div>
             </div>
@@ -86,31 +82,99 @@ export const WelfareGuide: React.FC = () => {
         </div>
       </section>
 
-      {/* =====================================================================================
-          3. DYNAMIC CONTENT: RELATED ARTICLES (SEO HUB STRUCTURE)
-          ===================================================================================== */}
-      <section id="latest-articles" className="py-24 bg-white border-t border-slate-200">
-        <div className="container mx-auto px-4 max-w-6xl">
-          <div className="flex items-end justify-between mb-10 border-b border-slate-100 pb-4">
-            <div>
-              <h2 className="text-3xl font-bold text-slate-900">최신 복지/정책 정보</h2>
-              <p className="text-slate-500 mt-2">놓치면 손해 보는 정부 지원금과 제도</p>
+      {/* Key Policies Cards */}
+      <section className="py-20 bg-slate-50 border-y border-slate-200">
+        <div className="container mx-auto px-4 max-w-5xl animate-on-scroll">
+          <div className="text-center mb-12">
+            <h2 className="text-2xl md:text-3xl font-black text-slate-900 flex items-center justify-center gap-3">
+              <SearchCheck className="text-purple-600" size={32} />
+              2024년 핵심 지원 정책
+            </h2>
+            <p className="text-slate-500 mt-2 font-medium">대상별 맞춤형 혜택을 확인하세요.</p>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-6">
+            {/* Youth Policy */}
+            <div className="bg-white rounded-3xl p-8 border border-slate-100 shadow-xl shadow-purple-100/50 hover:-translate-y-2 transition-all duration-300 group">
+              <div className="w-12 h-12 bg-purple-50 rounded-2xl flex items-center justify-center text-purple-600 mb-6 group-hover:scale-110 transition-transform">
+                <GraduationCap size={24} />
+              </div>
+              <h3 className="text-xl font-bold text-slate-900 mb-3 group-hover:text-purple-600 transition-colors">청년 (19~34세)</h3>
+              <ul className="space-y-3 text-sm text-slate-600 font-medium">
+                <li className="flex gap-2 items-start">
+                  <span className="text-purple-400 mt-1">•</span>
+                  <span><strong>청년도약계좌:</strong> 5년 납입 시 최대 5천만 원 목돈 마련</span>
+                </li>
+                <li className="flex gap-2 items-start">
+                  <span className="text-purple-400 mt-1">•</span>
+                  <span><strong>청년월세지원:</strong> 무주택 청년 월세 최대 20만 원 지원</span>
+                </li>
+              </ul>
             </div>
-            <Link to="/welfare" className="hidden md:flex items-center text-sm font-bold text-blue-600 hover:underline">
+
+            {/* Parents Policy */}
+            <div className="bg-white rounded-3xl p-8 border border-slate-100 shadow-xl shadow-pink-100/50 hover:-translate-y-2 transition-all duration-300 group">
+              <div className="w-12 h-12 bg-pink-50 rounded-2xl flex items-center justify-center text-pink-600 mb-6 group-hover:scale-110 transition-transform">
+                <Baby size={24} />
+              </div>
+              <h3 className="text-xl font-bold text-slate-900 mb-3 group-hover:text-pink-600 transition-colors">출산/육아</h3>
+              <ul className="space-y-3 text-sm text-slate-600 font-medium">
+                <li className="flex gap-2 items-start">
+                  <span className="text-pink-400 mt-1">•</span>
+                  <span><strong>부모급여:</strong> 0세 월 100만 원, 1세 월 50만 원 지급</span>
+                </li>
+                <li className="flex gap-2 items-start">
+                  <span className="text-pink-400 mt-1">•</span>
+                  <span><strong>첫만남이용권:</strong> 출생 아동 1명당 200만 원 바우처</span>
+                </li>
+              </ul>
+            </div>
+
+            {/* Low Income Policy */}
+            <div className="bg-white rounded-3xl p-8 border border-slate-100 shadow-xl shadow-blue-100/50 hover:-translate-y-2 transition-all duration-300 group">
+              <div className="w-12 h-12 bg-blue-50 rounded-2xl flex items-center justify-center text-blue-600 mb-6 group-hover:scale-110 transition-transform">
+                <Building2 size={24} />
+              </div>
+              <h3 className="text-xl font-bold text-slate-900 mb-3 group-hover:text-blue-600 transition-colors">근로/서민</h3>
+              <ul className="space-y-3 text-sm text-slate-600 font-medium">
+                <li className="flex gap-2 items-start">
+                  <span className="text-blue-400 mt-1">•</span>
+                  <span><strong>근로장려금:</strong> 소득 요건 충족 시 최대 330만 원 현금 지급</span>
+                </li>
+                <li className="flex gap-2 items-start">
+                  <span className="text-blue-400 mt-1">•</span>
+                  <span><strong>햇살론 유스:</strong> 취준생/사회초년생 저금리 생활비 대출</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Latest Articles */}
+      <section id="latest-articles" className="py-24 bg-white border-t border-slate-100">
+        <div className="container mx-auto px-4 max-w-6xl animate-on-scroll">
+          <div className="flex flex-col md:flex-row items-end justify-between mb-12 gap-4">
+            <div>
+              <h2 className="text-3xl md:text-4xl font-black text-slate-900">최신 복지/정책 정보</h2>
+              <p className="text-slate-500 mt-2 font-medium">놓치면 손해 보는 정부 지원금과 제도</p>
+            </div>
+            <Link to="/welfare" className="hidden md:flex items-center text-sm font-bold text-purple-600 hover:underline">
               전체 보기 <ArrowRight size={16} className="ml-1" />
             </Link>
           </div>
           
-          {/* Dynamic Article Grid */}
           {relatedArticles.length > 0 ? (
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {relatedArticles.map(article => (
-                <ArticleCard key={article.id} article={article} />
+              {relatedArticles.map((article, idx) => (
+                <div key={article.id} className={`animate-on-scroll delay-${(idx+1)*100}`}>
+                  <ArticleCard article={article} />
+                </div>
               ))}
             </div>
           ) : (
-            <div className="text-center py-12 bg-slate-50 rounded-xl">
-              <p className="text-slate-500">관련된 최신 글이 준비 중입니다.</p>
+            <div className="text-center py-20 bg-slate-50 rounded-3xl border border-slate-100">
+              <p className="text-slate-500 font-medium">관련된 최신 글이 준비 중입니다.</p>
             </div>
           )}
         </div>

@@ -23,7 +23,7 @@ export const INITIAL_ARTICLES: Article[] = [
     category: Category.FINANCE,
     title: '구글정보이용료현금화의 실체: 수수료 40%의 진실과 계정 정지 리스크',
     summary: '휴대폰 소액결제 한도가 막혔을 때 찾는 마지막 수단, 정보이용료(콘텐츠이용료). 왜 수수료가 비정상적으로 높은지, 그리고 구글 계정 영구 정지라는 치명적 위험을 피하는 방법은 무엇인지 분석합니다.',
-    imageUrl: 'https://picsum.photos/seed/google_pay/800/600',
+    imageUrl: 'https://images.unsplash.com/photo-1616077168079-7e09a677fb2c?q=80&w=800&auto=format&fit=crop',
     date: '2023-11-30',
     author: '금융 에디터',
     tags: ['구글정보이용료', '콘텐츠이용료', '정보이용료현금화', '구글깡', '리니지m', '소액결제'],
@@ -37,11 +37,10 @@ export const INITIAL_ARTICLES: Article[] = [
 
       <div class="my-8 rounded-2xl overflow-hidden shadow-lg border border-slate-100">
         <div class="bg-slate-200 aspect-video flex items-center justify-center relative">
-           <span class="absolute top-2 left-2 bg-slate-800 text-white text-xs px-2 py-1 rounded">IMAGE</span>
-           <div class="text-center p-6">
-             <p class="font-bold text-slate-700 mb-2">이미지 설명: 어두운 방 안, 스마트폰 화면에서 구글 플레이 결제 오류 또는 '한도 부족' 알림을 보며 고민에 빠진 사람의 손 클로즈업.</p>
-             <p class="text-xs text-slate-500">키워드: smartphone payment error, stressed user, google play screen, financial trouble</p>
-             <p class="text-xs text-blue-600 mt-2">이유: 유동성이 막혀 절박한 심정으로 정보이용료 현금화를 고민하는 독자의 상황에 공감하고 문제의식을 환기하기 위함.</p>
+           <img src="https://images.unsplash.com/photo-1512428559087-560fa5ce7d87?q=80&w=800&auto=format&fit=crop" alt="스마트폰을 보며 고민하는 모습" class="absolute inset-0 w-full h-full object-cover" />
+           <div class="absolute bottom-0 left-0 w-full bg-gradient-to-t from-black/70 to-transparent p-6">
+             <p class="font-bold text-white mb-1">한도 부족과 결제 오류</p>
+             <p class="text-xs text-slate-300">유동성이 막힌 상황에서의 위험한 선택</p>
            </div>
         </div>
       </div>
@@ -68,17 +67,6 @@ export const INITIAL_ARTICLES: Article[] = [
         즉, 쇼핑몰 결제가 막혀도 구글 게임 아이템 결제는 가능한 경우가 많아, 이를 현금화의 루트로 삼는 것입니다. 대표적으로 '리니지M 다이아' 같은 환금성 높은 게임 재화를 구매해 되파는 방식이 사용됩니다.
       </p>
 
-      <div class="my-8 rounded-2xl overflow-hidden shadow-lg border border-slate-100">
-        <div class="bg-slate-200 aspect-video flex items-center justify-center relative">
-           <span class="absolute top-2 left-2 bg-slate-800 text-white text-xs px-2 py-1 rounded">IMAGE</span>
-           <div class="text-center p-6">
-             <p class="font-bold text-slate-700 mb-2">이미지 설명: 좌측에는 '택배 박스(실물 상품)', 우측에는 화려하게 빛나는 '게임 보석 아이템(디지털 재화)'을 배치하여 두 자산의 성격이 다름을 대비.</p>
-             <p class="text-xs text-slate-500">키워드: delivery box vs game gems, physical goods vs digital assets, comparison</p>
-             <p class="text-xs text-blue-600 mt-2">이유: 소액결제와 정보이용료가 결제하는 대상(타겟)이 다르다는 것을 직관적으로 보여주어 개념 혼동을 방지.</p>
-           </div>
-        </div>
-      </div>
-
       <h2 class="text-2xl font-bold text-slate-900 mt-12 mb-4">2. 왜 수수료가 40%~50%인가? (살인적인 비용 구조)</h2>
       <p class="mb-6 leading-relaxed">
         상품권 현금화 수수료가 보통 10~15%인 것에 비해, 정보이용료 현금화는 <strong>최소 40% 이상의 수수료</strong>를 떼어갑니다. 10만 원을 결제하면 내 손에 쥐는 돈은 5~6만 원에 불과합니다. 도대체 왜 이렇게 비싼 걸까요? 여기에는 '구글세(Google Tax)'가 숨어 있습니다.
@@ -89,17 +77,6 @@ export const INITIAL_ARTICLES: Article[] = [
         여기에 매입 업체의 마진과 환전 리스크 비용이 더해지면서, 소비자가 부담해야 할 최종 수수료는 눈덩이처럼 불어나는 것입니다. 이는 금융 상품이 아니라, 자산을 반토막 내는 행위입니다.
       </p>
 
-      <div class="my-8 rounded-2xl overflow-hidden shadow-lg border border-slate-100">
-        <div class="bg-slate-200 aspect-video flex items-center justify-center relative">
-           <span class="absolute top-2 left-2 bg-slate-800 text-white text-xs px-2 py-1 rounded">IMAGE</span>
-           <div class="text-center p-6">
-             <p class="font-bold text-slate-700 mb-2">이미지 설명: 100만 원이라는 돈이 파이프를 통과하면서 '구글 수수료', '매입 업체 수수료'라는 필터를 거쳐 아주 적은 양의 물(현금)로 떨어지는 인포그래픽.</p>
-             <p class="text-xs text-slate-500">키워드: money pipe leakage, high commission fee structure, shrinking cash, infographic</p>
-             <p class="text-xs text-blue-600 mt-2">이유: 40% 이상의 수수료가 발생하는 구조적 원인을 시각화하여 사용자의 손실 체감도를 높임.</p>
-           </div>
-        </div>
-      </div>
-
       <h2 class="text-2xl font-bold text-slate-900 mt-12 mb-4">3. 구글 계정 영구 정지와 통신 정지의 공포</h2>
       <p class="mb-6 leading-relaxed">
         비싼 수수료보다 더 무서운 것은 <strong>계정 제재</strong>입니다. 구글은 AI 기반의 FDS(부정결제탐지시스템)를 통해 비정상적인 결제 패턴을 실시간으로 감시합니다.
@@ -108,17 +85,6 @@ export const INITIAL_ARTICLES: Article[] = [
       <p class="mb-6 leading-relaxed">
         계정이 정지되면 해당 계정에 연동된 모든 이메일, 사진, 연락처, 드라이브 자료를 잃게 됩니다. 또한, 통신사는 정보이용료 미납 발생 시 일반 통신 요금 미납보다 더 빠르게 발신 정지 및 직권 해지 조치를 취하는 경향이 있습니다. 스마트폰이 정지되면 본인 인증이 불가능해져 현대 사회에서 사실상 고립됩니다.
       </p>
-
-      <div class="my-8 rounded-2xl overflow-hidden shadow-lg border border-slate-100">
-        <div class="bg-slate-200 aspect-video flex items-center justify-center relative">
-           <span class="absolute top-2 left-2 bg-slate-800 text-white text-xs px-2 py-1 rounded">IMAGE</span>
-           <div class="text-center p-6">
-             <p class="font-bold text-slate-700 mb-2">이미지 설명: 노트북 화면에 붉은색 경고창으로 'Google 계정이 비활성화되었습니다' 또는 '보안 경고' 메시지가 떠 있고, 당황한 사용자의 실루엣.</p>
-             <p class="text-xs text-slate-500">키워드: account ban, google security alert, locked user, computer screen warning</p>
-             <p class="text-xs text-blue-600 mt-2">이유: 단순한 금전적 손실을 넘어, 디지털 자산(계정) 전체를 잃을 수 있다는 경각심을 시각적으로 전달.</p>
-           </div>
-        </div>
-      </div>
 
       <h2 class="text-2xl font-bold text-slate-900 mt-12 mb-4">4. 올바른 대안: 유동성 위기 탈출법</h2>
       <p class="mb-6 leading-relaxed">
@@ -131,17 +97,6 @@ export const INITIAL_ARTICLES: Article[] = [
       </ul>
 
       <hr class="border-slate-200 my-10" />
-
-      <div class="my-8 rounded-2xl overflow-hidden shadow-lg border border-slate-100">
-        <div class="bg-slate-200 aspect-video flex items-center justify-center relative">
-           <span class="absolute top-2 left-2 bg-slate-800 text-white text-xs px-2 py-1 rounded">IMAGE</span>
-           <div class="text-center p-6">
-             <p class="font-bold text-slate-700 mb-2">이미지 설명: 갈림길 표지판. 왼쪽은 험난하고 어두운 '불법 현금화' 길, 오른쪽은 밝고 정돈된 '정부 지원/은행' 길. 밝은 쪽을 가리키는 손.</p>
-             <p class="text-xs text-slate-500">키워드: crossroads decision, financial choice, bright future path, helping hand</p>
-             <p class="text-xs text-blue-600 mt-2">이유: 독자에게 마지막으로 올바른 선택을 하도록 유도하고, 긍정적인 해결책이 있음을 암시.</p>
-           </div>
-        </div>
-      </div>
 
       <h3 class="text-2xl font-bold text-slate-900 mt-8 mb-4">결론: 스마트폰은 지갑이 아닙니다</h3>
       <p class="mb-4 leading-relaxed">
@@ -157,7 +112,7 @@ export const INITIAL_ARTICLES: Article[] = [
     category: Category.FINANCE,
     title: '신용카드현금화의 두 얼굴: 합법적 포인트 전환과 불법 융통의 경계',
     summary: '신용카드 현금화는 자산 관리의 꿀팁일 수도, 신용 불량으로 가는 지름길일 수도 있습니다. 여신금융협회 포인트 현금화부터 카드깡의 위험성까지, 금융 소비자가 반드시 알아야 할 구조적 진실을 분석합니다.',
-    imageUrl: 'https://picsum.photos/seed/creditcard_cash/800/600',
+    imageUrl: 'https://images.unsplash.com/photo-1556742031-c6961e8560b0?q=80&w=800&auto=format&fit=crop',
     date: '2023-11-25',
     author: '금융 에디터',
     tags: ['신용카드현금화', '카드깡', '신용카드포인트', '상테크', '금융사기', '신용등급'],
@@ -203,7 +158,7 @@ export const INITIAL_ARTICLES: Article[] = [
       <h3 class="text-xl font-bold text-slate-800 mt-6 mb-3">① 살인적인 수수료 (이자율의 함정)</h3>
       <p class="mb-4 leading-relaxed">
         업체들은 보통 결제 금액의 15%~25%를 수수료로 떼고 나머지 금액을 입금해줍니다. 
-        만약 100만 원을 결제하고 80만 원을 받았다면, 당장 손에 쥔 돈은 80만 원이지만 다음 달에 갚아야 할 돈은 100만 원입니다. 
+        만약 100만 원을 결제하고 80만 원을 받았다면, 당장 손에 쥐는 돈은 80만 원이지만 다음 달에 갚아야 할 돈은 100만 원입니다. 
         이는 월 이자 25%에 해당하며, <strong>연 이자율로 환산하면 300%</strong>가 넘는 초고금리입니다. 법정 최고 금리(연 20%)를 수십 배 초과하는 비용을 지불하는 셈입니다.
       </p>
 
@@ -251,7 +206,7 @@ export const INITIAL_ARTICLES: Article[] = [
     category: Category.FINANCE,
     title: '소액결제현금화의 구조적 이해와 금융 소비자가 알아야 할 진실',
     summary: '급전이 필요할 때 검색하게 되는 소액결제현금화. 단순한 현금 마련 수단으로 접근하면 위험합니다. 그 이면에 숨겨진 수수료 구조와 신용상의 리스크, 그리고 안전한 대안까지 심층 분석합니다.',
-    imageUrl: 'https://picsum.photos/seed/micropayment/800/600',
+    imageUrl: 'https://images.unsplash.com/photo-1616077168079-7e09a677fb2c?q=80&w=800&auto=format&fit=crop',
     date: '2023-11-20',
     author: '금융 에디터',
     tags: ['소액결제현금화', '재테크', '금융상식', '신용관리', '현금유동성', '급전'],
@@ -357,7 +312,7 @@ export const INITIAL_ARTICLES: Article[] = [
     category: Category.FINANCE,
     title: '돈이 새는 구조부터 막아라: 대부분이 평생 반복하는 잘못된 금융 선택',
     summary: '소득이 늘어도 돈이 모이지 않는다면? 문제는 버는 돈이 아니라 새는 돈에 있습니다. 당신의 재정을 위협하는 6가지 구조적 누수를 점검하고, 탄탄한 현금 흐름을 만드는 법을 공개합니다.',
-    imageUrl: 'https://picsum.photos/seed/money_leak/800/600',
+    imageUrl: 'https://images.unsplash.com/photo-1574607383476-f2c711c6a851?q=80&w=800&auto=format&fit=crop',
     date: '2023-11-15',
     author: '금융 에디터',
     tags: ['재테크', '지출관리', '신용카드', '현금흐름', '돈관리', '대출'],
@@ -422,7 +377,7 @@ export const INITIAL_ARTICLES: Article[] = [
     category: Category.LOAN,
     title: '급할 때 유용한 소액 비상금 대출: 구조적 이해와 활용 전략',
     summary: '갑작스러운 유동성 위기 시, 신용점수 하락을 최소화하며 안전하게 자금을 융통하는 1금융권 소액 대출의 메커니즘과 주의사항을 심층 분석합니다.',
-    imageUrl: 'https://picsum.photos/seed/loan1/800/600',
+    imageUrl: 'https://images.unsplash.com/photo-1565514020176-db7934789531?q=80&w=800&auto=format&fit=crop',
     date: '2023-10-24',
     author: '금융 에디터',
     tags: ['소액', '대출', '비상금', '신용점수', '서울보증보험'],
@@ -471,7 +426,7 @@ export const INITIAL_ARTICLES: Article[] = [
     category: Category.INVESTMENT,
     title: '주식 투자 입문: 초보자를 위한 포트폴리오 구성의 기초와 분산 투자 전략',
     summary: '변동성이 큰 주식 시장에서 리스크를 관리하는 자산 배분의 기본 원칙. ETF와 배당주를 활용한 포트폴리오의 구조와 장단점을 이해합니다.',
-    imageUrl: 'https://picsum.photos/seed/stock1/800/600',
+    imageUrl: 'https://images.unsplash.com/photo-1611974765270-ca1258634369?q=80&w=800&auto=format&fit=crop',
     date: '2023-10-22',
     author: '투자 분석가',
     tags: ['주식투자', '포트폴리오', 'ETF', '분산투자', '초보자가이드'],
@@ -516,7 +471,7 @@ export const INITIAL_ARTICLES: Article[] = [
     category: Category.WELFARE,
     title: '2024년 주요 정부 지원금 및 복지 정책의 이해와 활용 가이드',
     summary: '청년 자산 형성부터 출산 장려까지, 복잡한 정부 정책의 취지와 핵심 내용을 정리하고 올바른 신청 기준을 제시합니다.',
-    imageUrl: 'https://picsum.photos/seed/welfare1/800/600',
+    imageUrl: 'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?q=80&w=800&auto=format&fit=crop',
     date: '2023-10-21',
     author: '복지 알리미',
     tags: ['복지', '정책', '지원금', '정부정책', '청년정책', '부모급여'],
@@ -560,7 +515,7 @@ export const INITIAL_ARTICLES: Article[] = [
     category: Category.FINANCE,
     title: '개인 금융이 무너지는 순간들: 대부분이 놓치는 돈 관리의 결정적 지점',
     summary: '열심히 버는데 왜 돈이 모이지 않을까요? 금융 위기는 소득 부족이 아닌 구조적 결함에서 시작됩니다. 당신의 돈 관리가 무너지는 5가지 결정적 순간을 진단합니다.',
-    imageUrl: 'https://picsum.photos/seed/finance_collapse/800/600',
+    imageUrl: 'https://images.unsplash.com/photo-1579621970795-87facc2f976d?q=80&w=800&auto=format&fit=crop',
     date: '2023-11-10',
     author: '금융 에디터',
     tags: ['금융', '재테크', '신용점수', '대출', '현금흐름', '리스크관리'],
@@ -572,7 +527,7 @@ export const INITIAL_ARTICLES: Article[] = [
     category: Category.FINANCE,
     title: '돈 관리의 순서: 소득·지출·대출·투자를 한 번에 이해하는 법',
     summary: '재테크의 실패는 방법이 아니라 순서에서 옵니다. 소득 파악부터 지출 통제, 대출 활용, 그리고 투자까지. 개인 금융의 전체 지도를 그려드립니다.',
-    imageUrl: 'https://picsum.photos/seed/finance_hub/800/600',
+    imageUrl: 'https://images.unsplash.com/photo-1554224155-6726b3ff858f?q=80&w=800&auto=format&fit=crop',
     date: '2023-11-01',
     author: '금융 에디터',
     tags: ['재테크', '돈관리', '금융기초', '대출', '투자', '소액'],
@@ -584,7 +539,7 @@ export const INITIAL_ARTICLES: Article[] = [
     category: Category.LIFE,
     title: '신용카드 포인트의 합법적 현금 전환: 여신금융협회 통합조회 활용법',
     summary: '흩어진 카드 포인트를 내 계좌로 입금받는 공식적인 절차와 방법. 여신금융협회 통합조회 서비스를 통한 안전한 자산 관리 가이드.',
-    imageUrl: 'https://picsum.photos/seed/card1/800/600',
+    imageUrl: 'https://images.unsplash.com/photo-1601597111158-2fceff292cd4?q=80&w=800&auto=format&fit=crop',
     date: '2023-10-23',
     author: '생활의 달인',
     tags: ['신용카드', '포인트조회', '계좌입금', '여신금융협회', '재테크'],
@@ -596,7 +551,7 @@ export const INITIAL_ARTICLES: Article[] = [
     category: Category.FINANCE,
     title: '사회초년생을 위한 월급 관리의 정석: 통장 쪼개기 시스템 구축',
     summary: '월급이 스쳐 지나가지 않도록 현금 흐름을 통제하는 통장 쪼개기 노하우. 4개의 통장으로 만드는 자동화된 자산 관리 시스템.',
-    imageUrl: 'https://picsum.photos/seed/finance1/800/600',
+    imageUrl: 'https://images.unsplash.com/photo-1579621970563-ebec7560ff3e?q=80&w=800&auto=format&fit=crop',
     date: '2023-10-20',
     author: '재무 설계사',
     tags: ['재테크', '금융', '통장쪼개기', '사회초년생', '월급관리'],
@@ -608,7 +563,7 @@ export const INITIAL_ARTICLES: Article[] = [
     category: Category.INVESTMENT,
     title: '미국 주식 투자와 세금의 이해: 양도소득세 구조와 관리 원칙',
     summary: '해외 주식 투자 수익의 세금 구조를 명확히 이해하고, 합법적인 범위 내에서 실질 수익을 지키는 세금 관리 전략을 안내합니다.',
-    imageUrl: 'https://picsum.photos/seed/stock2/800/600',
+    imageUrl: 'https://images.unsplash.com/photo-1586486855514-8c633cc6fd38?q=80&w=800&auto=format&fit=crop',
     date: '2023-10-19',
     author: '세무 전문가',
     tags: ['주식', '미국주식', '세금', '절세', '양도소득세'],
@@ -620,7 +575,7 @@ export const INITIAL_ARTICLES: Article[] = [
     category: Category.LOAN,
     title: '신용점수 관리의 정석: 등급을 올리는 5가지 실전 전략',
     summary: '대출 금리와 한도를 결정하는 금융 신분증, 신용점수. 체크카드 사용부터 비금융 정보 등록까지, 실질적인 점수 향상을 위한 행동 강령을 제시합니다.',
-    imageUrl: 'https://picsum.photos/seed/credit1/800/600',
+    imageUrl: 'https://images.unsplash.com/photo-1559526324-4b87b5e36e44?q=80&w=800&auto=format&fit=crop',
     date: '2023-10-18',
     author: '신용 관리자',
     tags: ['신용점수', '대출', '금리인하', '금융팁', '신용관리'],
