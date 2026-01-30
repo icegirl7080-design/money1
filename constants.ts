@@ -23,7 +23,7 @@ export const INITIAL_ARTICLES: Article[] = [
     category: Category.FINANCE,
     title: '구글정보이용료현금화의 실체: 수수료 40%의 진실과 계정 정지 리스크',
     summary: '휴대폰 소액결제 한도가 막혔을 때 찾는 마지막 수단, 정보이용료(콘텐츠이용료). 왜 수수료가 비정상적으로 높은지, 그리고 구글 계정 영구 정지라는 치명적 위험을 피하는 방법은 무엇인지 분석합니다.',
-    imageUrl: 'https://images.unsplash.com/photo-1611162617474-5b21e879e113?q=80&w=800&auto=format&fit=crop',
+    imageUrl: 'https://images.unsplash.com/photo-1616077168079-7e09a677fb2c?q=80&w=800&auto=format&fit=crop',
     date: '2023-11-30',
     author: '금융 에디터',
     tags: ['구글정보이용료', '콘텐츠이용료', '정보이용료현금화', '구글깡', '리니지m', '소액결제'],
@@ -37,7 +37,7 @@ export const INITIAL_ARTICLES: Article[] = [
 
       <div class="my-8 rounded-2xl overflow-hidden shadow-lg border border-slate-100">
         <div class="aspect-video flex items-center justify-center relative bg-slate-100">
-           <img src="https://images.unsplash.com/photo-1616077168079-7e09a677fb2c?q=80&w=800&auto=format&fit=crop" alt="스마트폰을 보며 고민하는 모습" class="absolute inset-0 w-full h-full object-cover" />
+           <img src="https://images.unsplash.com/photo-1596742578443-7682e525c489?q=80&w=800&auto=format&fit=crop" alt="스마트폰 앱 결제 화면" class="absolute inset-0 w-full h-full object-cover" />
            <div class="absolute bottom-0 left-0 w-full bg-gradient-to-t from-black/70 to-transparent p-6">
              <p class="font-bold text-white mb-1">한도 부족과 결제 오류</p>
              <p class="text-xs text-slate-300">유동성이 막힌 상황에서의 위험한 선택</p>
@@ -216,7 +216,7 @@ export const INITIAL_ARTICLES: Article[] = [
     category: Category.FINANCE,
     title: '소액결제현금화의 구조적 이해와 금융 소비자가 알아야 할 진실',
     summary: '급전이 필요할 때 검색하게 되는 소액결제현금화. 단순한 현금 마련 수단으로 접근하면 위험합니다. 그 이면에 숨겨진 수수료 구조와 신용상의 리스크, 그리고 안전한 대안까지 심층 분석합니다.',
-    imageUrl: 'https://images.unsplash.com/photo-1604594849809-dfedbc827105?q=80&w=800&auto=format&fit=crop',
+    imageUrl: 'https://images.unsplash.com/photo-1556742049-0cfed4f7a07d?q=80&w=800&auto=format&fit=crop',
     date: '2023-11-20',
     author: '금융 에디터',
     tags: ['소액결제현금화', '재테크', '금융상식', '신용관리', '현금유동성', '급전'],
