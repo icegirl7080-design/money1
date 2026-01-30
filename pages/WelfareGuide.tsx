@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { 
   Landmark, 
   Users,
-  SearchCheck,
+  ShieldCheck,
   ArrowRight,
   Baby,
   GraduationCap,
@@ -87,7 +87,7 @@ export const WelfareGuide: React.FC = () => {
         <div className="container mx-auto px-4 max-w-5xl animate-on-scroll">
           <div className="text-center mb-12">
             <h2 className="text-2xl md:text-3xl font-black text-slate-900 flex items-center justify-center gap-3">
-              <SearchCheck className="text-purple-600" size={32} />
+              <ShieldCheck className="text-purple-600" size={32} />
               2024년 핵심 지원 정책
             </h2>
             <p className="text-slate-500 mt-2 font-medium">대상별 맞춤형 혜택을 확인하세요.</p>
